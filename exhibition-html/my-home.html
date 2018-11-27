@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>基本信息-我的主页</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+		<!-- Bootstrap -->
+
+		<link rel="stylesheet" href="static/lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="static/css/content.css">
+		<link rel="stylesheet" href="static/css/style.css">
+
+		<!--[if lt IE 9]>
+			<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+
+		<!-- 顶部导航 -->
+		<header>
+			<div class="container">
+				<div class="row">
+					<nav class="navbar">
+						<div>
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header_nav"
+								aria-expanded="false">
+									<span class="sr-only">查看导航</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand" href="index.html">
+									<img src="static/img/logo.png" alt="logo">
+								</a>
+							</div>
+							<div class="collapse navbar-collapse navbar-right" id="header_nav">
+								<ul class="nav navbar-nav">
+									<li>
+										<a href="index.html">首页</a>
+									</li>
+									<li>
+										<a href="3d-show.html">3D展品</a>
+									</li>
+									<li>
+										<a href="vr-show.html">VR展厅</a>
+									</li>
+									<li>
+										<a href="full-show-video.html">全景视频</a>
+									</li>
+									<li>
+										<a href="case-show.html">案例展示</a>
+									</li>
+									<li>
+										<a href="show-info.html">展会讯息</a>
+									</li>
+									<li>
+										<a href="info-service.html">信息服务</a>
+									</li>
+									<li class="login-state">
+										<!-- 已登录 -->
+										<div class="person-center">
+											<a href="my-home.html" title="个人中心"><i class="icon svg-person-center"></i></a>
+											<a href="javascript:;" title="退出登录"><i class="icon svg-login-out"></i></a>
+										</div>
+										<!-- 未登录 -->
+										<!-- <div class="login-sign">
+										<a href="sign.html">注册</a>
+										<a href="login.html">登录</a>
+									</div> -->
+									</li>
+								</ul>
+							</div>
+							<!-- /.navbar-collapse -->
+						</div>
+						<!-- /.container-fluid -->
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<!-- 基本信息 -->
+		<section class="user-info">
+			<div class="container">
+				<div class="row" style="height: 20px;background-color: #f4f4f4;padding: 0;"></div>
+			</div>
+			
+			<div class="header-img">
+				<img src="static/img/my/my-header-img.png" alt="">
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="user-id">
+						<span>会员ID：</span>
+						<span>1115</span>
+					</div>
+					<div class="user-status">
+						<span>账户类别：</span>
+						<span>组票方</span>
+						<a href="javascript:;" data-toggle="modal" data-target="#switchUserTypeModal">
+							<i class="icon icon-changeStatus"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 二级导航 -->
+		<section class="second-nav">
+			<div class="container">
+				<div class="row">
+					<!-- 二级导航 -->
+					<nav class="navbar" id="menu">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="my-home.html">我的主页</a>
+							</li>
+							<li>
+								<a href="my-show.html">我的展厅</a>
+							</li>
+							<li>
+								<a href="my-groupExhibition.html">组织展览</a>
+							</li>
+							<li>
+								<a href="my-thirdService.html">第三方服务</a>
+							</li>
+							<li>
+								<a href="my-help.html">帮助</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</section>
+
+		<!-- 三级导航 -->
+		<section class="third-nav">
+			<div class="container">
+				<div class="row">
+					<nav>
+						<ul class="nav nav-tabs">
+							<li class="active">
+								<a href="my-home.html">基本信息</a>
+							</li>
+							<li>
+								<a href="my-home-account.html">账户认证</a>
+							</li>
+							<li>
+								<a href="my-home-changePassword.html">更改密码</a>
+							</li>
+							<li>
+								<a href="my-home-giftInfo.html">赠品信息</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</section>
+
+		<!-- 内容 -->
+		<section class="my-content MH-baseInfo">
+			<div class="container">
+				<div class="row">
+					<div class="innerBox">
+						<div class="main-content baseInfo">
+							<div class="header">
+								<h4>基本信息</h4>
+								<button class="btn" data-toggle="modal" data-target="#editorModal">编辑</button>
+							</div>
+							<div class="content clearfix">
+								<div class="col-sm-6">
+									<div>
+										<span>登录名</span>0000
+									</div>
+									<div>
+										<span>手机号</span>18482160080
+										<a href="javascript:;" id="changePhoneNumber">修改</a>
+									</div>
+									<div id="changingPhoneNumber">
+										<div class="changing-phone-number">
+											<span>手机号</span>
+											<div class="input-box">
+												<div class="top">
+													<b>绑定新手机号</b>
+													<span>完善信息后可用新手机号验证登录</span>
+												</div>
+												<form>
+													<div class="form-group">
+														<div class="input-title">
+															<h4>
+																<label for="newPhoneNumber">中国 + 86 </label>
+															</h4>
+														</div>
+														<div class="input">
+															<input type="number" class="form-control new-num" id="newPhoneNumber" placeholder="请输入新的手机号">
+														</div>
+													</div>
+													<div class="form-group get-code last">
+														<div class="input">
+															<input type="number" class="form-control" id="codeNumber" placeholder="验证码">
+															<button class="btn send-code" type="button">发送验证码</button>
+														</div>
+													</div>
+													<div class="btn-content btn-changePhoneNumber">
+														<button type="submit" class="btn reserve">取消</button>
+														<button type="submit" class="btn submit">提交</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div>
+										<span>性别</span>0000
+									</div>
+									<div>
+										<span>公司全称</span>0000
+									</div>
+									<div>
+										<span>简介</span>0000
+									</div>
+									<div>
+										<span>所属行业</span>0000
+									</div>
+
+									<div>
+										<span>公司网站</span>0000
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div>
+										<span>城市名</span>0000
+									</div>
+
+									<div>
+										<span>邮箱</span>0000
+									</div>
+									<div>
+										<span>QQ</span>0000
+									</div>
+									<div>
+										<span>微信号</span>0000
+									</div>
+									<div>
+										<span>联系人</span>0000
+									</div>
+									<div>
+										<span>联系地址</span>0000
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- 弹窗-编辑资料 -->
+		<div class="modal fade editor-modal" id="editorModal" tabindex="-1" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="">编辑资料</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</div>
+					<div class="modal-body">
+						<form class="content-form">
+							<div class="form-group">
+								<div class="input-title">
+									<h4>头像</h4>
+								</div>
+								<div class="input click-img-choice-img">
+									<div>
+										<label for="choiceHeaderImg">
+											<img src="static/img/btn-editor-uploadImg-bg@2x.jpg" alt="">
+										</label>
+										<input type="file" id="choiceHeaderImg">
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group w50">
+								<div class="input-title">
+									<h4>登录名</h4>
+								</div>
+								<div class="input">
+									<span class="text">121212121</span>
+								</div>
+							</div>
+							<div class="form-group w50">
+								<div class="input-title">
+									<h4>手机号</h4>
+								</div>
+								<div class="input">
+									<span class="text">18482160080
+										<a href="javascript:;">修改</a>
+									</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-title">
+									<h4>性别</h4>
+								</div>
+								<div class="input clearfix">
+									<div class="radio-box">
+										<input type="radio" name="sex" id="man" class="radio">
+										<label for="man">
+											<span class="icon-nochecked"></span>男
+										</label>
+									</div>
+									<div class="radio-box">
+										<input type="radio" name="sex" id="woman" class="radio">
+										<label for="woman">
+											<span class="icon-nochecked"></span>女
+										</label>
+									</div>
+									<div class="radio-box">
+										<input type="radio" name="sex" id="secret" class="radio">
+										<label for="secret">
+											<span class="icon-nochecked"></span>保密
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-title">
+									<h4>
+										<label for="companyName">公司全称</label>
+									</h4>
+								</div>
+								<div class="input">
+									<input type="text" id="companyName" class="form-control" placeholder="公司全称/真实姓名" required>
+									<span class="point"></span>
+								</div>
+							</div>
+							<div class="form-group w50 space-right">
+								<div class="input-title">
+									<h4>
+										<label for="jc">简称</label>
+									</h4>
+								</div>
+								<div class="input">
+									<input type="text" id="jc" class="form-control" placeholder="简称" required>
+									<span class="point"></span>
+								</div>
+							</div>
+							<div class="form-group w50 space-left">
+								<div class="input-title">
+									<h4>
+										<label for="sshy">所属行业</label>
+									</h4>
+								</div>
+								<div class="input">
+									<input type="text" id="sshy" class="form-control" placeholder="所属行业" required>
+									<span class="point"></span>
+								</div>
+							</div>
+							<div class="form-group w50 space-right">
+								<div class="input-title">
+									<h4>
+										<label for="companyWebsite">公司网站</label>
+									</h4>
+								</div>
+								<div class="input">
+									<input type="text" id="companyWebsite" class="form-control" placeholder="公司网站/个人空间" required>
+									<span class="point"></span>
+								</div>
+							</div>
+							<div class="form-group w50 space-left select-group">
+								<div class="input-title">
+									<h4>
+										<label for="city">城市</label>
+									</h4>
+								</div>
+								<div class="input">
+									<div class="select-box">
+										<select name="city" id="city" class="form-control">
+											<option value="">成都市</option>
+										</select>
+										<i class="icon-down"></i>
+									</div>
+									<div class="select-box">
+										<select name="county" class="form-control">
+											<option value="">金牛区</option>
+										</select>
+										<i class="icon-down"></i>
+									</div>
+								</div>
+							</div>
+							<div class="form-group w50 space-right">
+								<div class="input-title">
+									<h4>
+										<label for="email">邮箱</label>
+									</h4>
+								</div>
+								<div class="input">
+									<input type="text" id="email" class="form-control" placeholder="邮箱" required>
+									<span class="point"></span>
+								</div>
+							</div>
+							<div class="form-group w50 space-left">
+								<div class="input-title">
+									<h4>
+										<label for="qq">QQ</label>
+									</h4>
+								</div>
+								<div class="input">
+									<input type="number" id="qq" class="form-control" placeholder="QQ号" required>
+									<span class="point"></span>
+								</div>
+							</div>
+							<div class="form-group w50 space-right">
+								<div class="input-title">
+									<h4>
+										<label for="weChat">微信号</label>
+									</h4>
+								</div>
+								<div class="input">
+									<input type="text" id="weChat" class="form-control" placeholder="微信号" required>
+									<span class="point"></span>
+								</div>
+							</div>
+							<div class="form-group w50 space-left">
+								<div class="input-title">
+									<h4>
+										<label for="contactMan">联系人</label>
+									</h4>
+								</div>
+								<div class="input">
+									<input type="text" id="contactMan" class="form-control" placeholder="联系人" required>
+									<span class="point"></span>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-title">
+									<h4>
+										<label for="contactAddress">联系地址</label>
+									</h4>
+								</div>
+								<div class="input">
+									<input type="text" id="contactAddress" class="form-control" placeholder="联系地址" required>
+									<span class="point"></span>
+								</div>
+							</div>
+							<p class="help-block">
+								<span class="point"></span>表示必填
+							</p>
+							<div class="switch form-group">
+								<div class="input-title">
+									<h4>隐私设置</h4>
+								</div>
+								<div class="input clearfix">
+									<div class="switch-box">
+										<input type="checkbox" id="switch1" class="switch">
+										<label for="switch1">
+											允许站内用户联系我
+											<span></span>
+										</label>
+									</div>
+
+									<div class="switch-box">
+										<input type="checkbox" id="switch2" class="switch">
+										<label for="switch2">
+											允许站内用户关注我
+											<span></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="btn-content right">
+								<button class="btn submit" type="submit">保存设置</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 弹窗-切换用户 -->
+		<div class="modal fade switchUserType-modal" id="switchUserTypeModal" tabindex="-1" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="">切换用户</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="form">
+							<div>
+								<input type="radio" name="switchUserType" id="userTypeGZ" style="display: none;">
+								<label for="userTypeGZ"><span></span>观众</label>
+							</div>
+							<div class="clearfix">
+								<input type="radio" name="switchUserType" id="userTypeCZF" style="display: none;">
+								<label for="userTypeCZF"><span></span>参展方</label>
+								<span>认证后才能切换该账户</span>
+								<a href="#">去认证</a>
+							</div>
+							<div>
+								<input type="radio" name="switchUserType" id="userTypeZZF" style="display: none;">
+								<label for="userTypeZZF"><span></span>组展方</label>
+							</div>
+							<div>
+								<input type="radio" name="switchUserType" id="userTypeDSF" style="display: none;">
+								<label for="userTypeDSF"><span></span>第三方服务</label>
+							</div>
+							<div class="btn-content right btn-switchUserType">
+								<button class="btn submit" type="submit">确定切换</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 上传作品 -->
+		<section class="upload">
+			<div class="container">
+				<a href="#">
+					上传作品试试
+				</a>
+			</div>
+		</section>
+		<div>
+			<div class="container">
+				<div class="row" style="height: 263px; padding-top: 33px;"></div>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<nav>
+						<ul>
+							<li>
+								<a href="#">关于我们</a>
+							</li>
+							<li>
+								<a href="#">联系我们</a>
+							</li>
+							<li>
+								<a href="#">服务协议</a>
+							</li>
+							<li>
+								<a href="#">隐私政策</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="QRcode">
+						<img class="small-img" src="static/img/code.png" alt="" title="扫码关注">
+						<img class="big-img" src="static/img/code.png" alt="">
+					</div>
+					<div class="copyright">
+						<span>版权所有：成都沉浸互动数字科技有限责任公司</span>
+						<br />
+						<a href="#">
+							<span>蜀ICP备1600000号</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="static/js/index.js"></script>
+		<script>
+			$(function() {
+				$('#changePhoneNumber').on('click', function() {
+					$(this).parent().hide();
+					$('#changingPhoneNumber').show();
+				});
+				$('#btnEditor').on('click', function() {
+					$('#maskBaseInfo').show();
+				});
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>分享</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+		<!-- Bootstrap -->
+
+
+		<!--[if lt IE 9]>
+		  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+
+		<!-- 内容 -->
+		<section class="share">
+			<div class="container">
+				<div class="row">
+					<div class="bdsharebuttonbox" data-tag="share_1">
+						<!-- 微信 -->
+						<a class="bds_weixin" data-cmd="weixin"></a>
+						<!-- QQ 空间 -->
+						<a class="bds_qzone" data-cmd="qzone"></a>
+						<!-- 新浪微博 -->
+						<a class="bds_tsina" data-cmd="tsina"></a>
+						<!-- 微信 -->
+						<a class="bds_baidu" data-cmd="baidu"></a>
+						<!-- 人人网 -->
+						<!-- <a class="bds_renren" data-cmd="renren"></a> -->
+						<!-- 腾讯微博 -->
+						<a class="bds_tqq" data-cmd="tqq"></a>
+						<!-- 有道云笔记 -->
+						<a class="bds_youdao" data-cmd="youdao"></a>
+						<!-- qq 好友 -->
+						<a class="bds_sqq" data-cmd="sqq"></a>
+						<!-- 复制网址 -->
+						<a class="bds_copy" data-cmd="copy"></a>
+						<a class="bds_more" data-cmd="more">更多</a>
+						<a class="bds_count" data-cmd="count"></a>
+					</div>
+
+
+					<script>
+						window._bd_share_config = {
+							// 通用设置
+							"common": {
+								"bdSnsKey": {},
+								"bdText": "${title}", //分享时的标题
+								"bdMini": "2",
+								"bdMiniList": false,
+								"bdPic": "${pic}", //此处为分享时自带的图片
+								"bdStyle": "0",
+								"bdSize": "32",
+								"bdUrl": "${sharUrl}", //此处为后台要进行分享的内容的定义
+								"bdDesc": '${summary}', //分享时的文本摘要
+							},
+							// 分享按钮设置
+							share: [{
+								"bdSize": 16
+							}],
+							// 浮窗分享设置
+							slide: [{
+								bdImg: 0,
+								bdPos: "right",
+								bdTop: 100
+							}],
+
+							// 图片分享设置
+							image: [{
+								viewType: 'list',
+								viewPos: 'top',
+								viewColor: 'black',
+								viewSize: '16',
+								viewList: ['qzone', 'tsina', 'huaban', 'tqq', 'renren']
+							}],
+
+							// 划词分享设置
+							selectShare: [{
+								"bdselectMiniList": ['qzone', 'tqq', 'kaixin001', 'bdxc', 'tqf']
+							}]
+						}
+						with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src =
+							'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+					</script>
+
+				</div>
+			</div>
+		</section>
+
+
+		<!-- 上传作品 -->
+
+		<script src="static/js/jquery.min.js"></script>
+		<script src="static/js/bootstrap.min.js"></script>
+
+	</body>
+
+</html>

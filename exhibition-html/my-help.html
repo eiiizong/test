@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>帮助-个人中心</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="static/lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="static/css/content.css">
+		<link rel="stylesheet" href="static/css/style.css">
+
+		<!-- Latest compiled and minified CSS -->
+		<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css"> -->
+
+		<!--[if lt IE 9]>
+		  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+
+		<!-- 顶部导航 -->
+		<header>
+			<div class="container">
+				<div class="row">
+					<nav class="navbar">
+						<div>
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header_nav"
+								 aria-expanded="false">
+									<span class="sr-only">查看导航</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand" href="index.html">
+									<img src="static/img/logo.png" alt="logo">
+								</a>
+							</div>
+							<div class="collapse navbar-collapse navbar-right" id="header_nav">
+								<ul class="nav navbar-nav">
+									<li>
+										<a href="index.html">首页</a>
+									</li>
+									<li>
+										<a href="3d-show.html">3D展品</a>
+									</li>
+									<li>
+										<a href="vr-show.html">VR展厅</a>
+									</li>
+									<li>
+										<a href="full-show-video.html">全景视频</a>
+									</li>
+									<li>
+										<a href="case-show.html">案例展示</a>
+									</li>
+									<li>
+										<a href="show-info.html">展会讯息</a>
+									</li>
+									<li>
+										<a href="info-service.html">信息服务</a>
+									</li>
+									<li class="login-state">
+										<!-- 已登录 -->
+										<div class="person-center">
+											<a href="my-home.html" title="个人中心"><i class="icon svg-person-center"></i></a>
+											<a href="javascript:;" title="退出登录"><i class="icon svg-login-out"></i></a>
+										</div>
+										<!-- 未登录 -->
+										<!-- <div class="login-sign">
+										<a href="sign.html">注册</a>
+										<a href="login.html">登录</a>
+									</div> -->
+									</li>
+								</ul>
+							</div>
+							<!-- /.navbar-collapse -->
+						</div>
+						<!-- /.container-fluid -->
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<!-- 用户信息 -->
+		<section class="user-info">
+			<div class="container">
+				<div class="row" style="height: 20px;background-color: #f4f4f4;padding: 0;"></div>
+			</div>
+			<div class="header-img">
+				<img src="static/img/my/my-header-img.png" alt="">
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="user-id">
+						<span>会员ID：</span>
+						<span>1115</span>
+					</div>
+					<div class="user-status">
+						<span>账户类别：</span>
+						<span>组票方</span>
+						<a href="#">
+							<i class="icon icon-changeStatus"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 二级导航 -->
+		<section class="second-nav">
+			<div class="container">
+				<div class="row">
+					<nav class="navbar">
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="my-home.html">我的主页</a>
+							</li>
+							<li>
+								<a href="my-show.html">我的展厅</a>
+							</li>
+							<li>
+								<a href="my-groupExhibition.html">组织展览</a>
+							</li>
+							<li>
+								<a href="my-thirdService.html">第三方服务</a>
+							</li>
+							<li class="active">
+								<a href="my-help.html">帮助</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</section>
+
+		<!-- 三级导航 -->
+		<section class="third-nav">
+			<div class="container">
+				<div class="row">
+					<nav>
+						<ul class="nav nav-tabs">
+							<li class="active">
+								<a href="my-help.html">咨询列表</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</section>
+
+		<!-- 内容 -->
+		<section class="my-content my-helpe">
+			<div class="container">
+				<div class="row">
+					<div class="inndeBox">
+						<!-- 咨询列表 -->
+						<div class="main-content ask-question-list" id="askQuestionList">
+							<div class="header">
+								<h4>咨询列表</h4>
+								<button class="btn" id="askQuestionBtn">咨询问题</button>
+							</div>
+							<div class="content">
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<tbody>
+											<tr class="table-header">
+												<th>序号</th>
+												<th>问题类别</th>
+												<th>问题内容</th>
+												<th>状态</th>
+												<th>操作</th>
+											</tr>
+
+											<tr>
+												<td>1</td>
+												<td>展会上的事</td>
+												<td>这是测试问题，展网展网展网展网展网展这展网展网展网展...网展网展网展...</td>
+												<td class="replied">
+													已回复
+													<a href="javascript:;" data-toggle="modal" data-target="#responseModal">【查看】</a>
+												</td>
+												<td class="handle-btn">
+													<a href="javascript:;">
+														<i class="icon icon-table-delete"></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>展会上的事</td>
+												<td>这是测试问题，展网展网展网展网展网展网展网展网展网展...网展网展网展...</td>
+												<td class="no-reply">未回复</td>
+												<td class="handle-btn">
+													<a href="javascript:;">
+														<i class="icon icon-table-delete"></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>展会上的事</td>
+												<td>这是测试问题，展网展网展网展网展网展这是测展网展网展网展网展...网展网展网展...</td>
+												<td class="no-reply">未回复</td>
+												<td class="handle-btn">
+													<a href="javascript:;">
+														<i class="icon icon-table-delete"></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>展会上的事</td>
+												<td>这是测试问题，展展网展网展网展网展展...网展网展网展...</td>
+												<td class="no-reply">未回复</td>
+												<td class="handle-btn">
+													<a href="javascript:;">
+														<i class="icon icon-table-delete"></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>展会上的事</td>
+												<td>这是测试问题，展网展网展网展网展网网展网展网展网展...网展网展网展...</td>
+												<td class="no-reply">未回复</td>
+												<td class="handle-btn">
+													<a href="javascript:;">
+														<i class="icon icon-table-delete"></i>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>展会上的事</td>
+												<td>这是测试问题，展网展网展网展网展</td>
+												<td class="no-reply">未回复</td>
+												<td class="handle-btn">
+													<a href="javascript:;">
+														<i class="icon icon-table-delete"></i>
+													</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<!-- 咨询问题 -->
+						<div class="main-content ask-question" id="askQuestion" style="display: none;">
+							<div class="header">
+								<h4>咨询问题</h4>
+							</div>
+							<div class="content">
+								<form action="" class="content-form-block">
+									<div class="form-group">
+										<div class="input-title">
+											<h4>
+												<label for="questionType">问题类别：</label>
+											</h4>
+										</div>
+										<div class="input">
+											<input type="text" class="form-control" id="questionType" placeholder="添加问题类别" required>
+											<i class="text">50</i>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-title">
+											<h4>
+												<label for="questionContent">内容：</label>
+											</h4>
+										</div>
+										<div class="input">
+											<div class="quill">
+												<!-- 工具按钮 -->
+												<div id="textareToolbar"></div>
+												<!-- 编辑区域 -->
+												<div id="textareEditor"></div>
+											</div>
+										</div>
+									</div>
+									<div class="btn-askQuestion btn-content right">
+										<button type="submit" class="btn submit">提交</button>
+										<button type="button" class="btn goback" id="goBackBtn">返回</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 回复内容 弹框 -->
+		<div class="modal fade response-modal" id="responseModal" tabindex="-1" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="">咨询详情</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="req-type">
+							<div>问题类别：</div>
+							<div>展会上的事</div>
+						</div>
+						<div class="req-time">
+							<div>咨询时间：</div>
+							<div>2018-11-12 09:30</div>
+						</div>
+						<div class="req-content">
+							<div>问题内容：</div>
+							<div>这是测试问题，展网展网展网展网展网展这是测展网展网展网展网展这是测展网展网展网展网展这是测展网展网展网展网展...网展网展网展...</div>
+						</div>
+						<div class="res-type">
+							<div>回复状态：</div>
+							<div class="fgreen">已回复</div>
+							<!-- <div class="fred">未回复</div> -->
+						</div>
+						<div class="res-time">
+							<div>回复时间：</div>
+							<div>2018-11-12 09:30</div>
+						</div>
+						<div class="res-content">
+							<div>回复内容：</div>
+							<div>这是回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容</div>
+						</div>
+						<div class="btn-content right">
+							<button type="button" class="btn submit" style="margin: 0;" data-dismiss="modal">确定</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 上传作品 -->
+		<section class="upload">
+			<div class="container">
+				<a href="#">
+					上传作品试试
+				</a>
+			</div>
+		</section>
+		<div>
+			<div class="container">
+				<div class="row" style="height: 263px; padding-top: 33px;"></div>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<nav>
+						<ul>
+							<li>
+								<a href="#">关于我们</a>
+							</li>
+							<li>
+								<a href="#">联系我们</a>
+							</li>
+							<li>
+								<a href="#">服务协议</a>
+							</li>
+							<li>
+								<a href="#">隐私政策</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="QRcode">
+						<img class="small-img" src="static/img/code.png" alt="" title="扫码关注">
+						<img class="big-img" src="static/img/code.png" alt="">
+					</div>
+					<div class="copyright">
+						<span>版权所有：成都沉浸互动数字科技有限责任公司</span>
+						<br />
+						<a href="#">
+							<span>蜀ICP备1600000号</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="static/js/jquery.min.js"></script>
+		<script src="static/js/bootstrap.min.js"></script>
+		<script src="static/js/index.js"></script>
+		<script>
+			$(function() {
+				$('#askQuestionBtn').on('click', function() {
+					$('#askQuestionList').hide();
+					$('#askQuestion').show();
+				});
+				$('#goBackBtn').on('click', function() {
+					$('#askQuestion').hide();
+					$('#askQuestionList').show();
+				});
+			});
+		</script>
+	</body>
+
+</html>
