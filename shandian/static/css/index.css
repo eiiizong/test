@@ -1,7 +1,7 @@
 /*********! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css *************/
 
 html {
-  line-height: 1.15; 
+  /* line-height: 1.15; */
   -webkit-text-size-adjust: 100%; 
 			-ms-text-size-adjust: 100%;
 }
@@ -155,7 +155,7 @@ template {
 html {
 	width: 100%;
 	height: 100%;
-	/* font-size: 16px; */ /*浏览器默认字体大小*/
+	font-size: 100%;/*浏览器默认字体大小*/
 	font-family: sans-serif;
 	overflow: auto;
 }
@@ -194,49 +194,6 @@ ul, ol {
 }
 /****************清除浮动 END*****************************************************/
 
-/******************************** margin *****************/
-.mt1 { margin-top: 1px; }
-.mt2 { margin-top: 2px; }
-.mt3 { margin-top: 3px; }
-.mt4 { margin-top: 4px; }
-.mt5 { margin-top: 5px; }
-.mt6 { margin-top: 6px; }
-.mt7 { margin-top: 7px; }
-.mt8 { margin-top: 8px; }
-.mt9 { margin-top: 9px; }
-.mt10 { margin-top: 10px; }
-.mt11 { margin-top: 11px; }
-.mt12 { margin-top: 12px; }
-.mt13 { margin-top: 13px; }
-.mt14 { margin-top: 14px; }
-.mt15 { margin-top: 15px; }
-.mt16 { margin-top: 16px; }
-.mt17 { margin-top: 17px; }
-.mt18 { margin-top: 18px; }
-.mt19 { margin-top: 19px; }
-.mt20 { margin-top: 20px; }
-.mt25 { margin-top: 25px; }
-.mt30 { margin-top: 30px; }
-.mt35 { margin-top: 35px; }
-.mt40 { margin-top: 40px; }
-.mt45 { margin-top: 45px; }
-.mt50 { margin-top: 50px; }
-
-.mr1 { margin-right: 1px; }
-.mr2 { margin-right: 2px; }
-.mr3 { margin-right: 3px; }
-.mr4 { margin-right: 4px; }
-.mr5 { margin-right: 5px; }
-.mr6 { margin-right: 6px; }
-.mr7 { margin-right: 7px; }
-.mr8 { margin-right: 8px; }
-.mr9 { margin-right: 9px; }
-.mr10 { margin-right: 10px; }
-.mr15 { margin-right: 15px; }
-.mr20 { margin-right: 20px; }
-.mr25 { margin-right: 25px; }
-.mr30 { margin-right: 30px; }
-/*************************************** margin END********************************/
 
 /*************************************** flexBox********************************/
 .flexbox-ncc {
@@ -405,10 +362,13 @@ body {
 input[type=checkbox] {
 	display: none;
 }
+input[type=file] {
+	display: none;
+}
 
 /******************* 偏好设置 ************/
 .checkbox-group {
-	padding-top: 10px;
+	padding-top: 0.625em;
 }
 .checkbox-group label {
 	display: flex;
@@ -456,3 +416,59 @@ input[type=checkbox] {
 	background-color: #439aff;
 }
 /******************* 偏好设置 END************/
+
+/******************* 商铺信息管理 ***********/
+.store-info-change {
+	padding-top: 0.625em;
+}
+.store-info-change > div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 0.875em;
+	height: 2.6875em;
+	background-color: #fff;
+	margin-top: 0.625em;
+}
+.store-info-change > .store-head-portrait {
+	display: block;
+	height: auto;
+	padding: 0;
+	background-color: transparent;
+	margin-top: 0;
+}
+.store-info-change > .store-head-portrait >label {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 0.875em;
+	height: 4.375em;
+	background-color: #fff;
+}
+.store-info-change > .store-head-portrait >label img {
+	width: 3.75em;
+	height: 3.75em;
+	border-radius: 50%;
+}
+.store-info-change > div > span:first-of-type {
+	font-size: 0.938em;
+	font-weight: bold;
+	color: #000000;
+}
+.store-info-change > div span.help-editor {
+	font-size: 0.875em;
+	font-weight: 500;
+	color: #c6c6c6;
+	position: relative;
+}
+.store-info-change > div span.help-editor:after {
+	display: inline-block;
+	content: '';
+	background: url(../img/icon/is-link-small.png) no-repeat;
+	width: 0.5em;
+	height: 0.858em;
+	background-size: cover;
+	margin-left: 0.607em;
+	margin-top: 0.142857em;
+}
+/******************* 商铺信息管理 END***********/
