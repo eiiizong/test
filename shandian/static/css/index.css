@@ -521,10 +521,7 @@ input[type=file] {
 	margin: 0.833333em 0 0;
 }
 
-.btn {
-	padding: 0 0.1;
-	font-size: 0.9375em;
-}
+
 
 .btn-add-type {
 	display: block;
@@ -544,6 +541,7 @@ input[type=file] {
 }
 .change-info .mint-cell {
 	min-height: 2.5em;
+	border-bottom: 1px solid #eaeaee;
 }
 .change-info .mint-cell-wrapper {
 	padding: 0 0.875em;
@@ -555,15 +553,52 @@ input[type=file] {
 .change-info .help-info {
 	font-size: 0.625em;
 	padding-left: 1.5em;
+	margin-top: 0.6em;
 }
-.change-info .btn {
+/* 按钮 */
+.btn {
 	padding: 0 0.875em;
-	margin-top: 1.40625em;
+	margin-top: 1.4375em;
 }
-.change-info .btn button {
+.btn button {
 	width: 100%;
 	font-size: 0.9375em;
 	font-weight: 500;
 	border-radius: 200px;
 }
 /******************** 更改店铺名 END***********************/
+/* 验证手机号 */
+.verify-tel {
+	font-weight: 500;
+	padding-top: 1.25em;
+}
+.verify-tel .hint {
+	font-size: 1em;
+	color: #7b7b7b;
+	line-height: 1.1875em;
+	padding: 0 1.875em;
+	margin: 0 0 .5em;
+}
+.verify-tel .get-code {
+	display: flex;
+	border-top: 1px solid #eaeaee;
+	border-bottom: 1px solid #eaeaee;
+	padding: 0.5em 0.875em;
+	justify-content: space-between;
+}
+.verify-tel .get-code .mint-cell {
+	min-height: 3.125em;
+	border-radius: 0.625em;
+	flex: 1;
+}
+
+.verify-tel .get-code > button {
+	width: 8.3333333em;
+	height: 3.33333em;
+	border-radius: 0.625em;
+	font-size: 0.9375em;
+	margin-left: 1.34375em;
+}
+.verify-tel .btn {
+	margin-top: 2.875em;
+}
