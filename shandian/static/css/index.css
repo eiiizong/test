@@ -1,153 +1,186 @@
 /*********! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css *************/
 
 html {
-  /* line-height: 1.15; */
-  -webkit-text-size-adjust: 100%; 
-			-ms-text-size-adjust: 100%;
+	/* line-height: 1.15; */
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
 }
+
 body {
-  margin: 0;
+	margin: 0;
 }
+
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+	font-size: 2em;
+	margin: 0.67em 0;
 }
+
 hr {
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible; 
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
 }
+
 pre {
-  font-family: monospace, monospace; 
-  font-size: 1em; 
+	font-family: monospace, monospace;
+	font-size: 1em;
 }
+
 a {
-  background-color: transparent;
+	background-color: transparent;
 }
+
 abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+	border-bottom: none;
+	text-decoration: underline;
+	-webkit-text-decoration: underline dotted;
+	text-decoration: underline dotted;
 }
+
 b,
 strong {
-  font-weight: bolder;
+	font-weight: bolder;
 }
+
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
+	font-family: monospace, monospace;
+	font-size: 1em;
 }
+
 small {
-  font-size: 80%;
+	font-size: 80%;
 }
+
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
+
 sub {
-  bottom: -0.25em;
+	bottom: -0.25em;
 }
+
 sup {
-  top: -0.5em;
+	top: -0.5em;
 }
+
 img {
-  border-style: none;
+	border-style: none;
 }
+
 button,
 input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; 
-  font-size: 100%; 
-  line-height: 1.15;
-  margin: 0;
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
 }
+
 button,
-input { 
-  overflow: visible;
+input {
+	overflow: visible;
 }
+
 button,
 select {
-  text-transform: none;
+	text-transform: none;
 }
+
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+	-webkit-appearance: button;
 }
+
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
+	border-style: none;
+	padding: 0;
 }
+
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+	outline: 1px dotted ButtonText;
 }
+
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
+	padding: 0.35em 0.75em 0.625em;
 }
+
 legend {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  color: inherit;
-  display: table; 
-  max-width: 100%;
-  padding: 0; 
-  white-space: normal;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
 }
+
 progress {
-  vertical-align: baseline;
+	vertical-align: baseline;
 }
+
 textarea {
-  overflow: auto;
+	overflow: auto;
 }
+
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
 }
+
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-  height: auto;
+	height: auto;
 }
+
 [type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
 }
+
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+	-webkit-appearance: none;
 }
+
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
+	-webkit-appearance: button;
+	font: inherit;
 }
+
 details {
-  display: block;
+	display: block;
 }
+
 summary {
-  display: list-item;
+	display: list-item;
 }
+
 template {
-  display: none;
+	display: none;
 }
+
 [hidden] {
-  display: none;
+	display: none;
 }
+
 /************! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css  END*********/
 
 
@@ -155,41 +188,53 @@ template {
 html {
 	width: 100%;
 	height: 100%;
-	font-size: 100%;/*浏览器默认字体大小*/
+	font-size: 100%;
+	/*浏览器默认字体大小*/
 	font-family: sans-serif;
 	overflow: auto;
 }
+
 * {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
+
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
-body, ul {
+
+body,
+ul {
 	margin: 0;
 	padding: 0;
 }
+
 body {
 	width: 100%;
 	min-height: 100%;
 }
-ul, ol {
+
+ul,
+ol {
 	list-style: none;
 }
+
 a {
 	text-decoration: none;
 	color: #fff;
 	outline: 0;
 }
+
 /****************清除浮动 ( 添加 clearfix 类名即可 )******************************/
 .clearfix {
-	*zoom: 1; /*针对于IE6的，因为IE6不支持:after伪类*/
+	*zoom: 1;
+	/*针对于IE6的，因为IE6不支持:after伪类*/
 }
+
 .clearfix:after {
 	content: '';
 	display: table;
@@ -197,32 +242,36 @@ a {
 	clear: both;
 	visibility: hidden;
 }
+
 /****************清除浮动 END*****************************************************/
 
 
 /******************************* 响应图片 *******************************************/
 .img-responsive-box {
 	display: block;
-	height:0;   
-	width:100%;
-	margin:0;
+	height: 0;
+	width: 100%;
+	margin: 0;
 	position: relative;
-	padding-bottom:100%;
+	padding-bottom: 100%;
 	overflow: hidden;
 }
-.img-responsive-box > img {
+
+.img-responsive-box>img {
 	width: 100%;
 	position: absolute;
 	left: 0;
 	top: 0;
 	height: auto;
 }
+
 img {
 	display: block;
 	max-width: 100%;
 	height: auto;
 	vertical-align: top;
 }
+
 /******************************* 响应图片 END*******************************************/
 
 body {
@@ -230,12 +279,15 @@ body {
 	min-height: 100%;
 	background-color: #efeff4;
 }
+
 [v-cloak] {
 	display: none;
 }
+
 input[type=checkbox] {
 	display: none;
 }
+
 input[type=file] {
 	display: none;
 }
@@ -244,6 +296,7 @@ input[type=file] {
 .checkbox-group {
 	padding-top: 0.625em;
 }
+
 .checkbox-group label {
 	display: flex;
 	background-color: #fff;
@@ -253,16 +306,19 @@ input[type=file] {
 	border-bottom: 1px solid #efeff4;
 	padding: 0 14px;
 }
+
 .checkbox-group label:last-of-type {
 	border-bottom: 0;
 }
-.checkbox-group label > span {
+
+.checkbox-group label>span {
 	font-size: 14px;
 	line-height: 1;
 	font-weight: 500;
 	color: #444444;
 }
-.checkbox-group label > div {
+
+.checkbox-group label>div {
 	width: 17px;
 	height: 17px;
 	border: 1px solid #999;
@@ -271,7 +327,7 @@ input[type=file] {
 	transition: all .3s;
 }
 
-.checkbox-group label > div > span {
+.checkbox-group label>div>span {
 	display: block;
 	width: 10px;
 	height: 10px;
@@ -280,22 +336,26 @@ input[type=file] {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 	transition: all .3s;
 }
-.checkbox-group label > input:checked ~ div {
+
+.checkbox-group label>input:checked~div {
 	border-color: #439aff;
 }
-.checkbox-group label > input:checked ~ div span {
+
+.checkbox-group label>input:checked~div span {
 	background-color: #439aff;
 }
+
 /******************* 偏好设置 END************/
 
 /******************* 商铺信息管理 ***********/
 .store-info-change {
 	padding-top: 0.625em;
 }
-.store-info-change > div {
+
+.store-info-change>div {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -304,14 +364,16 @@ input[type=file] {
 	background-color: #fff;
 	margin-top: 0.625em;
 }
-.store-info-change > .store-head-portrait {
+
+.store-info-change>.store-head-portrait {
 	display: block;
 	height: auto;
 	padding: 0;
 	background-color: transparent;
 	margin-top: 0;
 }
-.store-info-change > .store-head-portrait >label {
+
+.store-info-change>.store-head-portrait>label {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -319,23 +381,27 @@ input[type=file] {
 	height: 4.375em;
 	background-color: #fff;
 }
-.store-info-change > .store-head-portrait >label img {
+
+.store-info-change>.store-head-portrait>label img {
 	width: 3.75em;
 	height: 3.75em;
 	border-radius: 50%;
 }
-.store-info-change > div > span:first-of-type {
+
+.store-info-change>div>span:first-of-type {
 	font-size: 0.938em;
 	font-weight: bold;
 	color: #000000;
 }
-.store-info-change > div span.help-editor {
+
+.store-info-change>div span.help-editor {
 	font-size: 0.875em;
 	font-weight: 500;
 	color: #c6c6c6;
 	position: relative;
 }
-.store-info-change > div span.help-editor:after {
+
+.store-info-change>div span.help-editor:after {
 	display: inline-block;
 	content: '';
 	background: url(../img/icon/is-link-small.png) no-repeat center center;
@@ -345,14 +411,14 @@ input[type=file] {
 	margin-left: 0.607em;
 	margin-top: 0.142857em;
 }
+
 /******************* 商铺信息管理 END***********/
 
 
 
 /******************* 商铺信息***********/
-.store-info {
-	
-}
+.store-info {}
+
 .store-info .base-info {
 	display: flex;
 	align-items: center;
@@ -363,63 +429,73 @@ input[type=file] {
 	padding-left: 2.5em;
 	padding-right: 0.875em;
 }
-.store-info .base-info > div {
+
+.store-info .base-info>div {
 	flex: 1;
 }
-.store-info .base-info > div img {
+
+.store-info .base-info>div img {
 	display: inline-block;
 	width: 3.75em;
 	height: 3.75em;
 	border-radius: 50%;
 	margin-right: 1.4375em;
 }
-.store-info .base-info > div > div {
+
+.store-info .base-info>div>div {
 	display: inline-block;
 }
-.store-info .base-info > div > div span {
+
+.store-info .base-info>div>div span {
 	font-size: 0.75em;
 	font-weight: 500;
 	color: #ffffff;
 	display: block;
 	line-height: 1;
 }
-.store-info .base-info > div > div span:first-of-type {
+
+.store-info .base-info>div>div span:first-of-type {
 	font-size: 1em;
 	font-weight: bold;
 	margin: 0.46875em 0;
 }
-.store-info .base-info > div > div span:last-of-type {
+
+.store-info .base-info>div>div span:last-of-type {
 	margin-top: 0.375em;
 }
-.store-info .base-info > i {
+
+.store-info .base-info>i {
 	width: 2.25em;
 	height: 2.25em;
 	background: url(../img/icon/db-right.png) no-repeat;
 	background-size: cover;
 }
+
 /******************* 商铺信息 END***********/
 
-/* 菜品分类管理 */
+/*********************** 菜品分类管理 ***************/
 .food-type-management {
-	padding: 3.125em 1.5625em;
+	padding: 1.5625em 0.78125em;
 }
+
 .food-type-management .list {
 	width: 100%;
 }
+
 .food-type-management .list div {
 	text-align: center;
 	width: 50%;
 	float: left;
 	margin-bottom: 0.625em;
-	padding: 0 0.9375em;
+	padding: 0 0.46875em;
 	position: relative;
 }
+
 .food-type-management .list div span {
 	display: block;
 	background-color: #fff;
 	line-height: 2.85715em;
 	border-radius: 100px;
-	margin-bottom: 0.71428em;
 	font-size: 0.875em;
 	font-weight: 500;
 	color: #444444;
@@ -428,7 +504,7 @@ input[type=file] {
 .food-type-management .list div i {
 	position: absolute;
 	top: -0.1875em;
-	right: 1em;
+	right: 0.375em;
 	display: block;
 	width: 1.03125em;
 	height: 1.03125em;
@@ -440,20 +516,54 @@ input[type=file] {
 	font-size: 0.75em;
 	font-weight: 500;
 	color: #898989;
-	padding-left: 2.9166667em;
+	padding-left: 1.0625em;
 	line-height: 1em;
-	margin:  0.833333em 0 0;
+	margin: 0.833333em 0 0;
 }
+
 .btn {
-	padding: 0 0.1875em;
+	padding: 0 0.1;
+	font-size: 0.9375em;
 }
+
 .btn-add-type {
 	display: block;
 	width: 100%;
-	font-size: 0.9375em;
 	background-color: #439aff;
 	border-radius: 100px;
 	text-align: center;
 	line-height: 2.73333333em;
-	margin-top: 3.06666667em;
+	margin-top: 1.40625em;
 }
+/*********************** 菜品分类管理 END***************/
+
+/******************** 更改店铺名 ***********************/
+	
+.change-info {
+	padding-top: 0.625em;
+}
+.change-info .mint-cell {
+	min-height: 2.5em;
+}
+.change-info .mint-cell-wrapper {
+	padding: 0 0.875em;
+}
+.change-info input {
+	font-size: 0.875em;
+	color: #282828;
+}
+.change-info .help-info {
+	font-size: 0.625em;
+	padding-left: 1.5em;
+}
+.change-info .btn {
+	padding: 0 0.875em;
+	margin-top: 1.40625em;
+}
+.change-info .btn button {
+	width: 100%;
+	font-size: 0.9375em;
+	font-weight: 500;
+	border-radius: 200px;
+}
+/******************** 更改店铺名 END***********************/
