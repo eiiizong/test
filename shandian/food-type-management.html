@@ -7,7 +7,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="author" content="" />
-		<title>商铺信息管理</title>
+		<title>菜品分类管理</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 		<!-- Bootstrap -->
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
@@ -22,25 +22,25 @@
 	<body>
 		<div id="app" v-cloak>
 
-			<!-- 问题： ？ -->
-			
+
+
 			<!-- 店铺基本信息 -->
-			<div class="store-info">
-				<a class="base-info" href="store-info-change.html">
-					<div>
-						<img src="static/img/head-portrait.jpg" >
-						<div>
-							<span>川道小炒</span>
-							<span>成都市青羊区牧电路23号</span>
-							<span>Tel：18482160080</span>
-						</div>
+			<div class="food-type-management">
+				<draggable class="list clearfix" v-model="myArray" :options="{group:'people'}" @start="drag=true" @end="drag=false">
+					<div v-for="item in myArray" :key="item.order">
+						<span>{{item.name}}</span>
+						<i class="icon-delete"></i>
 					</div>
-					<i class="db-right"></i>
-				</a>
-				
+				</draggable>
+				<p class="help-info">*长按拖动调整顺序</p>
+				<div class="btn">
+					<a href="#" class="btn-add-type">添加分类</a>
+				</div>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-		<script src="static/js/store-info.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.7.0/Sortable.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/2.15.0/vuedraggable.min.js"></script>
+		<script src="static/js/food-type-management.js"></script>
 	</body>
 </html>
