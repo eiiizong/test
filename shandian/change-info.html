@@ -20,9 +20,8 @@
 		<div id="app" v-cloak>
 			<!-- 店铺基本信息 -->
 			<div class="change-info">
-				<mt-field class=input"" type="text" v-model="changText"></mt-field>
-
-				<p class="help-info">*提交后将由管理平台审批,通过后自动更新(审批将于24小时内进行)。</p>
+				<mt-field class=input"" type="text" v-model="changText" ref="input"></mt-field>
+				<p class="hint">*提交后将由管理平台审批,通过后自动更新(审批将于24小时内进行)。</p>
 				<div class="btn">
 					<mt-button type="primary">提交</mt-button>
 				</div>

@@ -1,4 +1,5 @@
 
+
 var app = new Vue({
 	el: '#app',
 	data: function () {
@@ -6,12 +7,21 @@ var app = new Vue({
 			changText: '川道小炒',
 		}
 	},
+		
+	mounted: function () {
+		this.init();
+	},
 	methods: {
 		init: function () {
-			
+			this.onfocus();
+		},
+		onfocus: function () {
+			var input = this.$refs.input.$refs.input;
+			input.focus();
 		}
 	},
 	components: {
 		// draggable
 	}
 });
+

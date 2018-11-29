@@ -89,7 +89,6 @@ button,
 input {
 	overflow: visible;
 }
-
 button,
 select {
 	text-transform: none;
@@ -263,7 +262,18 @@ input::-moz-placeholder {
 input:-ms-input-placeholder {
 	color: #bababa;
 }
-
+input {
+	color: #282828;
+}
+button {
+	moz-user-select: -moz-none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 /****************清除浮动 ( 添加 clearfix 类名即可 )******************************/
 .clearfix {
 	*zoom: 1;
@@ -316,28 +326,32 @@ img {
 
 
 /******************* 偏好设置 ************/
-.checkbox-group {
+.preference {
 	padding-top: 0.625em;
+	font-weight: 500;
 }
 
+.checkbox-group {
+	padding-left: 0.875em;
+	background-color: #fff;
+}
 .checkbox-group label {
 	display: flex;
-	background-color: #fff;
 	justify-content: space-between;
 	align-items: center;
-	height: 42px;
+	min-height: 2.625em;
 	border-bottom: 1px solid #efeff4;
-	padding: 0 14px;
+	padding-right: 0.875em;
 }
 
 .checkbox-group label:last-of-type {
 	border-bottom: 0;
+	min-height: 2.5625em;
 }
 
 .checkbox-group label>span {
-	font-size: 14px;
+	font-size: 0.875em;
 	line-height: 1;
-	font-weight: 500;
 	color: #444444;
 }
 
@@ -566,7 +580,6 @@ img {
 
 .change-info .mint-cell {
 	min-height: 2.5em;
-	border-bottom: 1px solid #eaeaee;
 }
 
 .change-info .mint-cell-wrapper {
@@ -578,22 +591,31 @@ img {
 	color: #282828;
 }
 
-.change-info .help-info {
-	font-size: 0.625em;
-	padding-left: 1.5em;
-	margin-top: 0.6em;
+.change-info .hint {
+	font-size: 0.6875em;/*11*/
+	padding-left: 1.27272727em;
+	margin-top: 0.681818em;
+	line-height: 1.0454545em;
 }
 
 /* 按钮 */
 .btn {
-	padding: 1.4375em 0.875em;
+	padding: 1.40625em 0.875em;/* 22.5 14*/
 }
 
 .btn button {
 	width: 100%;
-	font-size: 0.9375em;
+	font-size: 0.9375em;/*15*/
 	font-weight: 500;
 	border-radius: 200px;
+	background-color: #439aff;
+	height: 2.7333333em;
+}
+.btn button:active {
+	background-color: #26a2ff;
+}
+.btn .mint-button::after {
+	background-color: transparent;
 }
 
 /******************** 更改店铺名 END***********************/
@@ -618,14 +640,18 @@ img {
 	padding: 0.5em 0.875em;
 	justify-content: space-between;
 }
-
+.verify-tel .get-code .btn {
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+}
 .verify-tel .get-code .mint-cell {
 	min-height: 3.125em;
 	border-radius: 0.625em;
 	flex: 1;
 }
 
-.verify-tel .get-code>button {
+.verify-tel .get-code .btn >button {
 	width: 8.3333333em;
 	height: 3.33333em;
 	border-radius: 0.625em;
@@ -633,18 +659,8 @@ img {
 	margin-left: 1.34375em;
 }
 
-.verify-tel .btn {
-	margin-top: 2.875em;
-}
-
-.verify-tel * {
-	moz-user-select: -moz-none;
-	-moz-user-select: none;
-	-o-user-select: none;
-	-khtml-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+.verify-tel > .btn {
+	padding-top: 2.875em;
 }
 
 /******************** 验证手机号 END***************************/
@@ -659,145 +675,63 @@ img {
 	border-top: 1px solid #eaeaee;
 	border-bottom: 1px solid #eaeaee;
 	background-color: #fff;
-	padding: 0 0.875em;
+	padding-left: 0.875em;
+}
+.add-food .cell.price {
+	border-top: 0;
 }
 
+/* 间距 添加space-top类名 */
 .add-food .cell.space-top {
 	margin-top: 0.5em;
 }
 
-.add-food .cell:first-of-type {
-	margin-top: 0;
-}
 
-.add-food .cell .cell-warpper {
+.add-food .cell-warpper {
 	color: #282828;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	min-height: 2.5em;
+	padding-right: 0.875em;
 }
-
-.add-food .cell .cell-warpper.border-b {
+.add-food .cell-warpper.border-b {
 	min-height: 2.5625em;
 	border-bottom: 1px solid #eaeaee;
 }
-
-.add-food .cell .cell-warpper>span {
+.add-food .cell-warpper .text-left {
 	flex: 1;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-}
-
-.add-food .cell .cell-warpper span span {
 	font-size: 0.875em;
 	line-height: 1;
 }
-
-.add-food .cell .cell-warpper span span.title {
-	margin-right: 0.89285em;
+.add-food .cell-warpper .text-left .title {
+	margin-right: 0.85714em;/*12*/
 }
-
-.add-food .cell .cell-warpper span span.title-hint {
+.add-food .cell-warpper .text-left .title-hint {
 	color: #bababa;
 }
-
-.add-food .cell .cell-warpper span span.value {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
+/* 输入框 */
+.add-food .cell-warpper .mint-cell {
+	flex: 1;
+	min-height: 2.85714em;
 }
-
-.add-food .cell .cell-warpper span span.value b {
-	padding: 0.363636em 0.818181em;
-	background-color: rgba(255, 214, 21, .4);
-	font-weight: 500;
-	margin-right: 0.454545em;
-	border-radius: 100px;
-	color: #5a5a5a;
-	font-size: 0.785714em;
+.add-food .cell-warpper .mint-cell-wrapper {
+	padding: 0;
 }
-
-.add-food .cell .cell-warpper span span.value b:last-of-type {
-	margin-right: 0;
+.add-food .cell-warpper .mint-cell-value input {
+	font-size: 0.875em;
 }
 
 
-
-.add-food .cell .cell-warpper i.icon-is-link-big {
+/* 向右箭头 */
+.add-food i.icon-is-link-big {
 	width: 0.5em;
 	height: 1em;
 	background: url(../img/icon/is-link-big.png) no-repeat;
 	background-size: cover;
-}
-
-
-.add-food .mint-cell {
-	min-height: 2.5em;
-}
-
-.add-food .mint-cell-wrapper {
-	padding: 0;
-}
-
-.add-food .mint-cell-title {
-	font-size: 0.875em;
-	width: auto;
-}
-
-.add-food .mint-cell-value {
-	padding-left: 0.78125em;
-}
-
-.add-food .mint-cell-value input {
-	font-size: 0.875em;
-}
-
-/* 图片 */
-.add-food .cell .cell-warpper.img {
-	justify-content: flex-start;
-	align-items: center;
-	min-height: 8.75em;
-}
-
-.add-food .cell .cell-warpper.img>span {
-	flex: none;
-	min-height: 8.75em;
-	align-items: flex-start;
-	padding-top: 1em;
-}
-
-.add-food .cell .cell-warpper.img label>img {
-	width: 7.1875em;
-	height: 7.1875em;
-}
-
-.add-food .cell.price {
-	min-height: 41px;
-	border-top: 0;
-}
-
-.size-price {
-	padding: 0 0.875em;
-	background-color: #fff;
-}
-
-.size-price>div {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.size-price>.size-price-cell {
-	height: 41px;
-	border-bottom: 1px solid #eaeaee;
-
-}
-
-.size-price .size-price-cell>a {
-	flex: 1;
-	margin-right: 0.3125em;
 }
 
 .size-price>div>i {
@@ -807,31 +741,47 @@ img {
 	background-size: cover;
 }
 
-.size-price .add-more-size {
-	justify-content: center;
-	min-height: 40px;
+
+/* 图片 */
+
+.add-food .cell-warpper.img {
+	justify-content: flex-start;
+	min-height: 8.75em;
+}
+.add-food .cell-warpper.img .text-left{
+	flex: none;
+	align-items: flex-start;
+}
+.add-food .cell-warpper.img label {
+	width: 7.1875em;
+	height: 7.1875em;
+}
+.add-food .cell-warpper.img label img{
+	width: 100%;
+}
+/* pianhao */
+.add-food .cell .cell-warpper span.value {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
 }
 
-.size-price .add-more-size span {
-	margin-right: 8px;
-	font-size: 14px;
-	color: #439aff;
-	line-height: 1;
-	position: relative;
-	margin-right: 0;
+.add-food .cell .cell-warpper span.value b {
+	padding: 0.363636em 0.818181em;
+	background-color: rgba(255, 214, 21, .4);
+	font-weight: 500;
+	margin-right: 0.454545em;
+	border-radius: 100px;
+	color: #5a5a5a;
+	font-size: 0.785714em;
 }
 
-.size-price .add-more-size span::before {
-	display: inline-block;
-	content: '';
-	width: 12px;
-	height: 12px;
-	background: url(../img/icon/add-size.png) no-repeat;
-	background-size: cover;
-	position: relative;
-	top: 1px;
-	margin-right: 8px;
-}
+
+
+
+
+
+
 
 /****************************** 添加菜品 END****************/
 

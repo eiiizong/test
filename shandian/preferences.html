@@ -23,15 +23,16 @@
 		<div id="app" v-cloak>
 
 			<!-- 问题： ios 端点击有灰色背景？ -->
-
-			<div class="checkbox-group">
-				<label v-for="(item, index) in checkBoxData" :key="index">
-					<span>{{item.name}}</span>
-					<input type="checkbox" :value="item.value" :checked="item.checked" />
-					<div class="point">
-						<span></span>
-					</div>
-				</label>
+			<div class="preference">
+				<div class="checkbox-group">
+					<label v-for="(item, index) in checkBoxData" :key="index">
+						<span>{{item.name}}</span>
+						<input type="checkbox" :value="item.value" :checked="item.checked" />
+						<div class="point">
+							<span></span>
+						</div>
+					</label>
+				</div>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
