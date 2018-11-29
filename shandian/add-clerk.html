@@ -7,54 +7,25 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="author" content="" />
-		<title>闪点-商家端</title>
+		<title>添加店员</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 
 		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
 
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
-		<style type="text/css">
-			ul {
-				width: 300px;
-				margin: 0 auto;
-				padding-top: 50px;
-			}
-			a {
-				color: #444;
-				display: block;
-				padding: 10px;
-			}
-		</style>
+
 	</head>
 	<body>
 		<div id="app" v-cloak>
-			<ul>
-				<li>
-					<a href="change-info.html">编辑店名</a>
-				</li>
-				<li>
-					<a href="food-type-management.html">菜品分类管理</a>
-				</li>
-				<li>
-					<a href="preferences.html">偏好设置</a>
-				</li>
-				<li>
-					<a href="store-info.html">商铺信息管理</a>
-				</li>
-				<li>
-					<a href="store-info-change.html">商铺信息</a>
-				</li>
-				<li>
-					<a href="verify-tel.html">验证手机号码</a>
-				</li>
-				<li>
-					<a href="add-food.html">添加菜品</a>
-				</li>
-				<li>
-					<a href="add-clerk.html">添加店员</a>
-				</li>
-			</ul>
+			<div class="add-clerk">
+				<h3>请扫描下方的二维码进行添加</h3>
+				<p class="hint add-method">添加方法：未添加的店员使用微信扫一扫进行扫码</p>
+				<div class="QR-box">
+					<img src="static/img/add-food-img.jpg" >
+				</div>
+				<p class="hint">*二维码定时更新，请勿截屏，以免影响正常使用</p>
+			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
