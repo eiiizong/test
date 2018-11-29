@@ -7,31 +7,55 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="author" content="" />
-		<title>偏好设置</title>
+		<title>闪点-商家端</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
-		<!-- Bootstrap -->
-		<link rel="stylesheet" type="text/css" href="static/css/index.css"/>
-		
-		
-		<!--[if lt IE 9]>
-		  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
-		
+
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+
+		<style type="text/css">
+			ul {
+				width: 300px;
+				margin: 0 auto;
+				padding-top: 50px;
+			}
+			a {
+				color: #444;
+				display: block;
+				padding: 10px;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="app" v-cloak>
-			<div class="checkbox-group">
-				<label v-for="(item, index) in checkBoxData" :key="index">
-					<span>{{item.name}}</span>
-					<input type="checkbox"  :value="item.value" :checked="item.checked" />
-					<div class="point">
-						<span></span>
-					</div>
-				</label>
-			</div>
+			<ul>
+				<li>
+					<a href="change-info.html">编辑店名</a>
+				</li>
+				<li>
+					<a href="food-type-management.html">菜品分类管理</a>
+				</li>
+				<li>
+					<a href="preferences.html">偏好设置</a>
+				</li>
+				<li>
+					<a href="store-info.html">商铺信息管理</a>
+				</li>
+				<li>
+					<a href="store-info-change.html">商铺信息</a>
+				</li>
+				<li>
+					<a href="verify-tel.html">验证手机号码</a>
+				</li>
+				<li>
+					<a href="add-food.html">添加菜品</a>
+				</li>
+			</ul>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-		<script src="static/js/preferences.js"></script>
+		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+
+		<script src="static/js/change-info.js"></script>
 	</body>
 </html>
