@@ -688,24 +688,24 @@ img {
 	font-weight: 500;
 }
 
-.add-food .cell {
+.cell {
 	border-top: 1px solid #eaeaee;
 	border-bottom: 1px solid #eaeaee;
 	background-color: #fff;
 	padding-left: 0.875em;
 }
 
-.add-food .cell.price {
+.cell.price {
 	border-top: 0;
 }
 
 /* 间距 添加space-top类名 */
-.add-food .cell.space-top {
+.cell.space-top {
 	margin-top: 0.5em;
 }
 
 
-.add-food .cell-warpper {
+.cell-warpper {
 	color: #282828;
 	display: flex;
 	justify-content: space-between;
@@ -714,12 +714,12 @@ img {
 	padding-right: 0.875em;
 }
 
-.add-food .cell-warpper.border-b {
+.cell-warpper.border-b {
 	min-height: 2.5625em;
 	border-bottom: 1px solid #eaeaee;
 }
 
-.add-food .cell-warpper .text-left {
+.cell-warpper .text-left {
 	flex: 1;
 	display: flex;
 	align-items: center;
@@ -728,26 +728,26 @@ img {
 	line-height: 1;
 }
 
-.add-food .cell-warpper .text-left .title {
+.cell-warpper .text-left .title {
 	margin-right: 0.85714em;
 	/*12*/
 }
 
-.add-food .cell-warpper .text-left .title-hint {
+.cell-warpper .text-left .title-hint {
 	color: #bababa;
 }
 
 /* 输入框 */
-.add-food .cell-warpper .mint-cell {
+.cell-warpper .mint-cell {
 	flex: 1;
 	min-height: 2.857142857em;
 }
 
-.add-food .cell-warpper .mint-cell-wrapper {
+.cell-warpper .mint-cell-wrapper {
 	padding: 0;
 }
 
-.add-food .cell-warpper .mint-cell-value input {
+.cell-warpper .mint-cell-value input {
 	font-size: 0.875em;
 }
 
@@ -920,6 +920,9 @@ img {
 	justify-content: space-between;
 	overflow: hidden;
 	font-weight: 500;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 .food-type .content {
@@ -1182,4 +1185,13 @@ img {
 .fade-enter,
 .fade-leave-to {
 	opacity: 0;
+}
+
+
+/* 设置营业时间 */
+.set-work-time {
+	padding-top: 0.625em;
+}
+.set-work-time .cell {
+	border: 0;
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>设置营业时间</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+
+
+		<!--[if lt IE 9]>
+		  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<!-- 店铺基本信息 -->
+			<div class="set-work-time">
+				<div class="cell">
+					<div class="cell-warpper">
+						<span class="text-left">
+							<span class="title">时间段1</span>
+							<mt-field type="text" v-model="price" placeholder="输入价格"></mt-field>
+						</span>
+					</div>
+				</div>
+				<button @click="open">111212</button>
+				<div>
+					<mt-datetime-picker ref="picker" v-model="pickerVisible" type="time" hour-format="{value} 时" minute-format="{value} 分">
+					</mt-datetime-picker>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		<script src="static/js/set-work-time.js"></script>
+	</body>
+</html>
