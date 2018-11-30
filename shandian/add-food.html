@@ -43,39 +43,44 @@
 						<span class="text-left">
 							<span class="title">是否添加规格</span>
 						</span>
-						<mt-switch v-model="standard"></mt-switch>
+						<mt-switch v-model="isAddStandard"></mt-switch>
 					</div>
 				</div>
 				
 				
 				
 				<!-- 价格 -->
-				<div class="cell price" v-show="!standard">
+				<div class="cell price" v-show="!isAddStandard">
 					<div class="cell-warpper">
 						<span class="text-left">
 							<span class="title">价格</span>
 							<mt-field type="text" v-model="price" placeholder="输入价格"></mt-field>
 						</span>
 					</div>
-					
 				</div>
 				
 				<!-- 规格 价格 -->
-				<!-- <div class="size-price" v-show="standard">
-					<div class="size-price-cell">
-						<mt-field class="input" label="规格" type="text" v-model="size" placeholder="例:大\/中\/小"></mt-field>
-						<mt-field class="input" label="价格" type="number" v-model="sizePrice" placeholder="输入价格"></mt-field>
-						<i class="size-delete"></i>
+				<div class="size-price" v-show="isAddStandard">
+					<div class="cell" v-for="(item, index) in sizePrices" :key="index">
+						<div class="cell-warpper">
+							<span class="text-left">
+								<span class="title">规格</span>
+								<mt-field type="text" v-model="item.size" placeholder="例:大\/中\/小"></mt-field>
+							</span>
+							<span class="text-left">
+								<span class="title">价格</span>
+								<mt-field type="number" v-model="item.price" placeholder="输入价格"></mt-field>
+							</span>
+							<i class="size-delete" @click="deleteSize" :id="item.id"></i>
+						</div>
 					</div>
-					<div class="size-price-cell">
-						<mt-field class="input" label="规格" type="text" v-model="size" placeholder="例:大\/中\/小"></mt-field>
-						<mt-field class="input" label="价格" type="number" v-model="sizePrice" placeholder="输入价格"></mt-field>
-						<i class="size-delete"></i>
+					<div class="cell add-size" @click="addSize">
+						<div class="cell-warpper">
+							<p>添加规格</p>
+						</div>
 					</div>
-					<div class="add-more-size">
-						<span>添加规格</span>
-					</div>
-				</div> -->
+				</div>
+				
 
 				<!-- 偏好 -->
 				<div class="cell space-top">
@@ -98,7 +103,7 @@
 					<div class="cell-warpper border-b">
 						<span class="text-left">
 							<span class="title">单位</span>
-							<mt-field class="input-text" type="text" v-model="foodDW" placeholder="菜品单位"></mt-field>
+							<mt-field type="text" v-model="foodUnit" placeholder="菜品单位"></mt-field>
 						</span>
 					</div>
 					<div class="cell-warpper border-b">

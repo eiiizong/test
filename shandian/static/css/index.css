@@ -274,6 +274,10 @@ button {
 	-ms-user-select: none;
 	user-select: none;
 }
+.mint-cell-wrapper,
+.mint-cell:last-child {
+	background-image: none;
+}
 /****************清除浮动 ( 添加 clearfix 类名即可 )******************************/
 .clearfix {
 	*zoom: 1;
@@ -716,7 +720,7 @@ img {
 /* 输入框 */
 .add-food .cell-warpper .mint-cell {
 	flex: 1;
-	min-height: 2.85714em;
+	min-height: 2.857142857em;
 }
 .add-food .cell-warpper .mint-cell-wrapper {
 	padding: 0;
@@ -724,8 +728,43 @@ img {
 .add-food .cell-warpper .mint-cell-value input {
 	font-size: 0.875em;
 }
-
-
+/* 规格 */
+.add-food  .size-price .cell{
+	border-top: 0;
+}
+.add-food  .size-price .cell-warpper{
+	border-top: 0;
+}
+.add-food  .size-price .cell-warpper .text-left {
+	margin-right: 5px;
+}
+.add-food  .size-price .cell-warpper i.size-delete {
+	width: 0.78125em;
+	height: 0.84375em;
+	background: url(../img/icon/size-delete.png) no-repeat;
+	background-size: cover;
+}
+/* 添加规格 */
+.add-food  .size-price .add-size .cell-warpper {
+	justify-content: center;
+}
+.add-food  .size-price .add-size p {
+	margin: 0;
+	font-size: 0.875em;
+	color: #439aff;
+	line-height: 1;
+}
+.add-food  .size-price .add-size p:before {
+	content: '';
+	display: inline-block;
+	width: 0.857142857em;
+	height: 0.857142857em;
+	background: url(../img/icon/add-size.png) no-repeat;
+	background-size: cover;
+	position: relative;
+	top: 1px;
+	margin-right: 0.57142857em;
+}
 /* 向右箭头 */
 .add-food i.icon-is-link-big {
 	width: 0.5em;
@@ -734,12 +773,6 @@ img {
 	background-size: cover;
 }
 
-.size-price>div>i {
-	width: 0.78125em;
-	height: 0.84375em;
-	background: url(../img/icon/size-delete.png) no-repeat;
-	background-size: cover;
-}
 
 
 /* 图片 */
@@ -747,10 +780,13 @@ img {
 .add-food .cell-warpper.img {
 	justify-content: flex-start;
 	min-height: 8.75em;
+	position: relative;
 }
 .add-food .cell-warpper.img .text-left{
 	flex: none;
-	align-items: flex-start;
+	display: block;
+	position: relative;
+	min-height: 8.214285em;
 }
 .add-food .cell-warpper.img label {
 	width: 7.1875em;
