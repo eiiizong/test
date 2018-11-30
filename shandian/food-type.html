@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>菜品分类管理</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+
+
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<!-- 店铺基本信息 -->
+			<div class="food-type">
+				<div class="content">
+					<div class="top">
+						<div class="banner">
+							<img src="static/img/banner-01.jpg">
+						</div>
+						<div class="btn">
+							<a href="food-type-management.html">
+								<i></i>
+								<span>菜单分类管理</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="bottom">
+						<div class="menu">
+							<ul>
+								<li v-for="(item, index) in menus" :key="index">
+									<i :class="item.iconClassName" v-if="item.icon"></i>
+									<span>{{item.name}}</span>
+								</li>
+							</ul>
+						</div>
+						<div class="food-box">
+							<div class="go-all btn">
+								<button>全部上架</button>
+							</div>
+							<div class="foods">
+								<ul>
+									<li>
+										<img src="static/img/order-detail.jpg">
+										<div class="food-detail">
+											<div class="food-name">川道口碑红油脆</div>
+											<div class="food-desc">脆皮鸭的分支北</div>
+											<div class="food-handle">
+												<div class="checkbox-group">
+													<label>
+														<span>推荐</span>
+														<input type="checkbox" />
+														<div class="point">
+															<span></span>
+														</div>
+													</label>
+												</div>
+												<div class="checkbox-group">
+													<label>
+														<span>上架</span>
+														<input type="checkbox" />
+														<div class="point">
+															<span></span>
+														</div>
+													</label>
+												</div>
+											</div>
+											<div class="food-price">
+												<span>24</span>
+												<div>编辑</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<img src="static/img/order-detail.jpg">
+										<div class="food-detail">
+											<div class="food-name">川道口碑红油脆</div>
+											<div class="food-desc">脆皮鸭的分支北</div>
+											<div class="food-handle">
+												<div class="checkbox-group">
+													<label>
+														<span>推荐</span>
+														<input type="checkbox" />
+														<div class="point">
+															<span></span>
+														</div>
+													</label>
+												</div>
+												<div class="checkbox-group">
+													<label>
+														<span>上架</span>
+														<input type="checkbox" />
+														<div class="point">
+															<span></span>
+														</div>
+													</label>
+												</div>
+											</div>
+											<div class="food-price">
+												<span>24</span>
+												<div>编辑</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<img src="static/img/order-detail.jpg">
+										<div class="food-detail">
+											<div class="food-name">川道口碑红油脆</div>
+											<div class="food-desc">脆皮鸭的分支北</div>
+											<div class="food-handle">
+												<div class="checkbox-group">
+													<label>
+														<span>推荐</span>
+														<input type="checkbox" />
+														<div class="point">
+															<span></span>
+														</div>
+													</label>
+												</div>
+												<div class="checkbox-group">
+													<label>
+														<span>上架</span>
+														<input type="checkbox" />
+														<div class="point">
+															<span></span>
+														</div>
+													</label>
+												</div>
+											</div>
+											<div class="food-price">
+												<span>24</span>
+												<div>编辑</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<img src="static/img/order-detail.jpg">
+										<div class="food-detail">
+											<div class="food-name">川道口碑红油脆</div>
+											<div class="food-desc">脆皮鸭的分支北</div>
+											<div class="food-handle">
+												<div class="checkbox-group">
+													<label>
+														<span>推荐</span>
+														<input type="checkbox" />
+														<div class="point">
+															<span></span>
+														</div>
+													</label>
+												</div>
+												<div class="checkbox-group">
+													<label>
+														<span>上架</span>
+														<input type="checkbox" />
+														<div class="point">
+															<span></span>
+														</div>
+													</label>
+												</div>
+											</div>
+											<div class="food-price">
+												<span>24</span>
+												<div>编辑</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<img src="static/img/order-detail.jpg">
+										<div class="food-detail">
+											<div class="food-name">川道口碑红油脆</div>
+											<div class="food-desc">脆皮鸭的分支北</div>
+											<div class="food-handle">
+												<div class="checkbox-group">
+													<label>
+														<span>推荐</span>
+														<input type="checkbox" />
+														<div class="point">
+															<span></span>
+														</div>
+													</label>
+												</div>
+												<div class="checkbox-group">
+													<label>
+														<span>上架</span>
+														<input type="checkbox" />
+														<div class="point">
+															<span></span>
+														</div>
+													</label>
+												</div>
+											</div>
+											<div class="food-price">
+												<span>24</span>
+												<div>编辑</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<img src="static/img/order-detail.jpg">
+										<div class="food-detail">
+											<div class="food-name">川道口碑红油脆</div>
+											<div class="food-desc">脆皮鸭的分支北</div>
+											<div class="food-handle">
+												<div class="checkbox-group">
+													<label>
+														<span>推荐</span>
+														<input type="checkbox" />
+														<div class="point">
+															<span></span>
+														</div>
+													</label>
+												</div>
+												<div class="checkbox-group">
+													<label>
+														<span>上架</span>
+														<input type="checkbox" />
+														<div class="point">
+															<span></span>
+														</div>
+													</label>
+												</div>
+											</div>
+											<div class="food-price">
+												<span>24</span>
+												<div>编辑</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+
+								<div class="btn add-food">
+									<a href="add-food.html">添加菜品</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-nav">
+
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src="static/js/food-type.js"></script>
+	</body>
+</html>

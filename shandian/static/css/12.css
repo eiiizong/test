@@ -1,0 +1,130 @@
+.add-food .cell .cell-warpper.border-b {
+	min-height: 2.5625em;
+	border-bottom: 1px solid #eaeaee;
+}
+
+.add-food .cell .cell-warpper>span {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.add-food .cell .cell-warpper span span {
+	font-size: 0.875em;
+	line-height: 1;
+}
+
+.add-food .cell .cell-warpper span span.title {
+	margin-right: 0.89285em;
+}
+
+.add-food .cell .cell-warpper span span.title-hint {
+	color: #bababa;
+}
+
+
+
+.add-food .cell .cell-warpper span span.value b:last-of-type {
+	margin-right: 0;
+}
+
+
+
+
+
+
+.add-food .mint-cell {
+	min-height: 2.5em;
+}
+
+.add-food .mint-cell-wrapper {
+	padding: 0;
+}
+
+.add-food .mint-cell-title {
+	font-size: 0.875em;
+	width: auto;
+}
+
+.add-food .mint-cell-value {
+	padding-left: 0.78125em;
+}
+
+.add-food .mint-cell-value input {
+	font-size: 0.875em;
+}
+
+/* 图片 */
+.add-food .cell .cell-warpper.img {
+	justify-content: flex-start;
+	align-items: center;
+	min-height: 8.75em;
+}
+
+.add-food .cell .cell-warpper.img>span {
+	flex: none;
+	min-height: 8.75em;
+	align-items: flex-start;
+	padding-top: 1em;
+}
+
+.add-food .cell .cell-warpper.img label>img {
+	width: 7.1875em;
+	height: 7.1875em;
+}
+
+.add-food .cell.price {
+	min-height: 41px;
+	border-top: 0;
+}
+
+.size-price {
+	padding: 0 0.875em;
+	background-color: #fff;
+}
+
+.size-price>div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.size-price>.size-price-cell {
+	height: 41px;
+	border-bottom: 1px solid #eaeaee;
+
+}
+
+.size-price .size-price-cell>a {
+	flex: 1;
+	margin-right: 0.3125em;
+}
+
+
+
+.size-price .add-more-size {
+	justify-content: center;
+	min-height: 40px;
+}
+
+.size-price .add-more-size span {
+	margin-right: 8px;
+	font-size: 14px;
+	color: #439aff;
+	line-height: 1;
+	position: relative;
+	margin-right: 0;
+}
+
+.size-price .add-more-size span::before {
+	display: inline-block;
+	content: '';
+	width: 12px;
+	height: 12px;
+	background: url(../img/icon/add-size.png) no-repeat;
+	background-size: cover;
+	position: relative;
+	top: 1px;
+	margin-right: 8px;
+}
