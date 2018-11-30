@@ -46,41 +46,45 @@
 						<mt-switch v-model="isAddStandard"></mt-switch>
 					</div>
 				</div>
-				
-				
-				
 				<!-- 价格 -->
-				<div class="cell price" v-show="!isAddStandard">
-					<div class="cell-warpper">
-						<span class="text-left">
-							<span class="title">价格</span>
-							<mt-field type="text" v-model="price" placeholder="输入价格"></mt-field>
-						</span>
-					</div>
-				</div>
-				
-				<!-- 规格 价格 -->
-				<div class="size-price" v-show="isAddStandard">
-					<div class="cell" v-for="(item, index) in sizePrices" :key="index">
+				<transition name="fade">
+					<div class="cell price" v-show="!isAddStandard">
 						<div class="cell-warpper">
-							<span class="text-left">
-								<span class="title">规格</span>
-								<mt-field type="text" v-model="item.size" placeholder="例:大\/中\/小"></mt-field>
-							</span>
 							<span class="text-left">
 								<span class="title">价格</span>
-								<mt-field type="number" v-model="item.price" placeholder="输入价格"></mt-field>
+								<mt-field type="text" v-model="price" placeholder="输入价格"></mt-field>
 							</span>
-							<i class="size-delete" @click="deleteSize" :id="item.id"></i>
 						</div>
 					</div>
-					<div class="cell add-size" @click="addSize">
-						<div class="cell-warpper">
-							<p>添加规格</p>
+				</transition>
+				<!-- 规格 价格 -->
+
+				<transition name="fade">
+					<div class="size-price" v-show="isAddStandard">
+						<div class="cell" v-for="(item, index) in sizePrices" :key="index">
+							<div class="cell-warpper">
+								<span class="text-left">
+									<span class="title">规格</span>
+									<mt-field type="text" v-model="item.size" placeholder="例:大\/中\/小"></mt-field>
+								</span>
+								<span class="text-left">
+									<span class="title">价格</span>
+									<mt-field type="number" v-model="item.price" placeholder="输入价格"></mt-field>
+								</span>
+								<i class="size-delete" @click="deleteSize" :id="item.id"></i>
+							</div>
+						</div>
+						<div class="cell add-size" @click="addSize">
+							<div class="cell-warpper">
+								<p>添加规格</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				
+				</transition>
+
+
+
+
 
 				<!-- 偏好 -->
 				<div class="cell space-top">

@@ -34,7 +34,7 @@
 					<div class="bottom">
 						<div class="menu">
 							<ul>
-								<li v-for="(item, index) in menus" :key="index">
+								<li v-for="(item, index) in menus" :key="index" @click.stop="changeMenu(item,index)" :class="index==current? 'active':''">
 									<i :class="item.iconClassName" v-if="item.icon"></i>
 									<span>{{item.name}}</span>
 								</li>
@@ -42,20 +42,20 @@
 						</div>
 						<div class="food-box">
 							<div class="go-all btn">
-								<button>全部上架</button>
+								<button @click="allPutaway">全部上架</button>
 							</div>
 							<div class="foods">
 								<ul>
-									<li>
-										<img src="static/img/order-detail.jpg">
+									<li v-for="(item, index) in foods" :key="index">
+										<img :src="item.imgUrl">
 										<div class="food-detail">
-											<div class="food-name">川道口碑红油脆</div>
-											<div class="food-desc">脆皮鸭的分支北</div>
+											<div class="food-name">{{item.name}}</div>
+											<div class="food-desc">{{item.description}}</div>
 											<div class="food-handle">
 												<div class="checkbox-group">
 													<label>
 														<span>推荐</span>
-														<input type="checkbox" />
+														<input type="checkbox" v-model="item.isRecommend" :checked="item.isRecommend" />
 														<div class="point">
 															<span></span>
 														</div>
@@ -64,162 +64,7 @@
 												<div class="checkbox-group">
 													<label>
 														<span>上架</span>
-														<input type="checkbox" />
-														<div class="point">
-															<span></span>
-														</div>
-													</label>
-												</div>
-											</div>
-											<div class="food-price">
-												<span>24</span>
-												<div>编辑</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<img src="static/img/order-detail.jpg">
-										<div class="food-detail">
-											<div class="food-name">川道口碑红油脆</div>
-											<div class="food-desc">脆皮鸭的分支北</div>
-											<div class="food-handle">
-												<div class="checkbox-group">
-													<label>
-														<span>推荐</span>
-														<input type="checkbox" />
-														<div class="point">
-															<span></span>
-														</div>
-													</label>
-												</div>
-												<div class="checkbox-group">
-													<label>
-														<span>上架</span>
-														<input type="checkbox" />
-														<div class="point">
-															<span></span>
-														</div>
-													</label>
-												</div>
-											</div>
-											<div class="food-price">
-												<span>24</span>
-												<div>编辑</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<img src="static/img/order-detail.jpg">
-										<div class="food-detail">
-											<div class="food-name">川道口碑红油脆</div>
-											<div class="food-desc">脆皮鸭的分支北</div>
-											<div class="food-handle">
-												<div class="checkbox-group">
-													<label>
-														<span>推荐</span>
-														<input type="checkbox" />
-														<div class="point">
-															<span></span>
-														</div>
-													</label>
-												</div>
-												<div class="checkbox-group">
-													<label>
-														<span>上架</span>
-														<input type="checkbox" />
-														<div class="point">
-															<span></span>
-														</div>
-													</label>
-												</div>
-											</div>
-											<div class="food-price">
-												<span>24</span>
-												<div>编辑</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<img src="static/img/order-detail.jpg">
-										<div class="food-detail">
-											<div class="food-name">川道口碑红油脆</div>
-											<div class="food-desc">脆皮鸭的分支北</div>
-											<div class="food-handle">
-												<div class="checkbox-group">
-													<label>
-														<span>推荐</span>
-														<input type="checkbox" />
-														<div class="point">
-															<span></span>
-														</div>
-													</label>
-												</div>
-												<div class="checkbox-group">
-													<label>
-														<span>上架</span>
-														<input type="checkbox" />
-														<div class="point">
-															<span></span>
-														</div>
-													</label>
-												</div>
-											</div>
-											<div class="food-price">
-												<span>24</span>
-												<div>编辑</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<img src="static/img/order-detail.jpg">
-										<div class="food-detail">
-											<div class="food-name">川道口碑红油脆</div>
-											<div class="food-desc">脆皮鸭的分支北</div>
-											<div class="food-handle">
-												<div class="checkbox-group">
-													<label>
-														<span>推荐</span>
-														<input type="checkbox" />
-														<div class="point">
-															<span></span>
-														</div>
-													</label>
-												</div>
-												<div class="checkbox-group">
-													<label>
-														<span>上架</span>
-														<input type="checkbox" />
-														<div class="point">
-															<span></span>
-														</div>
-													</label>
-												</div>
-											</div>
-											<div class="food-price">
-												<span>24</span>
-												<div>编辑</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<img src="static/img/order-detail.jpg">
-										<div class="food-detail">
-											<div class="food-name">川道口碑红油脆</div>
-											<div class="food-desc">脆皮鸭的分支北</div>
-											<div class="food-handle">
-												<div class="checkbox-group">
-													<label>
-														<span>推荐</span>
-														<input type="checkbox" />
-														<div class="point">
-															<span></span>
-														</div>
-													</label>
-												</div>
-												<div class="checkbox-group">
-													<label>
-														<span>上架</span>
-														<input type="checkbox" />
+														<input type="checkbox" v-model="item.isPutAway" :checked="item.isPutAway" />
 														<div class="point">
 															<span></span>
 														</div>
