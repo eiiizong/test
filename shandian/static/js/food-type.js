@@ -66,7 +66,7 @@ var app = new Vue({
 			foods: [{
 					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
 					name: '川道口碑红油脆',
-					description: '脆皮鸭的分支北',
+					description: '脆皮鸭的分支北脆皮',
 					price: 22,
 					id: 0,
 					isRecommend: false,

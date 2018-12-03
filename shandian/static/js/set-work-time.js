@@ -5,6 +5,9 @@ var app = new Vue({
 		return {
 			pickerVisible: new Date().getTime(),
 			price: '',
+			workTimes: [
+				{ name: '时间段1', startTime: '1', endTime: ''},
+			]
 		} 
 	},
 	methods: {

@@ -266,9 +266,16 @@ input:-ms-input-placeholder {
 
 input {
 	color: #282828;
+	border: 0;
+	outline: 0;
 }
 
 button {
+	border: 0;
+	outline: 0;
+	padding: 0;
+	background-color: transparent;
+	/* 禁止选中文字 */
 	moz-user-select: -moz-none;
 	-moz-user-select: none;
 	-o-user-select: none;
@@ -464,7 +471,9 @@ img {
 
 
 /******************* 商铺信息***********/
-.store-info {}
+.store-info {
+	padding-bottom: 50px;
+}
 
 .store-info .base-info {
 	display: flex;
@@ -516,6 +525,258 @@ img {
 	height: 2.25em;
 	background: url(../img/icon/db-right.png) no-repeat;
 	background-size: cover;
+}
+
+/* 营业状态 */
+.fcfs {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.fcc {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fcsb {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* icon */
+i.icon {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+i.icon-work-status {
+	width: 15px;
+	height: 15px;
+	background-image: url(../img/icon/work-status@2x.png);
+	margin-right: 6px;
+}
+
+i.icon-clerk-management {
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/icon/clerk-management@2x.png);
+	margin-right: 6px;
+}
+
+i.icon-delete-red {
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/icon/delete.png);
+}
+
+i.icon-islink15 {
+	width: 15px;
+	height: 14px;
+	background-image: url(../img/icon/islink15.png);
+}
+
+i.icon-license-info {
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/icon/license-info@2x.png);
+	margin-right: 6px;
+}
+
+/* 头部标题 */
+.cell-title {
+	height: 34px;
+}
+
+.cell-title .left span {
+	font-size: 15px;
+	font-weight: bold;
+	color: #2a2a2a;
+	line-height: 1;
+}
+
+.cell-title .right a {
+	display: block;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1;
+	color: #2a2a2a;
+}
+
+.store-info .store-info-cell {
+	background-color: #fff;
+	padding: 0 14px;
+	margin-top: 10px;
+}
+
+.store-info .work-status {
+	margin-top: 0;
+}
+
+.store-info .work-status .content {
+	height: 91px;
+	padding-left: 20px;
+}
+
+.store-info .work-status .content .rest {
+	width: 78px;
+	height: 48px;
+}
+
+.store-info .work-status .content .set-handle a {
+	line-height: 1;
+	font-size: 12px;
+	font-weight: bold;
+	color: #439aff;
+	margin-right: 35px;
+}
+
+.store-info .work-status .content ..set-handle label {
+	color: #000;
+}
+
+.store-info .clerk-management {
+	background-color: #fff;
+	padding: 0 14px;
+}
+
+
+.store-info .clerk-management .btn-add-clerk {
+	display: block;
+	width: 45px;
+	height: 45px;
+	background-color: #439aff;
+	box-shadow: 0px 5px 13px 0px rgba(0, 118, 255, 0.44);
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 100%;
+	align-content: flex-start;
+}
+
+.store-info .clerk-management .content {
+	height: 92px;
+	align-items: flex-start;
+	padding-top: 11px;
+}
+
+.store-info .clerk-management ul {
+	padding-left: 10px;
+
+}
+
+.store-info .clerk-management ul li {
+	position: relative;
+	width: 65px;
+	flex-wrap: wrap;
+	margin-right: 5px;
+	align-items: flex-start;
+}
+
+.store-info .clerk-management ul li img {
+	display: block;
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+}
+
+.store-info .clerk-management ul li i {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.clerk-name {
+	font-size: 12px;
+	font-weight: 500;
+	color: #2a2a2a;
+	margin-top: 9px;
+}
+
+/* 提现管理 */
+.cash-management .content {
+	height: 177px;
+}
+
+.content .card {
+	flex: 1;
+	width: 100%;
+	height: 150px;
+	box-shadow: 0px 7px 19px 1px rgba(205, 205, 205, 0.5);
+	border-radius: 10px;
+}
+
+.content .card img {
+	width: 115px;
+	height: 150px;
+}
+
+.content .card .right {
+	padding: 15px 0 12px 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 150px;
+}
+
+.right .can-cash-money {
+	font-size: 15px;
+	font-weight: bold;
+	color: #2a2a2a;
+	line-height: 1;
+}
+
+.right .can-cash-money span {
+	color: #00e526;
+}
+
+.compare {
+	font-size: 12px;
+	font-weight: 500;
+	color: #2a2a2a;
+	line-height: 15px;
+}
+
+.right .apply-cash {
+	display: block;
+	width: 80px;
+	text-align: center;
+	line-height: 1;
+	font-size: 14px;
+	font-weight: 500;
+	color: #439aff;
+	border: solid 1px #439aff;
+	padding: 5px 0px;
+	border-radius: 100px;
+}
+
+
+.license-detail-info {
+	font-size: 12px;
+	font-weight: 500;
+	color: #2a2a2a;
+}
+
+.license-info .content {
+	height: 177px;
+}
+
+.license-detail-info p {
+	margin: 0;
+	line-height: 15px;
+}
+
+.license-detail-info p:last-child {
+	margin-top: 10px;
+}
+
+.license-detail-info span {
+	color: #e00000;
 }
 
 /******************* 商铺信息 END***********/
@@ -772,18 +1033,18 @@ img {
 }
 
 /* 添加规格 */
-.add-food .size-price .add-size .cell-warpper {
+.add-size .cell-warpper {
 	justify-content: center;
 }
 
-.add-food .size-price .add-size p {
+.add-size p {
 	margin: 0;
 	font-size: 0.875em;
 	color: #439aff;
 	line-height: 1;
 }
 
-.add-food .size-price .add-size p:before {
+.add-size p:before {
 	content: '';
 	display: inline-block;
 	width: 0.857142857em;
@@ -923,6 +1184,7 @@ img {
 	position: fixed;
 	top: 0;
 	left: 0;
+	padding-bottom: 50px;
 }
 
 .food-type .content {
@@ -981,11 +1243,15 @@ img {
 	background-color: #fff;
 	display: flex;
 	padding: 0 14px 0 6px;
+	position: relative;
 }
 
 .food-type .bottom .menu {
 	width: 77px;
 	margin-right: 10px;
+	/* position: absolute; */
+	top: 0;
+	left: 6px;
 }
 
 .food-type .bottom .menu ul {
@@ -1033,6 +1299,7 @@ img {
 }
 
 .food-type .bottom .food-box {
+	width: 100%;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
@@ -1055,14 +1322,18 @@ img {
 }
 
 .food-type .food-box .foods {
+	width: 100%;
 	flex: 1;
 	overflow: auto;
 	-webkit-overflow-scrolling: touch;
 }
 
-.food-type .foods ul {}
+.food-type .foods ul {
+	width: 100%;
+}
 
 .food-type .foods li {
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 20px;
@@ -1095,9 +1366,13 @@ img {
 }
 
 .food-desc {
+	max-width: 100%;
 	font-size: 10px;
 	color: #929292;
 	margin-top: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .food-handle {
@@ -1168,11 +1443,7 @@ img {
 }
 
 
-/* 底部导航 */
-.food-type .footer-nav {
-	height: 50px;
-	background-color: #f0f;
-}
+
 
 /************************* 菜品分类END ****************/
 
@@ -1190,8 +1461,150 @@ img {
 
 /* 设置营业时间 */
 .set-work-time {
+	width: 100%;
+	height: 100%;
 	padding-top: 0.625em;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
+
 .set-work-time .cell {
 	border: 0;
+}
+
+/* 底部导航 */
+.footer-nav {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	height: 0;
+	height: 50px;
+	background-color: #fff;
+	border-top: 1px solid #f1f1f1;
+}
+.footer-nav .item {
+	display: flex;
+	width: 25%;
+	text-align: center;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.footer-nav .item span {
+	display: block;
+	width: 100%;
+	font-size: 10px;
+	color: #3c3c3c;
+	text-align: center;
+}
+.footer-nav .item.active span {
+	color: #439aff;
+}
+.footer-nav .item i {
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin-bottom: 5px;
+}
+.footer-nav .item i.icon-nav-order-list {
+	background-image: url(../img/icon/order-list@2x.png);
+}
+.footer-nav .item.active i.icon-nav-order-list {
+	background-image: url(../img/icon/order-list-active@2x.png);
+}
+.footer-nav .item i.icon-nav-type {
+	background-image: url(../img/icon/type@2x.png);
+}
+.footer-nav .item.active i.icon-nav-type {
+	background-image: url(../img/icon/type-active@2x.png);
+}
+.footer-nav .item i.icon-nav-total{
+	background-image: url(../img/icon/sale@2x.png);
+}
+.footer-nav .item.active i.icon-nav-total{
+	background-image: url(../img/icon/sale-active@2x.png);
+}
+.footer-nav .item i.icon-nav-storeInfo {
+	background-image: url(../img/icon/store-info@2x.png);
+}
+.footer-nav .item.active i.icon-nav-storeInfo {
+	background-image: url(../img/icon/store-info-active@2x.png);
+}
+
+/* 收益记录 */
+.gain-recording {
+	
+}
+.gain-recording .choice-deta {
+	height: 50px;
+	padding: 0 16px 0 14px;
+}
+.gain-recording .choice-deta div span{
+	display: block;
+	font-size: 11px;
+	font-weight: 500;
+	color: #9a9a9a;
+	line-height: 1;
+}
+.gain-recording .choice-deta div span:first-child{
+	font-size: 13px;
+	font-weight: bold;
+	color: #222;
+	line-height: 1;
+	margin-bottom: 8px;
+}
+.gain-recording .content{
+	background-color: #fff;
+	padding: 0 14px;
+}
+i.icon-gain-deta {
+	width: 18px;
+	height: 16px;
+	background-image: url(../img/icon/gain-deta.png);
+}
+.gain-card {
+	height: 86px;
+	border-bottom: 1px solid #ededed;
+}
+.gain-card:last-of-type {
+	border-bottom: 0;
+}
+.gain-card .user-header {
+	height: 40px;
+	width: 40px;
+	overflow: hidden;
+}
+.gain-card .user-header img {
+	border-radius: 50%;
+}
+.gain-card .detail {
+	flex: 1;
+	padding-left: 13px;
+	/* background-color: #f00; */
+}
+.gain-card .detail .take-food-num {
+	font-size: 14px;
+	font-weight: bold;
+	color: #282828;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+.gain-card .detail .take-food-man {
+	font-size: 11px;
+	font-weight: 500;
+	color: #282828;
+	line-height: 1;
+	margin-left: -6px;
+	margin-bottom: 12px;
+}
+.gain-card .detail .take-food-time {
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 1;
+	color: #9a9a9a;
+}
+i.icon-dai {
+	width: 18px;
+	height: 15px;
+	background-image: url(../img/icon/dai@2x.png);
 }

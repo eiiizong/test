@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>添加店员</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+
+
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<div class="order-list">
+				<!-- 搜索 -->
+				<div class="serarch-order">
+					
+				</div>
+				
+				<div class="order-card">
+					<div class="take-food-num">
+						<span>取餐号：236</span>
+						<i class="icon icon-replace-order"></i>
+					</div>
+					<div class="seat-num">
+						<span>座位号：3</span>
+					</div>
+					
+					<div class="order-food-detail">
+						<span>川道口碑脆皮鸭</span>
+						<div>
+							<span class="size">中</span>
+							<span class="num">×1</span>
+							<span class="price">¥24</span>
+						</div>
+					</div>
+					
+					<div class="total">
+						<span>总计</span>
+						<div>
+							<span class="num">2</span>
+							<span class="price">¥24</span>
+						</div>
+					</div>
+					<div class="ordering-time">
+						<span>下单时间:2018-11-07 12:18</span>
+					</div>
+					
+					<div class="btn">
+						<button type="button">重新出票</button>
+						<button type="button">查看详情</button>
+					</div>
+				</div>
+				
+				<!-- 代点餐 -->
+				
+				<!-- 底部导航 -->
+				<div class="footer-nav fcfs">
+					<a class="item order-list active" href="order-list.html">
+						<i class="icon icon-nav-order-list"></i>
+						<span>订单列表</span>
+					</a>
+					<a class="item order-list" href="food-type.html">
+						<i class="icon icon-nav-type"></i>
+						<span>菜品分类</span>
+					</a>
+					<a class="item order-list" href="#">
+						<i class="icon icon-nav-total"></i>
+						<span>销售统计</span>
+					</a>
+					<a class="item order-list" href="store-info.html">
+						<i class="icon icon-nav-storeInfo"></i>
+						<span>商铺信息</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+
+		<script src="static/js/add-clerk.js"></script>
+	</body>
+</html>

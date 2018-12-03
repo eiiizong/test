@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>收益记录</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+
+
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<div class="gain-recording">
+				<div class="choice-deta fcsb">
+					<div>
+						<span>{{deta}}</span>
+						<span>本月收入¥ {{totalSale}}</span>
+					</div>
+					<i class="icon icon-gain-deta" @click="openPicker"></i>
+				</div>
+				<div class="content">
+					<div class="gain-card fcfs" v-for="(item, index) in orderList" :key="index">
+						<div class="user-header">
+							<img :src="item.imgUrl">
+						</div>
+						<div class="detail">
+							<div class="fcsb take-food-num">
+								<span>取餐号：{{item.orderNum}}</span>
+								<span>+ {{item.foodPrice}}</span>
+							</div>
+							<div class="fcsb take-food-man">【点餐人：{{item.orderPeople}}】</div>
+							<div class="fcsb take-food-time">
+								<span>{{item.orderTime}}</span>
+								<i class="icon icon-dai" v-if="item.isHelpOrder"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<mt-datetime-picker ref="picker" type="date" v-model="pickerValue" year-format="{value} 年"
+  month-format="{value} 月" @confirm="handleConfirm">
+				</mt-datetime-picker>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+
+		<script src="static/js/gain-recording.js"></script>
+	</body>
+</html>
