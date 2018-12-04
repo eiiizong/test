@@ -7,36 +7,32 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="author" content="" />
-		<title>验证手机号码</title>
+		<title>绑定银行卡</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 
 		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
 
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
+
 	</head>
 	<body>
 		<div id="app" v-cloak>
-			<!-- 店铺基本信息 -->
-			<div class="verify-tel">
-				<p class="hint">绑定银行卡需要短信确认，验证码已发送至手机：177****8316，请按操作提示。</p>
-				<div class="get-code">
-					<mt-field  type="text" v-model="code"></mt-field>
-					<div class="btn">
-						<mt-button type="primary" :disabled="!canClick" @click="clickBtn">
-							<span v-if="canClick">获取验证码</span>
-							<span v-else>重新获取({{number}}s)</span>
-						</mt-button>
+			<div class="bind-bank-card">
+				<div class="bind-bank-card-item">
+					<p class="hint">请绑定持卡人本人的银行卡</p>
+					<div class="user-input">
+						<mt-field label="持卡人" type="text" v-model="cardHolder"></mt-field>
+						<mt-field label="卡号" type="number" v-model="cardNumber"></mt-field>
 					</div>
 				</div>
-				
-				<div class="btn">
-					<mt-button type="primary">确定</mt-button>
+				<div class="btn-box">
+					<a class="full-btn" href="bind-bank-card2.html">下一步</a>
 				</div>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
-		<script src="static/js/verify-tel.js"></script>
+		<script src="static/js/bind-bank-card.js"></script>
 	</body>
 </html>

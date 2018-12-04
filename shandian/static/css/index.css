@@ -268,12 +268,19 @@ input {
 	color: #282828;
 	border: 0;
 	outline: 0;
+	
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 button {
 	border: 0;
 	outline: 0;
 	padding: 0;
+	font-weight: 500;
 	background-color: transparent;
 	/* 禁止选中文字 */
 	moz-user-select: -moz-none;
@@ -1483,6 +1490,7 @@ i.icon-license-info {
 	background-color: #fff;
 	border-top: 1px solid #f1f1f1;
 }
+
 .footer-nav .item {
 	display: flex;
 	width: 25%;
@@ -1490,6 +1498,7 @@ i.icon-license-info {
 	flex-wrap: wrap;
 	justify-content: center;
 }
+
 .footer-nav .item span {
 	display: block;
 	width: 100%;
@@ -1497,91 +1506,110 @@ i.icon-license-info {
 	color: #3c3c3c;
 	text-align: center;
 }
+
 .footer-nav .item.active span {
 	color: #439aff;
 }
+
 .footer-nav .item i {
 	display: block;
 	width: 22px;
 	height: 22px;
 	margin-bottom: 5px;
 }
+
 .footer-nav .item i.icon-nav-order-list {
 	background-image: url(../img/icon/order-list@2x.png);
 }
+
 .footer-nav .item.active i.icon-nav-order-list {
 	background-image: url(../img/icon/order-list-active@2x.png);
 }
+
 .footer-nav .item i.icon-nav-type {
 	background-image: url(../img/icon/type@2x.png);
 }
+
 .footer-nav .item.active i.icon-nav-type {
 	background-image: url(../img/icon/type-active@2x.png);
 }
-.footer-nav .item i.icon-nav-total{
+
+.footer-nav .item i.icon-nav-total {
 	background-image: url(../img/icon/sale@2x.png);
 }
-.footer-nav .item.active i.icon-nav-total{
+
+.footer-nav .item.active i.icon-nav-total {
 	background-image: url(../img/icon/sale-active@2x.png);
 }
+
 .footer-nav .item i.icon-nav-storeInfo {
 	background-image: url(../img/icon/store-info@2x.png);
 }
+
 .footer-nav .item.active i.icon-nav-storeInfo {
 	background-image: url(../img/icon/store-info-active@2x.png);
 }
 
 /* 收益记录 */
-.gain-recording {
-	
-}
+.gain-recording {}
+
 .gain-recording .choice-deta {
 	height: 50px;
 	padding: 0 16px 0 14px;
 }
-.gain-recording .choice-deta div span{
+
+.gain-recording .choice-deta div span {
 	display: block;
 	font-size: 11px;
 	font-weight: 500;
 	color: #9a9a9a;
 	line-height: 1;
 }
-.gain-recording .choice-deta div span:first-child{
+
+.gain-recording .choice-deta div span:first-child {
 	font-size: 13px;
 	font-weight: bold;
 	color: #222;
 	line-height: 1;
 	margin-bottom: 8px;
 }
-.gain-recording .content{
+
+.gain-recording .content {
 	background-color: #fff;
 	padding: 0 14px;
 }
+
 i.icon-gain-deta {
 	width: 18px;
 	height: 16px;
 	background-image: url(../img/icon/gain-deta.png);
 }
+
 .gain-card {
 	height: 86px;
 	border-bottom: 1px solid #ededed;
 }
+
 .gain-card:last-of-type {
 	border-bottom: 0;
 }
+
 .gain-card .user-header {
 	height: 40px;
 	width: 40px;
 	overflow: hidden;
 }
+
 .gain-card .user-header img {
 	border-radius: 50%;
 }
+
 .gain-card .detail {
 	flex: 1;
 	padding-left: 13px;
 	/* background-color: #f00; */
 }
+
 .gain-card .detail .take-food-num {
 	font-size: 14px;
 	font-weight: bold;
@@ -1589,6 +1617,7 @@ i.icon-gain-deta {
 	line-height: 1;
 	margin-bottom: 10px;
 }
+
 .gain-card .detail .take-food-man {
 	font-size: 11px;
 	font-weight: 500;
@@ -1597,14 +1626,332 @@ i.icon-gain-deta {
 	margin-left: -6px;
 	margin-bottom: 12px;
 }
+
 .gain-card .detail .take-food-time {
 	font-size: 11px;
 	font-weight: 500;
 	line-height: 1;
 	color: #9a9a9a;
 }
+
 i.icon-dai {
 	width: 18px;
 	height: 15px;
 	background-image: url(../img/icon/dai@2x.png);
+}
+
+
+
+/* 2018-12-04 新开 */
+/********************************************绑定银行卡**************/
+
+.bind-bank-card-item {
+	padding-top: 1.25em;
+	font-weight: 500;
+}
+
+.bind-bank-card-item .hint {
+	color: #7b7b7b;
+	font-size: .875em;
+	line-height: 1.64285714em;
+	padding: 0 1em;
+}
+
+.user-input {
+	border-top: 1px solid #eaeaee;
+	border-bottom: 1px solid #eaeaee;
+	padding-left: .875em;
+	background-color: #fff;
+}
+
+.user-input .mint-cell {
+	border-top: 1px solid #eaeaee;
+	min-height: 2.5em;
+	padding-right: .875em;
+}
+
+.user-input .mint-cell:first-of-type {
+	border-top: 0;
+}
+
+.user-input .mint-cell-wrapper {
+	padding: 0;
+}
+
+.user-input .mint-cell-title {
+	width: 4.214285em;
+	font-size: .875em;
+	color: #000;
+}
+
+.user-input input {
+	font-size: .875em;
+	color: #000;
+}
+
+/* 按钮 */
+.btn-box {
+	padding: 2.3125em .875em;
+}
+
+.btn-box .full-btn {
+	display: block;
+	width: 100%;
+	height: 2.7333333em;
+	background-color: rgba(67, 154, 255, 1);
+	font-size: .9375em;
+	color: #fff;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 2.7333333em;
+}
+
+.btn-box .full-btn:active {
+	background-color: rgba(67, 154, 255, .8);
+}
+
+.bind-bank-card2 .bank-card-type input {
+	color: #e0b800;
+}
+
+/******************** 提现 *************************/
+.with-draw {
+	padding: 1.0625em .875em 0;
+	font-weight: 500;
+}
+
+.with-draw .content-bg {
+	padding: 1.25em 1.75em;
+	background-color: #fff;
+	border-radius: 3px;
+}
+
+.ffsfs {
+	display: flex;
+}
+
+.with-draw .ffsfs .title {
+	font-size: .8125em;
+	/*13*/
+	color: #0e0e0e;
+	margin-right: 1.6923em;
+	line-height: 1;
+}
+
+.with-draw .ffsfs div span {
+	display: block;
+	font-size: .8125em;
+	/*13*/
+	color: #087aff;
+	line-height: 1;
+	padding-bottom: .7692307em;
+}
+
+.with-draw .ffsfs div .hint {
+	color: #fbbd00;
+	padding-bottom: 0;
+}
+
+.with-draw .ffsfs.cash {
+	margin-top: 2.5em;
+}
+
+.with-draw .cash-num {
+	margin-top: .5em;
+	border-bottom: 1px solid #ededed;
+	min-height: 4.125em;
+}
+
+.with-draw .cash-num .title {
+	font-size: 2em;
+	font-weight: bold;
+	color: #0e0e0e;
+	line-height: 1;
+	margin-right: 1.8125em;
+}
+
+.with-draw .cash-num .mint-cell {
+	flex: 1;
+	min-height: 4.125em;
+}
+
+.with-draw .cash-num .mint-cell input {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.with-draw .ffsfs.hint {
+	margin-top: 1.25em;
+}
+
+.with-draw .ffsfs.hint p {
+	font-size: .75em;
+	color: #8f8f8f;
+	line-height: 1;
+	margin: 0;
+}
+
+.with-draw .ffsfs.hint p span {
+	color: #087aff;
+}
+
+.with-draw .btn-box {
+	padding: 1.25em 0 .625em;
+}
+
+.with-draw .btn-box .full-btn {
+	border-radius: 5px;
+}
+
+/************************** 提现管理******************/
+.cash-management {
+	padding-top: .625em;
+}
+
+.mt10 {
+	margin-top: 10px;
+}
+
+.link-cell {
+	min-height: 2.85714285em;
+	background-color: #fff;
+	color: #282828;
+	font-size: .875em;
+	font-weight: 500;
+	padding: 0 1em;
+	line-height: 1;
+}
+
+.link-cell i {
+	width: 8px;
+	height: 16px;
+	background-image: url(../img/icon/is-link-big.png);
+}
+
+/******************** 银行卡管理 ************************************/
+.bank-card-management {
+	padding: 10px 17px 0;
+	font-weight: 500;
+}
+
+.bank-card-management .item {
+	width: 100%;
+	height: 100px;
+	background-color: #fff;
+	margin-top: 10px;
+	box-shadow: 2px 3px 10px 1px rgba(205, 205, 205, 0.5);
+	border-radius: 10px;
+	padding: 0 11px 0 8px;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: cover;
+}
+
+.bank-card-management .item:first-child {
+	margin-top: 0;
+}
+
+.bank-card-management .item.CCB {
+	background-image: url(../img/CCB-bg.jpg);
+}
+
+.bank-card-management .item.ICBC {
+	background-image: url(../img/ICBC-bg.jpg);
+}
+
+.bank-card-management .img-full-box {
+	width: 51px;
+	height: 51px;
+	margin-right: 20px;
+}
+
+.bank-card-management .img-full-box img {
+	width: 100%;
+}
+
+.bank-card-detaill {
+	flex: 1;
+}
+
+.bank-card-detaill p {
+	margin: 0;
+}
+
+.bank-card-detaill .bank-card-name {
+	font-size: 17px;
+	font-weight: bold;
+	color: #050505;
+	line-height: 1;
+}
+
+.bank-card-detaill .bank-name p {
+	font-size: 17px;
+	font-weight: bold;
+	color: #050505;
+	line-height: 1;
+}
+
+.bank-card-detaill .bank-name .not-default-card,
+.bank-card-detaill .bank-name .default-card {
+	font-size: 12px;
+	color: #787878;
+	line-height: 1;
+	position: relative;
+}
+
+.bank-card-detaill .bank-name .not-default-card:after {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 1px;
+	background-color: #a1a1a1;
+	bottom: -2px;
+	left: 0;
+}
+
+.bank-card-detaill .bank-card-type {
+	font-size: 12px;
+	color: #787878;
+	line-height: 1;
+	margin-top: 11px;
+}
+
+.bank-card-detaill .bank-card-number {
+	margin-top: 11px;
+}
+
+.bank-card-detaill .bank-card-number p {
+	font-size: 15px;
+	color: #2c2c2c;
+}
+
+.bank-card-detaill .bank-card-number i {
+	width: 19px;
+	height: 13px;
+	background-image: url(../img/icon/delete-bank-card@2x.png);
+}
+
+.add-bank-card {
+	height: 100%;
+	padding: 8px 13px;
+}
+
+.add-bank-card>div {
+	flex: 1;
+	height: 85px;
+	border-radius: 10px;
+	border: 1px dotted #9c9c9c;
+}
+
+.add-bank-card > div i {
+	width: 24px;
+	height: 24px;
+	margin-right: 7px;
+	background-image: url(../img/icon/add-bank@2x.png);
+}
+
+.add-bank-card>div span {
+	font-size: 16px;
+	color: #2a2a2a;
+	line-height: 1;
 }

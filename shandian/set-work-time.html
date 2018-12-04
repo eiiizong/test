@@ -23,7 +23,7 @@
 		<div id="app" v-cloak>
 			<!-- 店铺基本信息 -->
 			<div class="set-work-time">
-				
+
 				<div class="cell work-time" v-for="(item, index) in workTimes" :key="index">
 					<div class="cell-warpper">
 						<span class="text-left">
@@ -33,18 +33,18 @@
 						</span>
 					</div>
 				</div>
-				
+
 				<div class="cell add-size space-top">
 					<div class="cell-warpper">
 						<p>添加时间段</p>
 					</div>
 				</div>
-				
+
 				<div>
-					<mt-datetime-picker ref="picker" v-model="pickerVisible" type="time" hour-format="{value} 时" minute-format="{value} 分">
+					<mt-datetime-picker ref="picker" type="time" v-model="date" @confirm="handleConfirm" hour-format="{value} 时" minute-format="{value} 分">
 					</mt-datetime-picker>
 				</div>
-				
+
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>

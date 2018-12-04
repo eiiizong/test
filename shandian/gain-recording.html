@@ -47,13 +47,12 @@
 			</div>
 			<div>
 				<mt-datetime-picker ref="picker" type="date" v-model="pickerValue" year-format="{value} 年"
-  month-format="{value} 月" @confirm="handleConfirm">
+  month-format="{value} 月"  @confirm="handleConfirm" @cancel="cancal" >
 				</mt-datetime-picker>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
-
 		<script src="static/js/gain-recording.js"></script>
 	</body>
 </html>

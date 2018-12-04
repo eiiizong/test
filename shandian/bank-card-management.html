@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>银行卡管理</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+
+
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<div class="bank-card-management">
+				<!-- 建设银行 -->
+				<div class="item fcsb CCB">
+					<div class="img-full-box">
+						<img src="static/img/CCB.jpg" alt="">
+					</div>
+					<div class="bank-card-detaill">
+						<div class="bank-name fcsb">
+							<p>建设银行</p>
+							<p class="default-card">已设为默认卡</p>
+							<!-- <p class="not-default-card">设为默认卡</p> -->
+						</div>
+						<div class="bank-card-type">
+							储蓄卡
+						</div>
+						<div class="bank-card-number fcsb">
+							<p>
+								<span>****</span>
+								<span>****</span>
+								<span>****</span>
+								<span>****</span>
+								<span>479</span>
+							</p>
+							<i class="icon delete-bank-card"></i>
+						</div>
+					</div>
+				</div>
+
+				<div class="item fcsb ICBC">
+					<div class="img-full-box">
+						<img src="static/img/ICBC.jpg" alt="">
+					</div>
+					<div class="bank-card-detaill">
+						<div class="bank-name fcsb">
+							<p>工商银行</p>
+							<!-- <p class="default-card">已设为默认卡</p> -->
+							<p class="not-default-card">设为默认卡</p>
+						</div>
+						<div class="bank-card-type">
+							储蓄卡
+						</div>
+						<div class="bank-card-number fcsb">
+							<p>
+								<span>****</span>
+								<span>****</span>
+								<span>****</span>
+								<span>****</span>
+								<span>479</span>
+							</p>
+							<i class="icon delete-bank-card"></i>
+						</div>
+					</div>
+				</div>
+
+				<!-- 添加银行卡 -->
+				<a class="item fcc add-bank-card" href="bind-bank-card.html">
+					<div class="fcc">
+						<i class="icon"></i><span>添加银行卡</span>
+					</div>
+				</a>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		<script src="static/js/bank-card-management.js"></script>
+	</body>
+</html>

@@ -76,25 +76,47 @@ var app = new Vue({
 					foodPrice: '11.15'
 				},
 			],
-			deta: '11-2',
+			deta: '',
 			totalSale: '854453.22',
-			pickerValue: ''
+			pickerValue: new Date()
 		} 
+	},
+	mounted () {
+		this.init();
 	},
 	methods: {
 		init: function () {
-			
+			this.initDate();
 		},
 		getTotalMoney: function () {
 			var _this = this;
 			var data = _this.orderList;
 			var len = data.length;
 		},
+		initDate() {
+			var now = new Date();
+			var years = now.getFullYear();
+			var month = now.getMonth() + 1;
+			this.deta = years + '-' + month
+		},
 		openPicker() {
+			var rootDOM = this.$el;
+			var targetDOM = rootDOM.getElementsByClassName('picker-slot picker-slot-center');
+			targetDOM[targetDOM.length - 1].style.display = 'none';
+			console.log(targetDOM);
+			
 			this.$refs.picker.open();
+			console.log(this.$el);
+			this.$el.style.position = "fixed";
 		},
 		handleConfirm(e) {
-			console.log(e)
+			var years = e.getFullYear();
+			var month = e.getMonth() + 1;
+			this.deta = years + '-' + month;
+			this.$el.style.position = "relative";
+		},
+		cancal() {
+			this.$el.style.position = "relative";
 		}
 
 	},

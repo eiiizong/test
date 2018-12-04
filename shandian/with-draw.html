@@ -7,36 +7,45 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="author" content="" />
-		<title>验证手机号码</title>
+		<title>提现</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 
 		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
 
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
+
 	</head>
 	<body>
 		<div id="app" v-cloak>
-			<!-- 店铺基本信息 -->
-			<div class="verify-tel">
-				<p class="hint">绑定银行卡需要短信确认，验证码已发送至手机：177****8316，请按操作提示。</p>
-				<div class="get-code">
-					<mt-field  type="text" v-model="code"></mt-field>
-					<div class="btn">
-						<mt-button type="primary" :disabled="!canClick" @click="clickBtn">
-							<span v-if="canClick">获取验证码</span>
-							<span v-else>重新获取({{number}}s)</span>
-						</mt-button>
-					</div>
-				</div>
+			<div class="with-draw">
 				
-				<div class="btn">
-					<mt-button type="primary">确定</mt-button>
+				<div class="content-bg">
+					<div class="ffsfs">
+						<div class="title">到账银行卡</div>
+						<div>
+							<span>中国银行(6539)</span>
+							<span class="hint">当天24点前到账</span>
+						</div>
+					</div>
+					<div class="ffsfs cash">
+						<div class="title">提现金额</div>
+					</div>
+					<div class="fcfs cash-num">
+						<div class="title">¥</div>
+						<mt-field type="number" v-model="money"></mt-field>
+					</div>
+					<div class="ffsfs hint">
+						<p>可提现金额 ¥3819.90，<span>全部提现</span></p>
+					</div>
+					<div class="btn-box">
+						<button class="full-btn">提现</button>
+					</div>
 				</div>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
-		<script src="static/js/verify-tel.js"></script>
+		<script src="static/js/with-draw.js"></script>
 	</body>
 </html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>test</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+			}
+
+			#app {
+				width: 100%;
+				height: 100%;
+				background-color: #fff;
+				position: relative;
+			}
+			.mask  {
+				position: fixed;
+				background-color: rgba(0,0,0,0.2);
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				z-index: 2000;
+			}
+			.popup {
+				width: 100%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-color: skyblue;
+				z-index: 2001;
+			}
+			.picker {
+				width: 100%;
+				text-align: center;
+				overflow: hidden;
+			}
+			.items {
+				width: 100%;
+				display: flex;
+			}
+			.center {
+				flex: 1;
+			}
+			.item {
+				line-height: 36px;
+				transform: scale(0.8);
+			}
+			.item.selected {
+				line-height: 36px;
+				transform: scale(1);
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<div class="popup">
+				<div class="picker">
+					<div class="toolbar"></div>
+					<div class="items">
+						<div class="center">
+							<div class="horus-warpper warpper">
+								<div class="item">01</div>
+								<div class="item">02</div>
+								<div class="item">03</div>
+								<div class="item">04</div>
+								<div class="item selected">05</div>
+								<div class="item">06</div>
+								<div class="item">07</div>
+								<div class="item">08</div>
+								<div class="item">09</div>
+							</div>
+						</div>
+						<div class="center">
+							<div class="minute-warpper warpper">
+								<div class="item">09</div>
+								<div class="item">02</div>
+								<div class="item">03</div>
+								<div class="item">04</div>
+								<div class="item selected">05</div>
+								<div class="item">06</div>
+								<div class="item">07</div>
+								<div class="item">08</div>
+								<div class="item">09</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mask"></div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src="static/js/test.js"></script>
+	</body>
+</html>
