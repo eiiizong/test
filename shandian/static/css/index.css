@@ -268,12 +268,13 @@ input {
 	color: #282828;
 	border: 0;
 	outline: 0;
-	
+
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
 }
 
 button {
@@ -1505,6 +1506,7 @@ i.icon-license-info {
 	font-size: 10px;
 	color: #3c3c3c;
 	text-align: center;
+	line-height: 1;
 }
 
 .footer-nav .item.active span {
@@ -1618,6 +1620,18 @@ i.icon-gain-deta {
 	margin-bottom: 10px;
 }
 
+.gain-card .detail .take-food-num .withdrawal-success {
+	font-size: 14px;
+	font-weight: 500;
+	color: #eca700;
+}
+
+.gain-card .detail .take-food-num .processing {
+	font-size: 14px;
+	font-weight: 500;
+	color: #439aff;
+}
+
 .gain-card .detail .take-food-man {
 	font-size: 11px;
 	font-weight: 500;
@@ -1627,11 +1641,19 @@ i.icon-gain-deta {
 	margin-bottom: 12px;
 }
 
+.withdrawal-record .gain-card .detail .take-food-man {
+	margin-left: 0px;
+}
+
 .gain-card .detail .take-food-time {
 	font-size: 11px;
 	font-weight: 500;
 	line-height: 1;
 	color: #9a9a9a;
+}
+
+.gain-card .detail .take-food-time span:first-child {
+	margin-right: 10px;
 }
 
 i.icon-dai {
@@ -1704,6 +1726,7 @@ i.icon-dai {
 	border-radius: 50px;
 	text-align: center;
 	line-height: 2.7333333em;
+	border: 0;
 }
 
 .btn-box .full-btn:active {
@@ -1712,6 +1735,57 @@ i.icon-dai {
 
 .bind-bank-card2 .bank-card-type input {
 	color: #e0b800;
+}
+
+.bind-bank-card2 .user-agreement {
+	margin-top: 25px;
+	padding: 0 14px;
+}
+
+.bind-bank-card2 .user-agreement label {
+	font-size: 13px;
+	color: #000;
+}
+
+.bind-bank-card2 .user-agreement label div i {
+	display: block;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 1px solid #666;
+	margin-right: 5px;
+	background-color: #fff;
+	position: relative;
+}
+
+.bind-bank-card2 .user-agreement label div i:after {
+	position: absolute;
+	content: '';
+	top: 1px;
+	left: 4px;
+	width: 4px;
+	height: 9px;
+	border: 2px solid transparent;
+	border-width: 0 1.06px 2px 0;
+	transform: rotate(45deg);
+}
+
+.bind-bank-card2 .user-agreement label input:checked~div i {
+	border-color: #439aff;
+}
+
+.bind-bank-card2 .user-agreement label input:checked~div i:after {
+	border-color: #439aff;
+}
+
+.bind-bank-card2 .user-agreement a {
+	color: #e0b800;
+	font-size: 13px;
+	color: #439aff;
+}
+
+.bind-bank-card2 .btn-box {
+	padding: 16px 14px;
 }
 
 /******************** 提现 *************************/
@@ -1943,7 +2017,7 @@ i.icon-dai {
 	border: 1px dotted #9c9c9c;
 }
 
-.add-bank-card > div i {
+.add-bank-card>div i {
 	width: 24px;
 	height: 24px;
 	margin-right: 7px;
@@ -1954,4 +2028,385 @@ i.icon-dai {
 	font-size: 16px;
 	color: #2a2a2a;
 	line-height: 1;
+}
+
+/* 续费 */
+.renew {}
+
+.renew .renew-agreement {
+	padding: 0 14px;
+	font-weight: 500;
+	padding: 0 14px 10px;
+	background-color: #fff;
+	line-height: 30px;
+	margin-top: 10px;
+}
+
+.renew .renew-agreement h3 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #282828;
+}
+
+.renew .renew-agreement h4,
+.renew .renew-agreement p {
+	font-weight: 500;
+	font-size: 11px;
+	color: #989898;
+	line-height: 13px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+.renew-detail {
+	background-color: #fff;
+}
+
+.time-remaining {
+	padding-top: 15px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #282828;
+	line-height: 1;
+	padding: 15px 14px 0;
+}
+
+.time-remaining span {
+	color: #e00000;
+}
+
+.authorization-period {
+	font-size: 11px;
+	color: #989898;
+	padding-top: 7px;
+	line-height: 1;
+	padding: 7px 14px 0;
+}
+
+.buy {
+	padding-top: 15px;
+	padding-bottom: 5px;
+	flex-wrap: wrap;
+	padding: 15px 10px 0;
+}
+
+.buy .item {
+	display: block;
+	width: 33.333333%;
+	padding: 0 4px;
+	margin-bottom: 10px;
+}
+
+.buy .item .warpper {
+	width: 100%;
+	/* height: 111px; */
+	background-color: #fff;
+	border-radius: 5px;
+	border: solid 1px #eac389;
+	flex-wrap: wrap;
+	text-align: center;
+	position: relative;
+}
+
+.buy .item.recommand .warpper {
+	background-color: #fffaf2;
+}
+
+.warpper p {
+	width: 100%;
+	margin: 0;
+	font-weight: bold;
+	color: #5d5d5e;
+}
+
+.warpper .renew-time {
+	font-size: 14px;
+	line-height: 1;
+}
+
+.warpper .now-price {
+	font-size: 24px;
+	color: #a57458;
+	line-height: 1;
+	margin-top: 20px;
+}
+
+.warpper .now-price:before {
+	content: '¥';
+	font-size: 15px;
+	margin-right: 4px;
+}
+
+.warpper .old-price {
+	width: auto;
+	display: inline-block;
+	line-height: 1;
+	margin-top: 10px;
+	font-size: 9px;
+	color: #989898;
+	padding: 0 2px;
+	position: relative;
+}
+
+.warpper .old-price:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	height: 1px;
+	width: 100%;
+	background-color: #989898;
+}
+
+.warpper i {
+	width: 33px;
+	height: 33px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../img/icon/buy-recommend@2x.png) no-repeat;
+	background-size: cover;
+}
+
+@media screen and (max-width:370px) {
+	.warpper .renew-time {
+		font-size: 12px;
+	}
+
+	.warpper .now-price {
+		font-size: 18px;
+		margin-top: 10px;
+	}
+
+	.warpper .now-price:before {
+		content: '¥';
+		font-size: 12px;
+		margin-right: 2px;
+	}
+
+	.warpper .old-price {
+		margin-top: 8px;
+		font-size: 8px;
+	}
+}
+
+/* 提现记录 */
+.withdrawal-record {}
+
+/* 销售统计 */
+.sale-total {
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	padding-bottom: 50px;
+}
+
+.sale-total .top {
+	width: 100%;
+	height: 200px;
+	background-color: #439aff;
+	text-align: center;
+	font-weight: 500;
+	padding-top: 20px;
+}
+
+.sale-total .top span {
+	font-size: 13px;
+	color: #fff;
+	line-height: 1;
+	display: block;
+}
+
+.sale-total .top div {
+	font-size: 41px;
+	line-height: 1;
+	color: #040000;
+	/* box-shadow: 3px 5px 29px rgba(0, 109, 235, 0.75); */
+	color: #fff;
+	padding-top: 40px;
+	margin-bottom: 43px;
+}
+
+.sale-total .top a {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1;
+	padding: 8px 42px;
+	color: #fff;
+	background-color: #00e526;
+	box-shadow: 3px 5px 40px 0px rgba(0, 116, 250, 0.5);
+	border-radius: 50px;
+}
+
+.sale-total .bottom {
+	width: 100%;
+	flex: 1;
+	flex-direction: column;
+}
+
+.bottom .date {
+	width: 100%;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1;
+	color: #2a2a2a;
+	background-color: #fff;
+	padding: 21px 14px 15px;
+}
+
+.bottom .date span {
+	margin-right: 6px;
+}
+
+.bottom .date i {
+	display: inline-block;
+	width: 18px;
+	height: 10px;
+	background: url(../img/icon/arrows-bottom@2x.png) no-repeat;
+	background-size: cover;
+}
+
+.chart {
+	width: 100%;
+	flex: 1;
+	background-color: #fff;
+}
+.chart canvas {
+	width: 100%;
+	height: 100%;
+}
+
+/* 订单列表 */
+	
+#app > .order-list {
+	width: 100%;
+	min-height: 100%;
+	padding: 15px 14px 50px;
+	font-weight: 500;
+}
+.order-card {
+	/* height: 200px; */
+	background-color: #fff;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+.order-card > div {
+	font-size: 14px;
+	color: #999;
+	line-height: 1;
+	padding: 0 14px;
+	margin-top: 9px;
+}
+.order-card .take-food-num {
+	height: 41px;
+	border-bottom: 1px solid #f1f1f1;
+	margin-top: 0;
+	
+	font-size: 17px;
+	font-weight: bold;
+	color: #282828;
+	line-height: 1;
+}
+i.icon-replace-order {
+	width: 18px;
+	height: 15px;
+	background-image: url(../img/icon/dai@2x.png);
+	background-color: #fff;
+}
+.order-card .seat-num {
+	
+}
+.order-card .btn-box {
+	text-align: right;
+}
+.order-card .btn-box .inline-btn {
+	display: inline-block;
+	color: #00e526;
+	padding: 6px 11px;
+	border: 1px solid #00E526;
+	border-radius: 50px;
+	background-color: #fff;
+}
+.order-card .order-food-detail div span {
+	display: inline-block;
+	text-align: right;
+}
+.order-card .order-food-detail div .price {
+	width: 84px;
+}
+.order-card .order-food-detail div .num {
+	width: 50px;
+}
+
+.order-card .total div .price {
+	display: inline-block;
+	text-align: right;
+	width: 84px;
+}
+.order-card .ordering-time span {
+	margin-right: 10px;
+}
+.order-card .btn-box {
+	margin-top: 15px;
+	padding-bottom: 9px;
+}
+
+/* 订单详情 */
+
+.order-detail {
+	padding: 10px 0 0 0;
+}
+.order-detail .take-food-num {
+	height: 50px;
+	background-color: #fff;
+	padding: 0 14px;
+}
+.order-detail .take-food-num div img {
+	width: 17px;
+	height: 17px;
+	border-radius: 50%;
+}
+.order-detail .take-food-num div span {
+	font-size: 17px;
+	font-weight: bold;
+	color: #282828;
+	line-height: 1;
+	margin-right: 8px;
+}
+.order-detail .seat-num {
+	height: 40px;
+	background-color: #fff;
+	padding: 0 14px;
+	margin-top: 10px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #282828;
+}
+.order-detail .food-list {
+	border-top: 1px solid #efeff4;
+	border-bottom: 1px solid #efeff4;
+	background-color: #fff;
+	padding-left: 14px;
+}
+.order-detail .food-list .item {
+	height: 77px;
+	border-bottom: 1px solid #efeff4;
+	padding-right: 14px;
+}
+.order-detail .food-list .item:last-of-type {
+	height: 76px;
+	border-bottom: 0;
+}
+.order-detail .food-list .item img {
+	width: 68px;
+	height: 68px;
+	border-radius: 5px;
+}
+.order-detail .food-list .item .detail {
+	height: 100%;
+	flex: 1;
+	flex-direction: column;
+	padding: 5px 0 10px 18px;
 }

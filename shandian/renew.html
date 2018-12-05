@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>续费</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+
+
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<div class="renew">
+				<div class="renew-detail">
+					<div class="time-remaining">当前剩余授权时间：<span>03天</span></div>
+					<div class="authorization-period">授权期限为：2018年2月16日—2018年11月16日</div>
+					
+					<div class="buy ffsfs">
+						
+						<div class="item" v-for="(item, index) in buyDetails" :key="index" :class="item.isRecommend? 'recommand': ''">
+							<div class="warpper fcc" ref="buyBox">
+								<div calss="content">
+									<p class="renew-time">续费{{item.time}}</p>
+									<p class="now-price">{{item.nowPrice}}</p>
+									<p class="old-price">¥{{item.oldPrice}}</p>
+									<i v-if="item.isRecommend"></i>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="renew-agreement">
+					<h3>续费协议及隐私条款</h3>
+					<p>本协议被视为《闪电点餐续费》的附件，如本规则与《微信续费守则》存在冲突的，以本协议为准。</p>
+					<p>如您需使用自动续费服务，则需同意本协议。</p>
+					<h4>1. 服务说明</h4>
+					<p>1.1本服务是在会员已开通付费服务的前提下，为付费会员提供的自动续费服务。如会员开通本服务，则视为会员授权财新有权在付费会员权限即将到期时，自行或委托第三方支付渠道从会员的自有充值账户、与会员账号绑定的第三方支付账户、银行卡、通信账户、iTunes账户（以下统称“账户”）余额中代扣下一个计费周期订阅费用。计费周期包括但不限于月度、季度、年度等，会员可根据财新网上显示的计费周期自行选择。该服务实现的前提是会员已将会员账号与上述账户绑定，且可成功从上述账户中扣款，因上述账户中可扣款余额不足导致的续费失败，由会员自行承担。</p>
+					<p>1.2会员选择第三方支付渠道享受本服务，将视为同意财新代理会员向第三方支付渠道发出扣款指令，并同意第三方支付渠道可以根据财新发出的扣款指令，在不验证会员账户密码、支付密码、短信校验码等信息的情况下从上述账户扣划下一个计费周期的订阅服务费。会员选择第三方支付渠道可能产生第三方手续费，具体金额以开通服务时第三方对外标明金额为准。</p>
+					<p>1.3会员选择使用本服务后，除非会员选择终止本服务，否则，会员对财新的自动扣款委托为不可撤销，财新基于本服务在会员开通自动续费服务时选择的支付方式下所扣划的费用，除会员服务协议约定的条件外，不以任何方式对会员所支付的费用予以退还。</p>
+					<h4>2.各方权责</h4>
+					<p>2.1如在扣费过程出现差错，财新和会员应密切配合查明原因，各自承担己方过错造成的损失；若因双方各自存在不均等过错造成损失的，由双方按过错的程度承担相应责任；因双方共同过错造成损失但无法区分各自过错的，由双方均摊责任。</p>
+					<p>2.2财新对会员开通本服务不收取任何费用，但财新有权根据业务需要或市场变化等原因决定是否对本服务本身进行收费或调整自动续费周期及费用，并在相关页面向会员进行公示。</p>
+					<p>2.3 本服务由会员自主选择是否取消，若会员选择不取消，则视为会员同意财新按照一定规则进行扣款尝试，一旦扣款成功，财新将为会员开通下一个计费周期的会员服务。</p>
+					<p>2.4若在自动续费时/之前，服务价格发生调整，应以现时有效的价格为准。</p>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+
+		<script src="static/js/renew.js"></script>
+	</body>
+</html>

@@ -9,7 +9,8 @@
 		<meta name="author" content="" />
 		<title>销售统计</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
-		<!-- Bootstrap -->
+		
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
 
@@ -17,8 +18,22 @@
 	<body>
 		<div id="app" v-cloak>
 			<!-- 店铺基本信息 -->
-			<div class="sale-total">
-				
+			<div class="sale-total fcsb">
+				<div class="top">
+					<span>今日收益额</span>
+					<div>¥ 15,680.00</div>
+					<a href="gain-recording.html">收益记录</a>
+				</div>
+				<div class="bottom fcsb">
+					<div class="date" @click="openPicker">
+						<span>{{choiceDate}}</span>
+						<i></i>
+					</div>
+					<div class="chart" ref="myChart">
+						<!-- <canvas >Your browser does not support the canvas element.</canvas> -->
+					</div>
+				</div>
+
 
 				<div class="footer-nav fcfs">
 					<a class="item order-list" href="order-list.html">
@@ -38,9 +53,18 @@
 						<span>商铺信息</span>
 					</a>
 				</div>
+
+				<!--  -->
+				<div>
+					<mt-datetime-picker ref="picker" type="date" v-model="date" year-format="{value} 年" month-format="{value} 月"
+					 @confirm="handleConfirm" @cancel="cancal">
+					</mt-datetime-picker>
+				</div>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-		<script src="static/js/food-type.js"></script>
+		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts.min.js"></script>
+		<script src="static/js/sale-total.js"></script>
 	</body>
 </html>

@@ -6,7 +6,7 @@ var app = new Vue({
 			bankCardType: '中国银行',
 			cardNumber: '',
 			area: '',
-			agree: true,
+			agreeUserAgreement: false,
 			phoneNumber: ''
 		} 
 	},
