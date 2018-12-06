@@ -234,20 +234,20 @@ a {
 	outline: 0;
 }
 
+/* 去除 ios 点击之后的背景 */
 a,
 input,
 label {
 	-webkit-tap-highlight-color: rgba(255, 0, 0, 0);
 }
 
-input[type=checkbox] {
-	display: none;
-}
 
+input[type=checkbox],
 input[type=file] {
 	display: none;
 }
 
+/* 设置 placeholder 字体颜色*/
 input::-webkit-input-placeholder {
 	color: #bababa;
 }
@@ -268,7 +268,6 @@ input {
 	color: #282828;
 	border: 0;
 	outline: 0;
-
 }
 
 input::-webkit-outer-spin-button,
@@ -291,6 +290,16 @@ button {
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
 }
 
 .mint-cell-wrapper,
@@ -1470,15 +1479,52 @@ i.icon-license-info {
 /* 设置营业时间 */
 .set-work-time {
 	width: 100%;
-	height: 100%;
-	padding-top: 0.625em;
-	position: fixed;
-	top: 0;
-	left: 0;
+	min-height: 100%;
+	padding: 0.625em 0;
+	font-weight: 500;
+	color: #282828;
 }
 
-.set-work-time .cell {
+.set-work-time .work-time-cell {
+	margin-top: 10px;
+}
+
+.set-work-time .work-time-cell:first-of-type {
+	margin-top: 0;
+}
+
+.set-work-time .work-time-cell-warpper {
 	border: 0;
+	height: 40px;
+	background-color: #fff;
+	padding: 0 14px;
+}
+
+.set-work-time .work-time-cell-warpper span {
+	font-size: 14px;
+	line-height: 1;
+}
+
+.set-work-time .work-time-cell-input {
+	flex: 1;
+}
+
+.set-work-time .work-time-cell-input span:first-of-type {
+	display: inline-block;
+	width: 73px;
+}
+
+.set-work-time .work-time-cell-warpper button {
+	font-size: 14px;
+	color: #e00000;
+}
+
+.set-work-time .work-time-cell-warpper input {
+	width: 60px;
+	display: inline;
+	font-size: 14px;
+	/* background-color: #f00; */
+	text-align: center;
 }
 
 /* 底部导航 */
@@ -2272,55 +2318,62 @@ i.icon-dai {
 	width: 100%;
 	flex: 1;
 	background-color: #fff;
+	padding: 0 14px;
 }
-.chart canvas {
+
+.chart>div {
 	width: 100%;
 	height: 100%;
 }
 
 /* 订单列表 */
-	
-#app > .order-list {
+
+#app>.order-list {
 	width: 100%;
 	min-height: 100%;
 	padding: 15px 14px 50px;
 	font-weight: 500;
 }
+
 .order-card {
 	/* height: 200px; */
 	background-color: #fff;
 	border-radius: 10px;
 	margin-bottom: 15px;
 }
-.order-card > div {
+
+.order-card>div {
 	font-size: 14px;
 	color: #999;
 	line-height: 1;
 	padding: 0 14px;
 	margin-top: 9px;
 }
+
 .order-card .take-food-num {
 	height: 41px;
 	border-bottom: 1px solid #f1f1f1;
 	margin-top: 0;
-	
+
 	font-size: 17px;
 	font-weight: bold;
 	color: #282828;
 	line-height: 1;
 }
+
 i.icon-replace-order {
 	width: 18px;
 	height: 15px;
 	background-image: url(../img/icon/dai@2x.png);
 	background-color: #fff;
 }
-.order-card .seat-num {
-	
-}
+
+.order-card .seat-num {}
+
 .order-card .btn-box {
 	text-align: right;
 }
+
 .order-card .btn-box .inline-btn {
 	display: inline-block;
 	color: #00e526;
@@ -2329,13 +2382,16 @@ i.icon-replace-order {
 	border-radius: 50px;
 	background-color: #fff;
 }
+
 .order-card .order-food-detail div span {
 	display: inline-block;
 	text-align: right;
 }
+
 .order-card .order-food-detail div .price {
 	width: 84px;
 }
+
 .order-card .order-food-detail div .num {
 	width: 50px;
 }
@@ -2345,9 +2401,11 @@ i.icon-replace-order {
 	text-align: right;
 	width: 84px;
 }
+
 .order-card .ordering-time span {
 	margin-right: 10px;
 }
+
 .order-card .btn-box {
 	margin-top: 15px;
 	padding-bottom: 9px;
@@ -2357,17 +2415,21 @@ i.icon-replace-order {
 
 .order-detail {
 	padding: 10px 0 0 0;
+	font-weight: 500;
 }
+
 .order-detail .take-food-num {
 	height: 50px;
 	background-color: #fff;
 	padding: 0 14px;
 }
+
 .order-detail .take-food-num div img {
 	width: 17px;
 	height: 17px;
 	border-radius: 50%;
 }
+
 .order-detail .take-food-num div span {
 	font-size: 17px;
 	font-weight: bold;
@@ -2375,6 +2437,7 @@ i.icon-replace-order {
 	line-height: 1;
 	margin-right: 8px;
 }
+
 .order-detail .seat-num {
 	height: 40px;
 	background-color: #fff;
@@ -2384,29 +2447,259 @@ i.icon-replace-order {
 	font-weight: bold;
 	color: #282828;
 }
+
 .order-detail .food-list {
 	border-top: 1px solid #efeff4;
 	border-bottom: 1px solid #efeff4;
 	background-color: #fff;
 	padding-left: 14px;
 }
+
 .order-detail .food-list .item {
 	height: 77px;
 	border-bottom: 1px solid #efeff4;
 	padding-right: 14px;
 }
-.order-detail .food-list .item:last-of-type {
-	height: 76px;
-	border-bottom: 0;
-}
+
 .order-detail .food-list .item img {
 	width: 68px;
 	height: 68px;
 	border-radius: 5px;
 }
+
 .order-detail .food-list .item .detail {
 	height: 100%;
 	flex: 1;
 	flex-direction: column;
 	padding: 5px 0 10px 18px;
 }
+
+.order-detail .food-list .item .detail .name {
+	font-size: 14px;
+	color: #282828;
+	line-height: 1;
+}
+
+.order-detail .food-list .item .detail .like span {
+	padding: 4px 8px;
+	font-size: 11px;
+	color: #5a5a5a;
+	background-color: rgba(255, 214, 21, .4);
+	border-radius: 50px;
+	margin-right: 4px;
+	line-height: 1;
+}
+
+.order-detail .food-list .item .detail .like span:last-child {
+	margin-right: 0;
+}
+
+.order-detail .food-list .item .detail .size {
+	width: 100%;
+}
+
+.order-detail .food-list .item .detail .size {
+	font-size: 14px;
+	color: #282828;
+	line-height: 1;
+}
+
+.order-detail .food-list .item .detail .size>div span:first-child {
+	display: inline-block;
+	width: 70px;
+}
+
+.ffssb {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.order-detail .food-list .food-total {
+	height: 40px;
+	padding-right: 14px;
+}
+
+.order-detail .food-list .food-total span {
+	font-size: 14px;
+	color: #282828;
+	line-height: 1;
+}
+
+.order-detail .food-list .food-total div span:first-child {
+	display: inline-block;
+	width: 86px;
+}
+
+.order-detail .order-other-info {
+	padding: 5px 14px 20px;
+	background-color: #fff;
+}
+
+.order-detail .order-other-info p {
+	font-size: 14px;
+	color: #999;
+	line-height: 24px;
+	margin: 0;
+}
+
+/* 支付到款方式 */
+.payment-method {
+	padding-top: 10px;
+}
+
+/********************* common ******************/
+.ffscrn {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.ffscrw {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.fcfsrn {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+/******************************** 发布成功 bg********************/
+.release {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	padding-top: 6.875em;
+	font-weight: 500;
+	color: #2a2a2a;
+	text-align: center;
+	position: relative;
+}
+
+.release .img-box {
+	width: 9em;
+	height: 9em;
+	margin-bottom: 20px;
+}
+
+.release p {
+	width: 100%;
+	font-size: .75em;
+	line-height: 1;
+}
+
+.release h4 {
+	width: 100%;
+	font-size: 1.0625em;
+	line-height: 1;
+	color: #000;
+}
+
+.release p:first-of-type {
+	margin: 8px 0 10px;
+}
+.release p.other-info {
+	margin: 42px 0 0 0;
+	padding: 0 20px;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: left;
+}
+.release p.other-info a {
+	color: #439aff;
+}
+.release .btn-box {
+	width: 100%;
+	padding: 0 70px;
+	position: absolute;
+	bottom: 53px;
+	font-size: .9375em;
+	font-weight: 500;
+}
+
+.release .btn-box .btn {
+	height: 2.6666666em;
+	background-color: #439aff;
+	display: block;
+	line-height: 2.6666666em;
+	width: 100%;
+	border-radius: 50px;
+	color: #fff;
+	padding: 0;
+}
+/******************************** 发布小程序-4***************/
+.release span.hint {
+	margin-top: 6px;
+	font-size: 14px;
+	color: #2a2a2a;
+}
+.release-step04 {
+	padding-top: 150px;
+}
+.release-step01 .img-box,
+.release-step03 .img-box,
+.release-step04 .img-box {
+	width: 105px;
+	height: 82px;
+	margin-bottom: 20px;
+	
+}
+/******************************** 发布小程序-1***************/
+
+/******************************** 发布小程序-3***************/
+.release-step03 div span.hint {
+	padding: 0 82px;
+	line-height: 17px;
+	margin-bottom: 5px;
+}
+.input-cell {
+	padding: 0 37px 0 18px;
+	margin-top: 14px;
+}
+.input-cell label {
+	width: 80px;
+	font-size: 15px;
+	line-height: 1;
+	color: #000;
+	text-align: left;
+}
+.input-cell > div  {
+	flex: 1;
+	border-radius: 5px;
+	position: relative;
+}
+.input-cell a {
+	background-color: #f4f4f4;
+	border-radius: 5px;
+}
+.input-cell a input {
+	background-color: #f4f4f4;
+}
+.input-cell span.hint {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.release-step03 > span.hint {
+	display: block;
+	font-size: 12px;
+	color: #c7c7cd;
+	padding: 0 37px 0 98px;
+	line-height: 15px;
+	text-align: left;
+}
+.release-step03 .selecte{
+	display: none;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background-color: #eee;
+} 

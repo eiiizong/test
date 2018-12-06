@@ -24,24 +24,27 @@
 			<!-- 店铺基本信息 -->
 			<div class="set-work-time">
 
-				<div class="cell work-time" v-for="(item, index) in workTimes" :key="index">
-					<div class="cell-warpper">
-						<span class="text-left">
-							<span class="title">{{item.name}}</span>
-							<input type="text" @focus="open" readonly="readonly" v-model="item.startTime">
-							<button type="button">删除</button>
-						</span>
+				<div class="work-time-cell" v-for="(item, index) in workTimes" :key="index">
+					<div class="work-time-cell-warpper fcsb">
+							<div class="work-time-cell-input">
+								<span>{{item.name}}</span>
+								<input type="text" @focus="open('s' + index)" readonly="readonly" v-model="item.startTime" placeholder="开始时间">
+								<span>~</span>
+								<input type="text" @focus="open('e' + index)" readonly="readonly" v-model="item.endTime" placeholder="结束时间">
+							</div>
+							<button @click="deletePeriod(index)">删除</button>
 					</div>
 				</div>
 
 				<div class="cell add-size space-top">
-					<div class="cell-warpper">
+					<div class="cell-warpper" @click="addPeriod">
 						<p>添加时间段</p>
 					</div>
 				</div>
 
 				<div>
-					<mt-datetime-picker ref="picker" type="time" v-model="date" @confirm="handleConfirm" hour-format="{value} 时" minute-format="{value} 分">
+					<mt-datetime-picker ref="picker" type="time" v-model="date" @confirm="handleConfirm" hour-format="{value} 时"
+					 minute-format="{value} 分" @cancel="cancal">
 					</mt-datetime-picker>
 				</div>
 
