@@ -195,12 +195,14 @@ html {
 
 * {
 	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
 *:before,
 *:after {
 	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -282,6 +284,7 @@ button {
 	moz-user-select: -moz-none;
 	-moz-user-select: none;
 	-o-user-select: none;
+	-khtml-user-select: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
@@ -319,49 +322,25 @@ p {
 /****************清除浮动 END****************************/
 
 .fcfs {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: start;
-	-ms-flex-pack: start;
 	justify-content: flex-start;
 }
 
 .fcc {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
 }
 
 .fcsb {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 .ffssb {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: start;
-	-ms-flex-align: start;
 	align-items: flex-start;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 /******************************* 响应图片 *******************************************/
@@ -410,14 +389,8 @@ img {
 }
 
 .checkbox-group label {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
 	min-height: 2.625em;
 	border-bottom: 1px solid #efeff4;
@@ -441,7 +414,6 @@ img {
 	border: 1px solid #999;
 	border-radius: 50%;
 	position: relative;
-	-webkit-transition: all .3s;
 	transition: all .3s;
 }
 
@@ -454,9 +426,7 @@ img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-	-webkit-transition: all .3s;
 	transition: all .3s;
 }
 
@@ -476,14 +446,8 @@ img {
 }
 
 .store-info-change>div {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 	padding: 0 0.875em;
 	height: 2.6875em;
@@ -500,14 +464,8 @@ img {
 }
 
 .store-info-change>.store-head-portrait>label {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 	padding: 0 0.875em;
 	height: 4.375em;
@@ -554,14 +512,8 @@ img {
 }
 
 .store-info .base-info {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 	height: 6.25em;
 	background: url(../img/base-info-bg.jpg) no-repeat;
@@ -571,8 +523,6 @@ img {
 }
 
 .store-info .base-info>div {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
 }
 
@@ -720,20 +670,16 @@ i.icon-license-info {
 	width: 45px;
 	height: 45px;
 	background-color: #439aff;
-	-webkit-box-shadow: 0px 5px 13px 0px rgba(0, 118, 255, 0.44);
 	box-shadow: 0px 5px 13px 0px rgba(0, 118, 255, 0.44);
 	font-size: 14px;
 	font-weight: bold;
 	color: #fff;
 	border-radius: 100%;
-	-ms-flex-line-pack: start;
 	align-content: flex-start;
 }
 
 .store-info .clerk-management .content {
 	height: 92px;
-	-webkit-box-align: start;
-	-ms-flex-align: start;
 	align-items: flex-start;
 	padding-top: 11px;
 }
@@ -746,11 +692,8 @@ i.icon-license-info {
 .store-info .clerk-management ul li {
 	position: relative;
 	width: 65px;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	margin-right: 5px;
-	-webkit-box-align: start;
-	-ms-flex-align: start;
 	align-items: flex-start;
 }
 
@@ -780,12 +723,9 @@ i.icon-license-info {
 }
 
 .content .card {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
 	width: 100%;
 	height: 150px;
-	-webkit-box-shadow: 0px 7px 19px 1px rgba(205, 205, 205, 0.5);
 	box-shadow: 0px 7px 19px 1px rgba(205, 205, 205, 0.5);
 	border-radius: 10px;
 }
@@ -797,15 +737,8 @@ i.icon-license-info {
 
 .content .card .right {
 	padding: 15px 0 12px 30px;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
 	flex-direction: column;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 	height: 150px;
 }
@@ -996,14 +929,10 @@ i.icon-license-info {
 }
 
 .verify-tel .get-code {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	border-top: 1px solid #eaeaee;
 	border-bottom: 1px solid #eaeaee;
 	padding: 0.5em 0.875em;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 
@@ -1016,8 +945,6 @@ i.icon-license-info {
 .verify-tel .get-code .mint-cell {
 	min-height: 3.125em;
 	border-radius: 0.625em;
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
 }
 
@@ -1060,14 +987,8 @@ i.icon-license-info {
 
 .cell-warpper {
 	color: #282828;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
 	min-height: 2.5em;
 	padding-right: 0.875em;
@@ -1079,17 +1000,9 @@ i.icon-license-info {
 }
 
 .cell-warpper .text-left {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: start;
-	-ms-flex-pack: start;
 	justify-content: flex-start;
 	font-size: 0.875em;
 	line-height: 1;
@@ -1106,8 +1019,6 @@ i.icon-license-info {
 
 /* 输入框 */
 .cell-warpper .mint-cell {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
 	min-height: 2.857142857em;
 }
@@ -1142,8 +1053,6 @@ i.icon-license-info {
 
 /* 添加规格 */
 .add-size .cell-warpper {
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
 }
 
@@ -1179,16 +1088,12 @@ i.icon-license-info {
 /* 图片 */
 
 .add-food .cell-warpper.img {
-	-webkit-box-pack: start;
-	-ms-flex-pack: start;
 	justify-content: flex-start;
 	min-height: 8.75em;
 	position: relative;
 }
 
 .add-food .cell-warpper.img .text-left {
-	-webkit-box-flex: 0;
-	-ms-flex: none;
 	flex: none;
 	display: block;
 	position: relative;
@@ -1206,14 +1111,8 @@ i.icon-license-info {
 
 /* pianhao */
 .add-food .cell .cell-warpper span.value {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: start;
-	-ms-flex-pack: start;
 	justify-content: flex-start;
 }
 
@@ -1296,15 +1195,8 @@ i.icon-license-info {
 .food-type {
 	width: 100%;
 	height: 100%;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
 	flex-direction: column;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 	overflow: hidden;
 	font-weight: 500;
@@ -1315,15 +1207,8 @@ i.icon-license-info {
 }
 
 .food-type .content {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
 	flex-direction: column;
 }
 
@@ -1348,19 +1233,12 @@ i.icon-license-info {
 
 .food-type .top .btn a {
 	width: 100%;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	height: 2.75em;
 	background-color: #439aff;
-	-webkit-box-shadow: 1px 2px 19px 1px rgba(0, 109, 236, 0.32);
 	box-shadow: 1px 2px 19px 1px rgba(0, 109, 236, 0.32);
 	border-radius: 100px;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
 	line-height: 1;
 }
@@ -1380,12 +1258,8 @@ i.icon-license-info {
 
 
 .food-type .content .bottom {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
 	background-color: #fff;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	padding: 0 14px 0 6px;
 	position: relative;
@@ -1407,14 +1281,8 @@ i.icon-license-info {
 }
 
 .food-type .bottom .menu li {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
 	margin-bottom: 2px;
 	height: 55px;
@@ -1451,15 +1319,8 @@ i.icon-license-info {
 
 .food-type .bottom .food-box {
 	width: 100%;
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
 	flex-direction: column;
 }
 
@@ -1481,8 +1342,6 @@ i.icon-license-info {
 
 .food-type .food-box .foods {
 	width: 100%;
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
 	overflow: auto;
 	-webkit-overflow-scrolling: touch;
@@ -1494,11 +1353,7 @@ i.icon-license-info {
 
 .food-type .foods li {
 	width: 100%;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 	margin-bottom: 20px;
 }
@@ -1508,8 +1363,6 @@ i.icon-license-info {
 }
 
 .food-type .foods li .food-detail {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
 	line-height: 1;
 	padding-left: 10px;
@@ -1542,11 +1395,7 @@ i.icon-license-info {
 }
 
 .food-handle {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 	margin-top: 10px;
 	padding-right: 16px;
@@ -1569,14 +1418,8 @@ i.icon-license-info {
 
 /* 价格 */
 .food-price {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
-	-webkit-box-align: end;
-	-ms-flex-align: end;
 	align-items: flex-end;
 	margin-top: 10px;
 }
@@ -1626,7 +1469,6 @@ i.icon-license-info {
 /* 过渡动画 */
 .fade-enter-active,
 .fade-leave-active {
-	-webkit-transition: opacity .3s;
 	transition: opacity .3s;
 }
 
@@ -1666,8 +1508,6 @@ i.icon-license-info {
 }
 
 .set-work-time .work-time-cell-input {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
 }
 
@@ -1701,15 +1541,10 @@ i.icon-license-info {
 }
 
 .footer-nav .item {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	width: 25%;
 	text-align: center;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
 }
 
@@ -1820,8 +1655,6 @@ i.icon-gain-deta {
 }
 
 .gain-card .detail {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
 	padding-left: 13px;
 	/* background-color: #f00; */
@@ -1982,7 +1815,6 @@ i.icon-dai {
 	height: 9px;
 	border: 2px solid transparent;
 	border-width: 0 1.06px 2px 0;
-	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
 
@@ -2017,8 +1849,6 @@ i.icon-dai {
 }
 
 .ffsfs {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -2063,8 +1893,6 @@ i.icon-dai {
 }
 
 .with-draw .cash-num .mint-cell {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
 	min-height: 4.125em;
 }
@@ -2133,7 +1961,6 @@ i.icon-dai {
 	height: 100px;
 	background-color: #fff;
 	margin-top: 10px;
-	-webkit-box-shadow: 2px 3px 10px 1px rgba(205, 205, 205, 0.5);
 	box-shadow: 2px 3px 10px 1px rgba(205, 205, 205, 0.5);
 	border-radius: 10px;
 	padding: 0 11px 0 8px;
@@ -2165,8 +1992,6 @@ i.icon-dai {
 }
 
 .bank-card-detaill {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
 }
 
@@ -2234,8 +2059,6 @@ i.icon-dai {
 }
 
 .add-bank-card>div {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
 	height: 85px;
 	border-radius: 10px;
@@ -2311,7 +2134,6 @@ i.icon-dai {
 .buy {
 	padding-top: 15px;
 	padding-bottom: 5px;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	padding: 15px 10px 0;
 }
@@ -2329,7 +2151,6 @@ i.icon-dai {
 	background-color: #fff;
 	border-radius: 5px;
 	border: solid 1px #eac389;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	text-align: center;
 	position: relative;
@@ -2380,7 +2201,6 @@ i.icon-dai {
 	position: absolute;
 	top: 50%;
 	left: 0;
-	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	height: 1px;
 	width: 100%;
@@ -2426,9 +2246,6 @@ i.icon-dai {
 .sale-total {
 	width: 100%;
 	height: 100%;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
 	flex-direction: column;
 	padding-bottom: 50px;
 }
@@ -2467,19 +2284,13 @@ i.icon-dai {
 	padding: 8px 42px;
 	color: #fff;
 	background-color: #00e526;
-	-webkit-box-shadow: 3px 5px 40px 0px rgba(0, 116, 250, 0.5);
 	box-shadow: 3px 5px 40px 0px rgba(0, 116, 250, 0.5);
 	border-radius: 50px;
 }
 
 .sale-total .bottom {
 	width: 100%;
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
 	flex-direction: column;
 }
 
@@ -2507,8 +2318,6 @@ i.icon-dai {
 
 .chart {
 	width: 100%;
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
 	background-color: #fff;
 	padding: 0 14px;
@@ -2662,12 +2471,7 @@ i.icon-replace-order {
 
 .order-detail .food-list .item .detail {
 	height: 100%;
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
 	flex-direction: column;
 	padding: 5px 0 10px 18px;
 }
@@ -2743,89 +2547,39 @@ i.icon-replace-order {
 
 /********************* common ******************/
 .ffscrn {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: start;
-	-ms-flex-align: start;
 	align-items: flex-start;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: row;
 	flex-direction: row;
-	-ms-flex-wrap: nowrap;
 	flex-wrap: nowrap;
 }
 
 .ffscrw {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: start;
-	-ms-flex-align: start;
 	align-items: flex-start;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: row;
 	flex-direction: row;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
 .fcfsrn {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: start;
-	-ms-flex-pack: start;
 	justify-content: flex-start;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: row;
 	flex-direction: row;
-	-ms-flex-wrap: nowrap;
 	flex-wrap: nowrap;
 }
 .fcsbrn {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: row;
 	flex-direction: row;
-	-ms-flex-wrap: nowrap;
 	flex-wrap: nowrap;
 }
 .fccrn {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: row;
 	flex-direction: row;
-	-ms-flex-wrap: nowrap;
 	flex-wrap: nowrap;
 }
 /******************************** 发布成功 bg********************/
@@ -2943,8 +2697,6 @@ i.icon-replace-order {
 	text-align: left;
 }
 .input-cell > div  {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
 	flex: 1;
 	border-radius: 5px;
 	position: relative;
@@ -3012,8 +2764,6 @@ i.icon-replace-order {
 	min-height: 40px;
 	border-bottom: 1px solid #EAEAEE;
 	padding-right: 14px;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
 }
 .input-box > a:last-child {
@@ -3184,7 +2934,6 @@ input[type=radio] {
 	border-radius: 50%;
 	border: 1px solid #bbb;
 	position: relative;
-	-webkit-transition: all .3;
 	transition: all .3;
 }
 .radio-group label .circle:before {
@@ -3197,10 +2946,8 @@ input[type=radio] {
 	background-color: transparent;
 	border: 2px solid transparent;
 	border-width: 0 0 1.5px 2px;
-	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 	border-radius: 1px;
-	-webkit-transition: all .3;
 	transition: all .3;
 }
 .radio-group label input:checked ~ .circle {
