@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>选择照片信息</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+
+
+		<!--[if lt IE 9]>
+		  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+		<div id="app" v-cloak>
+
+			<div class="select-photo-info">
+				<div class="radio-group">
+					<label v-for="(item, index) in checkBoxData" :key="index" class="fcsbrn">
+						<div class="title">
+							<span>{{item.name}}</span>
+							<div class="hint">{{item.hintInfo}}</div>
+						</div>
+						<input type="radio" name="photoInfo" :value="item.value" :checked="item.checked" />
+						<div class="circle">
+							
+						</div>
+					</label>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src="static/js/select-photo-info.js"></script>
+	</body>
+</html>
