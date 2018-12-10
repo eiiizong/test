@@ -22,29 +22,40 @@
 	</head>
 	<body>
 		<div id="app" v-cloak>
-
+		
+			<div class="toolbar clearfix">
+				<div class="left">
+					<a href="set.html">设置</a>
+				</div>
+				<div class="right">
+					<i class="icon icon-tel"></i>
+				</div>
+			</div>
 			
 			<!-- 店铺基本信息 -->
 			<div class="store-info">
-				<a class="base-info" href="store-info-change.html">
-					<div>
+				<div class="base-info clearfix">
+					<div class="store-head-img">
 						<img src="static/img/head-portrait.jpg" >
-						<div>
-							<span>川道小炒</span>
-							<span>成都市青羊区牧电路23号</span>
-							<span>Tel：18482160080</span>
-						</div>
 					</div>
-					<i class="db-right"></i>
-				</a>
+					<div class="stor-detail">
+						<span>川道小炒</span>
+						<span>成都市青羊区牧电路23号</span>
+						<span>Tel：18482160080</span>
+					</div>
+					<div class="right">
+						<a href="store-info-change.html"><i class="icon db-right"></i></a>
+					</div>
+				</div>
 				
 				<div class="work-status store-info-cell">
-					<div class="cell-title fcsb">
-						<div class="left fcc">
+					<div class="title-cell clearfix">
+						<div class="left">
 							<i class="icon icon-work-status"></i>
 							<span>营业状态</span>
 						</div>
 					</div>
+					
 					<div class="content fcsb">
 						<!-- 休息中 -->
 						<div class="rest">
@@ -59,12 +70,12 @@
 				
 				<!-- 店员管理 -->
 				<div class="clerk-management store-info-cell">
-					<div class="cell-title fcsb">
-						<div class="left fcc">
+					<div class="title-cell clearfix">
+						<div class="left">
 							<i class="icon icon-clerk-management"></i>
 							<span>店员管理(3)</span>
 						</div>
-						<div class="right fcc">
+						<div class="right">
 							<a href="#">编辑</a>
 						</div>
 					</div>
@@ -86,7 +97,7 @@
 				</div>
 				
 				<!-- 提现管理 -->
-				<div class="cash-management store-info-cell">
+				<!-- <div class="cash-management store-info-cell">
 					<div class="cell-title fcsb">
 						<div class="left fcc">
 							<i class="icon icon-clerk-management"></i>
@@ -108,10 +119,10 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				
 				<!-- 平台授权信息 -->
-				<div class="license-info store-info-cell">
+				<!-- <div class="license-info store-info-cell">
 					<div class="cell-title fcsb">
 						<div class="left fcc">
 							<i class="icon icon-license-info"></i>
@@ -130,7 +141,7 @@
 								<div><a href="renew.html" class="apply-cash">续费</a></div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 				
 				<div class="footer-nav fcfs">
