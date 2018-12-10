@@ -524,7 +524,7 @@ img {
 	width: 100%;
 	display: block;
 	height: 6.25em;
-	background: url(../img/base-info-bg.jpg) no-repeat top left;
+	background: url(../img/base-info-bg.jpg) no-repeat top right;
 	background-size: cover;
 	padding-left: 2.5em;
 	padding-right: 0.875em;
@@ -648,9 +648,9 @@ i.icon-license-info {
 	color: #2a2a2a;
 }
 .title-cell .right i {
-	width: 15px;
-	height: 14px;
+	margin-top: 10px;
 }
+/* 营业状态 */
 .store-info .store-info-cell {
 	background-color: #fff;
 	padding: 0 14px;
@@ -661,35 +661,41 @@ i.icon-license-info {
 	margin-top: 0;
 }
 
-.store-info .work-status .content {
+.work-status .content {
 	height: 91px;
 	padding-left: 20px;
 }
 
-.store-info .work-status .content .rest {
+.work-status .content .rest {
+	padding-top: 24px;
+}
+.work-status .content .rest img{
+	display: block;
 	width: 78px;
 	height: 48px;
 }
-
-.store-info .work-status .content .set-handle a {
-	line-height: 1;
+.work-status .content .set-handle {
+	padding-top: 32px;
+}
+.work-status .content .set-handle a span {
+	display: block;
+	line-height: 32px;
 	font-size: 12px;
 	font-weight: bold;
 	color: #439aff;
 	margin-right: 35px;
 }
-
-.store-info .work-status .content ..set-handle label {
-	color: #000;
+.work-status .content .set-handle a span.time {
+	color: #282828;
 }
 
+/* 店员管理 */
 .store-info .clerk-management {
 	background-color: #fff;
-	padding: 0 14px;
+	padding: 0 0 0 14px;
 }
 
-
-.store-info .clerk-management .btn-add-clerk {
+.clerk-management .btn-add-clerk {
 	display: block;
 	width: 45px;
 	height: 45px;
@@ -699,93 +705,116 @@ i.icon-license-info {
 	font-weight: bold;
 	color: #fff;
 	border-radius: 100%;
-	align-content: flex-start;
+	line-height: 45px;
+}
+.clerk-management .title-cell {
+	padding-right: 14px;
 }
 
-.store-info .clerk-management .content {
-	height: 92px;
-	align-items: flex-start;
-	padding-top: 11px;
+.clerk-management .content .item {
+	border-bottom: 1px solid #eaeaea;
 }
-
-.store-info .clerk-management ul {
+.clerk-management .content .item:last-of-type {
+	border-bottom: 0;
+	padding-bottom: 24px;
+}
+.clerk-management .content .item .type {
+	line-height: 28px;
+	font-size: 15px;
 	padding-left: 10px;
-
 }
-
-.store-info .clerk-management ul li {
+.clerk-management ul {
+	padding-left: 10px;
+}
+.clerk-management ul li {
 	position: relative;
-	width: 65px;
-	flex-wrap: wrap;
-	margin-right: 5px;
-	align-items: flex-start;
+	margin-right: 25px;
+	text-align: center;
 }
-
-.store-info .clerk-management ul li img {
+.clerk-management ul li:last-child {
+	margin-right: 0;
+}
+.clerk-management ul li img {
 	display: block;
 	width: 45px;
 	height: 45px;
 	border-radius: 100%;
+	margin: 0 auto;
 }
-
-.store-info .clerk-management ul li i {
+.clerk-management ul li i {
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: -2px;
+	right: -2px;
 }
-
-.clerk-name {
+.clerk-management ul li span {
+	display: block;
+	width: 45px;
 	font-size: 12px;
 	font-weight: 500;
 	color: #2a2a2a;
 	margin-top: 9px;
+	margin-bottom: 6px;
+	overflow: hidden;
 }
 
-/*  */
+/* 提现管理 */
 .cash-management .content {
 	height: 177px;
 }
-
-.content .card {
-	flex: 1;
+i.icon-cash-management {
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/icon/cash-management@2x.png);
+}
+i.icon-db-link {
+	width: 15px;
+	height: 14px;
+	background-image: url(../img/icon/db-link@2x.png);
+}
+.card {
 	width: 100%;
 	height: 150px;
 	box-shadow: 0px 7px 19px 1px rgba(205, 205, 205, 0.5);
 	border-radius: 10px;
+	position: relative;
 }
-
-.content .card img {
+.card .img-box {
+	width: 115px;
+	height: 150px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.card .img-box img {
 	width: 115px;
 	height: 150px;
 }
-
-.content .card .right {
-	padding: 15px 0 12px 30px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 150px;
+.card .text-detail {
+	width: 100%;
+	padding-left: 144px;
 }
 
-.right .can-cash-money {
+.card .text-detail .can-cash-money {
 	font-size: 15px;
 	font-weight: bold;
 	color: #2a2a2a;
 	line-height: 1;
+	padding-top: 15px;
 }
 
-.right .can-cash-money span {
+.card .text-detail .can-cash-money span {
 	color: #00e526;
 }
 
-.compare {
+.card .text-detail .compare {
 	font-size: 12px;
 	font-weight: 500;
 	color: #2a2a2a;
-	line-height: 15px;
+	line-height: 16px;
+	padding-top: 24px;
 }
 
-.right .apply-cash {
+.card .text-detail .apply-cash {
 	display: block;
 	width: 80px;
 	text-align: center;
@@ -796,29 +825,28 @@ i.icon-license-info {
 	border: solid 1px #439aff;
 	padding: 5px 0px;
 	border-radius: 100px;
+	margin-top: 10px;
 }
-
-
-.license-detail-info {
+.cash-management .card .text-detail .apply-cash {
+	margin-top: 32px;
+}
+.card .license-detail-info {
 	font-size: 12px;
 	font-weight: 500;
 	color: #2a2a2a;
+	padding-top: 24px;
 }
 
-.license-info .content {
-	height: 177px;
-}
-
-.license-detail-info p {
+.card .license-detail-info p {
 	margin: 0;
-	line-height: 15px;
+	line-height: 16px;
 }
 
-.license-detail-info p:last-child {
-	margin-top: 10px;
+.card .license-detail-info p:last-child {
+	margin-top: 6px;
 }
 
-.license-detail-info span {
+.card .license-detail-info span {
 	color: #e00000;
 }
 
@@ -1604,15 +1632,6 @@ i.icon-license-info {
 	margin: 0 auto;
 	margin-bottom: 5px;
 }
-
-/* .footer-nav .item i.icon-nav-order-list {
-	background-image: url(../img/icon/order-list@2x.png);
-}
-
-.footer-nav .item.active i.icon-nav-order-list {
-	background-image: url(../img/icon/order-list-active@2x.png);
-} */
-
 .footer-nav .item i.icon-nav-type {
 	background-image: url(../img/icon/type@2x.png);
 }
