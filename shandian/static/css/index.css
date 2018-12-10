@@ -1579,11 +1579,9 @@ i.icon-license-info {
 }
 
 .footer-nav .item {
-	display: flex;
-	width: 25%;
-	text-align: center;
-	flex-wrap: wrap;
-	justify-content: center;
+	width: 33.33333%;
+	float: left;
+	padding-top: 10px;
 }
 
 .footer-nav .item span {
@@ -1603,16 +1601,17 @@ i.icon-license-info {
 	display: block;
 	width: 22px;
 	height: 22px;
+	margin: 0 auto;
 	margin-bottom: 5px;
 }
 
-.footer-nav .item i.icon-nav-order-list {
+/* .footer-nav .item i.icon-nav-order-list {
 	background-image: url(../img/icon/order-list@2x.png);
 }
 
 .footer-nav .item.active i.icon-nav-order-list {
 	background-image: url(../img/icon/order-list-active@2x.png);
-}
+} */
 
 .footer-nav .item i.icon-nav-type {
 	background-image: url(../img/icon/type@2x.png);
