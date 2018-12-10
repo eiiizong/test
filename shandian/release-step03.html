@@ -16,32 +16,36 @@
 	<body>
 		<div id="app" v-cloak>
 			<div class="release-step03 release">
-				<div class="ffscrw">
+				<div class="top">
 					<div class="img-box">
-						<img src="static/img/release-step-03.jpg" >
+						<img src="static/img/release-step-03.jpg">
 					</div>
 					<h4>提交审核</h4>
-					<span class="hint">(提交给微信官方审核，预计1-3天审核完成，请耐心等待...)</span>
+					<p class="release-hint">(提交给微信官方审核，预计1-3天审核完成，请耐心等待...)</p>
 				</div>
-				<div class="input-cell fcfsrn">
-					<label>服务类目</label>
-					<div>
-						<mt-field placeholder="例：餐饮类" v-model="type" :readonly="readonly"></mt-field>
+
+				<div class="input-cell">
+					<label for="serviceType">服务类目</label>
+					<div class="input-warrper">
+						<input type="text" name="serviceType" id="serviceType" readonly="readonly" placeholder="例：餐饮类" class="service-typr-selected" @focus="popupVisible=true" v-model="type" />
+						<i class="icon icon-selected" :class="popupVisible? 'active': ''"></i>
 					</div>
 				</div>
-				<div class="input-cell fcfsrn">
+				<div class="input-cell">
 					<label>小程序标签</label>
-					<div>
+					<div class="input-warrper">
 						<mt-field placeholder="例：餐饮 美食 点餐" v-model="tag"></mt-field>
 					</div>
 				</div>
 				<span class="hint">用户可以用小程序标签作为关键词，在微信内搜索小程序，多个标签请用空格隔开。</span>
-				<div class="btn-box">
+				<div class="btn-box bottom">
 					<a class="btn" href="release-step04.html">提交</a>
 				</div>
-				<div class="selecte">
-					<mt-picker :slots="arr" @change="onValuesChange"></mt-picker>
-				</div>
+
+				<mt-popup v-model="popupVisible" position="bottom" class="mint-popup selecte">
+					<mt-picker :slots="serviceType" @change="onValuesChange"></mt-picker>
+				</mt-popup>
+
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>

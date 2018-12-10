@@ -274,6 +274,7 @@ input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	appearance: none;
 }
+
 button {
 	border: 0;
 	outline: 0;
@@ -318,17 +319,21 @@ p {
 	clear: both;
 	visibility: hidden;
 }
-.clearfix > .left {
+
+.clearfix>.left {
 	float: left;
 	font-size: 0;
 }
-.clearfix > .right {
+
+.clearfix>.right {
 	float: right;
 	font-size: 0;
 }
-.clearfix > div {
+
+.clearfix>div {
 	float: left;
 }
+
 /****************清除浮动 END****************************/
 
 .fcfs {
@@ -348,11 +353,13 @@ p {
 	align-items: center;
 	justify-content: space-between;
 }
+
 .ffssb {
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
 }
+
 /******************************* 响应图片 *******************************************/
 .img-responsive-box {
 	display: block;
@@ -520,6 +527,7 @@ img {
 .store-info {
 	padding-bottom: 50px;
 }
+
 .store-info .base-info {
 	width: 100%;
 	display: block;
@@ -534,6 +542,7 @@ img {
 .base-info .store-head-img {
 	padding-top: 20px;
 }
+
 .base-info .store-head-img img {
 	display: block;
 	width: 3.75em;
@@ -541,6 +550,7 @@ img {
 	border-radius: 50%;
 	margin-right: 1.4375em;
 }
+
 .base-info .stor-detail {
 	display: block;
 	padding-top: 25px;
@@ -563,10 +573,12 @@ img {
 .base-info .stor-detail span:last-of-type {
 	margin-top: 0.375em;
 }
+
 .base-info a {
 	display: block;
 	margin-top: 40px;
 }
+
 .base-info i.db-right {
 	font-size: 16px;
 	display: block;
@@ -583,11 +595,13 @@ i.icon {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
+
 i.db-right {
 	width: 36px;
 	height: 36px;
 	background-image: url(../img/icon/db-right.png);
 }
+
 i.icon-work-status {
 	width: 15px;
 	height: 15px;
@@ -621,10 +635,11 @@ i.icon-license-info {
 	margin-right: 6px;
 }
 
-/************ 头部标题 12.10 改**********/
+/********************************* 头部标题 12.10 改*********************/
 .title-cell {
 	height: 34px;
 }
+
 .title-cell .left span {
 	display: inline-block;
 	font-size: 15px;
@@ -633,23 +648,28 @@ i.icon-license-info {
 	line-height: 1;
 	line-height: 34px;
 }
+
 .title-cell .left i {
 	margin-right: 4px;
 	vertical-align: top;
 	margin-top: 9px;
 }
+
 .title-cell .right {
 	font-size: 13px;
 	font-weight: 500;
 }
+
 .title-cell .right a {
 	display: block;
 	line-height: 34px;
 	color: #2a2a2a;
 }
+
 .title-cell .right i {
 	margin-top: 10px;
 }
+
 /* 营业状态 */
 .store-info .store-info-cell {
 	background-color: #fff;
@@ -669,14 +689,17 @@ i.icon-license-info {
 .work-status .content .rest {
 	padding-top: 24px;
 }
-.work-status .content .rest img{
+
+.work-status .content .rest img {
 	display: block;
 	width: 78px;
 	height: 48px;
 }
+
 .work-status .content .set-handle {
 	padding-top: 32px;
 }
+
 .work-status .content .set-handle a span {
 	display: block;
 	line-height: 32px;
@@ -685,6 +708,7 @@ i.icon-license-info {
 	color: #439aff;
 	margin-right: 35px;
 }
+
 .work-status .content .set-handle a span.time {
 	color: #282828;
 }
@@ -707,6 +731,7 @@ i.icon-license-info {
 	border-radius: 100%;
 	line-height: 45px;
 }
+
 .clerk-management .title-cell {
 	padding-right: 14px;
 }
@@ -714,26 +739,32 @@ i.icon-license-info {
 .clerk-management .content .item {
 	border-bottom: 1px solid #eaeaea;
 }
+
 .clerk-management .content .item:last-of-type {
 	border-bottom: 0;
 	padding-bottom: 24px;
 }
+
 .clerk-management .content .item .type {
 	line-height: 28px;
 	font-size: 15px;
 	padding-left: 10px;
 }
+
 .clerk-management ul {
 	padding-left: 10px;
 }
+
 .clerk-management ul li {
 	position: relative;
 	margin-right: 25px;
 	text-align: center;
 }
+
 .clerk-management ul li:last-child {
 	margin-right: 0;
 }
+
 .clerk-management ul li img {
 	display: block;
 	width: 45px;
@@ -741,11 +772,13 @@ i.icon-license-info {
 	border-radius: 100%;
 	margin: 0 auto;
 }
+
 .clerk-management ul li i {
 	position: absolute;
 	top: -2px;
 	right: -2px;
 }
+
 .clerk-management ul li span {
 	display: block;
 	width: 45px;
@@ -761,16 +794,19 @@ i.icon-license-info {
 .cash-management .content {
 	height: 177px;
 }
+
 i.icon-cash-management {
 	width: 16px;
 	height: 16px;
 	background-image: url(../img/icon/cash-management@2x.png);
 }
+
 i.icon-db-link {
 	width: 15px;
 	height: 14px;
 	background-image: url(../img/icon/db-link@2x.png);
 }
+
 .card {
 	width: 100%;
 	height: 150px;
@@ -778,6 +814,7 @@ i.icon-db-link {
 	border-radius: 10px;
 	position: relative;
 }
+
 .card .img-box {
 	width: 115px;
 	height: 150px;
@@ -785,10 +822,12 @@ i.icon-db-link {
 	top: 0;
 	left: 0;
 }
+
 .card .img-box img {
 	width: 115px;
 	height: 150px;
 }
+
 .card .text-detail {
 	width: 100%;
 	padding-left: 144px;
@@ -827,9 +866,11 @@ i.icon-db-link {
 	border-radius: 100px;
 	margin-top: 10px;
 }
+
 .cash-management .card .text-detail .apply-cash {
 	margin-top: 32px;
 }
+
 .card .license-detail-info {
 	font-size: 12px;
 	font-weight: 500;
@@ -849,20 +890,6 @@ i.icon-db-link {
 .card .license-detail-info span {
 	color: #e00000;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /******************* 商铺信息 END***********/
 
@@ -1632,6 +1659,7 @@ i.icon-db-link {
 	margin: 0 auto;
 	margin-bottom: 5px;
 }
+
 .footer-nav .item i.icon-nav-type {
 	background-image: url(../img/icon/type@2x.png);
 }
@@ -2591,6 +2619,7 @@ i.icon-replace-order {
 	flex-direction: row;
 	flex-wrap: wrap;
 }
+
 .fcfsrn {
 	display: flex;
 	align-items: center;
@@ -2598,6 +2627,7 @@ i.icon-replace-order {
 	flex-direction: row;
 	flex-wrap: nowrap;
 }
+
 .fcsbrn {
 	display: flex;
 	align-items: center;
@@ -2605,6 +2635,7 @@ i.icon-replace-order {
 	flex-direction: row;
 	flex-wrap: nowrap;
 }
+
 .fccrn {
 	display: flex;
 	align-items: center;
@@ -2612,10 +2643,11 @@ i.icon-replace-order {
 	flex-direction: row;
 	flex-wrap: nowrap;
 }
-/******************************** 发布成功 bg********************/
+
+/******************************** 发布小程序 12.10改********************/
 .release {
 	width: 100%;
-	height: 100%;
+	min-height: 100%;
 	background-color: #fff;
 	padding-top: 6.875em;
 	font-weight: 500;
@@ -2623,17 +2655,13 @@ i.icon-replace-order {
 	text-align: center;
 	position: relative;
 }
-
 .release .img-box {
-	width: 9em;
-	height: 9em;
-	margin-bottom: 20px;
+	padding-bottom: 20px;
 }
-
-.release p {
-	width: 100%;
-	font-size: .75em;
-	line-height: 1;
+.release .img-box img {
+	width: 105px;
+	height: 82px;
+	margin: 0 auto;
 }
 
 .release h4 {
@@ -2642,29 +2670,36 @@ i.icon-replace-order {
 	line-height: 1;
 	color: #000;
 }
-
-.release p:first-of-type {
-	margin: 8px 0 10px;
+.release .release-hint {
+	display: block;
+	width: 100%;
+	font-size: .75em;
+	line-height: 1;
+	padding: 0 67px;
+	padding-top: 6px;
 }
-.release p.other-info {
-	margin: 42px 0 0 0;
+.release .other-info {
+	margin: 29px 0 0 0;
 	padding: 0 20px;
 	font-size: 14px;
 	line-height: 18px;
 	text-align: left;
 }
-.release p.other-info a {
+
+.release .other-info a {
 	color: #439aff;
 }
-.release .btn-box {
+
+
+.release .bottom {
 	width: 100%;
-	padding: 0 70px;
+	padding: 40px 70px;
 	position: absolute;
-	bottom: 53px;
+	bottom: 0;
+	left: 0;
 	font-size: .9375em;
 	font-weight: 500;
 }
-
 .release .btn-box .btn {
 	height: 2.6666666em;
 	background-color: #439aff;
@@ -2675,89 +2710,112 @@ i.icon-replace-order {
 	color: #fff;
 	padding: 0;
 }
-/******************************** 发布小程序-4***************/
-.release span.hint {
-	margin-top: 6px;
-	font-size: 14px;
-	color: #2a2a2a;
-	display: block;
-	width: 100%;
+
+/************** 发布小程序-2***************/
+
+.release-step02 .release-hint {
+	text-align: left;
 }
-.release-step04 {
-	padding-top: 150px;
-}
-.release-step01 .img-box,
-.release-step02 .img-box,
-.release-step03 .img-box,
-.release-step04 .img-box {
-	width: 105px;
-	height: 82px;
-	margin-bottom: 25px;
-	
-}
-/******************************** 发布小程序-1***************/
-/******************************** 发布小程序-2***************/
-.release-step02 {
-	padding-top: 81px;
-}
-.release-step02 div span.hint {
-	padding: 0 67px;
-}
+
 .release-step02 .experience-QR {
+	margin-top: 22px;
+}
+.release-step02 .experience-QR img {
 	width: 140px;
 	height: 140px;
-	margin-top: 22px;
-	margin-bottom: 0;
+	margin: 0 auto;
 }
-/******************************** 发布小程序-3***************/
-.release-step03 div span.hint {
+
+/**************** 发布小程序-3***************/
+.release-step03 p.release-hint {
 	padding: 0 82px;
-	line-height: 17px;
-	margin-bottom: 5px;
+	padding-top: 6px;
 }
+
 .input-cell {
 	padding: 0 37px 0 18px;
 	margin-top: 14px;
+	position: relative;
 }
 .input-cell label {
+	position: absolute;
+	top: 0;
+	left: 18px;
 	width: 80px;
 	font-size: 15px;
-	line-height: 1;
+	line-height: 40px;
 	color: #000;
 	text-align: left;
 }
-.input-cell > div  {
-	flex: 1;
-	border-radius: 5px;
+.input-cell .input-warrper {
+	display: block;
+	width: 100%;
+	padding-left: 80px;
 	position: relative;
 }
-.input-cell a {
+
+.input-cell .service-typr-selected {
+	height: 40px;
+	background-color: #f4f4f4;
+	width: 100%;
+	padding: 0 22px 0 10px;
+	border-radius: 5px;
+	line-height: 40px;
+	font-size: 15px;
+	color: #000;
+}
+i.icon-selected {
+	width: 12px;
+	height: 16px;
+	position: absolute;
+	top: 12px;
+	right: 7px;
+	background-image: url(../img/icon/selecte.png);
+}
+i.icon-selected.active {
+	background-image: url(../img/icon/selecte-active@2x.png);
+}
+.input-cell .mint-cell {
+	min-height: 40px;
 	background-color: #f4f4f4;
 	border-radius: 5px;
 }
-.input-cell a input {
+
+.input-cell .mint-cell input {
+	font-size: 15px;
 	background-color: #f4f4f4;
 }
-.input-cell span.hint {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-}
-.release-step03 > span.hint {
+.release-step03 span.hint {
 	display: block;
 	font-size: 12px;
 	color: #c7c7cd;
 	padding: 0 37px 0 98px;
 	line-height: 15px;
 	text-align: left;
+	padding-top: 5px;
+	
 }
-.release-step03 .selecte{
-	display: none;
+.release-step03 .selecte {
 	width: 100%;
-	position: fixed;
-	bottom: 0;
-	background-color: #eee;
 }
+/************* 发布小程序-4***************/
+.release-step04 {
+	padding-top: 150px;
+}
+/****** 发布小程序-发布成功***************/
+
+.release-success .img-box img {
+	width: 144px;
+	height: 144px;
+}
+.release-success p.info {
+	font-size: 12px;
+	line-height: 1;
+}
+.release-success p.info:first-of-type {
+	padding: 8px 0 10px;
+}
+
 
 /***********************申请特约商户**************************/
 .apply-business {
@@ -2765,9 +2823,8 @@ i.icon-replace-order {
 	font-weight: 500;
 }
 
-.hint-input-box {
-	
-}
+.hint-input-box {}
+
 .hint-input-box .hint-box {
 	font-size: 14px;
 	color: #7b7b7b;
@@ -2775,6 +2832,7 @@ i.icon-replace-order {
 	padding: 21px 14px 8px 20px;
 	position: relative;
 }
+
 .hint-input-box .hint-box:before {
 	content: '';
 	width: 2px;
@@ -2784,38 +2842,46 @@ i.icon-replace-order {
 	left: 14px;
 	border-radius: 2px;
 }
+
 .input-box {
 	border-bottom: 1px solid #eaeaee;
 	border-top: 1px solid #eaeaee;
 	padding-left: 14px;
 	background-color: #fff;
 }
-.input-box > a {
+
+.input-box>a {
 	min-height: 40px;
 	border-bottom: 1px solid #EAEAEE;
 	padding-right: 14px;
 	align-items: center;
 }
-.input-box > a:last-child {
+
+.input-box>a:last-child {
 	border-bottom: 0;
 }
-.input-box > a .mint-cell-wrapper {
+
+.input-box>a .mint-cell-wrapper {
 	padding: 0;
 }
-.input-box > a .mint-cell-title {
+
+.input-box>a .mint-cell-title {
 	width: auto;
 	font-size: 14px;
 	color: #000;
 	line-height: 1;
 	margin-right: 16px;
 }
-.input-box > a .mint-cell-title span {
+
+.input-box>a .mint-cell-title span {
 	display: inline-block;
 	line-height: 1;
 }
-.input-box > a input {
+
+.input-box>a input {
 	font-size: 14px;
-	color: #000;padding: 0;
+	color: #000;
+	padding: 0;
 }
 
 .link-box {
@@ -2827,25 +2893,31 @@ i.icon-replace-order {
 	margin-top: 30px;
 	padding: 0 14px;
 }
-.link-box > div > span {
+
+.link-box>div>span {
 	font-size: 14px;
 	font-weight: 500;
 }
-.link-box > div > .title {
+
+.link-box>div>.title {
 	margin-right: 16px;
 }
-.link-box > div > span.hint-info {
+
+.link-box>div>span.hint-info {
 	color: #c7c7cd;
 }
-.link-box > div > img {
+
+.link-box>div>img {
 	width: 80px;
 	height: 50px;
 }
+
 i.icon-isLink {
 	width: 8px;
 	height: 16px;
 	background-image: url(../img/icon/is-link-big.png);
 }
+
 p.hint-info {
 	font-size: 12px;
 	font-weight: 500;
@@ -2854,9 +2926,11 @@ p.hint-info {
 	padding: 0 14px;
 	padding-top: 7px;
 }
+
 .mt30 {
 	margin-top: 30px;
 }
+
 .apply-business .btn-box {
 	padding: 28px 14px;
 }
@@ -2873,6 +2947,7 @@ p.hint-info {
 .origin input::-moz-placeholder {
 	color: #e8b400;
 }
+
 .origin input:-ms-input-placeholder {
 	color: #e8b400;
 }
@@ -2884,10 +2959,12 @@ p.hint-info {
 	background-color: #fff;
 	padding-top: 20px;
 }
+
 .img-upload {
 	padding: 0 32px;
 	margin-top: 12px;
 }
+
 .img-upload label {
 	display: block;
 	width: 100%;
@@ -2895,15 +2972,18 @@ p.hint-info {
 	background-color: #f4f4f4;
 	border-radius: 5px;
 	text-align: center;
-	
+
 }
+
 .img-upload label img {
 	width: 100%;
 }
+
 .img-upload div {
 	padding-top: 50px;
 }
-.img-upload label > div span{
+
+.img-upload label>div span {
 	display: block;
 	width: 100%;
 	font-size: 15px;
@@ -2912,24 +2992,29 @@ p.hint-info {
 	line-height: 1;
 	padding-top: 5px;
 }
+
 i.icon-plus-sign35 {
 	width: 35px;
 	height: 35px;
 	background-image: url(../img/icon/plus-sign35.png);
 }
+
 .id-card-upload .btn-box {
-	padding: 27px 14px ;
+	padding: 27px 14px;
 }
+
 /***************************** 选择照片信息 ***********************/
 .select-photo-info {
 	padding-top: 10px;
 }
+
 .radio-group {
 	border-bottom: 1px solid #EAEAEE;
 	border-top: 1px solid #EAEAEE;
 	background-color: #fff;
 	padding-left: 14px;
 }
+
 .radio-group label {
 	width: 100%;
 	padding-right: 14px;
@@ -2937,27 +3022,29 @@ i.icon-plus-sign35 {
 	font-weight: 500;
 	height: 41px;
 }
+
 .radio-group label:last-of-type {
 	border-bottom: 0;
 }
+
 .radio-group label .title {
 	display: inline-block;
 	font-size: 14px;
 	color: #000;
 	line-height: 1;
 }
+
 .radio-group label .title .hint {
 	font-size: 11px;
 	color: #c7c7cd;
 	margin: 2px 0 0 0;
 }
+
 .select-photo-info .radio-group label:last-of-type .title,
 .select-photo-info .radio-group label:first-of-type .title {
 	margin-left: -6px;
 }
-input[type=radio] {
-	display: none;
-}
+
 .radio-group label .circle {
 	width: 22px;
 	height: 22px;
@@ -2966,6 +3053,7 @@ input[type=radio] {
 	position: relative;
 	transition: all .3;
 }
+
 .radio-group label .circle:before {
 	content: '';
 	position: absolute;
@@ -2980,27 +3068,32 @@ input[type=radio] {
 	border-radius: 1px;
 	transition: all .3;
 }
-.radio-group label input:checked ~ .circle {
-	border-color: #439AFF;
-}
-.radio-group label input:checked ~ .circle:before {
+
+.radio-group label input:checked~.circle {
 	border-color: #439AFF;
 }
 
-/********************* 设置 ******************/
+.radio-group label input:checked~.circle:before {
+	border-color: #439AFF;
+}
+
+/********************* 设置 12.10改 ******************/
 /* 链接 左边文字 右边图标 */
 .set {
 	width: 100%;
 	min-height: 100%;
 	padding-top: 9px;
 }
-.set  > a {
+
+.set>a {
 	display: block;
-    margin-top: 9px;
+	margin-top: 9px;
 }
+
 .set .first-of-type {
-    margin-top: 0;
+	margin-top: 0;
 }
+
 .link-cell {
 	display: block;
 	height: 42px;
@@ -3010,51 +3103,61 @@ input[type=radio] {
 	border-bottom: 1px solid #EAEAEE;
 	padding: 0 14px;
 }
+
 .link-cell .left {
 	float: left;
 	font-size: 14px;
 	line-height: 40px;
 }
+
 .link-cell .right {
 	float: right;
 	margin-top: 12px;
 }
+
 i.icon-link {
 	width: 8px;
 	height: 16px;
 	background-image: url(../img/icon/is-link-big.png);
 }
+
 /* 提现管理 */
 .cash-management {
 	width: 100%;
 	min-height: 100%;
 	padding-top: 9px;
 }
-.cash-management  > a {
+
+.cash-management>a {
 	display: block;
-    margin-top: 9px;
+	margin-top: 9px;
 }
+
 .cash-management .first-of-type {
-    margin-top: 0;
+	margin-top: 0;
 }
+
 /************ 支付到款方式 *********/
 .payment-method {
 	width: 100%;
 	min-height: 100%;
 	padding-top: 9px;
 }
-.payment-method  > a {
+
+.payment-method>a {
 	display: block;
-    margin-top: 9px;
+	margin-top: 9px;
 }
+
 .payment-method .first-of-type {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 .toolbar {
 	background-color: #afd4ff;
 	height: 44px;
 }
+
 .toolbar .left a {
 	font-size: 15px;
 	font-weight: 500;
@@ -3062,10 +3165,12 @@ i.icon-link {
 	padding-left: 14px;
 	line-height: 44px;
 }
+
 .toolbar .right {
 	padding-top: 14px;
 	padding-right: 14px;
 }
+
 .toolbar .right .icon-tel {
 	display: block;
 	width: 18px;

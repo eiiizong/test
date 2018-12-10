@@ -2,31 +2,27 @@ var app = new Vue({
 	el: '#app',
 	data: function() {
 		return {
-			slots: [
-				'餐饮类',
-				'服务类',
-				'其他'
-			],
-			arr: [
-				{
+			serviceType: [{
 				flex: 1,
-				values: ['2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06'],
-				className: 'type',
+				values: ['餐饮类', '服务类', '其他'],
+				className: 'serviceType',
 				textAlign: 'center'
-				},
-			],
+			}, ],
 			tag: '',
 			type: '',
-			readonly: true
+			readonly: true,
+			popupVisible: false
 		}
 	},
 	methods: {
 		init: function() {
-
+			
 		},
 		onValuesChange(picker, values) {
-			if (values[0] > values[1]) {
-				picker.setSlotValue(1, values[0]);
+// 			console.log(picker);
+// 			console.log(values);
+			if (values[0]) {
+				this.type = values[0];
 			}
 		}
 	}
