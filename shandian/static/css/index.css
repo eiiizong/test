@@ -717,7 +717,7 @@ i.icon-license-info {
 	margin-top: 9px;
 }
 
-/* 提现管理 */
+/*  */
 .cash-management .content {
 	height: 177px;
 }
@@ -1925,29 +1925,8 @@ i.icon-dai {
 	border-radius: 5px;
 }
 
-/************************** 提现管理******************/
-.cash-management {
-	padding-top: .625em;
-}
-
 .mt10 {
 	margin-top: 10px;
-}
-
-.link-cell {
-	min-height: 2.85714285em;
-	background-color: #fff;
-	color: #282828;
-	font-size: .875em;
-	font-weight: 500;
-	padding: 0 1em;
-	line-height: 1;
-}
-
-.link-cell i {
-	width: 8px;
-	height: 16px;
-	background-image: url(../img/icon/is-link-big.png);
 }
 
 /******************** 银行卡管理 ************************************/
@@ -2540,11 +2519,6 @@ i.icon-replace-order {
 	margin: 0;
 }
 
-/* 支付到款方式 */
-.payment-method {
-	padding-top: 10px;
-}
-
 /********************* common ******************/
 .ffscrn {
 	display: flex;
@@ -2955,4 +2929,67 @@ input[type=radio] {
 }
 .radio-group label input:checked ~ .circle:before {
 	border-color: #439AFF;
+}
+
+/********************* 设置 ******************/
+.set {
+	width: 100%;
+	min-height: 100%;
+	padding-top: 9px;
+}
+.set  > a {
+	display: block;
+    margin-top: 9px;
+}
+.set .first-of-type {
+    margin-top: 0;
+}
+.link-cell {
+	display: block;
+	height: 42px;
+	background-color: #fff;
+	color: #282828;
+	border-top: 1px solid #EAEAEE;
+	border-bottom: 1px solid #EAEAEE;
+	padding: 0 14px;
+}
+.link-cell .left {
+	float: left;
+	font-size: 14px;
+	line-height: 40px;
+}
+.link-cell .right {
+	float: right;
+	margin-top: 12px;
+}
+i.icon-link {
+	width: 8px;
+	height: 16px;
+	background-image: url(../img/icon/is-link-big.png);
+}
+/* 提现管理 */
+.cash-management {
+	width: 100%;
+	min-height: 100%;
+	padding-top: 9px;
+}
+.cash-management  > a {
+	display: block;
+    margin-top: 9px;
+}
+.cash-management .first-of-type {
+    margin-top: 0;
+}
+/************ 支付到款方式 *********/
+.payment-method {
+	width: 100%;
+	min-height: 100%;
+	padding-top: 9px;
+}
+.payment-method  > a {
+	display: block;
+    margin-top: 9px;
+}
+.payment-method .first-of-type {
+    margin-top: 0;
 }
