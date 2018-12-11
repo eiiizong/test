@@ -282,14 +282,23 @@ button {
 	padding: 0;
 	font-weight: 500;
 	background-color: transparent;
-	/* 禁止选中文字 */
-	moz-user-select: -moz-none;
 	-moz-user-select: none;
 	-o-user-select: none;
 	-khtml-user-select: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	moz-user-select: -moz-none;
+}
+
+.no-selected-text {
+	-moz-user-select: none;
+	-o-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	moz-user-select: -moz-none;
 }
 
 h1,
@@ -983,29 +992,7 @@ i.icon-db-link {
 	line-height: 1.0454545em;
 }
 
-/* 按钮 */
-.btn {
-	padding: 1.40625em 0.875em;
-	/* 22.5 14*/
-}
 
-.btn button {
-	width: 100%;
-	font-size: 0.9375em;
-	/*15*/
-	font-weight: 500;
-	border-radius: 200px;
-	background-color: #439aff;
-	height: 2.7333333em;
-}
-
-.btn button:active {
-	background-color: #26a2ff;
-}
-
-.btn .mint-button::after {
-	background-color: transparent;
-}
 
 /******************** 更改店铺名 END***********************/
 /******************** 验证手机号 *****************************/
@@ -1801,13 +1788,28 @@ i.icon-dai {
 .sd-input-group .hint-input-box {
 	display: block;
 	width: 100%;
-	padding: 0 14px;
-	line-height: 22px;
+	padding: 25px 14px 4px;
+	line-height: 1;
 	font-size: 14px;
-	padding-top: 21px;
 	color: #7b7b7b;
 	margin: 0;
+	position: relative;
 }
+
+.sd-input-group .hint-input-box.before {
+	padding-left: 18px;
+}
+
+.sd-input-group .hint-input-box.before:before {
+	position: absolute;
+	content: '';
+	height: 14px;
+	width: 2px;
+	border-radius: 1px;
+	background-color: #439aff;
+	left: 14px;
+}
+
 .sd-input-group .input-box {
 	border-top: 1px solid #eaeaee;
 	border-bottom: 1px solid #eaeaee;
@@ -1820,40 +1822,52 @@ i.icon-dai {
 	min-height: 41px;
 	padding-right: 14px;
 }
+
 .sd-input-group .mint-cell:first-of-type {
 	border-top: 0;
 	min-height: 40px;
 }
-.sd-input-group .mint-cell-wrapper  {
+
+.sd-input-group .mint-cell-wrapper {
 	padding: 0 0 0 60px;
 	position: relative;
 }
-.sd-input-group .mint-cell-title  {
+
+.sd-input-group .mint-cell-title {
 	width: auto;
 	position: absolute;
 	top: 0;
 	left: 0;
 }
+
 .sd-input-group .mint-cell-title span {
 	display: block;
 	font-size: 14px;
 	color: #000;
 	line-height: 40px;
 }
+
 .sd-input-group .mint-cell-value {
 	width: 100%;
 }
-.sd-input-group .mint-cell-value input{
+
+.sd-input-group .mint-cell-value input {
 	display: block;
 	width: 100%;
 	font-size: 14px;
+	font-weight: 500;
 }
-/* 按钮 */
-.btn-box {
+
+.sd-input-group .orange .mint-cell-value input {
+	color: #e0b800;
+}
+
+/*********** 按钮 12.11改********/
+.sd-btn-box {
 	padding: 2.3125em .875em;
 }
 
-.btn-box .full-btn {
+.sd-btn-box .btn {
 	display: block;
 	width: 100%;
 	height: 2.7333333em;
@@ -1866,63 +1880,75 @@ i.icon-dai {
 	border: 0;
 }
 
-.btn-box .full-btn:active {
+.sd-btn-box .btn.disabled,
+.sd-btn-box .btn[disabled] {
+	background-color: #898989;
+}
+
+.sd-btn-box .btn:active {
 	background-color: rgba(67, 154, 255, .8);
 }
 
-.bind-bank-card2 .bank-card-type input {
-	color: #e0b800;
+.sd-btn-box .btn.disabled:active,
+.sd-btn-box .btn[disabled]:active {
+	background-color: #898989;
 }
 
-.bind-bank-card2 .user-agreement {
-	margin-top: 25px;
-	padding: 0 14px;
+/* 添加银行卡第二步  12.11改*/
+.mt28 {
+	margin-top: 28px;
 }
 
-.bind-bank-card2 .user-agreement label {
-	font-size: 13px;
+/* 浮动 同意用户协议 12.11改*/
+.sd-agree-agreement {
+	display: block;
+	width: 100%;
+	font-weight: 500;
 	color: #000;
 }
 
-.bind-bank-card2 .user-agreement label div i {
-	display: block;
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
-	border: 1px solid #666;
+.sd-agree-agreement label.left {
 	margin-right: 5px;
-	background-color: #fff;
-	position: relative;
 }
 
-.bind-bank-card2 .user-agreement label div i:after {
-	position: absolute;
-	content: '';
-	top: 1px;
-	left: 4px;
-	width: 4px;
-	height: 9px;
-	border: 2px solid transparent;
-	border-width: 0 1.06px 2px 0;
-	transform: rotate(45deg);
-}
-
-.bind-bank-card2 .user-agreement label input:checked~div i {
-	border-color: #439aff;
-}
-
-.bind-bank-card2 .user-agreement label input:checked~div i:after {
-	border-color: #439aff;
-}
-
-.bind-bank-card2 .user-agreement a {
-	color: #e0b800;
+.sd-agree-agreement label.left span {
+	display: inline-block;
 	font-size: 13px;
+	line-height: 1;
+	position: relative;
+	padding-left: 20px;
+}
+
+.sd-agree-agreement label.left span:before {
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	background: url(../img/svg/checkbox-no-checked.svg) no-repeat center center;
+	background-size: cover;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	vertical-align: top;
+}
+
+.sd-agree-agreement label.left input:checked~span:before {
+	background-image: url(../img/svg/checkbox-checked.svg);
+}
+
+.sd-agree-agreement a.left {
+	font-size: 13px;
+	line-height: 1;
 	color: #439aff;
 }
 
-.bind-bank-card2 .btn-box {
-	padding: 16px 14px;
+.bind-bank-card-step2 .sd-agree-agreement {
+	padding: 24px 15px 0;
+}
+
+.bind-bank-card-step2 .sd-btn-box {
+	padding: 15px 14px;
 }
 
 /******************** 提现 *************************/
@@ -2839,140 +2865,34 @@ i.icon-selected.active {
 }
 
 
-/***********************申请特约商户**************************/
-/* .apply-business {
-	color: #7b7b7b;
-	font-weight: 500;
+/***********************申请特约商户 12.11改**************************/
+
+.apply-business a {
+	display: block;
 }
 
-.hint-input-box {}
-
-.hint-input-box .hint-box {
-	font-size: 14px;
-	color: #7b7b7b;
-	line-height: 1;
-	padding: 21px 14px 8px 20px;
-	position: relative;
+.apply-business .sd-input-group .mint-cell-wrapper {
+	padding-left: 90px;
 }
 
-.hint-input-box .hint-box:before {
-	content: '';
-	width: 2px;
-	height: 14px;
-	background-color: #439aff;
-	position: absolute;
-	left: 14px;
-	border-radius: 2px;
-}
-
-.input-box {
-	border-bottom: 1px solid #eaeaee;
-	border-top: 1px solid #eaeaee;
-	padding-left: 14px;
-	background-color: #fff;
-}
-
-.input-box>a {
-	min-height: 40px;
-	border-bottom: 1px solid #EAEAEE;
-	padding-right: 14px;
-	align-items: center;
-}
-
-.input-box>a:last-child {
-	border-bottom: 0;
-}
-
-.input-box>a .mint-cell-wrapper {
+.sd-hint {
+	display: block;
+	width: 100%;
+	margin: 0;
 	padding: 0;
-}
-
-.input-box>a .mint-cell-title {
-	width: auto;
-	font-size: 14px;
-	color: #000;
-	line-height: 1;
-	margin-right: 16px;
-}
-
-.input-box>a .mint-cell-title span {
-	display: inline-block;
-	line-height: 1;
-}
-
-.input-box>a input {
-	font-size: 14px;
-	color: #000;
-	padding: 0;
-}
-
-.link-box {
-	min-height: 72px;
-	border-top: 1px solid #eaeaee;
-	border-bottom: 1px solid #eaeaee;
-	background-color: #fff;
-	color: #000;
-	margin-top: 30px;
-	padding: 0 14px;
-}
-
-.link-box>div>span {
-	font-size: 14px;
-	font-weight: 500;
-}
-
-.link-box>div>.title {
-	margin-right: 16px;
-}
-
-.link-box>div>span.hint-info {
-	color: #c7c7cd;
-}
-
-.link-box>div>img {
-	width: 80px;
-	height: 50px;
-}
-
-i.icon-isLink {
-	width: 8px;
-	height: 16px;
-	background-image: url(../img/icon/is-link-big.png);
-}
-
-p.hint-info {
 	font-size: 12px;
 	font-weight: 500;
 	color: #c7c7cd;
 	line-height: 1;
-	padding: 0 14px;
-	padding-top: 7px;
 }
 
-.mt30 {
-	margin-top: 30px;
+.apply-business .sd-hint {
+	padding: 6px 14px 0;
 }
 
-.apply-business .btn-box {
-	padding: 28px 14px;
+.apply-business .sd-btn-box {
+	padding: 29px 14px;
 }
-
-
-.origin input::-webkit-input-placeholder {
-	color: #e8b400;
-}
-
-.origin input:-moz-placeholder {
-	color: #e8b400;
-}
-
-.origin input::-moz-placeholder {
-	color: #e8b400;
-}
-
-.origin input:-ms-input-placeholder {
-	color: #e8b400;
-} */
 
 /* 身份证上传 */
 .id-card-upload {
@@ -3116,7 +3036,7 @@ i.icon-plus-sign35 {
 	margin-top: 0;
 }
 
-.link-cell {
+.sd-link-cell {
 	display: block;
 	height: 42px;
 	background-color: #fff;
@@ -3126,17 +3046,62 @@ i.icon-plus-sign35 {
 	padding: 0 14px;
 }
 
-.link-cell .left {
+.sd-link-cell .left {
 	float: left;
 	font-size: 14px;
 	line-height: 40px;
 }
 
-.link-cell .right {
+.sd-link-cell .right {
 	float: right;
 	margin-top: 12px;
 }
 
+.sd-link-cell-h70 {
+	display: block;
+	height: 72px;
+	background-color: #fff;
+	color: #282828;
+	border-top: 1px solid #EAEAEE;
+	border-bottom: 1px solid #EAEAEE;
+	padding: 0 14px;
+}
+
+.sd-link-cell-h70 .left {
+	float: left;
+	font-size: 14px;
+	line-height: 70px;
+}
+
+.sd-link-cell-h70 .left>span,
+.sd-link-cell-h70 .left>div {
+	float: left;
+}
+
+.sd-link-cell-h70 .left>span {
+	display: block;
+	width: 90px;
+}
+
+.sd-link-cell-h70 .left>.hint-info {
+	color: #c7c7cd;
+}
+.sd-link-cell-h70 .left .content {
+	padding-top: 10px;
+}
+.sd-link-cell-h70 .left .content img {
+	display: inline-block;
+	width: 79px;
+	height: 50px;
+	margin-right: 5px;
+}
+.sd-link-cell-h70 .left .content img:last-of-type {
+	margin-right: 0;
+}
+.sd-link-cell-h70 .right {
+	float: right;
+	margin-top: 27px;
+}
 i.icon-link {
 	width: 8px;
 	height: 16px;

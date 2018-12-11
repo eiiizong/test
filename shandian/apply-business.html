@@ -16,56 +16,71 @@
 	<body>
 		<div id="app" v-cloak>
 			<div class="apply-business">
-				<div class="hint-input-box">
-					<div class="hint-box">请填写个人信息</div>
+
+				<div class="sd-input-group">
+					<p class="hint-input-box before">请填写个人信息</p>
 					<div class="input-box">
 						<mt-field label="姓名" placeholder="请填写姓名" v-model="name" type="text"></mt-field>
 						<mt-field label="电话" placeholder="请填写电话" v-model="tel" type="number"></mt-field>
 					</div>
 				</div>
-					
-				<a class="fcsbrn link-box" href="#">
-					<div class="fcfsrn">
-						<span class="title">身份证</span>
-						<span class="hint-info">请上传身份证正反面</span>
+
+				<a class="mt28" href="id-card-upload.html">
+					<div class="sd-link-cell-h70 clearfix">
+						<div class="left clearfix">
+							<span>身份证</span>
+							<div class="hint-info">请上传身份证正反面</div>
+							<div class="content"></div>
+						</div>
+						<i class="icon icon-link right"></i>
 					</div>
-					<i class="icon icon-isLink"></i>
 				</a>
-				
-				<div class="hint-input-box">
-					<div class="hint-box">请填写店铺信息</div>
+
+				<div class="sd-input-group">
+					<p class="hint-input-box before">请填写店铺信息</p>
 					<div class="input-box">
 						<mt-field label="客服电话" placeholder="请填写客服电话" v-model="customerPhone" type="number"></mt-field>
 						<mt-field label="门店地址" placeholder="请填写门店地址" v-model="storeAddress" type="text"></mt-field>
 					</div>
 				</div>
-				
-				<a class="fcsbrn link-box" href="#">
-					<div class="fcfsrn">
-						<span class="title">营业执照</span>
-						<img src="static/img/business-license.jpg" alt="">
+
+
+				<a class="mt28" href="#">
+					<div class="sd-link-cell-h70 clearfix">
+						<div class="left clearfix">
+							<span>营业执照</span>
+							<div class="hint-info">请上传营业执照</div>
+							<!-- <div class="content">
+								<img src="static/img/business-license.jpg" alt="">
+								<img src="static/img/business-license.jpg" alt="">
+							</div> -->
+						</div>
+						<i class="icon icon-link right"></i>
 					</div>
-					<i class="icon icon-isLink"></i>
 				</a>
-				
-				<a class="fcsbrn link-box" href="#">
-					<div class="fcfsrn">
-						<span class="title">照片信息</span>
-						<span class="hint-info">请选择所需上传的照片信息</span>
+
+				<a class="mt28" href="#">
+					<div class="sd-link-cell-h70 clearfix">
+						<div class="left clearfix">
+							<span>照片信息</span>
+							<div class="hint-info">请选择所需上传的照片信息</div>
+							<div class="content"></div>
+						</div>
+						<i class="icon icon-link right"></i>
 					</div>
-					<i class="icon icon-isLink"></i>
 				</a>
-				
-				<div class="hint-input-box">
-					<div class="hint-box">请填写银行卡信息</div>
+
+				<div class="sd-input-group">
+					<p class="hint-input-box before">请填写银行卡信息</p>
 					<div class="input-box">
 						<mt-field label="账户类型" class="origin" placeholder="法人账户" v-model="accountType" type="text"></mt-field>
 						<mt-field label="开户银行" class="origin" placeholder="中国工商" v-model="accountBank" type="text"></mt-field>
 						<mt-field label="开户名称" placeholder="请填写开户名称" v-model="accountName" type="text"></mt-field>
 					</div>
 				</div>
-				
-				<div class="hint-input-box mt30">
+
+
+				<div class="sd-input-group mt28">
 					<div class="input-box">
 						<mt-field label="开户银行城市" placeholder="请填写开户银行城市" v-model="accountBankCity" type="text"></mt-field>
 						<mt-field label="开户支行" placeholder="请填写卡户支行" v-model="accountOpeningBranch" type="text"></mt-field>
@@ -73,26 +88,29 @@
 						<mt-field label="开户人姓名" placeholder="请填写开户人姓名" v-model="accountPersonName" type="text"></mt-field>
 					</div>
 				</div>
-				
-				<a class="fcsbrn link-box" href="#">
-					<div class="fcfsrn">
-						<span class="title">开户银行卡照片</span>
-						<span class="hint-info">请上传开户银行卡照片</span>
+
+
+				<a class="mt28" href="#">
+					<div class="sd-link-cell-h70 clearfix">
+						<div class="left clearfix">
+							<span style="width: 114px;">开户银行卡照片</span>
+							<div class="hint-info">请上传开户银行卡照片</div>
+							<div class="content"></div>
+						</div>
+						<i class="icon icon-link right"></i>
 					</div>
-					<i class="icon icon-isLink"></i>
 				</a>
-				<p class="hint-info">
-					*提交申请后将在两个工作日内进行处理
-				</p>
-				<div class="btn-box">
-					<button class="full-btn">提交申请</button>
+
+				<p class="sd-hint">*提交申请后将在两个工作日内进行处理</p>
+
+				<div class="sd-btn-box">
+					<button class="btn">提交申请</button>
 				</div>
-				
+
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
-
 		<script src="static/js/apply-business.js"></script>
 	</body>
 </html>

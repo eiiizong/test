@@ -9,63 +9,49 @@
 		<meta name="author" content="" />
 		<title>绑定银行卡-第二步</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
-
 		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
-
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
-
 
 	</head>
 	<body>
 		<div id="app" v-cloak>
-			<div class="bind-bank-card2">
-				<div class="bind-bank-card-item bank-card-type">
-					<p class="hint">请选择银行卡类型</p>
-					<div class="user-input">
-						<mt-field label="银行卡" type="text" v-model="bankCardType"></mt-field>
+			<div class="bind-bank-card-step2">
+				
+				<div class="sd-input-group">
+					<p class="hint-input-box">请选择银行卡类型</p>
+					<div class="input-box orange">
+						<mt-field label="银行卡" type="text" v-model="bankCardType" placeholder="请输入银行卡类型"></mt-field>
 					</div>
 				</div>
-				<div class="bind-bank-card-item">
-					<p class="hint">请填写个人信息</p>
-					<div class="user-input">
+				
+				<div class="sd-input-group">
+					<p class="hint-input-box">请填写个人信息</p>
+					<div class="input-box">
 						<mt-field label="身份证" type="text" v-model="cardNumber" placeholder="请填写身份证号码"></mt-field>
 						<mt-field label="地区" type="text" v-model="area" placeholder="请选择地区"></mt-field>
 					</div>
-
 				</div>
-				<div class="bind-bank-card-item">
-					<div class="user-input">
+				
+				
+				<div class="sd-input-group mt28">
+					<div class="input-box">
 						<mt-field label="手机号" type="number" v-model="phoneNumber" placeholder="请输入银行预留手机号"></mt-field>
 					</div>
 				</div>
 
 				<!-- 同意协议 -->
-				<div class="fcfs user-agreement">
-					<label for="agreeAgreement">
+				<div class="sd-agree-agreement clearfix">
+					<label for="agreeAgreement" class="left">
 						<input type="checkbox" id="agreeAgreement" v-model="agreeUserAgreement">
-						<div class="fcfs">
-							<i></i><span>同意</span>
-						</div>
+						<span class="no-selected-text">同意</span>
 					</label>
-					<a href="#">《闪点用户协议》</a>
+					<a href="#" class="left">《闪点用户协议》</a>
 				</div>
 
-				<div class="btn-box">
-					<a class="full-btn" href="verify-tel.html">下一步</a>
+				<div class="sd-btn-box">
+					<a class="btn" :href="agreeUserAgreement?'verify-tel.html':'javascript:;'" :class="!agreeUserAgreement?'disabled':''">下一步</a>
 				</div>
 			</div>
-
-
-			<!-- <div class="user-input mt10">
-				<mt-field label="身份证" type="number" v-model="phoneNumber" placeholder="请输入银行预留手机号"></mt-field>
-			</div>
-
-			<div class="user-input mt10">
-				<mt-checklist v-model="value" :options="options"></mt-checklist>
-			</div> -->
-
-
-
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>

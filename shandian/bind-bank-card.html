@@ -9,25 +9,23 @@
 		<meta name="author" content="" />
 		<title>绑定银行卡</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
-
 		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
-
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
-
 
 	</head>
 	<body>
 		<div id="app" v-cloak>
 			<div class="bind-bank-card">
-				<div class="bind-bank-card-item">
-					<p class="hint">请绑定持卡人本人的银行卡</p>
-					<div class="user-input">
-						<mt-field label="持卡人" type="text" v-model="cardHolder"></mt-field>
-						<mt-field label="卡号" type="number" v-model="cardNumber"></mt-field>
+				<div class="sd-input-group">
+					<p class="hint-input-box">请绑定持卡人本人的银行卡</p>
+					<div class="input-box block">
+						<mt-field label="持卡人" type="text" v-model="cardHolder" placeholder="请输入持卡人姓名"></mt-field>
+						<mt-field label="卡号" type="number" v-model="cardNumber" placeholder="请输入卡号"></mt-field>
 					</div>
 				</div>
-				<div class="btn-box">
-					<a class="full-btn" href="bind-bank-card2.html">下一步</a>
+				<div class="sd-btn-box">
+					<a class="btn" href="bind-bank-card2.html">下一步</a>
+					<!-- <button class="btn" type="button">下一步</button> -->
 				</div>
 			</div>
 		</div>
