@@ -8,6 +8,7 @@ var app = new Vue({
 				address: '成都市青羊区牧电路23号',
 				merchant: '洋富柜',
 				tel: '18482160080',
+				tag: ''
 			},
 			text: '',
 			popupVisible: false
@@ -17,13 +18,17 @@ var app = new Vue({
 		init: function () {
 			
 		},
-		changeInfo(e) {
+		changeInfo(e,tag) {
 			this.text = e;
+			this.tag = tag;
 			this.popupVisible = true;
 			console.log(e);
+			console.log(tag);
 		},
 		saveInfo() {
+			var tag = this.tag;
 			var val = this.text;
+			this.storeInfo[tag] = val;
 			this.popupVisible = false;
 		}
 	}

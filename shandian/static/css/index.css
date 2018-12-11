@@ -245,6 +245,7 @@ label {
 
 
 input[type=checkbox],
+input[type=radio],
 input[type=file] {
 	display: none;
 }
@@ -406,66 +407,32 @@ img {
 }
 
 
-/******************* 偏好设置 ************/
+/******************* 偏好设置 星期三改************/
 .preference {
 	padding-top: 0.625em;
 	font-weight: 500;
 }
 
-.checkbox-group {
+.sd-checkbox-group {
 	padding-left: 0.875em;
 	background-color: #fff;
 }
-
-.checkbox-group label {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	min-height: 2.625em;
-	border-bottom: 1px solid #efeff4;
-	padding-right: 0.875em;
-}
-
-.checkbox-group label:last-of-type {
-	border-bottom: 0;
-	min-height: 2.5625em;
-}
-
-.checkbox-group label>span {
-	font-size: 0.875em;
-	line-height: 1;
-	color: #444444;
-}
-
-.checkbox-group label>div {
-	width: 17px;
-	height: 17px;
-	border: 1px solid #999;
-	border-radius: 50%;
-	position: relative;
-	transition: all .3s;
-}
-
-.checkbox-group label>div>span {
+.sd-checkbox-group label {
 	display: block;
-	width: 10px;
-	height: 10px;
-	background-color: transparent;
-	border-radius: 50%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	transition: all .3s;
+	width: 100%;
+	height: 41px;
+	border-bottom: 1px solid #EAEAEA;
+	padding-right: 14px;
+}
+.sd-checkbox-group label .left {
+	line-height: 40px;
+	font-size: 14px;
+	color: #444;
+}
+.sd-checkbox-group label .right {
+	
 }
 
-.checkbox-group label>input:checked~div {
-	border-color: #439aff;
-}
-
-.checkbox-group label>input:checked~div span {
-	background-color: #439aff;
-}
 
 /******************* 偏好设置 END************/
 
@@ -2974,79 +2941,64 @@ i.icon-plus-sign35 {
 	padding: 27px 14px;
 }
 
-/***************************** 选择照片信息 ***********************/
+/***************************** 选择照片信息 12.11改***********************/
 .select-photo-info {
 	padding-top: 10px;
 }
-
-.radio-group {
-	border-bottom: 1px solid #EAEAEE;
-	border-top: 1px solid #EAEAEE;
-	background-color: #fff;
+.sd-radio-group {
 	padding-left: 14px;
+	background-color: #fff;
 }
-
-.radio-group label {
-	width: 100%;
+.sd-radio-group label {
+	display: block;
 	padding-right: 14px;
 	border-bottom: 1px solid #EAEAEE;
 	font-weight: 500;
 	height: 41px;
 }
-
-.radio-group label:last-of-type {
+.sd-radio-group label:last-of-type{
+	height: 40px;
 	border-bottom: 0;
 }
-
-.radio-group label .title {
-	display: inline-block;
+.sd-radio-group label .left {
+	display: block;
+}
+.sd-radio-group label .left span {
+	display: block;
 	font-size: 14px;
 	color: #000;
 	line-height: 1;
+	padding-top: 7px;
 }
-
-.radio-group label .title .hint {
-	font-size: 11px;
-	color: #c7c7cd;
-	margin: 2px 0 0 0;
-}
-
-.select-photo-info .radio-group label:last-of-type .title,
-.select-photo-info .radio-group label:first-of-type .title {
+.sd-radio-group label:first-of-type .left span {
 	margin-left: -6px;
 }
 
-.radio-group label .circle {
-	width: 22px;
-	height: 22px;
-	border-radius: 50%;
-	border: 1px solid #bbb;
-	position: relative;
-	transition: all .3;
+.sd-radio-group label:last-of-type .left span {
+	margin-left: -6px;
+}
+.sd-radio-group label .left.onlyone span {
+	line-height: 40px;
+	padding-top: 0;
+}
+.sd-radio-group label .left div {
+	display: block;
+	font-size: 11px;
+	color: #c7c7cd;
+	margin: 2px 0 0 0;
+	line-height: 1;
+}
+.sd-radio-group label .icon-radio {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-image: url(../img/svg/checkbox-no-checked.svg);
+	margin-top: 10px;
+}
+.sd-radio-group label input:checked ~ .right .icon-radio {
+	background-image: url(../img/svg/checkbox-checked.svg);
 }
 
-.radio-group label .circle:before {
-	content: '';
-	position: absolute;
-	top: 4px;
-	left: 3px;
-	width: 14px;
-	height: 8px;
-	background-color: transparent;
-	border: 2px solid transparent;
-	border-width: 0 0 1.5px 2px;
-	transform: rotate(-45deg);
-	border-radius: 1px;
-	transition: all .3;
-}
-
-.radio-group label input:checked~.circle {
-	border-color: #439AFF;
-}
-
-.radio-group label input:checked~.circle:before {
-	border-color: #439AFF;
-}
 
 /********************* 设置 12.10改 ******************/
 /* 链接 左边文字 右边图标 */

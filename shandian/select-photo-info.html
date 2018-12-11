@@ -12,27 +12,18 @@
 		<!-- Bootstrap -->
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
-
-		<!--[if lt IE 9]>
-		  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
-
 	</head>
 	<body>
 		<div id="app" v-cloak>
-
 			<div class="select-photo-info">
-				<div class="radio-group">
-					<label v-for="(item, index) in checkBoxData" :key="index" class="fcsbrn">
-						<div class="title">
+				<div class="sd-radio-group">
+					<label v-for="(item, index) in checkBoxData" :key="index" class="clearfix">
+						<div class="left" :class="!item.hintInfo?'onlyone':''">
 							<span>{{item.name}}</span>
-							<div class="hint">{{item.hintInfo}}</div>
+							<div v-if="item.hintInfo">{{item.hintInfo}}</div>
 						</div>
 						<input type="radio" name="photoInfo" :value="item.value" :checked="item.checked" />
-						<div class="circle">
-							
-						</div>
+						<div class="circle right"><i class="icon icon-radio"></i></div>
 					</label>
 				</div>
 			</div>

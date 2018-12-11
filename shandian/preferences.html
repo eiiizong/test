@@ -24,13 +24,11 @@
 
 			<!-- 问题： ios 端点击有灰色背景？ -->
 			<div class="preference">
-				<div class="checkbox-group">
-					<label v-for="(item, index) in checkBoxData" :key="index">
-						<span>{{item.name}}</span>
+				<div class="sd-checkbox-group">
+					<label v-for="(item, index) in checkBoxData" :key="index" class="clearfix">
+						<span class="left">{{item.name}}</span>
 						<input type="checkbox" :value="item.value" :checked="item.checked" />
-						<div class="point">
-							<span></span>
-						</div>
+						<div class="point right"></div>
 					</label>
 				</div>
 			</div>
