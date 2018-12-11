@@ -189,8 +189,9 @@ html {
 	height: 100%;
 	font-size: 100%;
 	/*浏览器默认字体大小*/
-	font-family: sans-serif;
+	font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN Normal", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 	overflow: auto;
+
 }
 
 * {
@@ -1221,11 +1222,6 @@ i.icon-db-link {
 
 
 
-
-
-
-
-
 /****************************** 添加菜品 END****************/
 
 /* 提示信息 */
@@ -1796,53 +1792,62 @@ i.icon-dai {
 
 
 
-/* 2018-12-04 新开 */
-/********************************************绑定银行卡**************/
+/********************************************绑定银行卡 12.11改**************/
 
-.bind-bank-card-item {
-	padding-top: 1.25em;
+.sd-input-group {
 	font-weight: 500;
 }
 
-.bind-bank-card-item .hint {
+.sd-input-group .hint-input-box {
+	display: block;
+	width: 100%;
+	padding: 0 14px;
+	line-height: 22px;
+	font-size: 14px;
+	padding-top: 21px;
 	color: #7b7b7b;
-	font-size: .875em;
-	line-height: 1.64285714em;
-	padding: 0 1em;
+	margin: 0;
 }
-
-.user-input {
+.sd-input-group .input-box {
 	border-top: 1px solid #eaeaee;
 	border-bottom: 1px solid #eaeaee;
-	padding-left: .875em;
+	padding-left: 14px;
 	background-color: #fff;
 }
 
-.user-input .mint-cell {
+.sd-input-group .mint-cell {
 	border-top: 1px solid #eaeaee;
-	min-height: 2.5em;
-	padding-right: .875em;
+	min-height: 41px;
+	padding-right: 14px;
 }
-
-.user-input .mint-cell:first-of-type {
+.sd-input-group .mint-cell:first-of-type {
 	border-top: 0;
+	min-height: 40px;
 }
-
-.user-input .mint-cell-wrapper {
-	padding: 0;
+.sd-input-group .mint-cell-wrapper  {
+	padding: 0 0 0 60px;
+	position: relative;
 }
-
-.user-input .mint-cell-title {
-	width: 4.214285em;
-	font-size: .875em;
+.sd-input-group .mint-cell-title  {
+	width: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.sd-input-group .mint-cell-title span {
+	display: block;
+	font-size: 14px;
 	color: #000;
+	line-height: 40px;
 }
-
-.user-input input {
-	font-size: .875em;
-	color: #000;
+.sd-input-group .mint-cell-value {
+	width: 100%;
 }
-
+.sd-input-group .mint-cell-value input{
+	display: block;
+	width: 100%;
+	font-size: 14px;
+}
 /* 按钮 */
 .btn-box {
 	padding: 2.3125em .875em;
@@ -2655,9 +2660,11 @@ i.icon-replace-order {
 	text-align: center;
 	position: relative;
 }
+
 .release .img-box {
 	padding-bottom: 20px;
 }
+
 .release .img-box img {
 	width: 105px;
 	height: 82px;
@@ -2670,6 +2677,7 @@ i.icon-replace-order {
 	line-height: 1;
 	color: #000;
 }
+
 .release .release-hint {
 	display: block;
 	width: 100%;
@@ -2678,6 +2686,7 @@ i.icon-replace-order {
 	padding: 0 67px;
 	padding-top: 6px;
 }
+
 .release .other-info {
 	margin: 29px 0 0 0;
 	padding: 0 20px;
@@ -2700,6 +2709,7 @@ i.icon-replace-order {
 	font-size: .9375em;
 	font-weight: 500;
 }
+
 .release .btn-box .btn {
 	height: 2.6666666em;
 	background-color: #439aff;
@@ -2720,6 +2730,7 @@ i.icon-replace-order {
 .release-step02 .experience-QR {
 	margin-top: 22px;
 }
+
 .release-step02 .experience-QR img {
 	width: 140px;
 	height: 140px;
@@ -2737,6 +2748,7 @@ i.icon-replace-order {
 	margin-top: 14px;
 	position: relative;
 }
+
 .input-cell label {
 	position: absolute;
 	top: 0;
@@ -2747,6 +2759,7 @@ i.icon-replace-order {
 	color: #000;
 	text-align: left;
 }
+
 .input-cell .input-warrper {
 	display: block;
 	width: 100%;
@@ -2764,6 +2777,7 @@ i.icon-replace-order {
 	font-size: 15px;
 	color: #000;
 }
+
 i.icon-selected {
 	width: 12px;
 	height: 16px;
@@ -2772,9 +2786,11 @@ i.icon-selected {
 	right: 7px;
 	background-image: url(../img/icon/selecte.png);
 }
+
 i.icon-selected.active {
 	background-image: url(../img/icon/selecte-active@2x.png);
 }
+
 .input-cell .mint-cell {
 	min-height: 40px;
 	background-color: #f4f4f4;
@@ -2785,6 +2801,7 @@ i.icon-selected.active {
 	font-size: 15px;
 	background-color: #f4f4f4;
 }
+
 .release-step03 span.hint {
 	display: block;
 	font-size: 12px;
@@ -2793,32 +2810,37 @@ i.icon-selected.active {
 	line-height: 15px;
 	text-align: left;
 	padding-top: 5px;
-	
+
 }
+
 .release-step03 .selecte {
 	width: 100%;
 }
+
 /************* 发布小程序-4***************/
 .release-step04 {
 	padding-top: 150px;
 }
+
 /****** 发布小程序-发布成功***************/
 
 .release-success .img-box img {
 	width: 144px;
 	height: 144px;
 }
+
 .release-success p.info {
 	font-size: 12px;
 	line-height: 1;
 }
+
 .release-success p.info:first-of-type {
 	padding: 8px 0 10px;
 }
 
 
 /***********************申请特约商户**************************/
-.apply-business {
+/* .apply-business {
 	color: #7b7b7b;
 	font-weight: 500;
 }
@@ -2950,7 +2972,7 @@ p.hint-info {
 
 .origin input:-ms-input-placeholder {
 	color: #e8b400;
-}
+} */
 
 /* 身份证上传 */
 .id-card-upload {
