@@ -191,6 +191,7 @@ html {
 	/*浏览器默认字体大小*/
 	font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN Normal", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 	overflow: auto;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
 }
 
@@ -217,6 +218,7 @@ body {
 	width: 100%;
 	height: 100%;
 	background-color: #efeff4;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 [v-cloak] {
@@ -467,44 +469,53 @@ img {
 
 /******************* 偏好设置 END************/
 
-/******************* 商铺信息管理 ***********/
-.store-info-change {
+/******************* 商铺信息管理 12.11改***********/
+.change-store-info {
 	padding-top: 0.625em;
+	font-weight: 500;
 }
 
-.store-info-change>div {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 0.875em;
-	height: 2.6875em;
-	background-color: #fff;
-	margin-top: 0.625em;
+.change-store-info .store-head-portrait .sd-link-cell {
+	height: 70px;
 }
-
-.store-info-change>.store-head-portrait {
-	display: block;
-	height: auto;
-	padding: 0;
-	background-color: transparent;
+.change-store-info .store-head-portrait .sd-link-cell .right span {
+	line-height: 70px;
+}
+.change-store-info .store-head-portrait .sd-link-cell .right i {
+	top: 27px;
+}
+.change-store-info  img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	margin-top: 5px;
+}
+.change-store-info .sd-link-cell {
+	border: 0;
+	margin-top: 10px;
+	height: 40px;
+}
+.change-store-info .sd-link-cell .left {
+	font-size: 15px;
+	font-weight: bold;
+	color: #000;
+}
+.change-store-info .sd-link-cell .right {
 	margin-top: 0;
 }
-
-.store-info-change>.store-head-portrait>label {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 0.875em;
-	height: 4.375em;
-	background-color: #fff;
+.change-store-info .sd-link-cell .right span {
+	font-size: 14px;
+	color: #c6c6c6;
+	line-height: 40px;
+	display: inline-block;
+	margin-right: 9px;
 }
-
-.store-info-change>.store-head-portrait>label img {
-	width: 3.75em;
-	height: 3.75em;
-	border-radius: 50%;
+.change-store-info .sd-link-cell .right i {
+	position: relative;
+	vertical-align: top;
+	top: 12px;
 }
-
+/* 
 .store-info-change>div>span:first-of-type {
 	font-size: 0.938em;
 	font-weight: bold;
@@ -527,7 +538,7 @@ img {
 	background-size: 100% 100%;
 	margin-left: 0.607em;
 	margin-top: 0.142857em;
-}
+} */
 
 /******************* 商铺信息管理 END***********/
 
@@ -965,8 +976,14 @@ i.icon-db-link {
 /*********************** 菜品分类管理 END***************/
 
 /******************** 更改店铺名 12.11改***********************/
+.changeInfoPopup {
+	width: 100%;
+	height: 100%;
+	background-color: #efeff4;
+}
 
 .change-info {
+	width: 100%;
 	padding-top: 0.625em;
 }
 
@@ -997,11 +1014,12 @@ i.icon-db-link {
 
 .change-info p.sd-hint {
 	font-size: 11px;
-	padding: 7px 15px 0;
+	padding: 5px 15px 0;
+	line-height: 15px;
 }
 
 .change-info .sd-btn-box {
-	padding: 22px 14px;
+	padding: 20px 14px;
 }
 
 

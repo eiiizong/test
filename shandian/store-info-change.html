@@ -10,47 +10,64 @@
 		<title>商铺信息</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
-
-
-		<!--[if lt IE 9]>
-		  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
 
 	</head>
 	<body>
 		<div id="app" v-cloak>
+			<div class="change-store-info">
 
-			<!-- 问题： ？ -->
-
-			<div class="store-info-change">
 				<div class="store-head-portrait">
-					<label for="changeImg">
-						<img src="static/img/head-portrait.jpg" alt="">
-						<input type="file" id="changeImg"/>
-						<span class="help-editor">更改头像</span>
+					<label for="changeImg" class="sd-link-cell clearfix">
+						<img :src="storeInfo.headImgUrl" alt="" class="left">
+						<input type="file" id="changeImg" />
+						<div class="right">
+							<span>编辑</span><i class="icon icon-link"></i>
+						</div>
 					</label>
 				</div>
-				<div class="store-name">
-					<span>川道小炒</span>
-					<span class="help-editor">编辑</span>
+
+				<div class="sd-link-cell clearfix" @click="changeInfo(storeInfo.name)">
+					<div class="left">{{storeInfo.name}}</div>
+					<div class="right">
+						<span>编辑</span><i class="icon icon-link"></i>
+					</div>
 				</div>
-				<div class="store-address">
-					<span>成都市青羊区牧电路23号</span>
-					<span class="help-editor">编辑</span>
+				<div class="sd-link-cell clearfix" @click="changeInfo(storeInfo.address)">
+					<div class="left">{{storeInfo.address}}</div>
+					<div class="right">
+						<span>编辑</span><i class="icon icon-link"></i>
+					</div>
 				</div>
-				<div class="store-address">
-					<span>洋富柜</span>
-					<span class="help-editor">编辑</span>
+				<div class="sd-link-cell clearfix" @click="changeInfo(storeInfo.merchant)">
+					<div class="left">{{storeInfo.merchant}}</div>
+					<div class="right">
+						<span>编辑</span><i class="icon icon-link"></i>
+					</div>
 				</div>
-				<div class="store-phoneNumber">
-					<span style="color: #000;">18482160080</span>
-					<span class="help-editor">编辑</span>
+				<div class="sd-link-cell clearfix" @click="changeInfo(storeInfo.tel)">
+					<div class="left">{{storeInfo.tel}}</div>
+					<div class="right">
+						<span>编辑</span><i class="icon icon-link"></i>
+					</div>
 				</div>
 			</div>
+			<!-- 修改信息 -->
+			<mt-popup v-model="popupVisible" position="top" class="changeInfoPopup">
+				<div class="change-info">
+					<div class="sd-input-box">
+						<mt-field type="text" v-model="text" placeholder="请输入您想要修改的店名"></mt-field>
+					</div>
+					<p class="sd-hint">*提交后将由管理平台审批,通过后自动更新(审批将于24小时内进行)。</p>
+					<div class="sd-btn-box">
+						<button type="button" class="btn" @click="saveInfo">提交</button>
+					</div>
+				</div>
+			</mt-popup>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
 		<script src="static/js/store-info-change.js"></script>
 	</body>
 </html>
