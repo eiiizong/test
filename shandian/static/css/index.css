@@ -903,73 +903,211 @@ i.icon-db-link {
 
 /******************* 商铺信息 END***********/
 
-/*********************** 菜品分类管理 ***************/
+/*********************** 菜品分类管理 12.12改***************/
 .food-type-management {
-	padding: 1.5625em 0.78125em;
-}
-
-.food-type-management .list {
 	width: 100%;
+	height: 100%;
+}
+.food-type-management .toolbar {
+	height: 40px;
+	background-color: #f5f5f5;
+	font-weight: 500;
+}
+.food-type-management .toolbar .left {
+	font-size: 12px;
+	color: #595959;
+	line-height: 1;
+	padding: 14px 0 0 14px;
+}
+.food-type-management .toolbar .right {
+	font-size: 12px;
+	color: #439aff;
+	line-height: 1;
+	padding: 14px;
+}
+.food-type-management .type-list {
+	background-color: #fff;
+	padding-left: 14px;
+	font-weight: 500;
+}
+.food-type-management .type-list .clearfix {
+	height: 41px;
+	background-color: #fff;
+	border-bottom: 1px solid #eaeaea;
+	padding-right: 14px;
+}
+.food-type-management .type-list .clearfix .left {
+	font-size: 14px;
+	color: #151515;
+	line-height: 1;
+	padding-top: 13px;
+}
+i.icon-editor {
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/svg/editor.svg);
+	margin-right: 20px;
+}
+i.icon-delete {
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/svg/delete.svg);
+}
+i.icon-up {
+	width: 18px;
+	height: 18px;
+	background-image: url(../img/icon/can-up.png);
+	margin-right: 20px;
+	margin-top: 11px;
+}
+i.icon-up.no {
+	background-image: url(../img/icon/no-up.png);
+}
+i.icon-down {
+	width: 18px;
+	height: 18px;
+	background-image: url(../img/icon/can-dowm.png);
+	margin-top: 11px;
+}
+i.icon-down.no {
+	background-image: url(../img/icon/no-down.png);
+}
+.food-type-management .type-list .clearfix .right i {
+	margin-top: 11px;
 }
 
-.food-type-management .list div {
-	text-align: center;
-	width: 50%;
-	float: left;
-	margin-bottom: 0.625em;
-	padding: 0 0.46875em;
+.add-food-type .clearfix {
+	display: block;
+	width: 100%;
+	text-align: left;
+	height: 40px;
+	padding-left: 14px;
+	padding-right: 14px;
+	background-color: #fff;
+	font-size: 14px;
+	color: #439aff;
+}
+.add-food-type .clearfix > span.left{
+	font-size: 14px;
+	color: #439aff;
+	line-height: 40px;
+}
+.add-food-type i.icon-add {
+	width: 14px;
+	height: 14px;
+	background-image: url(../img/icon/add-size.png);
+	margin-top: 13px;
+	margin-right: 4px;
+}
+
+.add-food-type .input-add {
+	height: 40px;
+	padding-left: 14px;
+	background-color: #fff;
 	position: relative;
 }
-
-.food-type-management .list div span {
-	display: block;
-	background-color: #fff;
-	line-height: 2.85715em;
-	border-radius: 100px;
-	font-size: 0.875em;
-	font-weight: 500;
-	color: #444444;
-}
-
-.food-type-management .list div i {
-	position: absolute;
-	top: -0.1875em;
-	right: 0.375em;
-	display: block;
-	width: 1.03125em;
-	height: 1.03125em;
-	background: url(../img/icon/delete.png) no-repeat;
-	background-size: cover;
-}
-
-.help-info {
-	font-size: 0.75em;
-	font-weight: 500;
-	color: #898989;
-	padding-left: 1.0625em;
-	line-height: 1em;
-	margin: 0.833333em 0 0;
-}
-
-
-
-.btn-add-type {
+.add-food-type .input-add .left {
 	display: block;
 	width: 100%;
-	background-color: #439aff;
-	border-radius: 100px;
-	text-align: center;
-	line-height: 2.73333333em;
-	margin-top: 1.40625em;
+	padding-right: 60px;
+	padding-top: 10px;
 }
-
+.add-food-type .input-add .left input {
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0;
+}
+.add-food-type .input-add .right {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.add-food-type .input-add .right button {
+	padding: 0 14px;
+	line-height: 40px;
+	font-size: 14px;
+	color: #439aff;
+}
+.sd-popup {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
+.sd-popup .popup-mask {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.8);
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+.sd-popup .popup {
+	position: fixed;
+	width: 80%;
+	background-color: #FFF;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 2001;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.sd-popup .popup .content {
+	padding: 20px 15px 0;
+}
+.sd-popup .popup h3 {
+	font-size: 18px;
+	line-height: 1;
+	text-align: center;
+}
+.sd-popup .popup p.hint {
+	font-size: 14px;
+	line-height: 20px;
+	padding: 10px 0;
+	color: #282828;
+	text-align: center;
+}
+.sd-popup .popup .input-box  {
+	border: 1px solid #EAEAEA;
+	border-radius: 5px;
+	height: 40px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.sd-popup .popup .input-box input {
+	display: block;
+	width: 100%;
+	position: absolute;
+	font-size: 14px;
+	top: 50%;
+	transform: translateY(-50%);
+	padding-left: 6px;
+}
+.sd-popup .popup .btn-cancel,
+.sd-popup .popup .btn-ok {
+	width: 50%;
+	text-align: center;
+	height: 40px;
+	background-color: #fff;
+	font-size: 15px;
+	line-height: 40px;
+	border-top: 1px solid #eaeaea;
+}
+.sd-popup .popup .btn-cancel {
+	border-right: 1px solid #eaeaea;
+	color: #aaa;
+}
 /*********************** 菜品分类管理 END***************/
 
 /******************** 更改店铺名 12.11改***********************/
 .changeInfoPopup {
 	width: 100%;
 	height: 100%;
-	background-color: #efeff4;
+	background-color: #eee;
 }
 
 .change-info {
@@ -2113,6 +2251,7 @@ i.icon-dai {
 .sd-bank-card .img-box img {
 	width: 50px;
 	height: 50px;
+	border-radius: 50%;
 }
 .sd-bank-card .card-detaill .card-name {
 	padding-top: 19px;

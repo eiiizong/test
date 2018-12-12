@@ -13,31 +13,91 @@
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
 
-		<!--[if lt IE 9]>
-		  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
-
 	</head>
 	<body>
 		<div id="app" v-cloak>
 			<!-- 店铺基本信息 -->
 			<div class="food-type-management">
-				<draggable class="list clearfix" v-model="myArray" :options="{group:'people'}" @start="drag=true" @end="drag=false">
-					<div v-for="item in myArray" :key="item.order">
-						<span>{{item.name}}</span>
-						<i class="icon-delete"></i>
+				<div class="toolbar clearfix">
+					<div class="left">所有分类({{allNum}})</div>
+					<button type="button" class="btn right" v-show="!isOrding" @click="ording">排序</button>
+					<button type="button" class="btn right" v-show="isOrding" @click="ording">取消排序</button>
+				</div>
+
+				<div class="type-list">
+					<div class="clearfix" v-for="(item,index) in myArray" :key="index">
+						<div class="left">
+							{{item.name}}
+						</div>
+						<div class="right">
+							<span v-show="!isOrding">
+								<i class="icon icon-editor" @click="clickShowInputPopup(index)"></i>
+							</span>
+							<span v-show="!isOrding">
+								<i class="icon icon-delete" @click="clickShowPopup(index)"></i>
+							</span>
+							<span v-show="isOrding">
+								<i class="icon icon-up" v-if="!index==0" @click="moveUp(index)"></i>
+								<i class="icon icon-up no" v-else></i>
+							</span>
+							<span v-show="isOrding">
+								<i class="icon icon-down" v-if="!(index+1==allNum)" @click="moveDown(index)"></i>
+								<i class="icon icon-down no" v-else></i>
+							</span>
+						</div>
 					</div>
-				</draggable>
-				<p class="help-info">*长按拖动调整顺序</p>
-				<div class="btn">
-					<a href="#" class="btn-add-type">添加分类</a>
+				</div>
+
+				<div class="add-food-type">
+					<div class="clearfix" @click="addFood" v-show="!isAddFoodInputShow">
+						<i class="icon icon-add left"></i>
+						<span class="left">添加分类</span>
+					</div>
+
+					<div class="input-add" v-show="isAddFoodInputShow">
+						<div class="left">
+							<input type="text" name="" id="" v-model="content" placeholder="请输入" />
+						</div>
+						<div class="right">
+							<button type="button" class="btn" @click="complete">完成</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- 弹窗 -->
+				<div class="sd-popup" v-show="showPopup">
+					<div class="delete-popup popup">
+						<div class="content">
+							<h3>确定删除分类</h3>
+							<p class="hint">删除后该分类下的商品将保留至未分类</p>
+						</div>
+						<div class="btn clearfix">
+							<button type="button" class="btn btn-cancel left" @click="cancel">取消</button>
+							<button type="button" class="btn btn-ok left" @click="deleteOK">删除</button>
+						</div>
+					</div>
+					<div class="popup-mask"></div>
+				</div>
+
+				<div class="sd-popup" v-show="showInputPopup">
+					<div class="change-popup popup">
+						<div class="content">
+							<h3>请输入修改后的分类名称</h3>
+							<p class="hint">原分类名: {{oldTypeName}}</p>
+							<div class="input-box">
+								<input type="text" v-model="changeValue" placeholder="输入分类名称" ref="inputDOM">
+							</div>
+						</div>
+						<div class="btn clearfix">
+							<button type="button" class="btn btn-cancel left" @click="cancelChange">取消</button>
+							<button type="button" class="btn btn-ok left" @click="changeOK">确定</button>
+						</div>
+					</div>
+					<div class="popup-mask"></div>
 				</div>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.7.0/Sortable.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/2.15.0/vuedraggable.min.js"></script>
 		<script src="static/js/food-type-management.js"></script>
 	</body>
 </html>

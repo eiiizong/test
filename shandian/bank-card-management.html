@@ -20,64 +20,32 @@
 		<div id="app" v-cloak>
 			<div class="bank-card-management">
 				<!-- 建设银行 -->
-				<div class="sd-bank-card CCB">
+				<div class="sd-bank-card" v-if="cardList" v-for="(item,index) in cardList" :key="index" :class="item.className">
 					<div class="img-box">
-						<img src="static/img/CCB.jpg" alt="">
+						<img :src="item.imgUrl" alt="">
 					</div>
 
 					<div class="card-detaill">
 						<div class="card-name clearfix">
-							<p class="left">建设银行</p>
-							<p class="default-card right">已设为默认卡</p>
-							<!-- <p class="not-default-card right">设为默认卡</p> -->
+							<p class="left">{{item.name}}</p>
+							<p class="default-card right" v-if="item.isDefault">已设为默认卡</p>
+							<p class="not default-card right" v-else @click="setDafultCard(index)">设为默认卡</p>
 						</div>
 						<div class="card-type">
-							储蓄卡
+							{{item.type}}
 						</div>
 						<div class="card-number clearfix">
 							<p class="left">
-								<span>****</span>
-								<span>****</span>
-								<span>****</span>
-								<span>****</span>
-								<span>479</span>
+								<span>{{item.cardNumber}}</span>
 							</p>
-							<div class="right">
+							<div class="right" @click="deleteCard(index)">
 								<i class="icon icon-delete-bank-card"></i>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 工商银行 -->
-				<div class="sd-bank-card ICBC">
-					<div class="img-box">
-						<img src="static/img/ICBC.jpg" alt="">
-					</div>
-
-					<div class="card-detaill">
-						<div class="card-name clearfix">
-							<p class="left">工商银行</p>
-							<!-- <p class="default-card right">已设为默认卡</p> -->
-							<p class="not default-card right">设为默认卡</p>
-						</div>
-						<div class="card-type">
-							储蓄卡
-						</div>
-						<div class="card-number clearfix">
-							<p class="left">
-								<span>****</span>
-								<span>****</span>
-								<span>****</span>
-								<span>****</span>
-								<span>479</span>
-							</p>
-							<div class="right">
-								<i class="icon icon-delete-bank-card"></i>
-							</div>
-						</div>
-					</div>
-				</div>
+				
 
 				<!-- 添加银行卡 -->
 				<a class="sd-add-bank-card" href="bind-bank-card.html">
