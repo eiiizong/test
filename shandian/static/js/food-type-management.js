@@ -82,6 +82,7 @@ var app = new Vue({
 			this.myArray.splice(tag, 1);
 			this.$forceUpdate();
 			this.showPopup = !this.showPopup;
+			this.allNum = this.myArray.length;
 		},
 		cancel() {
 			var tag = this.index;
