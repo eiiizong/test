@@ -279,6 +279,7 @@ input::-webkit-inner-spin-button {
 	appearance: none;
 }
 
+.btn,
 button {
 	border: 0;
 	outline: 0;
@@ -346,10 +347,12 @@ p {
 .clearfix>div {
 	float: left;
 }
+
 #app {
 	width: 100%;
 	height: 100%;
 }
+
 /****************清除浮动 END****************************/
 
 .fcfs {
@@ -1011,13 +1014,13 @@ i.icon-db-link {
 
 
 /******************** 更改店铺名 END***********************/
-/******************** 验证手机号 *****************************/
+/******************** 验证手机号 12.12改*****************************/
 .verify-tel {
 	font-weight: 500;
 	padding-top: 1.25em;
 }
 
-.verify-tel .hint {
+.verify-tel>p {
 	font-size: 1em;
 	color: #7b7b7b;
 	line-height: 1.1875em;
@@ -1025,36 +1028,53 @@ i.icon-db-link {
 	margin: 0 0 .5em;
 }
 
-.verify-tel .get-code {
-	display: flex;
-	border-top: 1px solid #eaeaee;
-	border-bottom: 1px solid #eaeaee;
-	padding: 0.5em 0.875em;
-	justify-content: space-between;
+.sd-get-code {
+	display: block;
+	width: 100%;
+	border-top: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+	background-color: #f5f5f5;
+	padding: 8px 14px;
 }
 
-.verify-tel .get-code .btn {
-	margin: 0;
-	padding: 0;
-	border-radius: 0;
+.sd-get-code>div {
+	position: relative;
+	padding-right: 146px;
 }
 
-.verify-tel .get-code .mint-cell {
-	min-height: 3.125em;
-	border-radius: 0.625em;
-	flex: 1;
+.sd-get-code>div .mint-cell {
+	width: 100%;
+	min-height: 50px;
+	border-radius: 5px;
 }
 
-.verify-tel .get-code .btn>button {
-	width: 8.3333333em;
-	height: 3.33333em;
-	border-radius: 0.625em;
-	font-size: 0.9375em;
-	margin-left: 1.34375em;
+.sd-get-code>div .minute-warpper {
+	width: 100%;
 }
 
-.verify-tel>.btn {
-	padding-top: 2.875em;
+.sd-get-code>div .minute-value {
+	width: 100%;
+}
+
+.sd-get-code>div .minute-value input {
+	display: block;
+	width: 100%;
+}
+
+.sd-get-code>div .btn-box {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.sd-get-code>div .btn-box .btn {
+	background-color: #439aff;
+	border-radius: 5px;
+	height: 50px;
+	width: 125px;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 500;
 }
 
 /******************** 验证手机号 END***************************/
@@ -2060,133 +2080,133 @@ i.icon-dai {
 	margin-top: 10px;
 }
 
-/******************** 银行卡管理 ************************************/
+/******************** 银行卡管理 12.12改************************************/
 .bank-card-management {
 	padding: 10px 17px 0;
 	font-weight: 500;
 }
 
-.bank-card-management .item {
+.sd-bank-card {
 	width: 100%;
+	position: relative;
 	height: 100px;
-	background-color: #fff;
-	margin-top: 10px;
-	box-shadow: 2px 3px 10px 1px rgba(205, 205, 205, 0.5);
+	box-shadow: 4px 6px 19px 1px rgba(205, 205, 205, 0.5);
 	border-radius: 10px;
-	padding: 0 11px 0 8px;
-	background-repeat: no-repeat;
-	background-position: bottom right;
-	background-size: cover;
+	padding-left: 74px;
+	padding-right: 11px;
+	background: url(../img/CCB-bg.jpg) no-repeat bottom right #fff;
+	background-size: contain;
+	color: #787878;
+	margin-bottom: 10px;
 }
-
-.bank-card-management .item:first-child {
-	margin-top: 0;
-}
-
-.bank-card-management .item.CCB {
+.sd-bank-card.CCB {
 	background-image: url(../img/CCB-bg.jpg);
 }
-
-.bank-card-management .item.ICBC {
+.sd-bank-card.ICBC {
 	background-image: url(../img/ICBC-bg.jpg);
 }
-
-.bank-card-management .img-full-box {
-	width: 51px;
-	height: 51px;
-	margin-right: 20px;
+.sd-bank-card .img-box {
+	position: absolute;
+	top: 25px;
+	left: 8px;
 }
-
-.bank-card-management .img-full-box img {
-	width: 100%;
+.sd-bank-card .img-box img {
+	width: 50px;
+	height: 50px;
 }
-
-.bank-card-detaill {
-	flex: 1;
+.sd-bank-card .card-detaill .card-name {
+	padding-top: 19px;
 }
-
-.bank-card-detaill p {
-	margin: 0;
-}
-
-.bank-card-detaill .bank-card-name {
+.sd-bank-card .card-detaill .card-name .left {
 	font-size: 17px;
 	font-weight: bold;
 	color: #050505;
 	line-height: 1;
 }
-
-.bank-card-detaill .bank-name p {
-	font-size: 17px;
-	font-weight: bold;
-	color: #050505;
-	line-height: 1;
-}
-
-.bank-card-detaill .bank-name .not-default-card,
-.bank-card-detaill .bank-name .default-card {
+.sd-bank-card .card-detaill .card-name .default-card {
 	font-size: 12px;
 	color: #787878;
 	line-height: 1;
+}
+.sd-bank-card .card-detaill .card-name .not.default-card {
 	position: relative;
 }
-
-.bank-card-detaill .bank-name .not-default-card:after {
-	position: absolute;
+.sd-bank-card .card-detaill .card-name .not.default-card:after {
 	content: '';
+	position: absolute;
 	width: 100%;
 	height: 1px;
-	background-color: #a1a1a1;
 	bottom: -2px;
+	background-color: #a1a1a1;
 	left: 0;
 }
-
-.bank-card-detaill .bank-card-type {
+.sd-bank-card .card-detaill .card-type {
 	font-size: 12px;
-	color: #787878;
-	line-height: 1;
-	margin-top: 11px;
+	display: block;
+	padding: 11px 0;
 }
-
-.bank-card-detaill .bank-card-number {
-	margin-top: 11px;
-}
-
-.bank-card-detaill .bank-card-number p {
+.sd-bank-card .card-detaill .card-number .left span {
+	display: inline-block;
 	font-size: 15px;
 	color: #2c2c2c;
+	line-height: 1;
+	margin-right: 6px;
 }
-
-.bank-card-detaill .bank-card-number i {
+.sd-bank-card .card-detaill .card-number .left span:last-of-type {
+	margin-right: 0;
+}
+.sd-bank-card .card-detaill .card-number .right {
+	
+}
+i.icon-delete-bank-card {
 	width: 19px;
 	height: 13px;
 	background-image: url(../img/icon/delete-bank-card@2x.png);
 }
 
-.add-bank-card {
-	height: 100%;
-	padding: 8px 13px;
-}
-
-.add-bank-card>div {
-	flex: 1;
-	height: 85px;
+.sd-add-bank-card {
+	display: block;
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 4px 6px 19px 1px rgba(205, 205, 205, 0.5);
 	border-radius: 10px;
-	border: 1px dotted #9c9c9c;
+	padding: 8px 12px;
 }
-
-.add-bank-card>div i {
-	width: 24px;
-	height: 24px;
-	margin-right: 7px;
-	background-image: url(../img/icon/add-bank@2x.png);
+.sd-add-bank-card > .inner {
+	width: 100%;
+	border: dotted 1px #9c9c9c;
+	border-radius: 10px;
+	height: 84px;
+	position: relative;
 }
-
-.add-bank-card>div span {
+.sd-add-bank-card .inner .content {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+}
+.sd-add-bank-card .inner .content {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+}
+.sd-add-bank-card .inner .content span{
+	line-height: 24px;
 	font-size: 16px;
 	color: #2a2a2a;
-	line-height: 1;
+	float: left;
 }
+i.icon-add-bankcard {
+	float: left;
+	width: 24px;
+	height: 24px;
+	background-image: url(../img/icon/add-bank@2x.png);
+	margin-right: 7px;
+}
+
 
 /* 续费 */
 .renew {}

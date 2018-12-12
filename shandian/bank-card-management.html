@@ -20,64 +20,74 @@
 		<div id="app" v-cloak>
 			<div class="bank-card-management">
 				<!-- 建设银行 -->
-				<div class="item fcsb CCB">
-					<div class="img-full-box">
+				<div class="sd-bank-card CCB">
+					<div class="img-box">
 						<img src="static/img/CCB.jpg" alt="">
 					</div>
-					<div class="bank-card-detaill">
-						<div class="bank-name fcsb">
-							<p>建设银行</p>
-							<p class="default-card">已设为默认卡</p>
-							<!-- <p class="not-default-card">设为默认卡</p> -->
+
+					<div class="card-detaill">
+						<div class="card-name clearfix">
+							<p class="left">建设银行</p>
+							<p class="default-card right">已设为默认卡</p>
+							<!-- <p class="not-default-card right">设为默认卡</p> -->
 						</div>
-						<div class="bank-card-type">
+						<div class="card-type">
 							储蓄卡
 						</div>
-						<div class="bank-card-number fcsb">
-							<p>
+						<div class="card-number clearfix">
+							<p class="left">
 								<span>****</span>
 								<span>****</span>
 								<span>****</span>
 								<span>****</span>
 								<span>479</span>
 							</p>
-							<i class="icon delete-bank-card"></i>
+							<div class="right">
+								<i class="icon icon-delete-bank-card"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="item fcsb ICBC">
-					<div class="img-full-box">
+				<!-- 工商银行 -->
+				<div class="sd-bank-card ICBC">
+					<div class="img-box">
 						<img src="static/img/ICBC.jpg" alt="">
 					</div>
-					<div class="bank-card-detaill">
-						<div class="bank-name fcsb">
-							<p>工商银行</p>
-							<!-- <p class="default-card">已设为默认卡</p> -->
-							<p class="not-default-card">设为默认卡</p>
+
+					<div class="card-detaill">
+						<div class="card-name clearfix">
+							<p class="left">工商银行</p>
+							<!-- <p class="default-card right">已设为默认卡</p> -->
+							<p class="not default-card right">设为默认卡</p>
 						</div>
-						<div class="bank-card-type">
+						<div class="card-type">
 							储蓄卡
 						</div>
-						<div class="bank-card-number fcsb">
-							<p>
+						<div class="card-number clearfix">
+							<p class="left">
 								<span>****</span>
 								<span>****</span>
 								<span>****</span>
 								<span>****</span>
 								<span>479</span>
 							</p>
-							<i class="icon delete-bank-card"></i>
+							<div class="right">
+								<i class="icon icon-delete-bank-card"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 
 				<!-- 添加银行卡 -->
-				<a class="item fcc add-bank-card" href="bind-bank-card.html">
-					<div class="fcc">
-						<i class="icon"></i><span>添加银行卡</span>
+				<a class="sd-add-bank-card" href="bind-bank-card.html">
+					<div class="inner">
+						<div class="content clearfix">
+							<i class="icon icon-add-bankcard"></i><span>添加银行卡</span>
+						</div>
 					</div>
 				</a>
+
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>

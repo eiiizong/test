@@ -19,19 +19,20 @@
 		<div id="app" v-cloak>
 			<!-- 店铺基本信息 -->
 			<div class="verify-tel">
-				<p class="hint">绑定银行卡需要短信确认，验证码已发送至手机：177****8316，请按操作提示。</p>
-				<div class="get-code">
-					<mt-field  type="text" v-model="code"></mt-field>
-					<div class="btn">
-						<mt-button type="primary" :disabled="!canClick" @click="clickBtn">
-							<span v-if="canClick">获取验证码</span>
-							<span v-else>重新获取({{number}}s)</span>
-						</mt-button>
+				<p>绑定银行卡需要短信确认，验证码已发送至手机：177****8316，请按操作提示。</p>
+				<div class="sd-get-code">
+					<div>
+						<mt-field type="text" v-model="code" placeholder="请输入验证码"></mt-field>
+						<div class="btn-box">
+							<button type="primary" :disabled="!canClick" @click="clickBtn" class="btn">
+								<span v-if="canClick">获取验证码</span>
+								<span v-else>重新获取({{number}}s)</span>
+							</button>
+						</div>
 					</div>
 				</div>
-				
-				<div class="btn">
-					<mt-button type="primary">确定</mt-button>
+				<div class="sd-btn-box">
+					<button type="button" class="btn">确定</button>
 				</div>
 			</div>
 		</div>
