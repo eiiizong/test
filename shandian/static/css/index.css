@@ -346,7 +346,10 @@ p {
 .clearfix>div {
 	float: left;
 }
-
+#app {
+	width: 100%;
+	height: 100%;
+}
 /****************清除浮动 END****************************/
 
 .fcfs {
@@ -401,13 +404,10 @@ img {
 
 /******************************* 响应图片 END*******************************************/
 
-#app {
-	width: 100%;
-	height: 100%;
-}
 
 
-/******************* 偏好设置 星期三改************/
+
+/******************* 偏好设置 12.12改************/
 .preference {
 	padding-top: 0.625em;
 	font-weight: 500;
@@ -417,6 +417,7 @@ img {
 	padding-left: 0.875em;
 	background-color: #fff;
 }
+
 .sd-checkbox-group label {
 	display: block;
 	width: 100%;
@@ -424,15 +425,49 @@ img {
 	border-bottom: 1px solid #EAEAEA;
 	padding-right: 14px;
 }
+
+.sd-checkbox-group label:last-of-type {
+	height: 40px;
+	border-bottom: 0;
+}
+
 .sd-checkbox-group label .left {
 	line-height: 40px;
 	font-size: 14px;
 	color: #444;
 }
+
 .sd-checkbox-group label .right {
-	
+	width: 18px;
+	height: 18px;
+	margin-top: 10px;
+	border: 1px solid #bbb;
+	border-radius: 50%;
+	position: relative;
+	transition: all .3s;
 }
 
+.sd-checkbox-group label .right:before {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: transparent;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	transition: all .3s;
+}
+
+.sd-checkbox-group label input:checked~.right:before {
+	background-color: #439aff;
+}
+
+.sd-checkbox-group label input:checked~.right {
+	border-color: #439aff;
+}
 
 /******************* 偏好设置 END************/
 
@@ -445,31 +480,38 @@ img {
 .change-store-info .store-head-portrait .sd-link-cell {
 	height: 70px;
 }
+
 .change-store-info .store-head-portrait .sd-link-cell .right span {
 	line-height: 70px;
 }
+
 .change-store-info .store-head-portrait .sd-link-cell .right i {
 	top: 27px;
 }
-.change-store-info  img {
+
+.change-store-info img {
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
 	margin-top: 5px;
 }
+
 .change-store-info .sd-link-cell {
 	border: 0;
 	margin-top: 10px;
 	height: 40px;
 }
+
 .change-store-info .sd-link-cell .left {
 	font-size: 15px;
 	font-weight: bold;
 	color: #000;
 }
+
 .change-store-info .sd-link-cell .right {
 	margin-top: 0;
 }
+
 .change-store-info .sd-link-cell .right span {
 	font-size: 14px;
 	color: #c6c6c6;
@@ -477,35 +519,13 @@ img {
 	display: inline-block;
 	margin-right: 9px;
 }
+
 .change-store-info .sd-link-cell .right i {
 	position: relative;
 	vertical-align: top;
 	top: 12px;
 }
-/* 
-.store-info-change>div>span:first-of-type {
-	font-size: 0.938em;
-	font-weight: bold;
-	color: #000000;
-}
 
-.store-info-change>div span.help-editor {
-	font-size: 0.875em;
-	font-weight: 500;
-	color: #c6c6c6;
-	position: relative;
-}
-
-.store-info-change>div span.help-editor:after {
-	display: inline-block;
-	content: '';
-	background: url(../img/icon/is-link-small.png) no-repeat center center;
-	width: 0.5em;
-	height: 0.858em;
-	background-size: 100% 100%;
-	margin-left: 0.607em;
-	margin-top: 0.142857em;
-} */
 
 /******************* 商铺信息管理 END***********/
 
@@ -2945,10 +2965,12 @@ i.icon-plus-sign35 {
 .select-photo-info {
 	padding-top: 10px;
 }
+
 .sd-radio-group {
 	padding-left: 14px;
 	background-color: #fff;
 }
+
 .sd-radio-group label {
 	display: block;
 	padding-right: 14px;
@@ -2956,13 +2978,16 @@ i.icon-plus-sign35 {
 	font-weight: 500;
 	height: 41px;
 }
-.sd-radio-group label:last-of-type{
+
+.sd-radio-group label:last-of-type {
 	height: 40px;
 	border-bottom: 0;
 }
+
 .sd-radio-group label .left {
 	display: block;
 }
+
 .sd-radio-group label .left span {
 	display: block;
 	font-size: 14px;
@@ -2970,6 +2995,7 @@ i.icon-plus-sign35 {
 	line-height: 1;
 	padding-top: 7px;
 }
+
 .sd-radio-group label:first-of-type .left span {
 	margin-left: -6px;
 }
@@ -2977,10 +3003,12 @@ i.icon-plus-sign35 {
 .sd-radio-group label:last-of-type .left span {
 	margin-left: -6px;
 }
+
 .sd-radio-group label .left.onlyone span {
 	line-height: 40px;
 	padding-top: 0;
 }
+
 .sd-radio-group label .left div {
 	display: block;
 	font-size: 11px;
@@ -2988,6 +3016,7 @@ i.icon-plus-sign35 {
 	margin: 2px 0 0 0;
 	line-height: 1;
 }
+
 .sd-radio-group label .icon-radio {
 	display: block;
 	width: 20px;
@@ -2995,7 +3024,8 @@ i.icon-plus-sign35 {
 	background-image: url(../img/svg/checkbox-no-checked.svg);
 	margin-top: 10px;
 }
-.sd-radio-group label input:checked ~ .right .icon-radio {
+
+.sd-radio-group label input:checked~.right .icon-radio {
 	background-image: url(../img/svg/checkbox-checked.svg);
 }
 
