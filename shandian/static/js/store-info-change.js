@@ -18,14 +18,14 @@ var app = new Vue({
 		init: function () {
 			
 		},
-		changeInfo(e,tag) {
+		changeInfo: function(e,tag) {
 			this.text = e;
 			this.tag = tag;
 			this.popupVisible = true;
 			console.log(e);
 			console.log(tag);
 		},
-		saveInfo() {
+		saveInfo: function() {
 			var tag = this.tag;
 			var val = this.text;
 			this.storeInfo[tag] = val;

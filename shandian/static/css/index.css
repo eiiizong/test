@@ -531,7 +531,9 @@ i.icon-license-info {
 .change-store-info .store-head-portrait .sd-link-cell {
 	height: 70px;
 }
-
+.change-store-info .sd-link-cell:first-of-type {
+	margin-top: 0;
+}
 .change-store-info .store-head-portrait .sd-link-cell .right span {
 	line-height: 70px;
 }
@@ -3744,26 +3746,6 @@ i.icon-table-QR {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 提现管理 */
 .cash-management {
 	width: 100%;
@@ -3777,5 +3759,72 @@ i.icon-table-QR {
 }
 
 .cash-management .first-of-type {
+	margin-top: 0;
+}
+
+/* 输入桌数 */
+.input-table-num {
+	width: 100%;
+	height: 100%;
+	background: url(../img/inpu-table-num-bg.jpg) no-repeat top left;
+	background-size: cover;
+	position: relative;
+}
+.input-table-num .input-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	font-weight: 500;
+	margin-top: -50px;
+}
+.input-table-num .input-box input {
+	display: block;
+	background-color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 10px 0;
+	border-radius: 50px;
+	text-align: center;
+	margin-top: 15px;
+	width: 135px;
+}
+.input-table-num .input-box p {
+	font-size: 15px;
+	color: #000;
+	line-height: 1;
+}
+.input-table-num .sd-btn-box {
+	position: absolute;
+	bottom: 40px;
+	left: 0;
+	width: 100%;
+	padding: 0 70px;
+}
+/* 特约商户说明 */
+.mall-desc {
+	width: 100%;
+	min-height: 100%;
+	background-color: #fff;
+	padding: 15px 0;
+}
+.sd-text-desc {
+	padding: 0 14px;
+	color: #2a2a2a;
+}
+.sd-text-desc > h3 {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 18px;
+	margin-top: 18px;
+}
+.sd-text-desc > p{
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 18px;
+	margin-top: 18px;
+}
+.sd-text-desc > p.first{
 	margin-top: 0;
 }

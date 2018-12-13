@@ -93,13 +93,13 @@ var app = new Vue({
 			var data = _this.orderList;
 			var len = data.length;
 		},
-		initDate() {
+		initDate: function() {
 			var now = new Date();
 			var years = now.getFullYear();
 			var month = now.getMonth() + 1;
 			this.deta = years + '-' + month
 		},
-		openPicker() {
+		openPicker: function() {
 			var rootDOM = this.$el;
 			var targetDOM = rootDOM.getElementsByClassName('picker-slot picker-slot-center');
 			targetDOM[targetDOM.length - 1].style.display = 'none';
@@ -109,13 +109,13 @@ var app = new Vue({
 			console.log(this.$el);
 			this.$el.style.position = "fixed";
 		},
-		handleConfirm(e) {
+		handleConfirm: function(e) {
 			var years = e.getFullYear();
 			var month = e.getMonth() + 1;
 			this.deta = years + '-' + month;
 			this.$el.style.position = "relative";
 		},
-		cancal() {
+		cancal: function() {
 			this.$el.style.position = "relative";
 		}
 

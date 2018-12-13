@@ -7,41 +7,29 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="author" content="" />
-		<title>店铺类型选择</title>
+		<title>输入桌数</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 
 		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
 
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
-
 	</head>
 	<body>
 		<div id="app" v-cloak>
-			<div class="payment-method">
-				<a href="mall.html" class="first-of-type">
-					<div class="sd-link-cell clearfix">
-						<div class="left">
-							<span>特约商户</span><i class="icon icon-help" @click.prevent="gotopage"></i>
-						</div>
-						<i class="icon icon-link right"></i>
-					</div>
-				</a>
-				<a href="pluponform.html" class="">
-					<div class="sd-link-cell clearfix">
-						<div class="left">
-							<span>
-								平台管理
-							</span>
-							<i class="icon icon-help"  @click.prevent="gotopage"></i>
-						</div>
-						<i class="icon icon-link right"></i>
-					</div>
-				</a>
+			<div class="input-table-num">
+				<div class="input-box">
+					<p>请输入桌数</p>
+					<input type="number" placeholder="请输入桌数" v-model="num">
+				</div>
+				<div class="sd-btn-box">
+					<a href="#" class="btn">生成二维码</a>
+				</div>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
-		<script src="static/js/payment-method.js"></script>
+
+		<script src="static/js/input-table-num.js"></script>
 	</body>
 </html>

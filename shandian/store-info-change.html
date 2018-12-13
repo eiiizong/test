@@ -7,7 +7,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="author" content="" />
-		<title>商铺信息</title>
+		<title>商铺信息管理</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
@@ -29,25 +29,27 @@
 				</div>
 
 				<div class="sd-link-cell clearfix" @click="changeInfo(storeInfo.name, 'name')">
-					<div class="left">{{storeInfo.name}}</div>
+					<div class="left">
+						<span>{{storeInfo.name}}</span>
+					</div>
 					<div class="right">
 						<span>编辑</span><i class="icon icon-link"></i>
 					</div>
 				</div>
 				<div class="sd-link-cell clearfix" @click="changeInfo(storeInfo.address, 'address')">
-					<div class="left">{{storeInfo.address}}</div>
+					<div class="left"><span>{{storeInfo.address}}</span></div>
 					<div class="right">
 						<span>编辑</span><i class="icon icon-link"></i>
 					</div>
 				</div>
 				<div class="sd-link-cell clearfix" @click="changeInfo(storeInfo.merchant, 'merchant')">
-					<div class="left">{{storeInfo.merchant}}</div>
+					<div class="left"><span>{{storeInfo.merchant}}</span></div>
 					<div class="right">
 						<span>编辑</span><i class="icon icon-link"></i>
 					</div>
 				</div>
 				<div class="sd-link-cell clearfix" @click="changeInfo(storeInfo.tel, 'tel')">
-					<div class="left">{{storeInfo.tel}}</div>
+					<div class="left"><span>{{storeInfo.tel}}</span></div>
 					<div class="right">
 						<span>编辑</span><i class="icon icon-link"></i>
 					</div>
