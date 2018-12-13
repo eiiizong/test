@@ -604,6 +604,7 @@ i.icon {
 	height: 15px;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
+	vertical-align: top;
 }
 
 i.db-right {
@@ -2729,76 +2730,66 @@ i.icon-replace-order {
 	padding-bottom: 9px;
 }
 
-/* 订单详情 */
-
+/*********** 订单详情 12.13改*****************/
 .order-detail {
 	padding: 10px 0 0 0;
 	font-weight: 500;
 }
 
-.order-detail .take-food-num {
-	height: 50px;
-	background-color: #fff;
-	padding: 0 14px;
+.order-detail .right.icon-dai {
+	margin-top: 17px;
 }
 
-.order-detail .take-food-num div img {
-	width: 17px;
-	height: 17px;
-	border-radius: 50%;
-}
-
-.order-detail .take-food-num div span {
-	font-size: 17px;
-	font-weight: bold;
-	color: #282828;
-	line-height: 1;
-	margin-right: 8px;
-}
-
-.order-detail .seat-num {
-	height: 40px;
-	background-color: #fff;
-	padding: 0 14px;
+.order-detail .seat-num { 
 	margin-top: 10px;
+	border: 0;
+	height: 40px;
+}
+
+.order-detail .seat-num .left span {
 	font-size: 15px;
 	font-weight: bold;
+}
+
+.food-list {
+	padding-left: 14px;
+	border-top: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+	background-color: #fff;
+}
+
+.sd-food-item {
+	position: relative;
+	padding-left: 85px;
+	height: 79px;
+	border-bottom: 1px solid #eaeaea;
 	color: #282828;
 }
 
-.order-detail .food-list {
-	border-top: 1px solid #efeff4;
-	border-bottom: 1px solid #efeff4;
-	background-color: #fff;
-	padding-left: 14px;
-}
-
-.order-detail .food-list .item {
-	height: 77px;
-	border-bottom: 1px solid #efeff4;
-	padding-right: 14px;
-}
-
-.order-detail .food-list .item img {
+.sd-food-item>img {
+	position: absolute;
+	top: 5px;
+	left: 0;
 	width: 68px;
 	height: 68px;
 	border-radius: 5px;
 }
 
-.order-detail .food-list .item .detail {
-	height: 100%;
-	flex: 1;
-	flex-direction: column;
-	padding: 5px 0 10px 18px;
+.sd-food-item .detail {
+	padding-right: 14px;
 }
 
-.order-detail .food-list .item .detail .name {
+.sd-food-item .name {
 	font-size: 14px;
-	color: #282828;
 	line-height: 1;
+	padding-top: 5px;
 }
 
-.order-detail .food-list .item .detail .like span {
+.sd-food-item .like {
+	padding: 9px 0;
+}
+
+.sd-food-item .like .left {
 	padding: 4px 8px;
 	font-size: 11px;
 	color: #5a5a5a;
@@ -2808,93 +2799,61 @@ i.icon-replace-order {
 	line-height: 1;
 }
 
-.order-detail .food-list .item .detail .like span:last-child {
+.sd-food-item .like .left:last-of-type {
 	margin-right: 0;
 }
 
-.order-detail .food-list .item .detail .size {
-	width: 100%;
+.sd-food-item .size-num.no-like {
+	padding-top: 37px;
 }
 
-.order-detail .food-list .item .detail .size {
+.sd-food-item .size-num .left span {
+	display: inline-block;
 	font-size: 14px;
-	color: #282828;
 	line-height: 1;
 }
 
-.order-detail .food-list .item .detail .size>div span:first-child {
-	display: inline-block;
+.sd-food-item .size-num .left span:first-of-type {
 	width: 70px;
 }
 
-
-.order-detail .food-list .food-total {
-	height: 40px;
-	padding-right: 14px;
-}
-
-.order-detail .food-list .food-total span {
+.sd-food-item .size-num .right {
+	display: inline-block;
 	font-size: 14px;
-	color: #282828;
 	line-height: 1;
 }
 
-.order-detail .food-list .food-total div span:first-child {
+.order-detail .food-total {
+	height: 40px;
+	background-color: #fff;
+	padding-right: 14px;
+}
+
+.order-detail .food-total .left span {
 	display: inline-block;
-	width: 86px;
+	font-size: 14px;
+	line-height: 40px;
+}
+
+.order-detail .food-total .left span:first-of-type {
+	width: 85px;
+}
+
+.order-detail .food-total .right {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 40px;
 }
 
 .order-detail .order-other-info {
-	padding: 5px 14px 20px;
 	background-color: #fff;
+	padding: 4px 14px 20px;
 }
 
 .order-detail .order-other-info p {
 	font-size: 14px;
 	color: #999;
 	line-height: 24px;
-	margin: 0;
-}
-
-/********************* common ******************/
-.ffscrn {
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: row;
-	flex-wrap: nowrap;
-}
-
-.ffscrw {
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-.fcfsrn {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	flex-direction: row;
-	flex-wrap: nowrap;
-}
-
-.fcsbrn {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	flex-direction: row;
-	flex-wrap: nowrap;
-}
-
-.fccrn {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: row;
-	flex-wrap: nowrap;
 }
 
 /******************************** 发布小程序 12.10改********************/
@@ -3263,16 +3222,55 @@ i.icon-plus-sign35 {
 	padding: 0 14px;
 }
 
+.sd-link-cell.h50 {
+	height: 50px;
+	border: 0;
+}
+
 .sd-link-cell .left {
 	float: left;
+}
+
+.sd-link-cell .left>span {
+	display: inline-block;
 	font-size: 14px;
 	line-height: 40px;
+}
+
+.sd-link-cell.h50 .left>span {
+	line-height: 50px;
+}
+
+.sd-link-cell .left>span.bold {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.sd-link-cell .left>img {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	margin-left: 8px;
+	margin-top: 16px;
+}
+
+.sd-link-cell .left i.icon-help {
+	width: 16x;
+	height: 16px;
+	vertical-align: top;
+	background-image: url(../img/icon/help@2x.png);
+	margin-top: 12px;
+	margin-left: 7px;
 }
 
 .sd-link-cell .right {
 	float: right;
 	margin-top: 12px;
 }
+
+i.icon-dai {}
+
 
 .sd-link-cell-h70 {
 	display: block;
@@ -3519,4 +3517,112 @@ i.icon-download {
 	left: 0;
 	bottom: 0;
 	padding: 0 14px 40px;
+}
+/* 编辑二维码 */
+.editor-QR {
+	font-weight: 500;
+}
+.sd-hint-info  {
+	padding: 21px 14px 10px 0;
+}
+.sd-hint-info > p {
+	font-size: 14px;
+	color: #7b7b7b;
+	line-height: 1;
+	position: relative;
+	padding-left: 20px;
+}
+.sd-hint-info > p:before {
+	content: '';
+	position: absolute;
+	left: 14px;
+	top: 0;
+	height: 100%;
+	width: 2px;
+	background-color: #439aff;
+	border-radius: 1px;
+}
+.sd-table-num {
+	height: 72px;
+	border-top: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+	margin-bottom: 2px;
+	background-color: #fff;
+	padding: 0 14px;
+}  
+.sd-table-num .left span {
+	display: inline-block;
+	font-size: 14px;
+	color: #000;
+	line-height: 70px;
+}
+.sd-table-num .left a {
+	font-size: 14px;
+	color: #439aff;
+	line-height: 70px;
+	display: inline-block;
+}
+.sd-table-num .right {
+	position: relative;
+	margin-top: 7px;
+}
+.sd-table-num .right .mask {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: rgba(42, 42, 42,.2);
+}
+.sd-table-num .right .mask a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	color: #fff;
+	font-size: 14px;
+	line-height: 56px;
+	text-align: center;
+}
+.sd-table-num .right img {
+	width: 56px;
+	height: 56px;
+}
+.editor-QR .add-table-QR {
+	height: 72px;
+	border-top: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+	background-color: #fff;
+}
+
+.cc {
+	float: left;
+	font-weight: 500;
+	font-size: 0;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.cc span {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 500;
+	color: #439aff;
+	line-height: 1;
+}
+.cc i {
+	width: 12px;
+	height: 12px;
+	background-image: url(../img/icon/add-size.png);
+	margin-top: 1px;
+	margin-right: 8px;
+}
+.editor-QR .sd-hint {
+	padding-top: 7px;
+}
+.editor-QR .sd-btn-box {
+	padding: 20px 70px;
+}
+.editor-QR .sd-btn-box .btn {
+	font-weight: bold;
 }
