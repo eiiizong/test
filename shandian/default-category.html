@@ -7,7 +7,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="author" content="" />
-		<title>设置</title>
+		<title>默认分类</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 
 		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
@@ -18,27 +18,28 @@
 	</head>
 	<body>
 		<div id="app" v-cloak>
-			<div class="set">
-				<a href="payment-method.html" class="first-of-type">
-					<div class="sd-link-cell clearfix">
-						<div class="left">
-							<span>支付到款方式</span>
+			<div class="default-category">
+				<div class="sd-hint-info">
+					<p>请选择您的店铺类型</p>
+				</div>
+				
+				<div class="cell-group">
+					<a href="#" v-for="(item, index) in list" :key="index">
+						<div class="sd-link-cell clearfix">
+							<div class="left">
+								<span>{{item}}</span>
+							</div>
+							<i class="icon icon-link-black right"></i>
 						</div>
-						<i class="icon icon-link right"></i>
-					</div>
-				</a>
-				<a href="#">
-					<div class="sd-link-cell clearfix">
-						<div class="left">
-							<span>相关参数</span>
-						</div>
-						<i class="icon icon-link right"></i>
-					</div>
-				</a>
+					</a>
+				</div>
+				
+				
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
-		<script src="static/js/add-clerk.js"></script>
+
+		<script src="static/js/default-category.js"></script>
 	</body>
 </html>

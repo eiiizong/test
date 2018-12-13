@@ -8,7 +8,7 @@
 		<meta name="keywords" content="" />
 		<meta name="author" content="" />
 		<meta name="format-detection" content="telephone=no">
-		<title>商铺信息管理</title>
+		<title>店铺日常管理</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
@@ -23,18 +23,20 @@
 	</head>
 	<body>
 		<div id="app" v-cloak>
+			<div class="store-daily-management">
 
-			<div class="toolbar clearfix">
-				<div class="left">
-					<a href="set.html">设置</a>
+				<div class="top-nav">
+					<ul class="clearfix">
+						<li class="left">
+							<a href="my-app.html">我的小程序</a>
+						</li>
+						<li class="left active">
+							<a href="store-daily-management.html">店铺日常管理</a>
+						</li>
+					</ul>
 				</div>
-				<div class="right">
-					<i class="icon icon-tel"></i>
-				</div>
-			</div>
 
-			<!-- 店铺基本信息 -->
-			<div class="store-info">
+				<!-- 店铺基本信息 -->
 				<div class="base-info clearfix">
 					<div class="store-head-img">
 						<img src="static/img/head-portrait.jpg">
@@ -49,8 +51,8 @@
 					</div>
 				</div>
 
-				<div class="work-status store-info-cell">
-					<div class="title-cell clearfix">
+				<div class="work-status">
+					<div class="sd-title-cell clearfix">
 						<div class="left">
 							<i class="icon icon-work-status"></i>
 							<span>营业状态</span>
@@ -64,8 +66,8 @@
 						</div>
 						<!-- 营业中 -->
 						<!-- <div class="left rest">
-							<img src="static/img/rest.png" >
-						</div> -->
+											<img src="static/img/rest.png" >
+										</div> -->
 						<div class="right set-handle clearfix">
 							<a href="set-work-time.html" class="left">
 								<!-- <span>设置营业时间</span> -->
@@ -76,9 +78,8 @@
 					</div>
 				</div>
 
-				<!-- 店员管理 -->
-				<div class="clerk-management store-info-cell">
-					<div class="title-cell clearfix">
+				<div class="clerk-management">
+					<div class="sd-title-cell clearfix">
 						<div class="left">
 							<i class="icon icon-clerk-management"></i>
 							<span>店员管理(3)</span>
@@ -152,74 +153,28 @@
 						</div>
 					</div>
 				</div>
-				
-				
 
-				<!-- 提现管理 -->
-				<div class="cash-management store-info-cell">
-					<div class="title-cell clearfix">
-						<div class="left">
-							<i class="icon icon-cash-management"></i>
-							<span>提现管理</span>
-						</div>
-						<div class="right">
-							<i class="icon icon-db-link"></i>
-						</div>
-					</div>
-					<div class="content">
-						<div class="card">
-							<div class="img-box">
-								<img src="static/img/cash.jpg" alt="">
-							</div>
-							<div class="text-detail">
-								<div class="can-cash-money">可提现金额：<span>32536.00</span> 元</div>
-								<div class="compare">上月提现金额：23089.00元，相比上月收入增涨9820.80元</div>
-								<div><a href="with-draw.html" class="apply-cash">申请提现</a></div>
-							</div>
-						</div>
-					</div>
+				<div class="footer-nav clearfix">
+					<a class="item order-list" href="food-type.html">
+						<i class="icon icon-nav-type"></i>
+						<span>菜品分类</span>
+					</a>
+					<a class="item order-list" href="sale-total.html">
+						<i class="icon icon-nav-total"></i>
+						<span>销售统计</span>
+					</a>
+					<a class="item order-list active" href="store-info.html">
+						<i class="icon icon-nav-storeInfo"></i>
+						<span>商铺信息</span>
+					</a>
 				</div>
 
-				<!-- 平台授权信息 -->
-				<div class="license-info store-info-cell">
-					<div class="title-cell clearfix">
-						<div class="left">
-							<i class="icon icon-license-info"></i>
-							<span>平台授权信息</span>
-						</div>
-					</div>
-					<div class="content">
-						<div class="card">
-							<div class="img-box">
-								<img src="static/img/cash.jpg" alt="">
-							</div>
-							<div class="text-detail">
-								<div class="can-cash-money">授权状态：<span>已授权</span></div>
-								<div class="license-detail-info">
-									<p>授权时间期限：2018年2月1日—2018年11月1日，<span>仅剩28天</span></p>
-									<p>购买权限时间：一年</p>
-								</div>
-								<div><a href="renew.html" class="apply-cash">续费</a></div>
-							</div>
-						</div>
-					</div>
-			</div>
 
-			<div class="footer-nav clearfix">
-				<a class="item order-list" href="food-type.html">
-					<i class="icon icon-nav-type"></i>
-					<span>菜品分类</span>
-				</a>
-				<a class="item order-list" href="sale-total.html">
-					<i class="icon icon-nav-total"></i>
-					<span>销售统计</span>
-				</a>
-				<a class="item order-list active" href="store-info.html">
-					<i class="icon icon-nav-storeInfo"></i>
-					<span>商铺信息</span>
-				</a>
+
+
+				<!-- 店员管理 -->
+
 			</div>
-		</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>

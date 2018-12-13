@@ -406,7 +406,55 @@ img {
 }
 
 /******************************* 响应图片 END*******************************************/
+/***************************************** icon **********************************/
 
+i.icon {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	vertical-align: top;
+}
+
+i.db-right {
+	width: 36px;
+	height: 36px;
+	background-image: url(../img/icon/db-right.png);
+}
+
+i.icon-work-status {
+	width: 15px;
+	height: 15px;
+	background-image: url(../img/icon/work-status@2x.png);
+	margin-right: 6px;
+}
+
+i.icon-clerk-management {
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/icon/clerk-management@2x.png);
+	margin-right: 6px;
+}
+
+i.icon-delete-red {
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/icon/delete.png);
+}
+
+i.icon-islink15 {
+	width: 15px;
+	height: 14px;
+	background-image: url(../img/icon/islink15.png);
+}
+
+i.icon-license-info {
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/icon/license-info@2x.png);
+	margin-right: 6px;
+}
 
 
 
@@ -530,379 +578,6 @@ img {
 }
 
 
-/******************* 商铺信息管理 END***********/
-
-
-
-/******************* 商铺信息 12.10改 ***********/
-.store-info {
-	padding-bottom: 50px;
-}
-
-.store-info .base-info {
-	width: 100%;
-	display: block;
-	height: 6.25em;
-	background: url(../img/base-info-bg.jpg) no-repeat top right;
-	background-size: cover;
-	padding-left: 2.5em;
-	padding-right: 0.875em;
-	position: relative;
-}
-
-.base-info .store-head-img {
-	padding-top: 20px;
-}
-
-.base-info .store-head-img img {
-	display: block;
-	width: 3.75em;
-	height: 3.75em;
-	border-radius: 50%;
-	margin-right: 1.4375em;
-}
-
-.base-info .stor-detail {
-	display: block;
-	padding-top: 25px;
-}
-
-.base-info .stor-detail span {
-	font-size: 0.75em;
-	font-weight: 500;
-	color: #ffffff;
-	display: block;
-	line-height: 1;
-}
-
-.base-info .stor-detail span:first-of-type {
-	font-size: 1em;
-	font-weight: bold;
-	margin-bottom: 0.46875em;
-}
-
-.base-info .stor-detail span:last-of-type {
-	margin-top: 0.375em;
-}
-
-.base-info a {
-	display: block;
-	margin-top: 40px;
-}
-
-.base-info i.db-right {
-	font-size: 16px;
-	display: block;
-}
-
-
-/***************************************** icon **********************************/
-
-i.icon {
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	vertical-align: top;
-}
-
-i.db-right {
-	width: 36px;
-	height: 36px;
-	background-image: url(../img/icon/db-right.png);
-}
-
-i.icon-work-status {
-	width: 15px;
-	height: 15px;
-	background-image: url(../img/icon/work-status@2x.png);
-	margin-right: 6px;
-}
-
-i.icon-clerk-management {
-	width: 16px;
-	height: 16px;
-	background-image: url(../img/icon/clerk-management@2x.png);
-	margin-right: 6px;
-}
-
-i.icon-delete-red {
-	width: 16px;
-	height: 16px;
-	background-image: url(../img/icon/delete.png);
-}
-
-i.icon-islink15 {
-	width: 15px;
-	height: 14px;
-	background-image: url(../img/icon/islink15.png);
-}
-
-i.icon-license-info {
-	width: 16px;
-	height: 16px;
-	background-image: url(../img/icon/license-info@2x.png);
-	margin-right: 6px;
-}
-
-/********************************* 头部标题 12.10 改*********************/
-.title-cell {
-	height: 34px;
-}
-
-.title-cell .left span {
-	display: inline-block;
-	font-size: 15px;
-	font-weight: bold;
-	color: #2a2a2a;
-	line-height: 1;
-	line-height: 34px;
-}
-
-.title-cell .left i {
-	margin-right: 4px;
-	vertical-align: top;
-	margin-top: 9px;
-}
-
-.title-cell .right {
-	font-size: 13px;
-	font-weight: 500;
-}
-
-.title-cell .right a {
-	display: block;
-	line-height: 34px;
-	color: #2a2a2a;
-}
-
-.title-cell .right i {
-	margin-top: 10px;
-}
-
-/* 营业状态 */
-.store-info .store-info-cell {
-	background-color: #fff;
-	padding: 0 14px;
-	margin-top: 10px;
-}
-
-.store-info .work-status {
-	margin-top: 0;
-}
-
-.work-status .content {
-	height: 91px;
-	padding-left: 20px;
-}
-
-.work-status .content .rest {
-	padding-top: 24px;
-}
-
-.work-status .content .rest img {
-	display: block;
-	width: 78px;
-	height: 48px;
-}
-
-.work-status .content .set-handle {
-	padding-top: 32px;
-}
-
-.work-status .content .set-handle a span {
-	display: block;
-	line-height: 32px;
-	font-size: 12px;
-	font-weight: bold;
-	color: #439aff;
-	margin-right: 35px;
-}
-
-.work-status .content .set-handle a span.time {
-	color: #282828;
-}
-
-/* 店员管理 */
-.store-info .clerk-management {
-	background-color: #fff;
-	padding: 0 0 0 14px;
-}
-
-.clerk-management .btn-add-clerk {
-	display: block;
-	width: 45px;
-	height: 45px;
-	background-color: #439aff;
-	box-shadow: 0px 5px 13px 0px rgba(0, 118, 255, 0.44);
-	font-size: 14px;
-	font-weight: bold;
-	color: #fff;
-	border-radius: 100%;
-	line-height: 45px;
-}
-
-.clerk-management .title-cell {
-	padding-right: 14px;
-}
-
-.clerk-management .content .item {
-	border-bottom: 1px solid #eaeaea;
-}
-
-.clerk-management .content .item:last-of-type {
-	border-bottom: 0;
-	padding-bottom: 24px;
-}
-
-.clerk-management .content .item .type {
-	line-height: 28px;
-	font-size: 15px;
-	padding-left: 10px;
-}
-
-.clerk-management ul {
-	padding-left: 10px;
-}
-
-.clerk-management ul li {
-	position: relative;
-	margin-right: 25px;
-	text-align: center;
-}
-
-.clerk-management ul li:last-child {
-	margin-right: 0;
-}
-
-.clerk-management ul li img {
-	display: block;
-	width: 45px;
-	height: 45px;
-	border-radius: 100%;
-	margin: 0 auto;
-}
-
-.clerk-management ul li i {
-	position: absolute;
-	top: -2px;
-	right: -2px;
-}
-
-.clerk-management ul li span {
-	display: block;
-	width: 45px;
-	font-size: 12px;
-	font-weight: 500;
-	color: #2a2a2a;
-	margin-top: 9px;
-	margin-bottom: 6px;
-	overflow: hidden;
-}
-
-/* 提现管理 */
-.cash-management .content {
-	height: 177px;
-}
-
-i.icon-cash-management {
-	width: 16px;
-	height: 16px;
-	background-image: url(../img/icon/cash-management@2x.png);
-}
-
-i.icon-db-link {
-	width: 15px;
-	height: 14px;
-	background-image: url(../img/icon/db-link@2x.png);
-}
-
-.card {
-	width: 100%;
-	height: 150px;
-	box-shadow: 0px 7px 19px 1px rgba(205, 205, 205, 0.5);
-	border-radius: 10px;
-	position: relative;
-}
-
-.card .img-box {
-	width: 115px;
-	height: 150px;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-.card .img-box img {
-	width: 115px;
-	height: 150px;
-}
-
-.card .text-detail {
-	width: 100%;
-	padding-left: 144px;
-}
-
-.card .text-detail .can-cash-money {
-	font-size: 15px;
-	font-weight: bold;
-	color: #2a2a2a;
-	line-height: 1;
-	padding-top: 15px;
-}
-
-.card .text-detail .can-cash-money span {
-	color: #00e526;
-}
-
-.card .text-detail .compare {
-	font-size: 12px;
-	font-weight: 500;
-	color: #2a2a2a;
-	line-height: 16px;
-	padding-top: 24px;
-}
-
-.card .text-detail .apply-cash {
-	display: block;
-	width: 80px;
-	text-align: center;
-	line-height: 1;
-	font-size: 14px;
-	font-weight: 500;
-	color: #439aff;
-	border: solid 1px #439aff;
-	padding: 5px 0px;
-	border-radius: 100px;
-	margin-top: 10px;
-}
-
-.cash-management .card .text-detail .apply-cash {
-	margin-top: 32px;
-}
-
-.card .license-detail-info {
-	font-size: 12px;
-	font-weight: 500;
-	color: #2a2a2a;
-	padding-top: 24px;
-}
-
-.card .license-detail-info p {
-	margin: 0;
-	line-height: 16px;
-}
-
-.card .license-detail-info p:last-child {
-	margin-top: 6px;
-}
-
-.card .license-detail-info span {
-	color: #e00000;
-}
-
-/******************* 商铺信息 END***********/
 
 /*********************** 菜品分类管理 12.12改***************/
 .food-type-management {
@@ -2645,89 +2320,130 @@ i.icon-add-bankcard {
 	height: 100%;
 }
 
-/* 订单列表 */
+/******************* 订单列表 12.13改 *************/
 
-#app>.order-list {
+.order-list {
 	width: 100%;
 	min-height: 100%;
-	padding: 15px 14px 50px;
+	padding: 5px 14px 50px;
 	font-weight: 500;
 }
 
-.order-card {
-	/* height: 200px; */
+.sd-order-card {
 	background-color: #fff;
 	border-radius: 10px;
-	margin-bottom: 15px;
-}
-
-.order-card>div {
-	font-size: 14px;
+	margin-top: 10px;
 	color: #999;
-	line-height: 1;
-	padding: 0 14px;
-	margin-top: 9px;
+	font-weight: 500;
 }
 
-.order-card .take-food-num {
+.sd-order-card .take-food-num {
 	height: 41px;
-	border-bottom: 1px solid #f1f1f1;
-	margin-top: 0;
+	border-bottom: 1px solid #eaeaea;
+	padding: 0 15px;
+}
 
+.sd-order-card .take-food-num .left {
 	font-size: 17px;
 	font-weight: bold;
 	color: #282828;
-	line-height: 1;
+	line-height: 40px;
 }
 
-i.icon-replace-order {
-	width: 18px;
-	height: 15px;
-	background-image: url(../img/icon/dai@2x.png);
-	background-color: #fff;
+.sd-order-card .take-food-num .right {
+	margin-top: 12px;
 }
 
-.order-card .seat-num {}
+.sd-order-card .seat-num {
+	font-size: 14px;
+	line-height: 22px;
+	padding: 0 15px;
+}
 
-.order-card .btn-box {
+.sd-order-card .seat-num {
+	font-size: 14px;
+	line-height: 22px;
+	padding: 0 15px;
+}
+
+.sd-order-card .food-detail {
+	padding: 0 15px;
+}
+
+.sd-order-card .food-detail .left {
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.sd-order-card .food-detail .right {
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.sd-order-card .right span {
+	float: left;
 	text-align: right;
 }
 
-.order-card .btn-box .inline-btn {
-	display: inline-block;
-	color: #00e526;
-	padding: 6px 11px;
-	border: 1px solid #00E526;
-	border-radius: 50px;
-	background-color: #fff;
+.sd-order-card .right .price {
+	width: 85px;
 }
 
-.order-card .order-food-detail div span {
-	display: inline-block;
-	text-align: right;
-}
-
-.order-card .order-food-detail div .price {
-	width: 84px;
-}
-
-.order-card .order-food-detail div .num {
+.sd-order-card .right .num {
 	width: 50px;
 }
 
-.order-card .total div .price {
-	display: inline-block;
+@media screen and (max-width:374px) {
+	.sd-order-card .right .price {
+		width: 55px;
+	}
+
+	.sd-order-card .right .num {
+		width: 35px;
+	}
+}
+
+.sd-order-card .more {
+	font-size: 14px;
+	line-height: 22px;
+	text-align: left;
+	padding: 0 15px;
+}
+
+.sd-order-card .total {
+	padding: 0 15px;
+}
+
+.sd-order-card .total .left {
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.sd-order-card .total .right {
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.sd-order-card .ordered-time {
+	font-size: 14px;
+	padding: 0 15px;
+	line-height: 22px;
+}
+
+.sd-btn-box-inline {
+	padding: 10px 15px 8px;
 	text-align: right;
-	width: 84px;
 }
 
-.order-card .ordering-time span {
-	margin-right: 10px;
-}
-
-.order-card .btn-box {
-	margin-top: 15px;
-	padding-bottom: 9px;
+.sd-btn-box-inline .btn {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 500;
+	color: #00e526;
+	padding: 6px 11px;
+	border-radius: 50px;
+	border: 1px solid #00E526;
+	line-height: 1;
 }
 
 /*********** 订单详情 12.13改*****************/
@@ -2740,7 +2456,7 @@ i.icon-replace-order {
 	margin-top: 17px;
 }
 
-.order-detail .seat-num { 
+.order-detail .seat-num {
 	margin-top: 10px;
 	border: 0;
 	height: 40px;
@@ -3269,7 +2985,11 @@ i.icon-plus-sign35 {
 	margin-top: 12px;
 }
 
-i.icon-dai {}
+i.icon-link-black {
+	width: 8px;
+	height: 14px;
+	background-image: url(../img/icon/is-link-block@2x.png);
+}
 
 
 .sd-link-cell-h70 {
@@ -3328,21 +3048,6 @@ i.icon-link {
 	background-image: url(../img/icon/is-link-big.png);
 }
 
-/* 提现管理 */
-.cash-management {
-	width: 100%;
-	min-height: 100%;
-	padding-top: 9px;
-}
-
-.cash-management>a {
-	display: block;
-	margin-top: 9px;
-}
-
-.cash-management .first-of-type {
-	margin-top: 0;
-}
 
 /************ 支付到款方式 *********/
 .payment-method {
@@ -3452,19 +3157,28 @@ i.icon-download {
 	height: 100%;
 	background-color: #fff;
 	position: relative;
+	padding-top: 44px;
 }
 
-.create-app .top-nav li {
+.top-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2000;
+}
+
+.top-nav li {
 	width: 50%;
 	text-align: center;
 	background-color: #afd4ff;
 }
 
-.create-app .top-nav li.active {
+.top-nav li.active {
 	background-color: #fff;
 }
 
-.create-app .top-nav li a {
+.top-nav li a {
 	display: inline-block;
 	font-size: 17px;
 	font-weight: bold;
@@ -3474,7 +3188,7 @@ i.icon-download {
 	position: relative;
 }
 
-.create-app .top-nav li a:after {
+.top-nav li a:after {
 	position: absolute;
 	content: '';
 	width: 100%;
@@ -3485,11 +3199,11 @@ i.icon-download {
 	opacity: 0;
 }
 
-.create-app .top-nav li.active a {
+.top-nav li.active a {
 	color: #439aff;
 }
 
-.create-app .top-nav li.active a:after {
+.top-nav li.active a:after {
 	opacity: 1;
 }
 
@@ -3518,21 +3232,29 @@ i.icon-download {
 	bottom: 0;
 	padding: 0 14px 40px;
 }
+
 /* 编辑二维码 */
 .editor-QR {
 	font-weight: 500;
 }
-.sd-hint-info  {
+
+.sd-hint-info {
 	padding: 21px 14px 10px 0;
 }
-.sd-hint-info > p {
+
+.sd-hint-info>p {
 	font-size: 14px;
 	color: #7b7b7b;
 	line-height: 1;
 	position: relative;
+	padding-left: 14px;
+}
+
+.sd-hint-info>p.before {
 	padding-left: 20px;
 }
-.sd-hint-info > p:before {
+
+.sd-hint-info>p.before:before {
 	content: '';
 	position: absolute;
 	left: 14px;
@@ -3542,6 +3264,7 @@ i.icon-download {
 	background-color: #439aff;
 	border-radius: 1px;
 }
+
 .sd-table-num {
 	height: 72px;
 	border-top: 1px solid #eaeaea;
@@ -3549,31 +3272,36 @@ i.icon-download {
 	margin-bottom: 2px;
 	background-color: #fff;
 	padding: 0 14px;
-}  
+}
+
 .sd-table-num .left span {
 	display: inline-block;
 	font-size: 14px;
 	color: #000;
 	line-height: 70px;
 }
+
 .sd-table-num .left a {
 	font-size: 14px;
 	color: #439aff;
 	line-height: 70px;
 	display: inline-block;
 }
+
 .sd-table-num .right {
 	position: relative;
 	margin-top: 7px;
 }
+
 .sd-table-num .right .mask {
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	top: 0;
 	right: 0;
-	background-color: rgba(42, 42, 42,.2);
+	background-color: rgba(42, 42, 42, .2);
 }
+
 .sd-table-num .right .mask a {
 	width: 100%;
 	height: 100%;
@@ -3583,10 +3311,12 @@ i.icon-download {
 	line-height: 56px;
 	text-align: center;
 }
+
 .sd-table-num .right img {
 	width: 56px;
 	height: 56px;
 }
+
 .editor-QR .add-table-QR {
 	height: 72px;
 	border-top: 1px solid #eaeaea;
@@ -3601,8 +3331,9 @@ i.icon-download {
 	position: relative;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 }
+
 .cc span {
 	display: inline-block;
 	font-size: 14px;
@@ -3610,6 +3341,7 @@ i.icon-download {
 	color: #439aff;
 	line-height: 1;
 }
+
 .cc i {
 	width: 12px;
 	height: 12px;
@@ -3617,12 +3349,433 @@ i.icon-download {
 	margin-top: 1px;
 	margin-right: 8px;
 }
+
 .editor-QR .sd-hint {
 	padding-top: 7px;
 }
+
 .editor-QR .sd-btn-box {
 	padding: 20px 70px;
 }
+
 .editor-QR .sd-btn-box .btn {
 	font-weight: bold;
+}
+
+/* 默认分类 */
+.default-category {}
+
+.default-category a {
+	display: block;
+	padding-left: 14px;
+	background-color: #fff;
+}
+
+.default-category .sd-link-cell {
+	border: 0;
+	padding-left: 0;
+	border-bottom: 1px solid #EAEAEA;
+	height: 41px;
+}
+
+.default-category a:last-of-type .sd-link-cell {
+	border: 0;
+	height: 40px;
+}
+
+.default-category .sd-link-cell .right {
+	margin-top: 13px;
+}
+
+/* 店铺日常管理 */
+.store-daily-management {
+	width: 100%;
+	min-height: 100%;
+	padding-top: 44px;
+	padding-bottom: 50px;
+}
+
+/* 商铺基本信息 */
+.base-info {
+	width: 100%;
+	display: block;
+	height: 6.25em;
+	background: url(../img/base-info-bg.jpg) no-repeat top right;
+	background-size: cover;
+	padding-left: 2.5em;
+	padding-right: 0.875em;
+	position: relative;
+}
+
+.base-info .store-head-img {
+	padding-top: 20px;
+}
+
+.base-info .store-head-img img {
+	display: block;
+	width: 3.75em;
+	height: 3.75em;
+	border-radius: 50%;
+	margin-right: 1.4375em;
+}
+
+.base-info .stor-detail {
+	display: block;
+	padding-top: 25px;
+}
+
+.base-info .stor-detail span {
+	font-size: 0.75em;
+	font-weight: 500;
+	color: #ffffff;
+	display: block;
+	line-height: 1;
+}
+
+.base-info .stor-detail span:first-of-type {
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 0.46875em;
+}
+
+.base-info .stor-detail span:last-of-type {
+	margin-top: 0.375em;
+}
+
+.base-info a {
+	display: block;
+	margin-top: 40px;
+}
+
+.base-info i.db-right {
+	font-size: 16px;
+	display: block;
+}
+
+/* sd-title-cell */
+.sd-title-cell {
+	height: 38px;
+}
+.sd-title-cell .left span {
+	display: inline-block;
+	font-size: 15px;
+	font-weight: bold;
+	color: #2a2a2a;
+	line-height: 1;
+	line-height: 38px;
+}
+
+.sd-title-cell .left i {
+	margin-right: 4px;
+	margin-top: 11px;
+}
+
+.sd-title-cell .right {
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.sd-title-cell .right a {
+	display: block;
+	line-height: 38px;
+	color: #2a2a2a;
+}
+
+.sd-title-cell .right i {
+	margin-top: 10px;
+}
+
+/*************** 营业状态 *****************/
+
+.work-status {
+	background-color: #fff;
+	padding: 0 14px;
+}
+
+.work-status .content {
+	height: 91px;
+	padding-left: 20px;
+}
+
+.work-status .content .rest {
+	padding-top: 24px;
+}
+
+.work-status .content .rest img {
+	display: block;
+	width: 78px;
+	height: 48px;
+}
+
+.work-status .content .set-handle {
+	padding-top: 32px;
+}
+
+.work-status .content .set-handle a span {
+	display: block;
+	line-height: 32px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #439aff;
+	margin-right: 35px;
+}
+
+.work-status .content .set-handle a span.time {
+	color: #282828;
+}
+
+/* 店员管理 */
+.clerk-management {
+	background-color: #fff;
+	padding: 0 14px;
+	margin-top: 10px;
+}
+
+.clerk-management .btn-add-clerk {
+	display: block;
+	width: 45px;
+	height: 45px;
+	background-color: #439aff;
+	box-shadow: 0px 5px 13px 0px rgba(0, 118, 255, 0.44);
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 100%;
+	line-height: 45px;
+}
+
+.clerk-management .title-cell {
+	padding-right: 14px;
+}
+
+.clerk-management .content .item {
+	border-bottom: 1px solid #eaeaea;
+}
+
+.clerk-management .content .item:last-of-type {
+	border-bottom: 0;
+	padding-bottom: 24px;
+}
+
+.clerk-management .content .item .type {
+	line-height: 28px;
+	font-size: 15px;
+	padding-left: 10px;
+}
+
+.clerk-management ul {
+	padding-left: 10px;
+}
+
+.clerk-management ul li {
+	position: relative;
+	margin-right: 25px;
+	text-align: center;
+}
+
+.clerk-management ul li:last-child {
+	margin-right: 0;
+}
+
+.clerk-management ul li img {
+	display: block;
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+	margin: 0 auto;
+}
+
+.clerk-management ul li i {
+	position: absolute;
+	top: -2px;
+	right: -2px;
+}
+
+.clerk-management ul li span {
+	display: block;
+	width: 45px;
+	font-size: 12px;
+	font-weight: 500;
+	color: #2a2a2a;
+	margin-top: 9px;
+	margin-bottom: 6px;
+	overflow: hidden;
+}
+
+/*********** 特约商户 *******************/
+.my-app {
+	width: 100%;
+	height: 100%;
+}
+.platform-management,
+.mall {
+	width: 100%;
+	min-height: 100%;
+	padding-top: 44px;
+}
+
+
+/* 提现管理 */
+.sd-cash-management {
+	padding-top: 0;
+	background-color: #fff;
+	padding: 0 14px;
+}
+.sd-cash-management .content {
+	padding: 8px 0 16px;
+}
+.sd-cash-management .content .card {
+	width: 100%;
+	height: 150px;
+	box-shadow: 0px 7px 19px 1px rgba(205, 205, 205, 0.5);
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.sd-cash-management .card .img-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.sd-cash-management .card .img-box img {
+	display: block;
+	width: 115px;
+	height: 150px;
+}
+.sd-cash-management .card .text-detail {
+	width: 100%;
+	padding-left: 144px;
+}
+
+.sd-cash-management .card .text-detail .main-info {
+	font-size: 15px;
+	font-weight: bold;
+	color: #2a2a2a;
+	line-height: 1;
+	padding-top: 15px;
+}
+.sd-cash-management .card .text-detail .main-info span {
+	color: #00e526;
+}
+
+.sd-cash-management .card .text-detail .hint-info {
+	font-size: 12px;
+	font-weight: 500;
+	color: #2a2a2a;
+	line-height: 16px;
+	padding-top: 8px;
+}
+
+.sd-cash-management .card .text-detail .hint-info.first {
+	padding-top: 24px;
+}
+
+.sd-cash-management .card .text-detail .hint-info span.red {
+	color: #e00000;
+}
+.sd-cash-management .card .text-detail .btn-box {
+	position: absolute;
+	bottom: 12px;
+}
+.sd-cash-management .card .text-detail .btn-box .btn{
+	display: inline-block;
+	text-align: center;
+	width: 80px;
+	height: 25px;
+	color: #439aff;
+	border: solid 1px #439aff;
+	border-radius: 50px;
+	line-height: 25px;
+	font-size: 14px;
+	font-weight: 500;
+}
+@media screen and (max-width:374px) {
+	.sd-cash-management .card .text-detail {
+		padding-left: 110px;
+	}
+	.sd-cash-management .content .card {
+		height: 130px;
+	}
+	.sd-cash-management .card .img-box img {
+		width: 100px;
+		height: 130px;
+	}
+	.sd-cash-management .card .text-detail .main-info {
+		padding-top: 10px;
+	}
+	.sd-cash-management .card .text-detail .hint-info {
+		padding-top: 2px;
+	}
+	.sd-cash-management .card .text-detail .hint-info.first {
+		padding-top: 10px;
+	}
+}
+/* 授权信息 */
+.sd-cash-management.license-info {
+	margin-top: 10px;
+}
+.mall .sd-cash-management.license-info {
+	margin-top: 0;
+}
+
+i.icon-cash-management {
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/icon/cash-management@2x.png);
+}
+
+i.icon-db-link {
+	width: 15px;
+	height: 14px;
+	background-image: url(../img/icon/db-link@2x.png);
+}
+
+
+/* 餐桌二维码 */
+.sd-cash-management.table-QR {
+	margin-top: 10px;
+}
+
+i.icon-table-QR {
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/icon/table-QR@2x.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 提现管理 */
+.cash-management {
+	width: 100%;
+	min-height: 100%;
+	padding-top: 9px;
+}
+
+.cash-management>a {
+	display: block;
+	margin-top: 9px;
+}
+
+.cash-management .first-of-type {
+	margin-top: 0;
 }
