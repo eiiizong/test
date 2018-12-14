@@ -9,7 +9,7 @@
 		<meta name="author" content="" />
 		<title>销售统计</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
-		
+
 		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
@@ -19,6 +19,18 @@
 		<div id="app" v-cloak>
 			<!-- 店铺基本信息 -->
 			<div class="sale-total fcsb">
+
+				<div class="top-nav">
+					<ul class="clearfix">
+						<li class="left">
+							<a href="my-app.html">我的小程序</a>
+						</li>
+						<li class="left active">
+							<a href="store-daily-management.html">店铺日常管理</a>
+						</li>
+					</ul>
+				</div>
+
 				<div class="top">
 					<span>今日收益额</span>
 					<div>¥ 15,680.00</div>
@@ -36,16 +48,12 @@
 				</div>
 
 
-				<div class="footer-nav fcfs">
-					<a class="item order-list" href="order-list.html">
-						<i class="icon icon-nav-order-list"></i>
-						<span>订单列表</span>
-					</a>
+				<div class="footer-nav clearfix">
 					<a class="item order-list" href="food-type.html">
 						<i class="icon icon-nav-type"></i>
 						<span>菜品分类</span>
 					</a>
-					<a class="item order-list active" href="#">
+					<a class="item order-list active" href="sale-total.html">
 						<i class="icon icon-nav-total"></i>
 						<span>销售统计</span>
 					</a>

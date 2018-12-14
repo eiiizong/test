@@ -531,9 +531,11 @@ i.icon-license-info {
 .change-store-info .store-head-portrait .sd-link-cell {
 	height: 70px;
 }
+
 .change-store-info .sd-link-cell:first-of-type {
 	margin-top: 0;
 }
+
 .change-store-info .store-head-portrait .sd-link-cell .right span {
 	line-height: 70px;
 }
@@ -729,17 +731,20 @@ i.icon-down.no {
 	color: #439aff;
 }
 
+/* 弹窗 */
 .sd-popup {
 	width: 100%;
 	height: 100%;
 	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 .sd-popup .popup-mask {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, .8);
+	background-color: rgba(0, 0, 0, .5);
 	top: 0;
 	left: 0;
 	z-index: 2000;
@@ -753,26 +758,28 @@ i.icon-down.no {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 2001;
-	border-radius: 5px;
+	border-radius: 15px;
 	overflow: hidden;
 }
 
 .sd-popup .popup .content {
-	padding: 20px 15px 0;
+	padding: 0 15px;
 }
 
 .sd-popup .popup h3 {
-	font-size: 18px;
-	line-height: 1;
+	font-size: 16px;
+	line-height: 58px;
 	text-align: center;
+	color: #000;
+	font-weight: bold;
 }
 
 .sd-popup .popup p.hint {
 	font-size: 14px;
-	line-height: 20px;
-	padding: 10px 0;
+	line-height: 1;
 	color: #282828;
 	text-align: center;
+	padding-bottom: 20px;
 }
 
 .sd-popup .popup .input-box {
@@ -797,16 +804,17 @@ i.icon-down.no {
 .sd-popup .popup .btn-ok {
 	width: 50%;
 	text-align: center;
-	height: 40px;
+	height: 51px;
 	background-color: #fff;
-	font-size: 15px;
-	line-height: 40px;
+	font-size: 16px;
+	line-height: 50px;
 	border-top: 1px solid #eaeaea;
+	color: #439aff;
 }
 
 .sd-popup .popup .btn-cancel {
 	border-right: 1px solid #eaeaea;
-	color: #aaa;
+	color: #666;
 }
 
 /*********************** 菜品分类管理 END***************/
@@ -1144,6 +1152,41 @@ i.icon-down.no {
 	/*11*/
 	text-align: center;
 	margin-top: 2.454545em;
+}
+
+.sd-cc {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.sd-cc img {
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+}
+
+i.icon-jt {
+	width: 48px;
+	height: 27px;
+	background-image: url(../img/icon/jt@2x.png);
+	margin: 19px 25px 0;
+}
+
+i.icon-store {
+	width: 61px;
+	height: 55px;
+	background-image: url(../img/icon/store@2x.png);
+	margin-top: 5px;
+}
+
+.add-clerk .sd-popup .popup .content h3 {
+	line-height: 80px;
+	margin-top: 0;
+}
+
+.add-clerk .sd-cc {
+	padding: 14px 0 32px;
 }
 
 /*************** 添加店员 END******************/
@@ -3458,6 +3501,7 @@ i.icon-download {
 .sd-title-cell {
 	height: 38px;
 }
+
 .sd-title-cell .left span {
 	display: inline-block;
 	font-size: 15px;
@@ -3609,6 +3653,7 @@ i.icon-download {
 	width: 100%;
 	height: 100%;
 }
+
 .platform-management,
 .mall {
 	width: 100%;
@@ -3623,9 +3668,11 @@ i.icon-download {
 	background-color: #fff;
 	padding: 0 14px;
 }
+
 .sd-cash-management .content {
 	padding: 8px 0 16px;
 }
+
 .sd-cash-management .content .card {
 	width: 100%;
 	height: 150px;
@@ -3640,11 +3687,13 @@ i.icon-download {
 	top: 0;
 	left: 0;
 }
+
 .sd-cash-management .card .img-box img {
 	display: block;
 	width: 115px;
 	height: 150px;
 }
+
 .sd-cash-management .card .text-detail {
 	width: 100%;
 	padding-left: 144px;
@@ -3657,6 +3706,7 @@ i.icon-download {
 	line-height: 1;
 	padding-top: 15px;
 }
+
 .sd-cash-management .card .text-detail .main-info span {
 	color: #00e526;
 }
@@ -3676,11 +3726,13 @@ i.icon-download {
 .sd-cash-management .card .text-detail .hint-info span.red {
 	color: #e00000;
 }
+
 .sd-cash-management .card .text-detail .btn-box {
 	position: absolute;
 	bottom: 12px;
 }
-.sd-cash-management .card .text-detail .btn-box .btn{
+
+.sd-cash-management .card .text-detail .btn-box .btn {
 	display: inline-block;
 	text-align: center;
 	width: 80px;
@@ -3692,31 +3744,39 @@ i.icon-download {
 	font-size: 14px;
 	font-weight: 500;
 }
+
 @media screen and (max-width:374px) {
 	.sd-cash-management .card .text-detail {
 		padding-left: 110px;
 	}
+
 	.sd-cash-management .content .card {
 		height: 130px;
 	}
+
 	.sd-cash-management .card .img-box img {
 		width: 100px;
 		height: 130px;
 	}
+
 	.sd-cash-management .card .text-detail .main-info {
 		padding-top: 10px;
 	}
+
 	.sd-cash-management .card .text-detail .hint-info {
 		padding-top: 2px;
 	}
+
 	.sd-cash-management .card .text-detail .hint-info.first {
 		padding-top: 10px;
 	}
 }
+
 /* 授权信息 */
 .sd-cash-management.license-info {
 	margin-top: 10px;
 }
+
 .mall .sd-cash-management.license-info {
 	margin-top: 0;
 }
@@ -3770,15 +3830,17 @@ i.icon-table-QR {
 	background-size: cover;
 	position: relative;
 }
+
 .input-table-num .input-box {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 	text-align: center;
 	font-weight: 500;
 	margin-top: -50px;
 }
+
 .input-table-num .input-box input {
 	display: block;
 	background-color: #fff;
@@ -3790,11 +3852,13 @@ i.icon-table-QR {
 	margin-top: 15px;
 	width: 135px;
 }
+
 .input-table-num .input-box p {
 	font-size: 15px;
 	color: #000;
 	line-height: 1;
 }
+
 .input-table-num .sd-btn-box {
 	position: absolute;
 	bottom: 40px;
@@ -3802,6 +3866,7 @@ i.icon-table-QR {
 	width: 100%;
 	padding: 0 70px;
 }
+
 /* 特约商户说明 */
 .mall-desc {
 	width: 100%;
@@ -3809,22 +3874,267 @@ i.icon-table-QR {
 	background-color: #fff;
 	padding: 15px 0;
 }
+
 .sd-text-desc {
 	padding: 0 14px;
 	color: #2a2a2a;
 }
-.sd-text-desc > h3 {
+
+.sd-text-desc>h3 {
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 18px;
 	margin-top: 18px;
 }
-.sd-text-desc > p{
+
+.sd-text-desc>p {
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 18px;
 	margin-top: 18px;
 }
-.sd-text-desc > p.first{
+
+.sd-text-desc>p.first {
 	margin-top: 0;
+}
+
+/* 注册 */
+.sign {
+	width: 100%;
+	height: 100%;
+	background: url(../img/sign-bg.png) no-repeat top left;
+	background-size: cover;
+	padding-top: 44px;
+}
+
+.sign .logo-box {
+	width: 100%;
+}
+
+.sign .logo-box img {
+	display: block;
+	margin: 0 auto;
+}
+
+.sign .logo-box img.logo {
+	width: 90px;
+	height: 90px;
+}
+
+.sign .logo-box img.logo-text {
+	width: 175px;
+	height: 15px;
+	margin-top: 11px;
+}
+
+.sign .sd-btn-box {
+	padding: 76px 44px 20px;
+}
+
+i.icon-phone {
+	width: 32px;
+	height: 32px;
+	background-image: url(../img/icon/phone@2x.png);
+}
+
+i.icon-code {
+	width: 32px;
+	height: 32px;
+	background-image: url(../img/icon/code@2x.png);
+}
+
+i.icon-password {
+	width: 32px;
+	height: 32px;
+	background-image: url(../img/icon/password@2x.png);
+}
+
+i.icon-see-password {
+	width: 19px;
+	height: 14px;
+	background-image: url(../img/icon/see-password@2x.png);
+}
+
+.sign .sign-input {
+	padding-top: 20px;
+}
+
+.sign .sign-input>div {
+	width: 270px;
+	position: relative;
+	margin: 0 auto;
+	padding-top: 39px;
+}
+
+.sign .sign-input .left {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	float: none;
+}
+
+.sign .sign-input .right {
+	width: 100%;
+	float: none;
+	padding-left: 46px;
+}
+
+.sign .sign-input .right input {
+	display: block;
+	font-size: 14px;
+	line-height: 24px;
+	width: 100%;
+	padding: 5px 7px;
+	border-bottom: 2px solid #439aff;
+	background-color: transparent;
+}
+
+.sign .sign-input .code .right .btn {
+	position: absolute;
+	bottom: 6px;
+	right: 0;
+	width: 100px;
+	height: 30px;
+	border: 1px solid #439aff;
+	color: #439aff;
+	line-height: 28px;
+	border-radius: 50px;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.sign .sign-input .password .right i {
+	position: absolute;
+	bottom: 10px;
+	right: 0;
+}
+
+.sign input::-webkit-input-placeholder {
+	color: #6d6b6b;
+	;
+}
+
+.sign input:-moz-placeholder {
+	color: #6d6b6b;
+}
+
+.sign input::-moz-placeholder {
+	color: #6d6b6b;
+}
+
+.sign input:-ms-input-placeholder {
+	color: #6d6b6b;
+}
+
+/* 小程序申请流程 */
+.app-apply-step {
+	width: 100%;
+	min-height: 100%;
+	background-color: #fff;
+	padding: 0 14px;
+	padding-bottom: 10px;
+}
+
+.sd-img-text {
+	font-weight: 500;
+	color: #000;
+}
+
+.sd-img-text h2 {
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 1;
+	padding-top: 13px;
+}
+
+.sd-img-text p {
+	font-size: 14px;
+	line-height: 18px;
+	padding-top: 2px;
+	padding-bottom: 10px;
+}
+
+.sd-img-text p span {
+	color: #e20000;
+}
+
+/* 等待审核 */
+.wait-review {
+	width: 100%;
+	height: 100%;
+	background: url(../img/wait-review-bg.png) no-repeat top left;
+	background-size: cover;
+	padding-top: 14px;
+}
+
+.wait-review>div {
+	width: 100%;
+	text-align: center;
+}
+
+.wait-review .nav a {
+	font-size: 0;
+	display: block;
+}
+
+.wait-review .nav span {
+	display: inline-block;
+	font-size: 17px;
+	font-weight: bold;
+	color: #fff;
+	line-height: 1;
+}
+
+i.icon-change {
+	width: 12px;
+	height: 10px;
+	background-image: url(../img/icon/change@2x.png);
+	margin: 3px 0 0 4px;
+}
+
+.wait-review .img-box {
+	padding-top: 60px;
+	margin-bottom: 150px;
+}
+
+.wait-review .img-box img {
+	display: block;
+	margin: 0 auto;
+	width: 140px;
+}
+
+.wait-review .text h3 {
+	font-size: 17px;
+	color: #000;
+	font-weight: 500;
+	line-height: 1;
+}
+
+.wait-review .text p {
+	padding: 0 66px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #959595;
+	line-height: 18px;
+	padding-top: 5px;
+}
+
+/* 小程序名称 */
+.app-name {
+	width: 100%;
+	height: 100%;
+	padding: 10px 0;
+}
+
+.app-name .sd-hint {
+	padding: 7px 14px 0;
+	font-size: 11px;
+}
+
+.app-name .sd-hint a {
+	color: #439aff;
+}
+
+.app-name .sd-btn-box {
+	padding: 23px 14px;
 }

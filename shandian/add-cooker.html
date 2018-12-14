@@ -7,7 +7,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="author" content="" />
-		<title>平台管理</title>
+		<title>添加厨师</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 
 		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
@@ -18,12 +18,25 @@
 	</head>
 	<body>
 		<div id="app" v-cloak>
-			<div class="payment-method">
-				平台管理
+			<div class="add-cooker">
+				<!-- <div class="sd-hint-info">
+					<p>请输入账号和密码</p>
+				</div> -->
+				
+				<div class="sd-input-group">
+					<p class="hint-input-box">请输入账号和密码</p>
+					<div class="input-box">
+						<mt-field label="账号" placeholder="请输入账号" v-model="accountNumber" type="text"></mt-field>
+						<mt-field label="密码" placeholder="请输入密码" v-model="password" type="password"></mt-field>
+					</div>
+				</div>
+				<div class="sd-btn-box">
+					<button type="button" class="btn">添加</button>
+				</div>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
-		<script src="static/js/cash-management.js"></script>
+		<script src="static/js/add-cooker.js"></script>
 	</body>
 </html>

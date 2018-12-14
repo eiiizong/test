@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>注册</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+
+
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<div class="sign">
+				<div class="logo-box">
+					<img src="static/img/logo.png" alt="" class="logo">
+					<img src="static/img/logo-text.png" alt="" class="logo-text">
+				</div>
+				<div class="sign-input">
+					<div class="phone">
+						<div class="left">
+							<i class="icon icon-phone "></i>
+						</div>
+						<div class="right">
+							<input type="number" v-model="phoneNumber" placeholder="请输入手机号"/>
+						</div>
+					</div>
+					<div class="code">
+						<div class="left">
+							<i class="icon icon-code"></i>
+						</div>
+						<div class="right">
+							<input type="text" v-model="code" placeholder="请输入验证码"/>
+							<button type="button" class="btn">
+								<!-- <span>发送验证码</span> -->
+								<span>60s重新现获取</span>
+							</button>
+						</div>
+					</div>
+					<div class="password">
+						<div class="left">
+							<i class="icon icon-password"></i>
+						</div>
+						<div class="right">
+							<input type="password" v-model="password" placeholder="请填写密码"/>
+							<i class="icon icon-see-password"></i>
+						</div>
+					</div>
+				</div>
+				<div class="sd-btn-box">
+					<button type="button" class="btn">注册</button>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+
+		<script src="static/js/sign.js"></script>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>联系方式</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+
+
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<div class="contact-way">
+				<!-- <div class="sd-hint-info">
+					<p>请输入账号和密码</p>
+				</div> -->
+				
+				<div class="sd-input-group">
+					<p class="hint-input-box">请输入您的联系方式，我们会在1-2小时之内联系您</p>
+					<div class="input-box">
+						<mt-field label="姓名" placeholder="请输入您的姓名" v-model="name" type="text"></mt-field>
+						<mt-field label="电话" placeholder="请输入电话号码" v-model="phoneNumber" type="number"></mt-field>
+					</div>
+				</div>
+				<div class="sd-btn-box">
+					<button type="button" class="btn">提交</button>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		<script src="static/js/contact-way.js"></script>
+	</body>
+</html>

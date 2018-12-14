@@ -1,207 +1,200 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
-	<title>闪点-商家端</title>
-	<link rel="shortcut icon" href="static/img/favicon.ico">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>闪点-商家端</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+		<style type="text/css">
+			ul {
+				width: 300px;
+				margin: 0 auto;
+				padding: 50px 0;
+			}
 
-	<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+			ul li.ok a {
+				color: #961115;
+			}
 
-	<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+			ul li.oking a {
+				color: #ff0;
+			}
 
-	<style type="text/css">
-		ul {
-			width: 300px;
-			margin: 0 auto;
-			padding: 50px 0;
-		}
+			ul li.grey a {
+				color: #aaa;
+			}
 
-		ul li.ok a {
-			color: #961115;
-		}
+			ul li.oked a {
+				color: #f0f;
+			}
 
-		ul li.oking a {
-			color: #ff0;
-		}
+			a {
+				color: #000;
+				display: block;
+				padding: 10px;
+			}
+		</style>
+	</head>
 
-		ul li.grey a {
-			color: #aaa;
-		}
+	<body>
+		<div id="app" v-cloak>
+			<ul>
+				<li class="">
+					<a href="change-info.html">编辑店名</a>
+				</li>
+				<li class="">
+					<a href="food-type-management.html">菜品分类管理</a>
+				</li>
+				<li>
+					<a href="food-type.html">菜品管理</a>
+				</li>
+				<li>
+					<a href="see-QR.html">查看二维码</a>
+				</li>
+				<li>
+					<a href="create-app.html">创建我的小程序</a>
+				</li>
+				<li class="">
+					<a href="payment-method.html">店铺类型选择</a>
+				</li>
+				<li>
+					<a href="order-detail.html">订单详情</a>
+				</li>
+				<li>
+					<a href="editor-QR.html">编辑二维码</a>
+				</li>
+				<li class="">
+					<a href="release-success.html">发布成功</a>
+				</li>
+				<li class="">
+					<a href="release-step04.html">发布小程序(第四步)</a>
+				</li>
+				<li>
+					<a href="order-list.html">订单列表</a>
+				</li>
+				<li>
+					<a href="default-category.html">默认分类</a>
+				</li>
+				<li class="">
+					<a href="preferences.html">偏好设置</a>
+				</li>
+				<li class="">
+					<a href="release-step02.html">发布小程序(第二步)</a>
+				</li>
+				<li class="">
+					<a href="store-daily-management.html">店铺日常管理</a>
+				</li>
 
-		ul li.oked a {
-			color: #f0f;
-		}
+				<li class="">
+					<a href="store-info-change.html">商铺信息管理</a>
+				</li>
+				<li>
+					<a href="set-work-time.html">设置营业时间</a>
+				</li>
+				<li>
+					<a href="gain-recording.html">收益记录</a>
+				</li>
+				<li class="">
+					<a href="release-step01.html">发布小程序(第一步)</a>
+				</li>
+				<li class="">
+					<a href="input-table-num.html">输入桌数</a>
+				</li>
+				<li>
+					<a href="mall-desc.html">特约商户说明</a>
+				</li>
+				<li class="">
+					<a href="apply-business.html">申请特约商户</a>
+				</li>
+				<li class="">
+					<a href="release-step03.html">发布小程序(第三步)</a>
+				</li>
+				<li>
+					<a href="with-draw.html">提现</a>
+				</li>
+				<li class="">
+					<a href="cash-management.html">提现管理</a>
+				</li>
+				<li>
+					<a href="withdrawal-record.html">提现记录</a>
+				</li>
+				<li>
+					<a href="add-food.html">添加菜品</a>
+				</li>
+				<li>
+					<a href="add-cooker.html">添加厨师</a>
+				</li>
+				<li class="">
+					<a href="add-clerk.html">添加店员</a>
+				</li>
+				<li class="">
+					<a href="contact-way.html">联系方式</a>
+				</li>
+				<li class="">
+					<a href="bind-bank-card.html">绑定银行卡-第一步</a>
+				</li>
+				<li class="">
+					<a href="bind-bank-card2.html">绑定银行卡-第二步</a>
+				</li>
+				<li class="">
+					<a href="my-app-mall.html">我的商铺（特约商铺）</a>
+				</li>
+				<li class="">
+					<a href="my-app.html">我的商铺（平台管理）</a>
+				</li>
+				<li class="">
+					<a href="wait-review.html">等待审核</a>
+				</li>
+				<li class="">
+					<a href="bank-card-management.html">银行卡管理</a>
+				</li>
+				<li>
+					<a href="sale-total.html">销售统计</a>
+				</li>
+				<li>
+					<a href="app-name.html">小程序名称</a>
+				</li>
+				<li>
+					<a href="app-apply-step.html">小程序申请流程</a>
+				</li>
+				<li>
+					<a href="renew.html">续费</a>
+				</li>
+				<li class="">
+					<a href="verify-tel.html">验证手机号码</a>
+				</li>
+				<li class="">
+					<a href="sign.html">注册</a>
+				</li>
+				<hr>
 
-		a {
-			color: #000;
-			display: block;
-			padding: 10px;
-		}
-	</style>
-</head>
-
-<body>
-	<div id="app" v-cloak>
-		<ul>
-			<li class="ok">
-				<a href="change-info.html">编辑店名</a>
-			</li>
-			<li class="ok">
-				<a href="food-type-management.html">菜品分类管理</a>
-			</li>
-			<li>
-				<a href="food-type.html">菜品管理</a>
-			</li>
-			<li>
-				<a href="see-QR.html">查看二维码</a>
-			</li>
-			<li>
-				<a href="create-app.html">创建我的小程序</a>
-			</li>
-			<li class="ok">
-				<a href="payment-method.html">店铺类型选择</a>
-			</li>
-			<li>
-				<a href="order-detail.html">订单详情</a>
-			</li>
-			<li>
-				<a href="editor-QR.html">编辑二维码</a>
-			</li>
-			<li class="ok">
-				<a href="release-success.html">发布成功</a>
-			</li>
-			<li class="ok">
-				<a href="release-step04.html">发布小程序(第四步)</a>
-			</li>
-			<li>
-				<a href="order-list.html">订单列表</a>
-			</li>
-			<li>
-				<a href="default-category.html">默认分类</a>
-			</li>
-			<li class="ok">
-				<a href="preferences.html">偏好设置</a>
-			</li>
-			<li class="ok">
-				<a href="release-step02.html">发布小程序(第二步)</a>
-			</li>
-			<li class="ok">
-				<a href="store-daily-management.html">店铺日常管理</a>
-			</li>
-			<li class="ok">
-				<a href="my-app-mall.html">我的商铺（特约商铺）</a>
-			</li>
-			<li class="ok">
-				<a href="my-app.html">我的商铺（平台管理）</a>
-			</li>
-			<li class="ok">
-				<a href="store-info-change.html">商铺信息管理</a>
-			</li>
-			<li>
-				<a href="set-work-time.html">设置营业时间</a>
-			</li>
-			<li>
-				<a href="gain-recording.html">收益记录</a>
-			</li>
-			<li class="ok">
-				<a href="release-step01.html">发布小程序(第一步)</a>
-			</li>
-			<li class="ok">
-				<a href="input-table-num.html">输入桌数</a>
-			</li>
-			<li>
-				<a href="mall-desc.html">特约商户说明</a>
-			</li>
-			<li class="ok">
-				<a href="apply-business.html">申请特约商户</a>
-			</li>
-			<li class="oking">
-				<a href="release-step03.html">发布小程序(第三步)</a>
-			</li>
-			<li>
-				<a href="with-draw.html">提现</a>
-			</li>
-			<li class="ok">
-				<a href="cash-management.html">提现管理</a>
-			</li>
-			<li>
-				<a href="withdrawal-record.html">提现记录</a>
-			</li>
-			<li>
-				<a href="add-food.html">添加菜品</a>
-			</li>
-			<hr>
-
-
-
-			<li class="grey">
-				<a href="store-info.html">商铺信息管理</a>
-			</li>
-			<li class="ok">
-				<a href="store-info-change.html">商铺信息</a>
-			</li>
-			<li class="oked">
-				<a href="verify-tel.html">验证手机号码</a>
-			</li>
-
-			<li class="ok">
-				<a href="add-clerk.html">添加店员</a>
-			</li>
-
-
-
-			<li class="ok">
-				<a href="bind-bank-card.html">绑定银行卡-第一步</a>
-			</li>
-			<li class="ok">
-				<a href="bind-bank-card2.html">绑定银行卡-第二步</a>
-			</li>
-
-
-			<li class="ok">
-				<a href="bank-card-management.html">银行卡管理</a>
-			</li>
-			<li>
-				<a href="renew.html">续费</a>
-			</li>
-
-			<li>
-				<a href="sale-total.html">销售统计</a>
-			</li>
-
-
-
-
-			<li>
-				<a href="pluponform.html">平台管理</a>
-			</li>
-
-
-
-
-
-
-
-			<li class="ok">
-				<a href="id-card-upload.html">上传身份证</a>
-			</li>
-			<li class="ok">
-				<a href="select-photo-info.html">选择照片信息</a>
-			</li>
-			<li class="ok">
-				<a href="set.html">设置</a>
-			</li>
-		</ul>
-	</div>
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-	<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
-	<script src="static/js/add-clerk.js"></script>
-</body>
+				<li class="">
+					<a href="store-info.html">商铺信息管理</a>
+				</li>
+				<li class="">
+					<a href="store-info-change.html">商铺信息</a>
+				</li>
+				<li class="">
+					<a href="id-card-upload.html">上传身份证</a>
+				</li>
+				<li class="">
+					<a href="select-photo-info.html">选择照片信息</a>
+				</li>
+				<li class="">
+					<a href="set.html">设置</a>
+				</li>
+			</ul>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		<script src="static/js/add-clerk.js"></script>
+	</body>
 
 </html>

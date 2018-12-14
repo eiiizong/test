@@ -7,7 +7,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="author" content="" />
-		<title>创建我的小程序</title>
+		<title>小程序名称</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 
 		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
@@ -18,33 +18,21 @@
 	</head>
 	<body>
 		<div id="app" v-cloak>
-			<div class="create-app">
-				<div class="top-nav">
-					<ul class="clearfix">
-						<li class="left active">
-							<a href="my-app.html">我的小程序</a>
-						</li>
-						<li class="left">
-							<a href="#.html">店铺日常管理</a>
-						</li>
-					</ul>
+			<div class="app-name">
+				<div class="sd-input-box">
+					<mt-field type="text" v-model="name" ref="input" placeholder="请输入您的小程序名称"></mt-field>
 				</div>
-				<div class="content">
-					<div class="img-box">
-						<img src="static/img/no-app.jpg" alt="">
-					</div>
-					<p class="hint">
-						您还没有小程序哦<br>发布一个吧~
-					</p>
-				</div>
+				
+				<p class="sd-hint">
+					*没有小程序？<a href="#">点击这里</a>
+				</p>
 				<div class="sd-btn-box">
-					<a href="#" class="btn">发布小程序</a>
+					<button type="button" class="btn">提交</button>
 				</div>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
-
-		<script src="static/js/add-clerk.js"></script>
+		<script src="static/js/app-name.js"></script>
 	</body>
 </html>

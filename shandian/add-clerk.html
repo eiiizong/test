@@ -22,9 +22,29 @@
 				<h3>请扫描下方的二维码进行添加</h3>
 				<p class="hint add-method">添加方法：未添加的店员使用微信扫一扫进行扫码</p>
 				<div class="QR-box">
-					<img src="static/img/add-food-img.jpg" >
+					<img src="static/img/add-food-img.jpg">
 				</div>
 				<p class="hint">*二维码定时更新，请勿截屏，以免影响正常使用</p>
+
+				<div class="sd-popup" v-show="showPopup">
+					<div class="add-clerk-popup popup">
+						<div class="content">
+							<h3>是否将‘南希’添加为店员？</h3>
+							<div class="img-box clearfix">
+								<div class="sd-cc left clearfix">
+									<img src="static/img/user-head.png" alt="" class="left">
+									<i class="icon icon-jt left"></i>
+									<i class="icon icon-store left"></i>
+								</div>
+							</div>
+						</div>
+						<div class="btn clearfix">
+							<button type="button" class="btn btn-cancel left" @click="btnOk">否</button>
+							<button type="button" class="btn btn-ok left" @click="btnCancel">是</button>
+						</div>
+					</div>
+					<div class="popup-mask"></div>
+				</div>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
