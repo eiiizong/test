@@ -17,7 +17,7 @@
 		<div id="app" v-cloak>
 			<div class="apply-business">
 
-				<div class="sd-input-group">
+				<div class="sd-input-group w2">
 					<p class="hint-input-box before">请填写个人信息</p>
 					<div class="input-box">
 						<mt-field label="姓名" placeholder="请填写姓名" v-model="name" type="text"></mt-field>
@@ -29,14 +29,16 @@
 					<div class="sd-link-cell-h70 clearfix">
 						<div class="left clearfix">
 							<span>身份证</span>
-							<div class="hint-info">请上传身份证正反面</div>
-							<div class="content"></div>
+							<div class="content">
+								<img src="static/img/sfz-zm@2x.png" alt="">
+								<img src="static/img/sfz-fm@2x.png" alt="">
+							</div>
 						</div>
-						<i class="icon icon-link right"></i>
+						<i class="icon icon-plus-sign16 right"></i>
 					</div>
 				</a>
 
-				<div class="sd-input-group">
+				<div class="sd-input-group w4">
 					<p class="hint-input-box before">请填写店铺信息</p>
 					<div class="input-box">
 						<mt-field label="客服电话" placeholder="请填写客服电话" v-model="customerPhone" type="number"></mt-field>
@@ -49,13 +51,11 @@
 					<div class="sd-link-cell-h70 clearfix">
 						<div class="left clearfix">
 							<span>营业执照</span>
-							<div class="hint-info">请上传营业执照</div>
-							<!-- <div class="content">
-								<img src="static/img/business-license.jpg" alt="">
-								<img src="static/img/business-license.jpg" alt="">
-							</div> -->
+							<div class="content">
+								<img src="static/img/yyzz-zm@2x.png" alt="">
+							</div>
 						</div>
-						<i class="icon icon-link right"></i>
+						<i class="icon icon-plus-sign16 right"></i>
 					</div>
 				</a>
 
@@ -70,7 +70,7 @@
 					</div>
 				</a>
 
-				<div class="sd-input-group">
+				<div class="sd-input-group w4">
 					<p class="hint-input-box before">请填写银行卡信息</p>
 					<div class="input-box">
 						<mt-field label="账户类型" class="origin" placeholder="法人账户" v-model="accountType" type="text"></mt-field>
@@ -80,7 +80,7 @@
 				</div>
 
 
-				<div class="sd-input-group mt28">
+				<div class="sd-input-group mt28 w6">
 					<div class="input-box">
 						<mt-field label="开户银行城市" placeholder="请填写开户银行城市" v-model="accountBankCity" type="text"></mt-field>
 						<mt-field label="开户支行" placeholder="请填写卡户支行" v-model="accountOpeningBranch" type="text"></mt-field>

@@ -20,20 +20,25 @@
 		<div id="app" v-cloak>
 			<div class="see-QR">
 				<div class="img-box">
-					<img src="static/img/table-QR.jpg" alt="">
+					<img src="static/img/table-QR-bg.png" alt="" ref="bgImg">
+					<p class="num" ref="numDOM">01</p>
+					<div class="QR" ref="QRbox">
+						<div><img src="static/img/QR@2x.png"></div>
+					</div>
 				</div>
 				<div class="btn-box">
-					<button type="button" class="btn download">
+					<!-- <button type="button" class="btn download">
 						<i class="icon icon-download"></i>
 						<span>下载高清图片(3M)</span>
 					</button>
-					<button type="button" class="btn save-img"><span>保存图片</span></button>
+					<button type="button" class="btn save-img"><span>保存图片</span></button> -->
 				</div>
+				<p class="hint">*长按保存图片</p>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
 
-		<script src="static/js/add-clerk.js"></script>
+		<script src="static/js/see-QR.js"></script>
 	</body>
 </html>

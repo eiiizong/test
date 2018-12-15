@@ -5,7 +5,7 @@ var app = new Vue({
 			menus: [{
 					name: '推荐',
 					icon: true,
-					iconClassName: 'icon-tuijian'
+					iconClassName: 'icon-recommend'
 				},
 				{
 					name: '滋味灌汤',
@@ -135,7 +135,7 @@ var app = new Vue({
 	},
 	methods: {
 		init: function() {
-			// this.allPutaway();
+			this.height();
 		},
 		allPutaway: function() {
 			console.log(this.foods);
@@ -151,6 +151,21 @@ var app = new Vue({
 		changeMenu: function(e, a) {
 			var index = a;
 			this.current = a;
+		},
+		height: function () {
+			var bannerDOM = this.$refs.banner;
+			var btnDOM = this.$refs.btn;
+			var foodDOM = this.$refs.food;
+			var putawayBtnDOM = this.$refs.putawayBtn;
+			var foodsDOM = this.$refs.foods;
+			var windowHeight = window.screen.height;
+			var bannerHeight = bannerDOM.offsetHeight;
+			var btnHeight = btnDOM.offsetHeight;
+			var putawayBtnHeight = putawayBtnDOM.offsetHeight;
+			var foodHeight = windowHeight - 94 - bannerHeight - btnHeight;
+			var foodsHeight = foodHeight - putawayBtnHeight;
+			foodDOM.style.height = foodHeight + 'px';
+			foodsDOM.style.height = foodsHeight + 'px';
 		}
 	},
 	components: {
