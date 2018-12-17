@@ -39,17 +39,20 @@ var app = new Vue({
 		init: function() {
 			this.allNum = this.myArray.length;
 		},
-		ording() {
+		// 排序
+		ording: function() {
 			this.isOrding = !this.isOrding;
 		},
-		moveUp(index) {
+		// 上移
+		moveUp: function(index) {
 			var i = parseInt(index);
 			var arr = this.myArray[i - 1];
 			this.myArray[i - 1] = this.myArray[i];
 			this.myArray[i] = arr;
 			this.$forceUpdate();
 		},
-		moveDown(index) {
+		// 下移
+		moveDown: function(index) {
 			var i = parseInt(index);
 			console.log(i);
 			var arr = this.myArray[i + 1];
@@ -57,10 +60,14 @@ var app = new Vue({
 			this.myArray[i] = arr;
 			this.$forceUpdate();
 		},
-		addFood() {
+		// 添加分类
+		addFood: function() {
 			this.isAddFoodInputShow = !this.isAddFoodInputShow;
+			this.$refs.inputAdd.focus();
+			console.log(this.$refs.inputAdd)
 		},
-		complete() {
+		// 添加分类 完成
+		complete: function() {
 			this.isAddFoodInputShow = !this.isAddFoodInputShow;
 			var text = this.content;
 			if (text) {
@@ -72,11 +79,13 @@ var app = new Vue({
 			}
 			this.allNum = this.myArray.length;
 		},
+
 		clickShowPopup(index) {
 			console.log(index);
 			this.index = index;
 			this.showPopup = !this.showPopup;
 		},
+		// 确认删除
 		deleteOK() {
 			var tag = this.index;
 			this.myArray.splice(tag, 1);
@@ -84,10 +93,12 @@ var app = new Vue({
 			this.showPopup = !this.showPopup;
 			this.allNum = this.myArray.length;
 		},
+		// 取消删除
 		cancel() {
 			var tag = this.index;
 			this.showPopup = !this.showPopup;
 		},
+		// 展示 修改输入框
 		clickShowInputPopup(index) {
 			this.index = index;
 			this.showInputPopup = !this.showInputPopup;
@@ -96,9 +107,11 @@ var app = new Vue({
 			var DOM = this.$refs.inputDOM;;
 			DOM.focus();
 		},
+		// 取消修改
 		cancelChange() {
 			this.showInputPopup = !this.showInputPopup;
 		},
+		// 确认修改
 		changeOK() {
 			var index = this.index;
 			this.myArray[index].name = this.changeValue;

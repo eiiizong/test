@@ -4004,6 +4004,7 @@ i.icon-table-QR {
 .sign .logo-box img.logo {
 	width: 90px;
 	height: 90px;
+	border-radius: 50%;
 }
 
 .sign .logo-box img.logo-text {
@@ -4243,6 +4244,7 @@ i.icon-change {
 	display: inline-block;
 	width: 90px;
 	height: 90px;
+	border-radius: 50%;
 }
 
 .store-sign .store-upload-logo .hint {

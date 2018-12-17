@@ -42,7 +42,7 @@
 					</div>
 
 					<div class="food" ref="food">
-						<div class="menu">
+						<div class="menu" ref="menuWarrper">
 							<ul>
 								<li v-for="(item, index) in menus" :key="index" @click.stop="changeMenu(item,index)" :class="index==current? 'active':''">
 									<i :class="item.iconClassName" v-if="item.icon" class="icon"></i>
