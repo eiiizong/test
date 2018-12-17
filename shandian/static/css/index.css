@@ -1302,17 +1302,22 @@ i.icon-recommend {
 	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 }
-.food-management .food-detail > ul {
+.food-management .foods-box {
 	width: 100%;
 	overflow: auto;
+	position: relative;
 }
-.food-management .food-detail > ul li {
+.food-management .food-detail ul {
+	width: 100%;
+	position: relative;
+}
+.food-management .food-detail ul li {
 	width: 100%;
 	position: relative;
 	padding-left: 105px;
 	margin-bottom: 20px;
 }
-.food-management .food-detail > ul li > img{
+.food-management .food-detail ul li > img{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1320,11 +1325,11 @@ i.icon-recommend {
 	height: 95px;
 	border-radius: 3px;
 }
-.food-management .food-detail > ul li > .food-detail{
+.food-management .food-detail ul li > .food-detail{
 	width: 100%;
 	overflow: hidden;
 }
-.food-management .food-detail > ul li > .food-detail .food-name{
+.food-management .food-detail ul li > .food-detail .food-name{
 	width: 100%;
 	font-size: 16px;
 	font-weight: bold;
@@ -1335,7 +1340,7 @@ i.icon-recommend {
 	white-space: nowrap;
 	
 }
-.food-management .food-detail > ul li > .food-detail .food-desc{
+.food-management .food-detail ul li > .food-detail .food-desc{
 	width: 100%;
 	font-size: 10px;
 	font-weight: 500;
@@ -1346,31 +1351,31 @@ i.icon-recommend {
 	white-space: nowrap;
 	padding: 9px 0 10px;
 }
-.food-management .food-detail > ul li > .food-detail .food-handle {
+.food-management .food-detail ul li > .food-detail .food-handle {
 	
 }
-.food-management .food-detail > ul li > .food-detail .food-handle  .checkbox-group {
+.food-management .food-detail ul li > .food-detail .food-handle  .checkbox-group {
 	
 }
-.food-management .food-detail > ul li > .food-detail .food-handle  .checkbox-group label {
+.food-management .food-detail ul li > .food-detail .food-handle  .checkbox-group label {
 	
 }
-.food-management .food-detail > ul li > .food-detail .food-handle  .checkbox-group label span {
+.food-management .food-detail ul li > .food-detail .food-handle  .checkbox-group label span {
 	font-size: 14px;
 	color: #2a2a2a;
 	line-height: 1;
 	margin-right: 9px;
 }
-.food-management .food-detail > ul li > .food-detail .food-handle  .checkbox-group label span {
+.food-management .food-detail ul li > .food-detail .food-handle  .checkbox-group label span {
 	
 }
-.food-management .food-detail > ul li > .food-detail .food-handle  .checkbox-group label .sd-point {
+.food-management .food-detail ul li > .food-detail .food-handle  .checkbox-group label .sd-point {
 	margin-top: -2px;
 }
-.food-management .food-detail > ul li > .food-detail .food-handle  .checkbox-group label input:checked ~ .sd-point {
+.food-management .food-detail ul li > .food-detail .food-handle  .checkbox-group label input:checked ~ .sd-point {
 	border-color: #439aff;
 }
-.food-management .food-detail > ul li > .food-detail .food-handle  .checkbox-group label input:checked ~ .sd-point:after {
+.food-management .food-detail ul li > .food-detail .food-handle  .checkbox-group label input:checked ~ .sd-point:after {
 	background-color: #439aff;
 }
 .sd-point {
@@ -1416,9 +1421,7 @@ i.icon-recommend {
 .add-food-btn {
 	width: 100%;
 	text-align: center;
-	position: absolute;
-	top: 0;
-	left: 0;
+	padding-bottom: 30px;
 }
 .add-food-btn .btn {
 	display: inline-block;
