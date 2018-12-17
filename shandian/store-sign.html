@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>商铺注册</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+
+
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<div class="store-sign">
+				<div class="store-upload-logo">
+					<label for="uploadLogo">
+						<div>
+							<img src="static/img/logo.png" alt="" class="logo">
+						</div>
+						<input type="file" id="uploadLogo">
+					</label>
+					<p class="hint">注：上传店铺logo或门头</p>
+				</div>
+				<div class="store-sign-input">
+					<div class="store-name">
+						<label for="storeName">
+							<span>店铺名称</span>
+						</label>
+						<div>
+							<input type="text" v-model="storeName" placeholder="请输入店铺名称" id="storeName"/>
+						</div>
+					</div>
+					<div class="contact-tel">
+						<label for="contactTel">
+							<span>联系电话</span>
+						</label>
+						<div>
+							<input type="number" v-model="contactTel" placeholder="请输入联系电话" id="contactTel"/>
+						</div>
+					</div>
+					<div class="contact-person">
+						<label for="contactPerson">
+							<span>联系人</span>
+						</label>
+						<div>
+							<input type="text" v-model="contactPerson" placeholder="请输入联系人" id="contactPerson"/>
+						</div>
+					</div>
+					<div class="store-naddress">
+						<label for="storeAddress">
+							<span>店铺地址</span>
+						</label>
+						<div>
+							<input type="text" v-model="storeAddress" placeholder="请输入店铺地址" id="storeAddress"/>
+						</div>
+					</div>
+				</div>
+				<div class="sd-btn-box">
+					<button type="button" class="btn">注册</button>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+
+		<script src="static/js/store-sign.js"></script>
+	</body>
+</html>

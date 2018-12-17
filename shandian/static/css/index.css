@@ -1204,18 +1204,19 @@ i.icon-store {
 	padding-top: 44px;
 	padding-bottom: 50px;
 }
-.food-management .content .banner {
-	
-}
+
+.food-management .content .banner {}
 
 .food-management .banner img {
 	width: 100%;
 }
+
 .food-management .sd-btn-box {
 	text-align: center;
-	padding:  14px 32px 16px;
+	padding: 14px 32px 16px;
 	border-bottom: 1px solid #EAEAEA;
 }
+
 .food-management .sd-btn-box .btn {
 	height: 44px;
 	box-shadow: 1px 2px 19px 1px rgba(0, 109, 236, 0.32);
@@ -1229,6 +1230,7 @@ i.icon-store {
 	font-size: 16px;
 	color: #fff;
 }
+
 i.icon-food-type-management {
 	height: 16px;
 	width: 19px;
@@ -1236,6 +1238,7 @@ i.icon-food-type-management {
 	margin-right: 10px;
 	background-image: url(../img/icon/icon-@2x.png);
 }
+
 .food-management .food {
 	width: 100%;
 	overflow: hidden;
@@ -1243,6 +1246,7 @@ i.icon-food-type-management {
 	background-color: #fff;
 	padding-left: 93px;
 }
+
 .food-management .food .menu {
 	position: absolute;
 	top: 0;
@@ -1251,10 +1255,12 @@ i.icon-food-type-management {
 	height: 100%;
 	overflow: auto;
 }
+
 .food-management .food .menu ul {
 	width: 100%;
 	height: 100%;
 }
+
 .food-management .food .menu ul li {
 	background-color: #f8f8f8;
 	height: 55px;
@@ -1262,15 +1268,18 @@ i.icon-food-type-management {
 	color: #898989;
 	text-align: center;
 }
+
 .food-management .food .menu ul li.active {
 	background-color: #fff;
 	color: #444;
 }
+
 .food-management .food .menu ul li span {
 	display: inline-block;
 	font-size: 13px;
 	line-height: 55px;
 }
+
 i.icon-recommend {
 	width: 13px;
 	height: 13px;
@@ -1278,15 +1287,18 @@ i.icon-recommend {
 	margin-top: 21px;
 	margin-right: 4px;
 }
+
 .food-management .food-detail {
 	width: 100%;
 	padding-right: 14px;
 }
+
 .food-management .food-detail .btn-putaway {
 	height: 53px;
 	background-color: #fff;
 	position: relative;
 }
+
 .food-management .food-detail .btn-putaway .btn {
 	display: inline-block;
 	background-color: #00e526;
@@ -1302,22 +1314,27 @@ i.icon-recommend {
 	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 }
+
 .food-management .foods-box {
 	width: 100%;
 	overflow: auto;
 	position: relative;
 }
+
 .food-management .food-detail ul {
 	width: 100%;
 	position: relative;
+	-webkit-overflow-scrolling: touch;
 }
+
 .food-management .food-detail ul li {
 	width: 100%;
 	position: relative;
 	padding-left: 105px;
 	margin-bottom: 20px;
 }
-.food-management .food-detail ul li > img{
+
+.food-management .food-detail ul li>img {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1325,11 +1342,14 @@ i.icon-recommend {
 	height: 95px;
 	border-radius: 3px;
 }
-.food-management .food-detail ul li > .food-detail{
+
+.food-management .food-detail ul li>.food-detail {
 	width: 100%;
 	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
 }
-.food-management .food-detail ul li > .food-detail .food-name{
+
+.food-management .food-detail ul li>.food-detail .food-name {
 	width: 100%;
 	font-size: 16px;
 	font-weight: bold;
@@ -1338,9 +1358,9 @@ i.icon-recommend {
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
-	
 }
-.food-management .food-detail ul li > .food-detail .food-desc{
+
+.food-management .food-detail ul li>.food-detail .food-desc {
 	width: 100%;
 	font-size: 10px;
 	font-weight: 500;
@@ -1351,33 +1371,34 @@ i.icon-recommend {
 	white-space: nowrap;
 	padding: 9px 0 10px;
 }
-.food-management .food-detail ul li > .food-detail .food-handle {
-	
-}
-.food-management .food-detail ul li > .food-detail .food-handle  .checkbox-group {
-	
-}
-.food-management .food-detail ul li > .food-detail .food-handle  .checkbox-group label {
-	
-}
-.food-management .food-detail ul li > .food-detail .food-handle  .checkbox-group label span {
+
+.food-management .food-detail ul li>.food-detail .food-handle {}
+
+.food-management .food-detail ul li>.food-detail .food-handle .checkbox-group {}
+
+.food-management .food-detail ul li>.food-detail .food-handle .checkbox-group label {}
+
+.food-management .food-detail ul li>.food-detail .food-handle .checkbox-group label span {
 	font-size: 14px;
 	color: #2a2a2a;
 	line-height: 1;
 	margin-right: 9px;
 }
-.food-management .food-detail ul li > .food-detail .food-handle  .checkbox-group label span {
-	
-}
-.food-management .food-detail ul li > .food-detail .food-handle  .checkbox-group label .sd-point {
+
+.food-management .food-detail ul li>.food-detail .food-handle .checkbox-group label span {}
+
+.food-management .food-detail ul li>.food-detail .food-handle .checkbox-group label .sd-point {
 	margin-top: -2px;
 }
-.food-management .food-detail ul li > .food-detail .food-handle  .checkbox-group label input:checked ~ .sd-point {
+
+.food-management .food-detail ul li>.food-detail .food-handle .checkbox-group label input:checked~.sd-point {
 	border-color: #439aff;
 }
-.food-management .food-detail ul li > .food-detail .food-handle  .checkbox-group label input:checked ~ .sd-point:after {
+
+.food-management .food-detail ul li>.food-detail .food-handle .checkbox-group label input:checked~.sd-point:after {
 	background-color: #439aff;
 }
+
 .sd-point {
 	width: 18px;
 	height: 18px;
@@ -1386,6 +1407,7 @@ i.icon-recommend {
 	border-radius: 50%;
 	position: relative;
 }
+
 .sd-point:after {
 	content: '';
 	position: absolute;
@@ -1395,22 +1417,26 @@ i.icon-recommend {
 	height: 10px;
 	background-color: transparent;
 	border-radius: 50%;
-	transform: translate(-50%,-50%);
-	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
 }
+
 .food-price {
 	padding-top: 14px;
 }
+
 .food-price .left {
 	font-size: 18px;
 	font-weight: 500;
 	line-height: 1;
 	color: #f00;
 }
+
 .food-price .left:before {
 	content: '¥';
 	font-size: 13px;
 }
+
 .food-price .right {
 	font-size: 14px;
 	font-weight: 500;
@@ -1418,11 +1444,13 @@ i.icon-recommend {
 	line-height: 1;
 	vertical-align: bottom;
 }
+
 .add-food-btn {
 	width: 100%;
 	text-align: center;
 	padding-bottom: 30px;
 }
+
 .add-food-btn .btn {
 	display: inline-block;
 	font-size: 16px;
@@ -1435,6 +1463,7 @@ i.icon-recommend {
 	border: solid 1px #439aff;
 	border-radius: 50px;
 }
+
 /************************* 菜品分类END ****************/
 
 /* 设置营业时间 */
@@ -2770,6 +2799,7 @@ i.icon-selected.active {
 .apply-business a {
 	display: block;
 }
+
 i.icon-plus-sign16 {
 	width: 16px;
 	height: 16px;
@@ -2779,12 +2809,15 @@ i.icon-plus-sign16 {
 .apply-business .sd-input-group.w2 .mint-cell-wrapper {
 	padding-left: 43px;
 }
+
 .apply-business .sd-input-group.w4 .mint-cell-wrapper {
 	padding-left: 72px;
 }
+
 .apply-business .sd-input-group.w6 .mint-cell-wrapper {
 	padding-left: 102px;
 }
+
 .sd-hint {
 	display: block;
 	width: 100%;
@@ -3113,7 +3146,7 @@ i.icon-link {
 }
 
 .see-QR .img-box {
-	padding:0;
+	padding: 0;
 	position: relative;
 }
 
@@ -3121,7 +3154,8 @@ i.icon-link {
 	display: block;
 	width: 100%;
 }
-.see-QR .img-box .num  {
+
+.see-QR .img-box .num {
 	position: absolute;
 	top: 120px;
 	left: 90px;
@@ -3129,6 +3163,7 @@ i.icon-link {
 	line-height: 1;
 	font-weight: bold;
 }
+
 .see-QR .img-box .QR {
 	position: absolute;
 	bottom: 40px;
@@ -3138,14 +3173,17 @@ i.icon-link {
 	padding: 7px 6px 8px;
 	overflow: hidden;
 }
-.see-QR .img-box .QR> div  {
+
+.see-QR .img-box .QR>div {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 }
+
 .see-QR .img-box .QR img {
 	width: 100%;
 }
+
 .see-QR p.hint {
 	text-align: center;
 	padding-top: 20px;
@@ -3987,6 +4025,7 @@ i.icon-see-password {
 	padding: 5px 7px;
 	border-bottom: 2px solid #439aff;
 	background-color: transparent;
+	border-radius: 0;
 }
 
 .sign .sign-input .code .right .btn {
@@ -4137,4 +4176,62 @@ i.icon-change {
 
 .app-name .sd-btn-box {
 	padding: 23px 14px;
+}
+
+/* 店铺注册 */
+.store-sign {
+	padding-top: 40px;
+}
+
+.store-sign .store-upload-logo label {
+	text-align: center;
+}
+
+.store-sign .store-upload-logo label img {
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+}
+
+.store-sign .store-upload-logo .hint {
+	width: 100%;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 26px;
+}
+
+.store-sign .store-sign-input>div {
+	width: 100%;
+	position: relative;
+	padding-left: 106px;
+	margin-top: 27px;
+	padding-right: 40px;
+}
+
+.store-sign .store-sign-input>div label {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 40px;
+	font-size: 14px;
+	line-height: 35px;
+}
+
+.store-sign .store-sign-input>div>div {
+	width: 100%;
+}
+
+.store-sign .store-sign-input>div>div input {
+	display: block;
+	width: 100%;
+	background-color: transparent;
+	border-bottom: 2px solid #439AFF;
+	border-radius: 0;
+	font-size: 14px;
+	line-height: 23px;
+	padding: 5px 0 5px 7px;
+}
+
+.store-sign .sd-btn-box {
+	padding: 76px 44px 20px;
 }
