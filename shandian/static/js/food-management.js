@@ -64,7 +64,7 @@ var app = new Vue({
 				}
 			],
 			foods: [{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					name: '川道口碑红油脆',
 					description: '脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮',
 					price: 22,
@@ -73,7 +73,7 @@ var app = new Vue({
 					isPutAway: true
 				},
 				{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					name: '川道口碑红油脆',
 					description: '脆皮鸭的分支北',
 					price: 22,
@@ -82,7 +82,7 @@ var app = new Vue({
 					isPutAway: false
 				},
 				{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					name: '川道口碑红油脆',
 					description: '脆皮鸭的分支北',
 					price: 22,
@@ -91,7 +91,7 @@ var app = new Vue({
 					isPutAway: false
 				},
 				{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					name: '川道口碑红油脆',
 					description: '脆皮鸭的分支北',
 					price: 22,
@@ -100,7 +100,7 @@ var app = new Vue({
 					isPutAway: false
 				},
 				{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					name: '川道口碑红油脆',
 					description: '脆皮鸭的分支北',
 					price: 22,
@@ -109,7 +109,7 @@ var app = new Vue({
 					isPutAway: false
 				},
 				{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					name: '川道口碑红油脆',
 					description: '脆皮鸭的分支北',
 					price: 22,
@@ -118,7 +118,7 @@ var app = new Vue({
 					isPutAway: false
 				},
 				{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					name: '川道口碑红油脆',
 					description: '脆皮鸭的分支北',
 					price: 22,

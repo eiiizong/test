@@ -10,7 +10,7 @@
 		<title>销售统计</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 
-		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+		<link rel="stylesheet" href="static/css/mint-ui.css">
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
 
@@ -18,7 +18,7 @@
 	<body>
 		<div id="app" v-cloak>
 			<!-- 店铺基本信息 -->
-			<div class="sale-total fcsb">
+			<div class="sale-total">
 
 				<div class="top-nav">
 					<ul class="clearfix">
@@ -31,20 +31,20 @@
 					</ul>
 				</div>
 
-				<div class="top">
+				<div class="top" ref="recordBox">
 					<span>今日收益额</span>
 					<div>¥ 15,680.00</div>
 					<a href="gain-recording.html">收益记录</a>
 				</div>
-				<div class="bottom fcsb">
-					<div class="date" @click="openPicker">
-						<span>{{choiceDate}}</span>
-						<i></i>
-					</div>
-					<div class="chart">
-						<div ref="myChart"></div>
-						<!-- <canvas >Your browser does not support the canvas element.</canvas> -->
-					</div>
+
+				<div class="choice-date" @click="openPicker" ref="dataBox">
+					<span>{{choiceDate}}</span>
+					<i class="icon"></i>
+				</div>
+
+				<div class="chart" ref="chartBox">
+					<div ref="myChart" class="my-charts"></div>
+					<!-- <canvas >Your browser does not support the canvas element.</canvas> -->
 				</div>
 
 
@@ -71,8 +71,8 @@
 				</div>
 			</div>
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		<script src="static/js/vue.min.js"></script>
+		<script src="static/js/mint-ui.js"></script>
 		<script src="static/js/echarts.min.js"></script>
 		<script src="static/js/sale-total.js"></script>
 	</body>

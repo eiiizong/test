@@ -11,7 +11,7 @@ var app = new Vue({
 			foodName: '',
 			foodUnit: '',
 			sizePrices: [
-				{ size: '1', price: '2', id: 0},
+				{ size: '', price: '', id: 0},
 			]
 		}
 	},
@@ -24,13 +24,12 @@ var app = new Vue({
 			var order = this.sizePrices.length;
 			var item = {size: '', price: '', id: order};
 			arr.push(item);
+			this.$forceUpdate();
 		},
 		deleteSize: function (e) {
 			var id = parseInt(e.target.id);
-			var arr = this.sizePrices;
-			var a = arr.splice(id,1);
-			console.log(a);
-			console.log(arr);
+			this.sizePrices.splice(id,1);
+			this.$forceUpdate();
 		}
 	},
 	components: {

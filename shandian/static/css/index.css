@@ -198,14 +198,12 @@ html {
 
 * {
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
 *:before,
 *:after {
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -290,7 +288,6 @@ button {
 	background-color: transparent;
 	-moz-user-select: none;
 	-o-user-select: none;
-	-khtml-user-select: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
@@ -300,7 +297,6 @@ button {
 .no-selected-text {
 	-moz-user-select: none;
 	-o-user-select: none;
-	-khtml-user-select: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
@@ -357,29 +353,6 @@ p {
 
 /****************清除浮动 END****************************/
 
-.fcfs {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-}
-
-.fcc {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.fcsb {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.ffssb {
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
-}
 
 /******************************* 响应图片 *******************************************/
 .img-responsive-box {
@@ -497,6 +470,7 @@ i.icon-license-info {
 	border: 1px solid #bbb;
 	border-radius: 50%;
 	position: relative;
+	-webkit-transition: all .3s;
 	transition: all .3s;
 }
 
@@ -511,6 +485,7 @@ i.icon-license-info {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
+	-webkit-transition: all .3s;
 	transition: all .3s;
 }
 
@@ -718,6 +693,7 @@ i.icon-down.no {
 	height: 20px;
 	line-height: 20px;
 	padding: 0;
+	font-weight: 500;
 }
 
 .add-food-type .input-add .right {
@@ -758,6 +734,7 @@ i.icon-down.no {
 	background-color: #FFF;
 	top: 50%;
 	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	z-index: 2001;
 	border-radius: 15px;
@@ -798,6 +775,7 @@ i.icon-down.no {
 	position: absolute;
 	font-size: 14px;
 	top: 50%;
+	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	padding-left: 6px;
 }
@@ -960,8 +938,14 @@ i.icon-down.no {
 
 .cell-warpper {
 	color: #282828;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	min-height: 2.5em;
 	padding-right: 0.875em;
@@ -973,9 +957,17 @@ i.icon-down.no {
 }
 
 .cell-warpper .text-left {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
 	flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
 	justify-content: flex-start;
 	font-size: 0.875em;
 	line-height: 1;
@@ -992,6 +984,8 @@ i.icon-down.no {
 
 /* 输入框 */
 .cell-warpper .mint-cell {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
 	flex: 1;
 	min-height: 2.857142857em;
 }
@@ -1026,6 +1020,8 @@ i.icon-down.no {
 
 /* 添加规格 */
 .add-size .cell-warpper {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
 
@@ -1061,12 +1057,16 @@ i.icon-down.no {
 /* 图片 */
 
 .add-food .cell-warpper.img {
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
 	justify-content: flex-start;
 	min-height: 8.75em;
 	position: relative;
 }
 
 .add-food .cell-warpper.img .text-left {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
 	flex: none;
 	display: block;
 	position: relative;
@@ -1084,8 +1084,14 @@ i.icon-down.no {
 
 /* pianhao */
 .add-food .cell .cell-warpper span.value {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
 	justify-content: flex-start;
 }
 
@@ -1103,16 +1109,6 @@ i.icon-down.no {
 
 /****************************** 添加菜品 END****************/
 
-/* 提示信息 */
-.hint {
-	font-size: 0.75em;
-	/*12*/
-	font-weight: 500;
-	color: #989898;
-	margin: 0;
-	padding: 0;
-	line-height: 1;
-}
 
 /*************** 添加店员 ******************/
 .add-clerk {
@@ -1159,6 +1155,7 @@ i.icon-down.no {
 .sd-cc {
 	position: relative;
 	left: 50%;
+	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
 
@@ -1221,6 +1218,7 @@ i.icon-store {
 
 .food-management .sd-btn-box .btn {
 	height: 44px;
+	-webkit-box-shadow: 1px 2px 19px 1px rgba(0, 109, 236, 0.32);
 	box-shadow: 1px 2px 19px 1px rgba(0, 109, 236, 0.32);
 	text-align: center;
 	font-size: 0;
@@ -1374,20 +1372,12 @@ i.icon-recommend {
 	padding: 9px 0 10px;
 }
 
-.food-management .food-detail ul li>.food-detail .food-handle {}
-
-.food-management .food-detail ul li>.food-detail .food-handle .checkbox-group {}
-
-.food-management .food-detail ul li>.food-detail .food-handle .checkbox-group label {}
-
 .food-management .food-detail ul li>.food-detail .food-handle .checkbox-group label span {
 	font-size: 14px;
 	color: #2a2a2a;
 	line-height: 1;
 	margin-right: 9px;
 }
-
-.food-management .food-detail ul li>.food-detail .food-handle .checkbox-group label span {}
 
 .food-management .food-detail ul li>.food-detail .food-handle .checkbox-group label .sd-point {
 	margin-top: -2px;
@@ -1477,45 +1467,46 @@ i.icon-recommend {
 	color: #282828;
 }
 
-.set-work-time .work-time-cell {
+.work-time-cell {
 	margin-top: 10px;
 }
 
-.set-work-time .work-time-cell:first-of-type {
+.work-time-cell:first-of-type {
 	margin-top: 0;
 }
 
-.set-work-time .work-time-cell-warpper {
-	border: 0;
+.work-time-cell-warpper {
 	height: 40px;
 	background-color: #fff;
-	padding: 0 14px;
+	padding-left: 14px;
+	position: relative;
 }
 
-.set-work-time .work-time-cell-warpper span {
+.work-time-cell-warpper>div {
+	width: 100%;
+	padding-right: 50px;
+	line-height: 40px;
+}
+
+.work-time-cell-warpper>div .time-title {
 	font-size: 14px;
-	line-height: 1;
 }
 
-.set-work-time .work-time-cell-input {
-	flex: 1;
-}
-
-.set-work-time .work-time-cell-input span:first-of-type {
-	display: inline-block;
-	width: 73px;
-}
-
-.set-work-time .work-time-cell-warpper button {
+.work-time-cell-warpper .btn {
 	font-size: 14px;
 	color: #e00000;
+	position: absolute;
+	top: 0;
+	right: 0;
+	line-height: 40px;
+	padding-right: 14px;
+	padding-left: 8px;
 }
 
-.set-work-time .work-time-cell-warpper input {
-	width: 60px;
+.work-time-cell-warpper input {
+	width: 70px;
 	display: inline;
 	font-size: 14px;
-	/* background-color: #f00; */
 	text-align: center;
 }
 
@@ -1585,113 +1576,165 @@ i.icon-recommend {
 .gain-recording {}
 
 .gain-recording .choice-deta {
-	height: 50px;
-	padding: 0 16px 0 14px;
+	height: 45px;
+	padding: 0 14px;
 }
 
-.gain-recording .choice-deta div span {
+.gain-recording .choice-deta .left span {
 	display: block;
 	font-size: 11px;
 	font-weight: 500;
 	color: #9a9a9a;
 	line-height: 1;
+	padding-top: 6px;
 }
 
-.gain-recording .choice-deta div span:first-child {
+.gain-recording .choice-deta .left span:first-child {
 	font-size: 13px;
 	font-weight: bold;
 	color: #222;
 	line-height: 1;
-	margin-bottom: 8px;
+	padding-top: 10px;
 }
 
-.gain-recording .content {
+.gain-recording .record-list {
 	background-color: #fff;
-	padding: 0 14px;
+	padding-left: 14px;
+	border-top: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+}
+
+.gain-recording .record-list .sd-gain-card:last-of-type {
+	border-bottom: 0;
+	height: 85px;
+}
+
+.sd-gain-card {
+	padding-right: 14px;
+	border-bottom: 1px solid #eaeaea;
+	position: relative;
+	height: 86px;
+	font-weight: 500;
+	color: #282828;
+}
+
+.sd-gain-card .user-header {
+	position: absolute;
+	top: 23px;
+	left: 0;
+	height: 40px;
+	width: 40px;
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+.sd-gain-card .user-header img {
+	width: 100%;
+}
+
+.sd-gain-card .detail {
+	width: 100%;
+	padding-left: 53px;
+}
+
+.sd-gain-card .detail>div {
+	width: 100%;
+}
+
+.sd-gain-card .detail .top {
+	padding-top: 14px;
+}
+
+.sd-gain-card .detail .top .left span {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: bold;
+}
+
+.sd-gain-card .detail .top .right span {
+	display: inline-block;
+	font-size: 17px;
+	line-height: 1;
+	font-weight: bold;
+}
+
+.sd-gain-card .detail .middle {
+	padding-top: 10px;
+}
+
+.sd-gain-card .detail .middle .left span {
+	display: inline-block;
+	font-size: 11px;
+	line-height: 1;
+	margin-left: -6px;
+}
+
+.sd-gain-card .detail .bottom {
+	padding-top: 10px;
+	color: #9a9a9a;
+}
+
+.sd-gain-card .detail .bottom .left span {
+	display: inline-block;
+	font-size: 11px;
+	line-height: 1;
+}
+
+.sd-gain-card .detail .bottom .right a {
+	display: block;
+}
+
+.sd-gain-card .detail .bottom .right a span {
+	display: inline-block;
+	color: #9a9a9a;
+	font-size: 11px;
+	line-height: 1;
+}
+
+.sd-gain-card .detail .bottom.right a i {
+	width: 9px;
+	height: 9px;
+	background-image: url(../img/icon/db-link@2x.png);
+	margin-left: 2px;
+	margin-top: 1px;
 }
 
 i.icon-gain-deta {
 	width: 18px;
 	height: 16px;
 	background-image: url(../img/icon/gain-deta.png);
+	margin-top: 15px;
 }
 
-.gain-card {
-	height: 86px;
-	border-bottom: 1px solid #ededed;
-}
-
-.gain-card:last-of-type {
-	border-bottom: 0;
-}
-
-.gain-card .user-header {
-	height: 40px;
-	width: 40px;
-	overflow: hidden;
-}
-
-.gain-card .user-header img {
-	border-radius: 50%;
-}
-
-.gain-card .detail {
-	flex: 1;
-	padding-left: 13px;
-	/* background-color: #f00; */
-}
-
-.gain-card .detail .take-food-num {
-	font-size: 14px;
-	font-weight: bold;
-	color: #282828;
-	line-height: 1;
-	margin-bottom: 10px;
-}
-
-.gain-card .detail .take-food-num .withdrawal-success {
-	font-size: 14px;
-	font-weight: 500;
-	color: #eca700;
-}
-
-.gain-card .detail .take-food-num .processing {
-	font-size: 14px;
-	font-weight: 500;
-	color: #439aff;
-}
-
-.gain-card .detail .take-food-man {
-	font-size: 11px;
-	font-weight: 500;
-	color: #282828;
-	line-height: 1;
-	margin-left: -6px;
-	margin-bottom: 12px;
-}
-
-.withdrawal-record .gain-card .detail .take-food-man {
-	margin-left: 0px;
-}
-
-.gain-card .detail .take-food-time {
-	font-size: 11px;
-	font-weight: 500;
-	line-height: 1;
-	color: #9a9a9a;
-}
-
-.gain-card .detail .take-food-time span:first-child {
-	margin-right: 10px;
-}
-
-i.icon-dai {
+i.icon-replace-order {
 	width: 18px;
 	height: 15px;
 	background-image: url(../img/icon/dai@2x.png);
 }
 
+/* 提现记录 */
+.withdrawal-record .sd-gain-card .detail .top .left span {
+	font-size: 16px;
+}
 
+.withdrawal-record .sd-gain-card .detail .top .right span {
+	font-size: 14px;
+	color: #439aff;
+	font-weight: 500;
+}
+
+.withdrawal-record .sd-gain-card .detail .top .right .withdrawal-success {
+	color: #eca700;
+}
+
+.withdrawal-record .sd-gain-card .detail .middle .left span {
+	margin-left: 0;
+}
+
+.withdrawal-record .sd-gain-card .detail .top .right span {
+	font-size: 14px;
+}
 
 /********************************************绑定银行卡 12.11改**************/
 
@@ -1878,6 +1921,8 @@ i.icon-dai {
 }
 
 .ffsfs {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -1922,6 +1967,8 @@ i.icon-dai {
 }
 
 .with-draw .cash-num .mint-cell {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
 	flex: 1;
 	min-height: 4.125em;
 }
@@ -1968,6 +2015,7 @@ i.icon-dai {
 	width: 100%;
 	position: relative;
 	height: 100px;
+	-webkit-box-shadow: 4px 6px 19px 1px rgba(205, 205, 205, 0.5);
 	box-shadow: 4px 6px 19px 1px rgba(205, 205, 205, 0.5);
 	border-radius: 10px;
 	padding-left: 74px;
@@ -2059,6 +2107,7 @@ i.icon-delete-bank-card {
 	display: block;
 	width: 100%;
 	background-color: #fff;
+	-webkit-box-shadow: 4px 6px 19px 1px rgba(205, 205, 205, 0.5);
 	box-shadow: 4px 6px 19px 1px rgba(205, 205, 205, 0.5);
 	border-radius: 10px;
 	padding: 8px 12px;
@@ -2160,6 +2209,7 @@ i.icon-add-bankcard {
 .buy {
 	padding-top: 15px;
 	padding-bottom: 5px;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	padding: 15px 10px 0;
 }
@@ -2177,6 +2227,7 @@ i.icon-add-bankcard {
 	background-color: #fff;
 	border-radius: 5px;
 	border: solid 1px #eac389;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	text-align: center;
 	position: relative;
@@ -2227,6 +2278,7 @@ i.icon-add-bankcard {
 	position: absolute;
 	top: 50%;
 	left: 0;
+	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	height: 1px;
 	width: 100%;
@@ -2265,15 +2317,12 @@ i.icon-add-bankcard {
 	}
 }
 
-/* 提现记录 */
-.withdrawal-record {}
-
 /* 销售统计 */
 .sale-total {
 	width: 100%;
 	height: 100%;
-	flex-direction: column;
 	padding-bottom: 50px;
+	padding-top: 44px;
 }
 
 .sale-total .top {
@@ -2293,13 +2342,11 @@ i.icon-add-bankcard {
 }
 
 .sale-total .top div {
-	font-size: 41px;
+	font-size: 35px;
 	line-height: 1;
 	color: #040000;
-	/* box-shadow: 3px 5px 29px rgba(0, 109, 235, 0.75); */
 	color: #fff;
-	padding-top: 40px;
-	margin-bottom: 43px;
+	padding: 42px 0;
 }
 
 .sale-total .top a {
@@ -2310,46 +2357,39 @@ i.icon-add-bankcard {
 	padding: 8px 42px;
 	color: #fff;
 	background-color: #00e526;
+	-webkit-box-shadow: 3px 5px 40px 0px rgba(0, 116, 250, 0.5);
 	box-shadow: 3px 5px 40px 0px rgba(0, 116, 250, 0.5);
 	border-radius: 50px;
 }
 
-.sale-total .bottom {
-	width: 100%;
-	flex: 1;
-	flex-direction: column;
-}
 
-.bottom .date {
+.choice-date {
 	width: 100%;
 	font-size: 14px;
 	font-weight: bold;
-	line-height: 1;
+	line-height: 50px;
 	color: #2a2a2a;
-	background-color: #fff;
-	padding: 21px 14px 15px;
-}
-
-.bottom .date span {
-	margin-right: 6px;
-}
-
-.bottom .date i {
-	display: inline-block;
-	width: 18px;
-	height: 10px;
-	background: url(../img/icon/arrows-bottom@2x.png) no-repeat;
-	background-size: cover;
-}
-
-.chart {
-	width: 100%;
-	flex: 1;
 	background-color: #fff;
 	padding: 0 14px;
 }
 
-.chart>div {
+.choice-date i {
+	display: inline-block;
+	width: 18px;
+	height: 10px;
+	background-image: url(../img/icon/arrows-bottom@2x.png);
+	margin-top: 20px;
+	margin-left: 6px;
+}
+
+.chart {
+	width: 100%;
+	background-color: #fff;
+	padding: 0 14px;
+	overflow: hidden;
+}
+
+.chart .my-charts {
 	width: 100%;
 	height: 100%;
 }
@@ -3416,6 +3456,7 @@ i.icon-download {
 	position: relative;
 	top: 50%;
 	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
 
@@ -3437,6 +3478,7 @@ i.icon-download {
 
 .editor-QR .sd-hint {
 	padding-top: 7px;
+	padding-left: 14px;
 }
 
 .editor-QR .sd-btn-box {
@@ -3622,6 +3664,7 @@ i.icon-download {
 	width: 45px;
 	height: 45px;
 	background-color: #439aff;
+	-webkit-box-shadow: 0px 5px 13px 0px rgba(0, 118, 255, 0.44);
 	box-shadow: 0px 5px 13px 0px rgba(0, 118, 255, 0.44);
 	font-size: 14px;
 	font-weight: bold;
@@ -3716,6 +3759,7 @@ i.icon-download {
 .sd-cash-management .content .card {
 	width: 100%;
 	height: 150px;
+	-webkit-box-shadow: 0px 7px 19px 1px rgba(205, 205, 205, 0.5);
 	box-shadow: 0px 7px 19px 1px rgba(205, 205, 205, 0.5);
 	border-radius: 10px;
 	position: relative;
@@ -3875,6 +3919,7 @@ i.icon-table-QR {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	text-align: center;
 	font-weight: 500;
@@ -4050,19 +4095,23 @@ i.icon-see-password {
 	bottom: 10px;
 	right: 0;
 }
+
 .store-sign input::-webkit-input-placeholder,
 .sign input::-webkit-input-placeholder {
 	color: #6d6b6b;
 	;
 }
+
 .store-sign input:-moz-placeholder,
 .sign input:-moz-placeholder {
 	color: #6d6b6b;
 }
+
 .store-sign input::-moz-placeholder,
 .sign input::-moz-placeholder {
 	color: #6d6b6b;
 }
+
 .store-sign input:-ms-input-placeholder,
 .sign input:-ms-input-placeholder {
 	color: #6d6b6b;

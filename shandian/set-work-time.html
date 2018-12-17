@@ -9,7 +9,7 @@
 		<meta name="author" content="" />
 		<title>设置营业时间</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
-		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+		<link rel="stylesheet" href="static/css/mint-ui.css">
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
 
@@ -25,14 +25,14 @@
 			<div class="set-work-time">
 
 				<div class="work-time-cell" v-for="(item, index) in workTimes" :key="index">
-					<div class="work-time-cell-warpper fcsb">
-							<div class="work-time-cell-input">
-								<span>{{item.name}}</span>
-								<input type="text" @focus="open('s' + index)" readonly="readonly" v-model="item.startTime" placeholder="开始时间">
-								<span>~</span>
-								<input type="text" @focus="open('e' + index)" readonly="readonly" v-model="item.endTime" placeholder="结束时间">
-							</div>
-							<button @click="deletePeriod(index)">删除</button>
+					<div class="work-time-cell-warpper">
+						<div>
+							<span class="time-title">{{item.name}}</span>
+							<input type="text" @focus="open('s' + index)" readonly="readonly" v-model="item.startTime" placeholder="开始时间">
+							<span>~</span>
+							<input type="text" @focus="open('e' + index)" readonly="readonly" v-model="item.endTime" placeholder="结束时间">
+						</div>
+						<button @click="deletePeriod(index)" class="btn">删除</button>
 					</div>
 				</div>
 
@@ -50,8 +50,8 @@
 
 			</div>
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		<script src="static/js/vue.min.js"></script>
+		<script src="static/js/mint-ui.js"></script>
 		<script src="static/js/set-work-time.js"></script>
 	</body>
 </html>

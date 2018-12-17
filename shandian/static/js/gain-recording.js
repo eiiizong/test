@@ -5,70 +5,70 @@ var app = new Vue({
 		return {
 			orderList: [
 				{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					orderNum: 236,
 					orderPeople: 'Eiiizong',
 					orderTime: '今天  12:34',
 					isHelpOrder: true,
 					foodPrice: '11.15'
 				},{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					orderNum: 239,
 					orderPeople: 'Eiiizong',
 					orderTime: '今天  12:34',
 					isHelpOrder: false,
 					foodPrice: '11.15'
 				},{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					orderNum: 239,
 					orderPeople: 'Eiiizong',
 					orderTime: '今天  12:34',
 					isHelpOrder: false,
 					foodPrice: '11.15'
 				},{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					orderNum: 239,
 					orderPeople: 'Eiiizong',
 					orderTime: '今天  12:34',
 					isHelpOrder: false,
 					foodPrice: '11.15'
 				},{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					orderNum: 239,
 					orderPeople: 'Eiiizong',
 					orderTime: '今天  12:34',
 					isHelpOrder: false,
 					foodPrice: '11.15'
 				},{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					orderNum: 239,
 					orderPeople: 'Eiiizong',
 					orderTime: '今天  12:34',
 					isHelpOrder: false,
 					foodPrice: '11.15'
 				},{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					orderNum: 239,
 					orderPeople: 'Eiiizong',
 					orderTime: '今天  12:34',
 					isHelpOrder: false,
 					foodPrice: '11.15'
 				},{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					orderNum: 239,
 					orderPeople: 'Eiiizong',
 					orderTime: '今天  12:34',
 					isHelpOrder: false,
 					foodPrice: '11.15'
 				},{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					orderNum: 239,
 					orderPeople: 'Eiiizong',
 					orderTime: '今天  12:34',
 					isHelpOrder: false,
 					foodPrice: '11.15'
 				},{
-					imgUrl: 'http://oupo5zwub.bkt.clouddn.com/blog/170816/10IA3EL4IF.jpg?imageslim',
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
 					orderNum: 239,
 					orderPeople: 'Eiiizong',
 					orderTime: '今天  12:34',
@@ -106,17 +106,14 @@ var app = new Vue({
 			console.log(targetDOM);
 			
 			this.$refs.picker.open();
-			console.log(this.$el);
-			this.$el.style.position = "fixed";
 		},
 		handleConfirm: function(e) {
 			var years = e.getFullYear();
 			var month = e.getMonth() + 1;
 			this.deta = years + '-' + month;
-			this.$el.style.position = "relative";
 		},
 		cancal: function() {
-			this.$el.style.position = "relative";
+			
 		}
 
 	},

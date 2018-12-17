@@ -10,7 +10,7 @@
 		<title>提现记录</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 
-		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+		<link rel="stylesheet" href="static/css/mint-ui.css">
 
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
@@ -19,41 +19,52 @@
 	<body>
 		<div id="app" v-cloak>
 			<div class="withdrawal-record gain-recording">
-				<div class="choice-deta fcsb">
-					<div>
+				<div class="choice-deta clearfix">
+					<div class="left">
 						<span>{{deta}}</span>
 						<span>提现总计¥ {{totalSale}}</span>
 					</div>
-					<i class="icon icon-gain-deta" @click="openPicker"></i>
+					<i class="icon icon-gain-deta right" @click="openPicker"></i>
 				</div>
-				<div class="content">
-					<div class="gain-card fcfs" v-for="(item, index) in withdrawalList" :key="index">
+
+				<div class="record-list">
+					<div class="sd-gain-card" v-for="(item, index) in withdrawalList" :key="index">
 						<div class="user-header">
 							<img :src="item.imgUrl">
 						</div>
 						<div class="detail">
-							<div class="fcsb take-food-num">
-								<span>提现{{item.withdrawalNum}}元</span>
-								<span class="withdrawal-success" v-if="item.withdrawalSuccess">提现成功</span>
-								<span class="processing" v-else>正在处理</span>
+							<div class="top clearfix">
+								<div class="left">
+									<span>提现{{item.withdrawalNum}}元</span>
+								</div>
+								<div class="right">
+									<span class="withdrawal-success" v-if="item.withdrawalSuccess">提现成功</span>
+									<span class="processing" v-else>正在处理</span>
+								</div>
 							</div>
-							<div class="fcsb take-food-man">到账银行卡：{{item.bankCardNumber}}</div>
-							<div class="fcfs take-food-time">
-								<span>{{item.ymd}}</span>
-								<span>{{item.hms}}</span>
+							<div class="middle clearfix">
+								<div class="left">
+									<span>到账银行卡：{{item.bankCardNumber}}</span>
+								</div>
+							</div>
+							<div class="bottom clearfix">
+								<div class="left">
+									<span>{{item.ymd}} {{item.hms}}</span>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
 			</div>
 			<div>
-				<mt-datetime-picker ref="picker" type="date" v-model="pickerValue" year-format="{value} 年"
-  month-format="{value} 月"  @confirm="handleConfirm" @cancel="cancal" >
+				<mt-datetime-picker ref="picker" type="date" v-model="pickerValue" year-format="{value} 年" month-format="{value} 月"
+				 @confirm="handleConfirm" @cancel="cancal">
 				</mt-datetime-picker>
 			</div>
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		<script src="static/js/vue.min.js"></script>
+		<script src="static/js/mint-ui.js"></script>
 		<script src="static/js/withdrawal-record.js"></script>
 	</body>
 </html>

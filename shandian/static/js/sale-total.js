@@ -18,6 +18,7 @@ var app = new Vue({
 	methods: {
 
 		init() {
+			this.calcHeight();
 			this.initDate();
 			this.charts();
 		},
@@ -142,17 +143,21 @@ var app = new Vue({
 			var targetDOM = rootDOM.getElementsByClassName('picker-slot picker-slot-center');
 			targetDOM[targetDOM.length - 1].style.display = 'none';
 			this.$refs.picker.open();
-			this.$el.style.position = "fixed";
 		},
 		handleConfirm(e) {
 			var years = e.getFullYear();
 			var month = e.getMonth() + 1;
 			this.choiceDate = years + '月' + month + '日';
-			this.$el.style.position = "relative";
 		},
 		cancal() {
-			this.$el.style.position = "relative";
 		},
+		calcHeight() {
+			var recordBoxH = this.$refs.recordBox.offsetHeight;
+			var dataBoxH = this.$refs.dataBox.offsetHeight;
+			var chartBoxDOM = this.$refs.chartBox;
+			var h = document.body.clientHeight - recordBoxH - dataBoxH - 94;
+			chartBoxDOM.style.height = h + 'px';
+		}
 
 	},
 });
