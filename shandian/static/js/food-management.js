@@ -127,7 +127,8 @@ var app = new Vue({
 				isPutAway: false
 			},
 			],
-			current: 0
+			current: 0,
+			showCreateTypePopup: true,
 		}
 	},
 	mounted() {
@@ -187,6 +188,13 @@ var app = new Vue({
 
 			};
 
+		},
+		// 帮助创建分类
+		ok: function () {
+
+		},
+		cancel: function () {
+			this.showCreateTypePopup = !this.showCreateTypePopup;
 		}
 	},
 	components: {

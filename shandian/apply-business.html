@@ -46,8 +46,8 @@
 					</div>
 				</div>
 
-
-				<a class="mt28" href="#">
+				
+				<a class="mt28" href="id-card-upload.html">
 					<div class="sd-link-cell-h70 clearfix">
 						<div class="left clearfix">
 							<span>营业执照</span>
@@ -59,11 +59,15 @@
 					</div>
 				</a>
 
-				<a class="mt28" href="#">
+				<div class="other-file-info clearfix mt28">
+						<div class="left">附件信息</div>
+						<div class="left orange">请选择需要上传的附件信息</div>
+					</div>
+				<a  href="select-photo-info.html">
 					<div class="sd-link-cell-h70 clearfix">
 						<div class="left clearfix">
-							<span>照片信息</span>
-							<div class="hint-info">请选择所需上传的照片信息</div>
+							<span>上传附件</span>
+							<div class="hint-info">先选择附件信息后才能上传</div>
 							<div class="content"></div>
 						</div>
 						<i class="icon icon-link right"></i>
@@ -73,8 +77,8 @@
 				<div class="sd-input-group w4">
 					<p class="hint-input-box before">请填写银行卡信息</p>
 					<div class="input-box">
-						<mt-field label="账户类型" class="origin" placeholder="法人账户" v-model="accountType" type="text"></mt-field>
-						<mt-field label="开户银行" class="origin" placeholder="中国工商" v-model="accountBank" type="text"></mt-field>
+						<mt-field label="账户类型" class="orange" placeholder="法人账户" v-model="accountType" type="text"></mt-field>
+						<mt-field label="开户银行" class="orange" placeholder="中国工商" v-model="accountBank" type="text"></mt-field>
 						<mt-field label="开户名称" placeholder="请填写开户名称" v-model="accountName" type="text"></mt-field>
 					</div>
 				</div>
@@ -90,7 +94,7 @@
 				</div>
 
 
-				<a class="mt28" href="#">
+				<a class="mt28" href="id-card-upload.html">
 					<div class="sd-link-cell-h70 clearfix">
 						<div class="left clearfix">
 							<span style="width: 114px;">开户银行卡照片</span>
@@ -107,6 +111,23 @@
 					<button class="btn">提交申请</button>
 				</div>
 
+				<div class="sd-popup" v-show="showHaveMiniApp">
+						<div class="have-mini-app-popup popup">
+							<div class="content">
+								<h3>您是否已有微信小程序账号？</h3>
+								<div class="img-box clearfix">
+									<div class="sd-cc left clearfix">
+										<img src="static/img/have-mini-app@2x.png" alt="" class="left">
+									</div>
+								</div>
+							</div>
+							<div class="btn clearfix">
+								<button type="button" class="btn btn-cancel left" @click="btnOk">否</button>
+								<button type="button" class="btn btn-ok left" @click="btnCancel">是</button>
+							</div>
+						</div>
+						<div class="popup-mask"></div>
+					</div>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>

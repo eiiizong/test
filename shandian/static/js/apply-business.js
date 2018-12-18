@@ -14,12 +14,19 @@ var app = new Vue({
 			accountOpeningBranch: '',//开户支行
 			bankCardNumber: '',//银行卡卡号
 			accountPersonName: '',//开户人姓名
+			showHaveMiniApp: true,
 		} 
 	},
 	methods: {
 		init: function () {
 			
-		}
+		},
+		btnOk: function () {
+			this.showHaveMiniApp = !this.showHaveMiniApp;
+		},
+		btnCancel: function () {
+			this.showHaveMiniApp = !this.showHaveMiniApp;
+		},
 	},
 	components: {
 		// draggable

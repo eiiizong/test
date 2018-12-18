@@ -2154,7 +2154,124 @@ i.icon-add-bankcard {
 
 
 /* 续费 */
-.renew {}
+.renew .renew-detail {
+	background-color: #fff;
+}
+
+.renew .time-remaining {
+	padding-top: 15px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #282828;
+	line-height: 1;
+	padding: 15px 14px 0;
+}
+
+.renew .time-remaining span {
+	color: #e00000;
+}
+
+.renew .authorization-period {
+	font-size: 11px;
+	color: #989898;
+	padding-top: 7px;
+	line-height: 1;
+	padding: 7px 14px 0;
+}
+.renew .buy {
+	padding: 15px 10px 0;
+}
+.sd-renew-card {
+	width: 33.3333%;
+	padding: 0 4px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.sd-renew-card .warpper {
+	position: relative;
+	background-color: #fffaf2;
+	border-radius: 5px;
+	border: solid 1px #eac389;
+}
+.sd-renew-card .warpper .content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+}
+.sd-renew-card .warpper .content p {
+	font-weight: bold;
+	color: #5d5d5e;
+}
+.sd-renew-card .warpper .content .renew-time {
+	font-size: 14px;
+	line-height: 1;
+}
+.sd-renew-card .warpper .content .now-price {
+	font-size: 24px;
+	color: #a57458;
+	line-height: 1;
+	margin-top: 20px;
+}
+.sd-renew-card .warpper .content .now-price:before {
+	content: '¥';
+	font-size: 15px;
+	margin-right: 4px;
+}
+.sd-renew-card .warpper .content .old-price {
+	width: auto;
+	display: inline-block;
+	line-height: 1;
+	margin-top: 10px;
+	font-size: 9px;
+	color: #989898;
+	padding: 0 2px;
+	position: relative;
+}
+.sd-renew-card .warpper .content .old-price:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	height: 1px;
+	width: 100%;
+	background-color: #989898;
+}
+
+.sd-renew-card .warpper i {
+	width: 33px;
+	height: 33px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../img/icon/buy-recommend@2x.png) no-repeat;
+	background-size: cover;
+}
+
+@media screen and (max-width:374px) {
+	.sd-renew-card .warpper .content .renew-time {
+		font-size: 12px;
+	}
+
+	.sd-renew-card .warpper .content .now-price {
+		font-size: 18px;
+		margin-top: 10px;
+	}
+
+	.sd-renew-card .warpper .content .now-price:before {
+		font-size: 12px;
+		margin-right: 2px;
+	}
+
+	.sd-renew-card .warpper .content .old-price {
+		margin-top: 8px;
+		font-size: 8px;
+	}
+}
+
 
 .renew .renew-agreement {
 	padding: 0 14px;
@@ -2176,146 +2293,11 @@ i.icon-add-bankcard {
 	font-weight: 500;
 	font-size: 11px;
 	color: #989898;
-	line-height: 13px;
+	line-height: 17px;
 	margin-top: 10px;
 	margin-bottom: 0px;
 }
 
-.renew-detail {
-	background-color: #fff;
-}
-
-.time-remaining {
-	padding-top: 15px;
-	font-size: 15px;
-	font-weight: bold;
-	color: #282828;
-	line-height: 1;
-	padding: 15px 14px 0;
-}
-
-.time-remaining span {
-	color: #e00000;
-}
-
-.authorization-period {
-	font-size: 11px;
-	color: #989898;
-	padding-top: 7px;
-	line-height: 1;
-	padding: 7px 14px 0;
-}
-
-.buy {
-	padding-top: 15px;
-	padding-bottom: 5px;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	padding: 15px 10px 0;
-}
-
-.buy .item {
-	display: block;
-	width: 33.333333%;
-	padding: 0 4px;
-	margin-bottom: 10px;
-}
-
-.buy .item .warpper {
-	width: 100%;
-	/* height: 111px; */
-	background-color: #fff;
-	border-radius: 5px;
-	border: solid 1px #eac389;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	text-align: center;
-	position: relative;
-}
-
-.buy .item.recommand .warpper {
-	background-color: #fffaf2;
-}
-
-.warpper p {
-	width: 100%;
-	margin: 0;
-	font-weight: bold;
-	color: #5d5d5e;
-}
-
-.warpper .renew-time {
-	font-size: 14px;
-	line-height: 1;
-}
-
-.warpper .now-price {
-	font-size: 24px;
-	color: #a57458;
-	line-height: 1;
-	margin-top: 20px;
-}
-
-.warpper .now-price:before {
-	content: '¥';
-	font-size: 15px;
-	margin-right: 4px;
-}
-
-.warpper .old-price {
-	width: auto;
-	display: inline-block;
-	line-height: 1;
-	margin-top: 10px;
-	font-size: 9px;
-	color: #989898;
-	padding: 0 2px;
-	position: relative;
-}
-
-.warpper .old-price:after {
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 0;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-	height: 1px;
-	width: 100%;
-	background-color: #989898;
-}
-
-.warpper i {
-	width: 33px;
-	height: 33px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: url(../img/icon/buy-recommend@2x.png) no-repeat;
-	background-size: cover;
-}
-
-@media screen and (max-width:370px) {
-	.warpper .renew-time {
-		font-size: 12px;
-	}
-
-	.warpper .now-price {
-		font-size: 18px;
-		margin-top: 10px;
-	}
-
-	.warpper .now-price:before {
-		content: '¥';
-		font-size: 12px;
-		margin-right: 2px;
-	}
-
-	.warpper .old-price {
-		margin-top: 8px;
-		font-size: 8px;
-	}
-}
 
 /* 销售统计 */
 .sale-total {
@@ -2399,7 +2381,7 @@ i.icon-add-bankcard {
 .order-list {
 	width: 100%;
 	min-height: 100%;
-	padding: 5px 14px 50px;
+	padding: 5px 14px 15px;
 	font-weight: 500;
 }
 
@@ -2526,7 +2508,7 @@ i.icon-add-bankcard {
 	font-weight: 500;
 }
 
-.order-detail .right.icon-dai {
+.order-detail i.icon-replace-order{
 	margin-top: 17px;
 }
 
@@ -2649,7 +2631,7 @@ i.icon-add-bankcard {
 /******************************** 发布小程序 12.10改********************/
 .release {
 	width: 100%;
-	min-height: 100%;
+	height: 100%;
 	background-color: #fff;
 	padding-top: 6.875em;
 	font-weight: 500;
@@ -2657,7 +2639,15 @@ i.icon-add-bankcard {
 	text-align: center;
 	position: relative;
 }
-
+.release .top {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	margin-top: -90px;
+}
 .release .img-box {
 	padding-bottom: 20px;
 }
@@ -2929,7 +2919,46 @@ i.icon-plus-sign35 {
 .id-card-upload .btn-box {
 	padding: 27px 14px;
 }
+.apply-business .other-file-info {
+	height: 41px;
+	background-color: #fff;
+	border-top: 1px solid #eaeaea;
+	line-height: 40px;
+	padding: 0 14px;
+}
+.apply-business .other-file-info .left {
+	font-size: 14px;
+	font-weight: 500;
+	color: #000;
+}
+.apply-business .other-file-info .left.orange {
+	color: #e8b400;
+	margin-left: 16px;
+}
+.apply-business .have-mini-app-popup .sd-cc img {
+	width: 139px;
+	height: 101px;
+	border-radius: 0;
+	margin-bottom: 20px;
+}
+.orange input::-webkit-input-placeholder{
+	color: #e8b400;
+}
 
+.orange input:-moz-placeholder {
+	color: #e8b400;
+}
+
+.orange input::-moz-placeholder {
+	color: #e8b400;
+}
+
+.orange input:-ms-input-placeholder {
+	color: #e8b400;
+}
+.orange input {
+	color: #e8b400;
+}
 /***************************** 选择照片信息 12.11改***********************/
 .select-photo-info {
 	padding-top: 10px;
@@ -3226,7 +3255,7 @@ i.icon-link {
 	width: 100%;
 }
 
-.see-QR p.hint {
+.see-QR p.sd-hint {
 	text-align: center;
 	padding-top: 20px;
 }
@@ -3602,7 +3631,9 @@ i.icon-download {
 	font-size: 13px;
 	font-weight: 500;
 }
-
+.sd-title-cell .right .btn{
+	line-height: 38px;
+}
 .sd-title-cell .right a {
 	display: block;
 	line-height: 38px;
@@ -3672,7 +3703,10 @@ i.icon-download {
 	border-radius: 100%;
 	line-height: 45px;
 }
-
+.clerk-management .btn-add-clerk ~ .clerk-name{
+	color: #fff;
+	text-indent: 999em;
+}
 .clerk-management .title-cell {
 	padding-right: 14px;
 }

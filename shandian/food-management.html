@@ -1,115 +1,130 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<meta name="author" content="" />
-		<title>菜品分类管理</title>
-		<link rel="shortcut icon" href="static/img/favicon.ico">
-		<!-- Bootstrap -->
-		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<title>菜品分类管理</title>
+	<link rel="shortcut icon" href="static/img/favicon.ico">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
 
-	</head>
-	<body>
-		<div id="app" v-cloak>
-			<!-- 店铺基本信息 -->
-			<div class="food-management">
-				<!-- 顶部导航 -->
-				<div class="top-nav">
-					<ul class="clearfix">
-						<li class="left">
-							<a href="my-app.html">我的小程序</a>
-						</li>
-						<li class="left active">
-							<a href="food-management.html">店铺日常管理</a>
-						</li>
-					</ul>
+</head>
+
+<body>
+	<div id="app" v-cloak>
+		<!-- 店铺基本信息 -->
+		<div class="food-management">
+			<!-- 顶部导航 -->
+			<div class="top-nav">
+				<ul class="clearfix">
+					<li class="left">
+						<a href="my-app.html">我的小程序</a>
+					</li>
+					<li class="left active">
+						<a href="food-management.html">店铺日常管理</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="content">
+				<div class="banner" ref="banner">
+					<img src="static/img/banner-01.jpg" ref="bannerImg">
+				</div>
+				<div class="sd-btn-box" ref="btn">
+					<a href="food-type-management.html" class="btn">
+						<i class="icon icon-food-type-management"></i>
+						<span>菜单分类管理</span>
+					</a>
 				</div>
 
-				<div class="content">
-					<div class="banner" ref="banner">
-						<img src="static/img/banner-01.jpg" ref="bannerImg">
+				<div class="food" ref="food">
+					<div class="menu" ref="menuWarrper">
+						<ul>
+							<li v-for="(item, index) in menus" :key="index" @click.stop="changeMenu(item,index)" :class="index==current? 'active':''">
+								<i :class="item.iconClassName" v-if="item.icon" class="icon"></i>
+								<span>{{item.name}}</span>
+							</li>
+						</ul>
 					</div>
-					<div class="sd-btn-box" ref="btn">
-						<a href="food-type-management.html" class="btn">
-							<i class="icon icon-food-type-management"></i>
-							<span>菜单分类管理</span>
-						</a>
-					</div>
-
-					<div class="food" ref="food">
-						<div class="menu" ref="menuWarrper">
-							<ul>
-								<li v-for="(item, index) in menus" :key="index" @click.stop="changeMenu(item,index)" :class="index==current? 'active':''">
-									<i :class="item.iconClassName" v-if="item.icon" class="icon"></i>
-									<span>{{item.name}}</span>
-								</li>
-							</ul>
+					<div class="food-detail">
+						<div class="btn-putaway" ref="putawayBtn">
+							<button @click="allPutaway" class="btn">全部上架</button>
 						</div>
-						<div class="food-detail">
-							<div class="btn-putaway" ref="putawayBtn">
-								<button @click="allPutaway" class="btn">全部上架</button>
-							</div>
-							<div ref="foods" class="foods-box">
-								<ul>
-									<li v-for="(item, index) in foods" :key="index">
-										<img :src="item.imgUrl">
-										<div class="food-detail">
-											<div class="food-name">{{item.name}}</div>
-											<div class="food-desc">{{item.description}}</div>
-											<div class="food-handle clearfix">
-												<div class="checkbox-group left">
-													<label class="clearfix">
-														<span class="left">推荐</span>
-														<input type="checkbox" v-model="item.isRecommend" :checked="item.isRecommend" />
-														<div class="sd-point left"></div>
-													</label>
-												</div>
-												<div class="checkbox-group right">
-													<label class="clearfix">
-														<span class="left">上架</span>
-														<input type="checkbox" v-model="item.isPutAway" :checked="item.isPutAway" />
-														<div class="sd-point left"></div>
-													</label>
-												</div>
+						<div ref="foods" class="foods-box">
+							<ul>
+								<li v-for="(item, index) in foods" :key="index">
+									<img :src="item.imgUrl">
+									<div class="food-detail">
+										<div class="food-name">{{item.name}}</div>
+										<div class="food-desc">{{item.description}}</div>
+										<div class="food-handle clearfix">
+											<div class="checkbox-group left">
+												<label class="clearfix">
+													<span class="left">推荐</span>
+													<input type="checkbox" v-model="item.isRecommend" :checked="item.isRecommend" />
+													<div class="sd-point left"></div>
+												</label>
 											</div>
-											<div class="food-price clearfix">
-												<span class="left">24</span>
-												<div class="right">编辑</div>
+											<div class="checkbox-group right">
+												<label class="clearfix">
+													<span class="left">上架</span>
+													<input type="checkbox" v-model="item.isPutAway" :checked="item.isPutAway" />
+													<div class="sd-point left"></div>
+												</label>
 											</div>
 										</div>
-									</li>
-								</ul>
-								<div class="add-food-btn">
-									<a href="add-food.html" class="btn">添加菜品</a>
-								</div>
+										<div class="food-price clearfix">
+											<span class="left">24</span>
+											<div class="right">编辑</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="add-food-btn">
+								<a href="add-food.html" class="btn">添加菜品</a>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<!-- 底部导航 -->
-				<div class="footer-nav clearfix">
-					<a class="item order-list active" href="food-management.html">
-						<i class="icon icon-nav-type"></i>
-						<span>菜品分类</span>
-					</a>
-					<a class="item order-list" href="sale-total.html">
-						<i class="icon icon-nav-total"></i>
-						<span>销售统计</span>
-					</a>
-					<a class="item order-list" href="store-daily-management.html">
-						<i class="icon icon-nav-storeInfo"></i>
-						<span>商铺信息</span>
-					</a>
+			<!-- 底部导航 -->
+			<div class="footer-nav clearfix">
+				<a class="item order-list active" href="food-management.html">
+					<i class="icon icon-nav-type"></i>
+					<span>菜品分类</span>
+				</a>
+				<a class="item order-list" href="sale-total.html">
+					<i class="icon icon-nav-total"></i>
+					<span>销售统计</span>
+				</a>
+				<a class="item order-list" href="store-daily-management.html">
+					<i class="icon icon-nav-storeInfo"></i>
+					<span>商铺信息</span>
+				</a>
+			</div>
+			<div class="sd-popup" v-show="showCreateTypePopup">
+				<div class="create-type-popup popup">
+					<div class="content">
+						<h3>需要帮您创建菜品分类吗？</h3>
+					</div>
+					<div class="btn clearfix">
+						<button type="button" class="btn btn-cancel left" @click="cancel">否</button>
+						<a href="default-category.html" class="btn btn-ok left" @click="ok">是</a>
+					</div>
 				</div>
+				<div class="popup-mask"></div>
 			</div>
 		</div>
-		<script src="static/js/vue.min.js"></script>
-		<script src="static/js/food-management.js"></script>
-	</body>
+	</div>
+	<script src="static/js/vue.min.js"></script>
+	<script src="static/js/food-management.js"></script>
+</body>
+
 </html>

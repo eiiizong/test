@@ -16,8 +16,7 @@ var app = new Vue({
 			this.onfocus();
 		},
 		onfocus: function () {
-			var input = this.$refs.input.$refs.input;
-			input.focus();
+	
 		}
 	},
 	components: {

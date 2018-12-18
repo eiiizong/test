@@ -1,239 +1,68 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<meta name="author" content="" />
-		<title>订单列表</title>
-		<link rel="shortcut icon" href="static/img/favicon.ico">
 
-		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<title>订单列表</title>
+	<link rel="shortcut icon" href="static/img/favicon.ico">
 
-		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+	<link rel="stylesheet" href="static/css/mint-ui.css">
+
+	<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
 
-	</head>
-	<body>
-		<div id="app" v-cloak>
-			<div class="order-list">
-				<!-- 搜索 -->
-				<div class="serarch-order">
+</head>
 
-				</div>
+<body>
+	<div id="app" v-cloak>
+		<div class="order-list">
 
-				<div class="sd-order-card">
+			<div class="order-list-warpper" v-if="orderList">
+				<div class="sd-order-card" v-for="(item,index) in orderList" :key="index">
 					<div class="take-food-num clearfix">
-						<span class="left">取餐号：236</span>
-						<i class="icon icon-replace-order right"></i>
+						<span class="left">取餐号：{{item.takeFoodNumber}}</span>
+						<i class="icon icon-replace-order right" v-if="item.isReplaceOrder"></i>
 					</div>
 					<div class="seat-num">
-						<span>座位号：3</span>
+						<span>座位号：{{item.seatNum}}</span>
 					</div>
-					<div class="food-detail clearfix">
-						<span class="left">川道口碑脆皮鸭</span>
+					<div class="food-detail clearfix" v-for="(foodItem, foodIndex) in item.foods" :key="foodIndex">
+						<span class="left">{{foodItem.name}}</span>
 						<div class="right clearfix">
-							<span class="size">中</span>
-							<span class="num">×1</span>
-							<span class="price">¥24</span>
+							<span class="size">{{foodItem.size}}</span>
+							<span class="num">×{{foodItem.num}}</span>
+							<span class="price">¥{{foodItem.allPrice}}</span>
 						</div>
 					</div>
-					<div class="food-detail clearfix">
-						<span class="left">川道口碑脆皮鸭</span>
-						<div class="right clearfix">
-							<span class="size">中</span>
-							<span class="num">×1</span>
-							<span class="price">¥24</span>
-						</div>
-					</div>
-					<!-- <div class="more">···</div> -->
+					<div class="more" v-if="item.more">···</div>
 					<div class="total clearfix">
 						<span class="left">总计</span>
 						<div class="right clearfix">
-							<span class="num">2</span>
-							<span class="price">¥24</span>
+							<span class="num">{{item.totalNum}}</span>
+							<span class="price">¥{{item.payMoney}}</span>
 						</div>
 					</div>
-					
+
 					<div class="ordered-time">
-						<span>下单时间：</span><span>2018-11-07</span> <span>12:18</span>
-					</div>
-					<div class="sd-btn-box-inline">
-						<a class="btn" href="order-detail.html">查看详情</a>
-					</div>
-				</div>
-				
-				<div class="sd-order-card">
-					<div class="take-food-num clearfix">
-						<span class="left">取餐号：236</span>
-						<i class="icon icon-replace-order right"></i>
-					</div>
-					<div class="seat-num">
-						<span>座位号：3</span>
-					</div>
-					<div class="food-detail clearfix">
-						<span class="left">川道口碑脆皮鸭</span>
-						<div class="right clearfix">
-							<span class="size">中</span>
-							<span class="num">×1</span>
-							<span class="price">¥24</span>
-						</div>
-					</div>
-					<div class="food-detail clearfix">
-						<span class="left">川道口碑脆皮鸭</span>
-						<div class="right clearfix">
-							<span class="size">中</span>
-							<span class="num">×1</span>
-							<span class="price">¥24</span>
-						</div>
-					</div>
-					<div class="more">···</div>
-					<div class="total clearfix">
-						<span class="left">总计</span>
-						<div class="right clearfix">
-							<span class="num">2</span>
-							<span class="price">¥24</span>
-						</div>
-					</div>
-					
-					<div class="ordered-time">
-						<span>下单时间：</span><span>2018-11-07</span> <span>12:18</span>
-					</div>
-					<div class="sd-btn-box-inline">
-						<a class="btn" href="order-detail.html">查看详情</a>
-					</div>
-				</div>
-				
-				<div class="sd-order-card">
-					<div class="take-food-num clearfix">
-						<span class="left">取餐号：236</span>
-						<i class="icon icon-replace-order right"></i>
-					</div>
-					<div class="seat-num">
-						<span>座位号：3</span>
-					</div>
-					<div class="food-detail clearfix">
-						<span class="left">川道口碑脆皮鸭</span>
-						<div class="right clearfix">
-							<span class="size">中</span>
-							<span class="num">×1</span>
-							<span class="price">¥24</span>
-						</div>
-					</div>
-					<div class="food-detail clearfix">
-						<span class="left">川道口碑脆皮鸭</span>
-						<div class="right clearfix">
-							<span class="size">中</span>
-							<span class="num">×1</span>
-							<span class="price">¥24</span>
-						</div>
-					</div>
-					<div class="more">···</div>
-					<div class="total clearfix">
-						<span class="left">总计</span>
-						<div class="right clearfix">
-							<span class="num">2</span>
-							<span class="price">¥24</span>
-						</div>
-					</div>
-					
-					<div class="ordered-time">
-						<span>下单时间：</span><span>2018-11-07</span> <span>12:18</span>
-					</div>
-					<div class="sd-btn-box-inline">
-						<a class="btn" href="order-detail.html">查看详情</a>
-					</div>
-				</div>
-				
-				<div class="sd-order-card">
-					<div class="take-food-num clearfix">
-						<span class="left">取餐号：236</span>
-						<i class="icon icon-replace-order right"></i>
-					</div>
-					<div class="seat-num">
-						<span>座位号：3</span>
-					</div>
-					<div class="food-detail clearfix">
-						<span class="left">川道口碑脆皮鸭</span>
-						<div class="right clearfix">
-							<span class="size">中</span>
-							<span class="num">×1</span>
-							<span class="price">¥24</span>
-						</div>
-					</div>
-					<div class="food-detail clearfix">
-						<span class="left">川道口碑脆皮鸭</span>
-						<div class="right clearfix">
-							<span class="size">中</span>
-							<span class="num">×1</span>
-							<span class="price">¥24</span>
-						</div>
-					</div>
-					<div class="more">···</div>
-					<div class="total clearfix">
-						<span class="left">总计</span>
-						<div class="right clearfix">
-							<span class="num">2</span>
-							<span class="price">¥24</span>
-						</div>
-					</div>
-					
-					<div class="ordered-time">
-						<span>下单时间：</span><span>2018-11-07</span> <span>12:18</span>
-					</div>
-					<div class="sd-btn-box-inline">
-						<a class="btn" href="order-detail.html">查看详情</a>
-					</div>
-				</div>
-				
-				<div class="sd-order-card">
-					<div class="take-food-num clearfix">
-						<span class="left">取餐号：236</span>
-						<i class="icon icon-replace-order right"></i>
-					</div>
-					<div class="seat-num">
-						<span>座位号：3</span>
-					</div>
-					<div class="food-detail clearfix">
-						<span class="left">川道口碑脆皮鸭</span>
-						<div class="right clearfix">
-							<span class="size">中</span>
-							<span class="num">×1</span>
-							<span class="price">¥24</span>
-						</div>
-					</div>
-					<div class="food-detail clearfix">
-						<span class="left">川道口碑脆皮鸭</span>
-						<div class="right clearfix">
-							<span class="size">中</span>
-							<span class="num">×1</span>
-							<span class="price">¥24</span>
-						</div>
-					</div>
-					<div class="more">···</div>
-					<div class="total clearfix">
-						<span class="left">总计</span>
-						<div class="right clearfix">
-							<span class="num">2</span>
-							<span class="price">¥24</span>
-						</div>
-					</div>
-					
-					<div class="ordered-time">
-						<span>下单时间：</span><span>2018-11-07</span> <span>12:18</span>
+						<span>下单时间：{{item.orderTime}}</span>
 					</div>
 					<div class="sd-btn-box-inline">
 						<a class="btn" href="order-detail.html">查看详情</a>
 					</div>
 				</div>
 			</div>
-			
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
 
-		<script src="static/js/order-list.js"></script>
-	</body>
+	</div>
+	<script src="static/js/vue.min.js"></script>
+	<script src="static/js/mint-ui.js"></script>
+
+	<script src="static/js/order-list.js"></script>
+</body>
+
 </html>
