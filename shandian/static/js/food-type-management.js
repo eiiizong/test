@@ -19,6 +19,9 @@ var app = new Vue({
 				},
 				{
 					name: '宜宾燃面',
+				},
+				{
+					name: '烤饭',
 				}
 			],
 			isOrding: false,
@@ -62,8 +65,12 @@ var app = new Vue({
 		},
 		// 添加分类
 		addFood: function() {
+			var _this = this;
 			this.isAddFoodInputShow = !this.isAddFoodInputShow;
-			this.$refs.inputAdd.focus();
+			
+			setTimeout(() => {
+				_this.$refs.inputAdd.focus();
+			}, 200);
 			console.log(this.$refs.inputAdd)
 		},
 		// 添加分类 完成
@@ -103,9 +110,9 @@ var app = new Vue({
 			this.index = index;
 			this.showInputPopup = !this.showInputPopup;
 			this.oldTypeName = this.myArray[index].name;
-			
-			var DOM = this.$refs.inputDOM;;
-			DOM.focus();
+			setTimeout(() => {
+				this.$refs.inputDOM.focus();
+			}, 200);
 		},
 		// 取消修改
 		cancelChange() {
