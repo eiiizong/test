@@ -85,44 +85,31 @@
 						<div class="left red" v-else>{{attachmentInfo}}</div>
 					</div>
 
-					<div class="sd-link-cell-h70 clearfix">
+					<div class="sd-link-cell-h70 clearfix" v-if="attachmentInfo===''">
 						<div class="left clearfix">
 							<span class="left">上传附件</span>
-							<div class="hint-info left" v-if="attachmentInfo===''">先选择附件信息后才能上传</div>
-							<div class="content left" v-else>
-								<label for="fjxx" class="left" style="padding-top: 10px;">
-									<img src="static/img/yyzz-zm@2x.png" alt="">
-									<input type="file" name="fjxx" id="fjxx" />
-								</label>
-							</div>
+							<div class="hint-info left">先选择附件信息后才能上传</div>
 						</div>
 						<!-- <i class="icon icon-link right"></i> -->
 					</div>
 
-					<ul class="clearfix">
+					<div class="other-file-info clearfix" v-else>
+						<div class="left">上传附件</div>
+					</div>
+
+					<ul class="clearfix" v-if="attachmentInfo!==''">
 						<li class="left">
-							<div class="img-box">
+							<div class="img-box" ref="imgBox1">
 								<img src="https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4">
 							</div>
 							<i class="icon icon-delete-img"></i>
 						</li>
-						<li class="left">
-							<div class="img-box">
+
+						<li class="left add-img-btn">
+							<label for="attachmentInfoImg" class="img-box" ref="imgBox1">
 								<img src="https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4">
-							</div>
-							<i class="icon icon-delete-img"></i>
-						</li>
-						<li class="left">
-							<div class="img-box">
-								<img src="https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4">
-							</div>
-							<i class="icon icon-delete-img"></i>
-						</li>
-						<li class="left">
-							<div class="img-box">
-								<img src="https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4">
-							</div>
-							<i class="icon icon-delete-img"></i>
+								<input type="file" name="" id="attachmentInfoImg" value="" />
+							</label>
 						</li>
 					</ul>
 				</div>
@@ -130,7 +117,7 @@
 				<div class="sd-input-group w4">
 					<p class="hint-input-box before">请填写银行卡信息</p>
 					<div class="input-box">
-						<div class="clearfix cell" @click="showaAcountTypePopup">
+						<div class="clearfix cell" @click="showAccountTypePopup">
 							<div class="left">账户类型</div>
 							<div class="left orange">{{accountType}}</div>
 						</div>
@@ -240,22 +227,73 @@
 									<span>{{item.name}}</span>
 									<div v-if="item.hintInfo">{{item.hintInfo}}</div>
 								</div>
-								<input type="radio" name="photoInfo" :value="item.value" :checked="item.checked" v-model="item.checked" />
+								<input type="radio" name="photoInfo" :value="item.value" :checked="item.checked" @change="changeRadio(index)" />
 								<div class="circle right"><i class="icon icon-radio"></i></div>
 							</label>
 						</div>
 					</div>
 				</mt-popup>
 			</div>
+			<div class="select-city">
+				<mt-popup v-model="showCityPopup" position="bottom">
+					<mt-picker :slots="slotsCity" @change="cityOnValuesChange"></mt-picker>
+				</mt-popup>
+			</div>
 
 			<div class="account-type-popup">
 				<mt-popup v-model="popupAccountType" position="bottom">
+					<div class="tool-bar clearfix">
+						<div class="left">
+							<button class="btn" @click="accountTypeCancel">取消</button>
+						</div>
+						<div class="left">
+							<button class="btn" @click="accountTypeOK">确定</button>
+						</div>
+					</div>
 					<mt-picker :slots="slotsAccountType" @change="accountTypeOnValuesChange"></mt-picker>
 				</mt-popup>
 			</div>
 			<div class="account-bank-popup">
 				<mt-popup v-model="popupAccountBank" position="bottom">
+					<div class="tool-bar clearfix">
+						<div class="left">
+							<button class="btn" @click="accountBankCancel">取消</button>
+						</div>
+						<div class="left">
+							<button class="btn" @click="accountBankOK">确定</button>
+						</div>
+					</div>
 					<mt-picker :slots="slotsAccountBank" @change="accountBankOnValuesChange"></mt-picker>
+				</mt-popup>
+			</div>
+
+			<div class="select-bank">
+				<mt-popup v-model="popupSelectBank" position="bottom">
+					<div class="search-box">
+						<input type="text" placeholder="请输入你想要搜索的银行">
+						<button type="button" class="btn">搜索</button>
+					</div>
+					
+					<div class="content">
+						<div class="tool-bar clearfix">
+							<div class="left">
+								<button class="btn" @click="selectCancel">取消</button>
+							</div>
+							<div class="left">
+								<button class="btn" @click="selectOK">确定</button>
+							</div>
+						</div>
+						<div class="sd-radio-group">
+							<label v-for="(item, index) in bankNameList" :key="index" class="clearfix">
+								<div class="left onlyone">
+									<span>{{item.name}}</span>
+								</div>
+								<input type="radio" name="bankName" :checked="item.ischecked" @change="changeRadio(index)" />
+								<div class="circle right"><i class="icon icon-radio"></i></div>
+							</label>
+						</div>
+					</div>
+
 				</mt-popup>
 			</div>
 		</div>

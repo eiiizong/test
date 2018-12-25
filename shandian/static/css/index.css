@@ -3002,17 +3002,59 @@ i.icon-plus-sign35 {
 }
 
 .select-img-type,
+.select-city,
 .account-bank-popup,
 .account-type-popup {
 	width: 100%;
 }
 
 .select-img-type .mint-popup,
+.select-city .mint-popup,
 .account-bank-popup .mint-popup,
 .account-type-popup .mint-popup {
 	width: 100%;
 }
 
+/* 银行选择 */
+.select-bank {
+	width: 100%;
+	left: 0;
+	bottom: 0;
+}
+.select-bank .search-box {
+	padding: 10px 14px;
+	border-bottom: 1px solid #eaeaea;
+	position: relative;
+	padding-right: 60px;
+	
+}
+.select-bank .search-box input {
+	font-size: 14px;
+	line-height: 20px;
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	border: 1px solid #eaeaea;
+	border-radius: 50px;
+	padding-left: 10px;
+}
+.select-bank .search-box .btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50px;
+}
+.select-bank .mint-popup {
+	width: 100%;
+}
+.select-bank ul {
+	max-height: 300px;
+	overflow: auto;
+	
+}
+.select-bank label .left {
+	font-size: 14px;line-height: 40px;
+}
 /***************************** 选择照片信息 12.11改***********************/
 .select-photo-info {
 	padding-top: 10px;
@@ -3255,7 +3297,7 @@ i.icon-link-black {
 	-webkit-transform: translate(-50%, -50%);
 }
 
-.other-file>ul>li.left i {
+.other-file>ul>li.left i.icon-delete-img {
 	width: 16px;
 	height: 16px;
 	position: absolute;
@@ -3263,7 +3305,35 @@ i.icon-link-black {
 	right: 0;
 	background-image: url(../img/icon/delete.png);
 }
-
+.other-file>ul>li.add-img-btn {
+	display: block;
+	/* padding: 5px 4px; */
+}
+.other-file>ul>li.add-img-btn label {
+	display: block;
+}
+/*
+.other-file>ul>li.add-img-btn label div{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	text-align: center;
+	
+}
+.other-file>ul>li.add-img-btn label div i{
+	width: 24px;
+	height: 24px;
+	border: ;
+}
+.other-file>ul>li.add-img-btn label div p {
+	width: 100%;
+	font-size: 14px;
+	line-height: 1;
+	padding-top: 5px;
+} */
 .sd-link-cell-h70 .right {
 	float: right;
 	margin-top: 27px;

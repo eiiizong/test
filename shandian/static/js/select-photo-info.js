@@ -19,8 +19,7 @@ var app = new Vue({
 					hintInfo: '',
 					checked: false,
 					value: 2
-				// },
-
+				},
 			]
 		}
 	},
