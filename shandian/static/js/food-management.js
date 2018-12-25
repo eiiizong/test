@@ -1,131 +1,131 @@
 var app = new Vue({
 	el: '#app',
-	data: function () {
+	data: function() {
 		return {
 			menus: [{
-				name: '推荐',
-				icon: true,
-				iconClassName: 'icon-recommend'
-			},
-			{
-				name: '滋味灌汤',
-				icon: false,
-				iconClassName: ''
-			},
-			{
-				name: '口味干锅',
-				icon: false,
-				iconClassName: ''
-			},
-			{
-				name: '美味盖饭',
-				icon: false,
-				iconClassName: ''
-			},
-			{
-				name: '极品鸭舌',
-				icon: false,
-				iconClassName: ''
-			},
-			{
-				name: '有道有味',
-				icon: false,
-				iconClassName: ''
-			},
-			{
-				name: '宜宾燃面',
-				icon: false,
-				iconClassName: ''
-			},
-			{
-				name: '宜宾燃面',
-				icon: false,
-				iconClassName: ''
-			},
-			{
-				name: '宜宾燃面',
-				icon: false,
-				iconClassName: ''
-			},
-			{
-				name: '宜宾燃面',
-				icon: false,
-				iconClassName: ''
-			},
-			{
-				name: '宜宾燃面',
-				icon: false,
-				iconClassName: ''
-			},
-			{
-				name: '宜宾燃面10',
-				icon: false,
-				iconClassName: ''
-			}
+					name: '推荐',
+					icon: true,
+					iconClassName: 'icon-recommend'
+				},
+				{
+					name: '滋味灌汤',
+					icon: false,
+					iconClassName: ''
+				},
+				{
+					name: '口味干锅',
+					icon: false,
+					iconClassName: ''
+				},
+				{
+					name: '美味盖饭',
+					icon: false,
+					iconClassName: ''
+				},
+				{
+					name: '极品鸭舌',
+					icon: false,
+					iconClassName: ''
+				},
+				{
+					name: '有道有味',
+					icon: false,
+					iconClassName: ''
+				},
+				{
+					name: '宜宾燃面',
+					icon: false,
+					iconClassName: ''
+				},
+				{
+					name: '宜宾燃面',
+					icon: false,
+					iconClassName: ''
+				},
+				{
+					name: '宜宾燃面',
+					icon: false,
+					iconClassName: ''
+				},
+				{
+					name: '宜宾燃面',
+					icon: false,
+					iconClassName: ''
+				},
+				{
+					name: '宜宾燃面',
+					icon: false,
+					iconClassName: ''
+				},
+				{
+					name: '宜宾燃面10',
+					icon: false,
+					iconClassName: ''
+				}
 			],
 			foods: [{
-				imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
-				name: '川道口碑红油脆',
-				description: '脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮',
-				price: 22,
-				id: 0,
-				isRecommend: false,
-				isPutAway: true
-			},
-			{
-				imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
-				name: '川道口碑红油脆',
-				description: '脆皮鸭的分支北',
-				price: 22,
-				id: 0,
-				isRecommend: false,
-				isPutAway: false
-			},
-			{
-				imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
-				name: '川道口碑红油脆',
-				description: '脆皮鸭的分支北',
-				price: 22,
-				id: 0,
-				isRecommend: false,
-				isPutAway: false
-			},
-			{
-				imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
-				name: '川道口碑红油脆',
-				description: '脆皮鸭的分支北',
-				price: 22,
-				id: 0,
-				isRecommend: false,
-				isPutAway: false
-			},
-			{
-				imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
-				name: '川道口碑红油脆',
-				description: '脆皮鸭的分支北',
-				price: 22,
-				id: 0,
-				isRecommend: false,
-				isPutAway: false
-			},
-			{
-				imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
-				name: '川道口碑红油脆',
-				description: '脆皮鸭的分支北',
-				price: 22,
-				id: 0,
-				isRecommend: false,
-				isPutAway: false
-			},
-			{
-				imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
-				name: '川道口碑红油脆',
-				description: '脆皮鸭的分支北',
-				price: 22,
-				id: 0,
-				isRecommend: false,
-				isPutAway: false
-			},
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
+					name: '川道口碑红油脆',
+					description: '脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮脆皮鸭的分支北脆皮',
+					price: 22,
+					id: 0,
+					isRecommend: false,
+					isPutAway: true
+				},
+				{
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
+					name: '川道口碑红油脆',
+					description: '脆皮鸭的分支北',
+					price: 22,
+					id: 0,
+					isRecommend: false,
+					isPutAway: false
+				},
+				{
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
+					name: '川道口碑红油脆',
+					description: '脆皮鸭的分支北',
+					price: 22,
+					id: 0,
+					isRecommend: false,
+					isPutAway: false
+				},
+				{
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
+					name: '川道口碑红油脆',
+					description: '脆皮鸭的分支北',
+					price: 22,
+					id: 0,
+					isRecommend: false,
+					isPutAway: false
+				},
+				{
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
+					name: '川道口碑红油脆',
+					description: '脆皮鸭的分支北',
+					price: 22,
+					id: 0,
+					isRecommend: false,
+					isPutAway: false
+				},
+				{
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
+					name: '川道口碑红油脆',
+					description: '脆皮鸭的分支北',
+					price: 22,
+					id: 0,
+					isRecommend: false,
+					isPutAway: false
+				},
+				{
+					imgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4',
+					name: '川道口碑红油脆',
+					description: '脆皮鸭的分支北',
+					price: 22,
+					id: 0,
+					isRecommend: false,
+					isPutAway: false
+				},
 			],
 			current: 0,
 			showCreateTypePopup: true,
@@ -135,10 +135,10 @@ var app = new Vue({
 		this.init();
 	},
 	methods: {
-		init: function () {
+		init: function() {
 			this.height();
 		},
-		allPutaway: function () {
+		allPutaway: function() {
 			console.log(this.foods);
 			var arr = this.foods;
 			for (let i = 0; i < arr.length; i++) {
@@ -149,14 +149,14 @@ var app = new Vue({
 			this.foods = arr;
 			console.log(this.foods);
 		},
-		changeMenu: function (e, a) {
+		changeMenu: function(e, a) {
 			var index = a;
 			this.current = a;
 		},
-		height: function () {
+		height: function() {
 			var _this = this;
-			window.onload = function () {
-				var caclHeight = function () {
+			window.onload = function() {
+				var caclHeight = function() {
 					var bannerDOM = _this.$refs.banner,
 						btnDOM = _this.$refs.btn,
 						foodDOM = _this.$refs.food,
@@ -173,7 +173,7 @@ var app = new Vue({
 				}
 				caclHeight();
 				var menuWarrper = _this.$refs.menuWarrper;
-				menuWarrper.addEventListener('scroll', function () {
+				menuWarrper.addEventListener('scroll', function() {
 					var scrollTop = menuWarrper.scrollTop;
 					if (scrollTop > 0) {
 						_this.$refs.banner.style.display = 'none';
@@ -190,10 +190,10 @@ var app = new Vue({
 
 		},
 		// 帮助创建分类
-		ok: function () {
+		ok: function() {
 
 		},
-		cancel: function () {
+		cancel: function() {
 			this.showCreateTypePopup = !this.showCreateTypePopup;
 		}
 	},

@@ -273,9 +273,13 @@ input {
 	outline: 0;
 }
 
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-	-webkit-appearance: none;
+	-webkit-appearance: none !important;
 	appearance: none;
 }
 
@@ -1774,6 +1778,26 @@ i.icon-replace-order {
 	background-color: #fff;
 }
 
+.sd-input-group .input-box .cell {
+	display: block;
+	width: 100%;
+	height: 41px;
+	border-top: 0;
+	padding-left: 0;
+	border-bottom: 1px solid #eaeaee;
+}
+
+.sd-input-group .input-box .cell .left {
+	font-size: 14px;
+	line-height: 40px;
+	width: 72px;
+}
+
+.sd-input-group .input-box .cell .left.orange {
+	width: auto;
+	color: #e8b400;
+}
+
 .sd-input-group .mint-cell {
 	border-top: 1px solid #eaeaee;
 	min-height: 41px;
@@ -2178,47 +2202,56 @@ i.icon-add-bankcard {
 	line-height: 1;
 	padding: 7px 14px 0;
 }
+
 .renew .buy {
 	padding: 15px 10px 0;
 }
+
 .sd-renew-card {
 	width: 33.3333%;
 	padding: 0 4px;
 	margin-bottom: 10px;
 	text-align: center;
 }
+
 .sd-renew-card .warpper {
 	position: relative;
 	background-color: #fffaf2;
 	border-radius: 5px;
 	border: solid 1px #eac389;
 }
+
 .sd-renew-card .warpper .content {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
-	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
 }
+
 .sd-renew-card .warpper .content p {
 	font-weight: bold;
 	color: #5d5d5e;
 }
+
 .sd-renew-card .warpper .content .renew-time {
 	font-size: 14px;
 	line-height: 1;
 }
+
 .sd-renew-card .warpper .content .now-price {
 	font-size: 24px;
 	color: #a57458;
 	line-height: 1;
 	margin-top: 20px;
 }
+
 .sd-renew-card .warpper .content .now-price:before {
 	content: '¥';
 	font-size: 15px;
 	margin-right: 4px;
 }
+
 .sd-renew-card .warpper .content .old-price {
 	width: auto;
 	display: inline-block;
@@ -2229,6 +2262,7 @@ i.icon-add-bankcard {
 	padding: 0 2px;
 	position: relative;
 }
+
 .sd-renew-card .warpper .content .old-price:after {
 	content: '';
 	position: absolute;
@@ -2508,7 +2542,7 @@ i.icon-add-bankcard {
 	font-weight: 500;
 }
 
-.order-detail i.icon-replace-order{
+.order-detail i.icon-replace-order {
 	margin-top: 17px;
 }
 
@@ -2639,6 +2673,7 @@ i.icon-add-bankcard {
 	text-align: center;
 	position: relative;
 }
+
 .release .top {
 	width: 100%;
 	position: absolute;
@@ -2648,6 +2683,7 @@ i.icon-add-bankcard {
 	-webkit-transform: translate(-50%, -50%);
 	margin-top: -90px;
 }
+
 .release .img-box {
 	padding-bottom: 20px;
 }
@@ -2919,6 +2955,7 @@ i.icon-plus-sign35 {
 .id-card-upload .btn-box {
 	padding: 27px 14px;
 }
+
 .apply-business .other-file-info {
 	height: 41px;
 	background-color: #fff;
@@ -2926,39 +2963,56 @@ i.icon-plus-sign35 {
 	line-height: 40px;
 	padding: 0 14px;
 }
+
 .apply-business .other-file-info .left {
 	font-size: 14px;
 	font-weight: 500;
 	color: #000;
 }
+
 .apply-business .other-file-info .left.orange {
 	color: #e8b400;
 	margin-left: 16px;
 }
-.apply-business .have-mini-app-popup .sd-cc img {
+
+.apply-business .other-file-info .left.red {
+	color: #f00;
+	margin-left: 16px;
+}
+
+.apply-business .other-file .left.hint-info {
+	font-size: 14px;
+	line-height: 70px;
+	color: #c7c7cd;
+}
+
+.apply-business .other-file-info .right.icon {
+	margin-top: 12px;
+}
+
+.sd-popup .have-mini-app-popup .sd-cc img {
 	width: 139px;
 	height: 101px;
 	border-radius: 0;
 	margin-bottom: 20px;
 }
-.orange input::-webkit-input-placeholder{
-	color: #e8b400;
+
+.account-type-popup {
+	width: 100%;
 }
 
-.orange input:-moz-placeholder {
-	color: #e8b400;
+.select-img-type,
+.account-bank-popup,
+.account-type-popup {
+	width: 100%;
 }
 
-.orange input::-moz-placeholder {
-	color: #e8b400;
+.select-img-type .mint-popup,
+.account-bank-popup .mint-popup,
+.account-type-popup .mint-popup {
+	width: 100%;
 }
 
-.orange input:-ms-input-placeholder {
-	color: #e8b400;
-}
-.orange input {
-	color: #e8b400;
-}
 /***************************** 选择照片信息 12.11改***********************/
 .select-photo-info {
 	padding-top: 10px;
@@ -3119,39 +3173,95 @@ i.icon-link-black {
 	padding: 0 14px;
 }
 
-.sd-link-cell-h70 .left {
-	float: left;
+.sd-link-cell-h70 span.left {
 	font-size: 14px;
 	line-height: 70px;
-}
-
-.sd-link-cell-h70 .left>span,
-.sd-link-cell-h70 .left>div {
-	float: left;
-}
-
-.sd-link-cell-h70 .left>span {
-	display: block;
 	margin-right: 16px;
-}
-
-.sd-link-cell-h70 .left>.hint-info {
-	color: #c7c7cd;
 }
 
 .sd-link-cell-h70 .left .content {
 	padding-top: 10px;
 }
 
-.sd-link-cell-h70 .left .content img {
-	display: inline-block;
-	width: 79px;
-	height: 50px;
-	margin-right: 5px;
+.sd-link-cell-h70 .left .content>label {
+	margin-right: 6px;
 }
 
-.sd-link-cell-h70 .left .content img:last-of-type {
+.sd-link-cell-h70 .left .content>label:last-of-type {
 	margin-right: 0;
+}
+
+.sd-link-cell-h70 .left .content>label>.img-box {
+	display: block;
+	width: 79px;
+	height: 50px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 3px;
+}
+
+.sd-link-cell-h70 .left .content>label>.img-box img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+.sd-link-cell-h70 .left .content>label>img {
+	display: block;
+	width: 79px;
+	height: 50px;
+	border-radius: 3px;
+}
+
+.other-file .sd-link-cell-h70 .content {
+	font-size: 14px;
+	color: #282828;
+	line-height: 70px;
+	font-weight: 500;
+}
+
+.card-img-info .sd-link-cell-h70 .content .hint-info,
+.other-file .sd-link-cell-h70 .content .hint-info {
+	color: #c7c7cd;
+}
+
+.other-file>ul {
+	padding: 10px;
+	background-color: #fff;
+	width: 100%;
+}
+
+.other-file>ul>li.left {
+	width: 33.333%;
+	position: relative;
+}
+
+.other-file>ul>li.left .img-box {
+	width: 100%;
+	padding: 0 4px;
+	height: 100px;
+	overflow: hidden;
+	margin: 5px 0;
+}
+
+.other-file>ul>li.left .img-box img {
+	width: 100%;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+.other-file>ul>li.left i {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-image: url(../img/icon/delete.png);
 }
 
 .sd-link-cell-h70 .right {
@@ -3631,9 +3741,11 @@ i.icon-download {
 	font-size: 13px;
 	font-weight: 500;
 }
-.sd-title-cell .right .btn{
+
+.sd-title-cell .right .btn {
 	line-height: 38px;
 }
+
 .sd-title-cell .right a {
 	display: block;
 	line-height: 38px;
@@ -3703,10 +3815,12 @@ i.icon-download {
 	border-radius: 100%;
 	line-height: 45px;
 }
-.clerk-management .btn-add-clerk ~ .clerk-name{
+
+.clerk-management .btn-add-clerk~.clerk-name {
 	color: #fff;
 	text-indent: 999em;
 }
+
 .clerk-management .title-cell {
 	padding-right: 14px;
 }
@@ -4326,4 +4440,54 @@ i.icon-change {
 
 .store-sign .sd-btn-box {
 	padding: 76px 44px 20px;
+}
+
+.sd-popup-bottom {
+	position: fixed;
+	bottom: 0;
+}
+
+.sd-popup-bottom .popup {
+	position: fixed;
+	width: 100%;
+	z-index: 2001;
+	bottom: 0;
+}
+
+.sd-popup-bottom .popup .content {
+	width: 100%;
+	background-color: #fff;
+}
+
+.tool-bar {
+	width: 100%;
+	height: 41px;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.tool-bar .left {
+	width: 50%;
+}
+
+.tool-bar .left:first-of-type {
+	border-right: 1px solid #eaeaea;
+}
+
+.tool-bar .left .btn {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	line-height: 40px;
+}
+
+.sd-popup-bottom .popup-mask {
+	position: fixed;
+	width: 100%;
+	z-index: 2000;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+	top: 0;
+	left: 0;
 }

@@ -18,8 +18,8 @@ var app = new Vue({
 					name: '《卫生许可证》照片',
 					hintInfo: '',
 					checked: false,
-					value: 1
-				},
+					value: 2
+				// },
 
 			]
 		}
