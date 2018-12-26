@@ -1,61 +1,69 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
-	<title>发布小程(第三步)</title>
-	<link rel="shortcut icon" href="static/img/favicon.ico">
-	<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
-	<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>发布小程(第三步)</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
-</head>
+	</head>
 
-<body>
-	<div id="app" v-cloak>
-		<div class="release-step03 release">
-			<div class="top">
-				<div class="img-box">
-					<img src="static/img/release-step-03.jpg">
-				</div>
-				<h4>提交审核</h4>
-				<p class="release-hint">(提交给微信官方审核，预计1-3天审核完成，请耐心等待...)</p>
-				<div class="input-cell">
-					<label for="serviceType">服务类目</label>
-					<div class="input-warrper">
-						<input type="text" name="serviceType" id="serviceType" readonly="readonly" placeholder="例：餐饮类" class="service-typr-selected"
-						 @focus="popupVisible=true" v-model="type" />
-						<i class="icon icon-selected" :class="popupVisible? 'active': ''"></i>
+	<body>
+		<div id="app" v-cloak>
+			<div class="release-step03 release">
+				<div class="top">
+					<div class="img-box">
+						<img src="static/img/release-step-03.jpg">
 					</div>
-				</div>
-				<div class="input-cell">
-					<label>小程序标签</label>
-					<div class="input-warrper">
-						<mt-field placeholder="例：餐饮 美食 点餐" v-model="tag"></mt-field>
+					<h4>提交审核</h4>
+					<p class="release-hint">(提交给微信官方审核，预计1-3天审核完成，请耐心等待...)</p>
+					<div class="input-cell" @click="showServiceTypePopup">
+						<label for="serviceType">服务类目</label>
+						<div class="input-warrper">
+							<input type="text" name="serviceType" id="serviceType" readonly="readonly" placeholder="例：餐饮类" class="service-typr-selected"
+							 v-model="type" />
+							<i class="icon icon-selected" :class="serviceTypePopup? 'active': ''"></i>
+						</div>
 					</div>
+					<div class="input-cell">
+						<label>小程序标签</label>
+						<div class="input-warrper">
+							<mt-field placeholder="例：餐饮 美食 点餐" v-model="tag"></mt-field>
+						</div>
+					</div>
+					<span class="hint">用户可以用小程序标签作为关键词，在微信内搜索小程序，多个标签请用空格隔开。</span>
 				</div>
-				<span class="hint">用户可以用小程序标签作为关键词，在微信内搜索小程序，多个标签请用空格隔开。</span>
+
+
+				<div class="btn-box bottom">
+					<a class="btn" href="release-step04.html">提交</a>
+				</div>
+
+				<div>
+					<mt-popup v-model="serviceTypePopup" position="bottom" class="mint-popup selecte">
+						<div class="tool-bar clearfix">
+							<div class="left">
+								<button class="btn" @click="serviceTypeCancel">取消</button>
+							</div>
+							<div class="left">
+								<button class="btn" @click="serviceTypeOK">确定</button>
+							</div>
+						</div>
+						<mt-picker :slots="serviceType" @change="serviceTypeOnValuesChange"></mt-picker>
+					</mt-popup>
+				</div>
 			</div>
-
-
-			<div class="btn-box bottom">
-				<a class="btn" href="release-step04.html">提交</a>
-			</div>
-
-			<mt-popup v-model="popupVisible" position="bottom" class="mint-popup selecte">
-				<mt-picker :slots="serviceType" @change="onValuesChange"></mt-picker>
-			</mt-popup>
-
 		</div>
-	</div>
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-	<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
-
-	<script src="static/js/release-step-03.js"></script>
-</body>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		<script src="static/js/release-step-03.js"></script>
+	</body>
 
 </html>

@@ -4,26 +4,33 @@ var app = new Vue({
 		return {
 			serviceType: [{
 				flex: 1,
-				values: ['餐饮类', '服务类', '其他'],
+				values: ['餐饮类', '服务类', '服务类','服务类','其他',],
 				className: 'serviceType',
 				textAlign: 'center'
 			}, ],
 			tag: '',
 			type: '',
 			readonly: true,
-			popupVisible: false
+			serviceTypePopup: false,
+			TS: ''
 		}
 	},
 	methods: {
 		init: function() {
 			
 		},
-		onValuesChange(picker, values) {
-// 			console.log(picker);
-// 			console.log(values);
-			if (values[0]) {
-				this.type = values[0];
-			}
+		showServiceTypePopup: function () {
+			this.serviceTypePopup = !this.serviceTypePopup;
+		},
+		serviceTypeCancel: function () {
+			this.serviceTypePopup = !this.serviceTypePopup;
+		},
+		serviceTypeOK: function () {
+			this.serviceTypePopup = !this.serviceTypePopup;
+			this.type = this.TS;
+		},
+		serviceTypeOnValuesChange(picker, values) {
+			this.TS = values[0];
 		}
 	}
 });

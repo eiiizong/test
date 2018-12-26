@@ -11,22 +11,20 @@
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 		<link rel="stylesheet" href="static/css/mint-ui.css">
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
-
-
 	</head>
 	<body>
 		<div id="app" v-cloak>
 			<div class="add-food">
-
 				<!-- 分类 -->
-				<div class="cell">
-					<a href="default-category.html" class="cell-warpper">
+				<div class="cell" @click="showFoodTypePopup">
+					<div class="cell-warpper">
 						<span class="text-left">
 							<span class="title">分类</span>
-							<span class="title-hint">选择分类</span>
+							<span class="title-hint" v-if="foodType===''">选择分类</span>
+							<span class="orange" v-else="">{{foodType}}</span>
 						</span>
 						<i class="icon-is-link-big"></i>
-					</a>
+					</div>
 				</div>
 
 				<!-- 名称 -->
@@ -69,7 +67,7 @@
 									<span class="title">价格</span>
 									<mt-field type="number" v-model="item.price" placeholder="输入价格"></mt-field>
 								</span>
-								<i class="size-delete" @click="deleteSize" :id="item.id"></i>
+								<i class="size-delete" @click="deleteSize(index)"></i>
 							</div>
 						</div>
 						<div class="cell add-size" @click="addSize">
@@ -85,20 +83,17 @@
 
 
 				<!-- 偏好 -->
-				<div class="cell space-top">
-					<a href="preferences.html" class="cell-warpper">
+				<div class="cell space-top" @click="showSelectLikePopup">
+					<div class="cell-warpper">
 						<span class="text-left">
 							<span class="title">偏好</span>
-							<!-- <span class="title-hint">选择偏好</span> -->
-							<span class="value">
-								<b>不要葱</b>
-								<b>不要葱</b>
-								<b>不要葱</b>
-								<b>不要葱</b>
+							<span class="title-hint" v-if="selectedLike.length === 0">选择偏好</span>
+							<span class="value" v-else="">
+								<b v-for="(item, index) in selectedLike" :key="index">{{item}}</b>
 							</span>
 						</span>
 						<i class="icon-is-link-big"></i>
-					</a>
+					</div>
 				</div>
 
 				<div class="cell space-top">
@@ -147,9 +142,47 @@
 				</div>
 
 				<div class="sd-btn-box">
-					<button type="button" class="btn">确认添加<button>
+					<button type="button" class="btn">确认添加</button>
 				</div>
 			</div>
+			
+			<div class="food-type-popup">
+				<mt-popup v-model="foodTypePopup" position="bottom">
+					<div class="tool-bar clearfix">
+						<div class="left">
+							<button class="btn" @click="foodTypeCancel">取消</button>
+						</div>
+						<div class="left">
+							<button class="btn" @click="foodTypeOK">确定</button>
+						</div>
+					</div>
+					<mt-picker :slots="slotsFoodType" @change="foodTypeOnValuesChange"></mt-picker>
+				</mt-popup>
+			</div>
+			
+			<div class="select-like-popup">
+				<mt-popup v-model="selectLikePopup" position="bottom">
+					<div class="tool-bar clearfix">
+						<div class="left">
+							<button class="btn" @click="selectLikeCancel">取消</button>
+						</div>
+						<div class="left">
+							<button class="btn" @click="selectLikeOK">确定</button>
+						</div>
+					</div>
+					<div class="preference">
+						<div class="sd-checkbox-group">
+							<label v-for="(item, index) in likes" :key="index" class="clearfix">
+								<span class="left">{{item.name}}</span>
+								<input type="checkbox" :value="item.value" :checked="item.checked" @change="changeCheckBox(index)"/>
+								<div class="point right"></div>
+							</label>
+						</div>
+					</div>
+					
+				</mt-popup>
+			</div>
+			
 		</div>
 		<script src="static/js/vue.min.js"></script>
 		<script src="static/js/mint-ui.js"></script>

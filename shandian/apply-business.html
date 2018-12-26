@@ -65,10 +65,10 @@
 							<span class="left">营业执照</span>
 							<div class="content clearfix">
 								<label for="yyzz" class="left">
-									<div class="img-box">
-										<img src="static/img/order-detail.jpg" alt="">
-									</div>
-									<!-- <img src="static/img/yyzz-zm@2x.png" alt=""> -->
+									<!-- <div class="img-box">
+										<img src="static/img/attachment-info.png" alt="">
+									</div> -->
+									<img src="static/img/yyzz-zm@2x.png" alt="">
 									<input type="file" name="yyzz" id="yyzz" />
 								</label>
 							</div>
@@ -82,7 +82,7 @@
 					<div class="other-file-info clearfix mt28" @click="showSelecte">
 						<div class="left">附件信息</div>
 						<div class="left orange" v-if="attachmentInfo===''">请选择需要上传的附件信息</div>
-						<div class="left red" v-else>{{attachmentInfo}}</div>
+						<div class="left orange" v-else>{{attachmentInfo}}</div>
 					</div>
 
 					<div class="sd-link-cell-h70 clearfix" v-if="attachmentInfo===''">
@@ -107,7 +107,7 @@
 
 						<li class="left add-img-btn">
 							<label for="attachmentInfoImg" class="img-box" ref="imgBox1">
-								<img src="https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4">
+								<img src="static/img/attachment-info.png">
 								<input type="file" name="" id="attachmentInfoImg" value="" />
 							</label>
 						</li>
@@ -137,8 +137,8 @@
 						<!-- <mt-field label="开户银行城市" placeholder="请填写开户银行城市" v-model="accountBankCity" type="text"></mt-field> -->
 						<div class="clearfix cell city" @click="showSelectCity">
 							<div class="left">开户银行城市</div>
-							<div class="left hint-info" v-if="accountBankCity===''">请填写开户银行城市</div>
-							<div class="left wauto" v-else>{{accountBankCity}}</div>
+							<div class="left orange" v-if="accountBankCity===''">请填写开户银行城市</div>
+							<div class="left orange" v-else>{{accountBankCity}}</div>
 						</div>
 						<mt-field label="开户支行" placeholder="请填写卡户支行" v-model="accountOpeningBranch" type="text"></mt-field>
 						<mt-field label="银行卡号" placeholder="请填写银行卡号" v-model="bankCardNumber" type="number"></mt-field>
@@ -154,10 +154,10 @@
 							<div class="content left clearfix">
 								<!-- <div class="hint-info">请上传开户银行卡照片</div> -->
 								<label for="khyhzp" class="left">
-									<div class="img-box">
-										<img src="static/img/order-detail.jpg" alt="">
-									</div>
-									<!-- <img src="static/img/yyzz-zm@2x.png" alt=""> -->
+									<!-- <div class="img-box">
+										<img src="static/img/attachment-info.png" alt="">
+									</div> -->
+									<img src="static/img/attachment-info.png" alt="">
 									<input type="file" name="khyhzp" id="khyhzp" />
 								</label>
 							</div>
@@ -249,8 +249,8 @@
 			<div class="select-bank">
 				<mt-popup v-model="popupSelectBank" position="bottom" ref="serchPopup">
 					<div class="search-box">
-						<mt-search v-model="searchValue" cancel-text="取消" placeholder="搜索">
-						</mt-search>
+						<mt-field v-model="searchValue"  placeholder="请输入您想要搜索的银行名字">
+						</mt-field>
 					</div>
 
 					<div class="content">

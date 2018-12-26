@@ -23,20 +23,33 @@
 		<div id="app" v-cloak>
 			<!-- 店铺基本信息 -->
 			<div class="set-work-time">
-
-				<div class="work-time-cell" v-for="(item, index) in workTimes" :key="index">
-					<div class="work-time-cell-warpper">
-						<div>
-							<span class="time-title">{{item.name}}</span>
-							<input type="text" @focus="open('s' + index)" readonly="readonly" v-model="item.startTime" placeholder="开始时间">
-							<span>~</span>
-							<input type="text" @focus="open('e' + index)" readonly="readonly" v-model="item.endTime" placeholder="结束时间">
+				<div class="sd-work-time-cell clearfix" v-for="(item, index) in workTimes" :key="index">
+					<div class="left clearfix">
+						<div class="left title">
+							<span>{{item.name}}</span>
 						</div>
+
+						<div class="left start-time" @click="openSelectTime('s', index)">
+							<span class="hint-info" v-if="item.startTime==''">开始时间</span>
+							<span v-else>{{item.startTime}}</span>
+						</div>
+
+						<div class="left">
+							<span>~</span>
+						</div>
+
+						<div class="left end-time" @click="openSelectTime('e', index)">
+							<span class="hint-info" v-if="item.endTime==''">结束时间</span>
+							<span v-else>{{item.endTime}}</span>
+						</div>
+					</div>
+					<div class="right btn-box">
 						<button @click="deletePeriod(index)" class="btn">删除</button>
 					</div>
 				</div>
 
-				<div class="cell add-size space-top">
+
+				<div class="cell add-size">
 					<div class="cell-warpper" @click="addPeriod">
 						<p>添加时间段</p>
 					</div>
