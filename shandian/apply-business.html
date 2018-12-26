@@ -134,7 +134,12 @@
 
 				<div class="sd-input-group mt28 w6">
 					<div class="input-box">
-						<mt-field label="开户银行城市" placeholder="请填写开户银行城市" v-model="accountBankCity" type="text"></mt-field>
+						<!-- <mt-field label="开户银行城市" placeholder="请填写开户银行城市" v-model="accountBankCity" type="text"></mt-field> -->
+						<div class="clearfix cell city" @click="showSelectCity">
+							<div class="left">开户银行城市</div>
+							<div class="left hint-info" v-if="accountBankCity===''">请填写开户银行城市</div>
+							<div class="left wauto" v-else>{{accountBankCity}}</div>
+						</div>
 						<mt-field label="开户支行" placeholder="请填写卡户支行" v-model="accountOpeningBranch" type="text"></mt-field>
 						<mt-field label="银行卡号" placeholder="请填写银行卡号" v-model="bankCardNumber" type="number"></mt-field>
 						<mt-field label="开户人姓名" placeholder="请填写开户人姓名" v-model="accountPersonName" type="text"></mt-field>
@@ -167,6 +172,7 @@
 					<button class="btn">提交申请</button>
 				</div>
 			</div>
+
 			<div class="sd-popup" v-show="showHaveMiniApp">
 				<div class="have-mini-app-popup popup">
 					<div class="content">
@@ -185,31 +191,7 @@
 				<div class="popup-mask"></div>
 			</div>
 
-			<!-- <div class="sd-popup-bottom" v-show="showImgInfo">
-				<div class="popup">
-					<div class="content">
-						<div class="tool-bar clearfix">
-							<div class="left">
-								<button class="btn" @click="selectCancel">取消</button>
-							</div>
-							<div class="left">
-								<button class="btn" @click="selectOK">确定</button>
-							</div>
-						</div>
-						<div class="sd-radio-group">
-							<label v-for="(item, index) in checkBoxData" :key="index" class="clearfix">
-								<div class="left" :class="!item.hintInfo?'onlyone':''">
-									<span>{{item.name}}</span>
-									<div v-if="item.hintInfo">{{item.hintInfo}}</div>
-								</div>
-								<input type="radio" name="photoInfo" :value="item.value" :checked="item.checked" />
-								<div class="circle right"><i class="icon icon-radio"></i></div>
-							</label>
-						</div>
-					</div>
-				</div>
-				<div class="popup-mask"></div>
-			</div> -->
+
 			<div class="select-img-type">
 				<mt-popup v-model="showImgInfo" position="bottom">
 					<div class="content">
@@ -234,8 +216,17 @@
 					</div>
 				</mt-popup>
 			</div>
+			<!-- 选择城市 -->
 			<div class="select-city">
-				<mt-popup v-model="showCityPopup" position="bottom">
+				<mt-popup v-model="showSelectCityPopup" position="bottom">
+					<div class="tool-bar clearfix">
+						<div class="left">
+							<button class="btn" @click="selectCityCancel">取消</button>
+						</div>
+						<div class="left">
+							<button class="btn" @click="selectCityOK">确定</button>
+						</div>
+					</div>
 					<mt-picker :slots="slotsCity" @change="cityOnValuesChange"></mt-picker>
 				</mt-popup>
 			</div>
@@ -253,47 +244,34 @@
 					<mt-picker :slots="slotsAccountType" @change="accountTypeOnValuesChange"></mt-picker>
 				</mt-popup>
 			</div>
-			<div class="account-bank-popup">
-				<mt-popup v-model="popupAccountBank" position="bottom">
-					<div class="tool-bar clearfix">
-						<div class="left">
-							<button class="btn" @click="accountBankCancel">取消</button>
-						</div>
-						<div class="left">
-							<button class="btn" @click="accountBankOK">确定</button>
-						</div>
-					</div>
-					<mt-picker :slots="slotsAccountBank" @change="accountBankOnValuesChange"></mt-picker>
-				</mt-popup>
-			</div>
 
+			<!-- 选择银行 -->
 			<div class="select-bank">
-				<mt-popup v-model="popupSelectBank" position="bottom">
+				<mt-popup v-model="popupSelectBank" position="bottom" ref="serchPopup">
 					<div class="search-box">
-						<input type="text" placeholder="请输入你想要搜索的银行">
-						<button type="button" class="btn">搜索</button>
+						<mt-search v-model="searchValue" cancel-text="取消" placeholder="搜索">
+						</mt-search>
 					</div>
-					
+
 					<div class="content">
 						<div class="tool-bar clearfix">
 							<div class="left">
-								<button class="btn" @click="selectCancel">取消</button>
+								<button class="btn" @click="selectBankCancel">取消</button>
 							</div>
 							<div class="left">
-								<button class="btn" @click="selectOK">确定</button>
+								<button class="btn" @click="selectBankOK">确定</button>
 							</div>
 						</div>
-						<div class="sd-radio-group">
+						<div class="sd-radio-group" ref="scrollDOM">
 							<label v-for="(item, index) in bankNameList" :key="index" class="clearfix">
 								<div class="left onlyone">
 									<span>{{item.name}}</span>
 								</div>
-								<input type="radio" name="bankName" :checked="item.ischecked" @change="changeRadio(index)" />
+								<input type="radio" name="bankName" :checked="item.isChecked" @change="changeBankRadio(index)" />
 								<div class="circle right"><i class="icon icon-radio"></i></div>
 							</label>
 						</div>
 					</div>
-
 				</mt-popup>
 			</div>
 		</div>

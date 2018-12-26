@@ -13,7 +13,7 @@ var app = new Vue({
 			accountOpeningBranch: '', //开户支行
 			bankCardNumber: '', //银行卡卡号
 			accountPersonName: '', //开户人姓名
-			showHaveMiniApp: false,
+			showHaveMiniApp: true,
 			showImgInfo: false,
 			checkBoxData: [{
 					name: '《餐饮服务许可证》照片',
@@ -35,75 +35,39 @@ var app = new Vue({
 				},
 			],
 			TS: '',
-			bankNameList: [
-				{
+			bankNameList: [{
 					name: '中国银行',
 					isChecked: false
 				},
 				{
-					name: '中国银行',
+					name: '建设银行',
 					isChecked: false
 				},
 				{
-					name: '中国银行',
+					name: '农业银行',
 					isChecked: false
 				},
 				{
-					name: '中国银行',
+					name: '商业银行',
 					isChecked: false
 				},
 				{
-					name: '中国银行',
+					name: '工商银行',
 					isChecked: false
-				},
-				{
-					name: '中国银行',
-					isChecked: false
-				},
-				{
-					name: '中国银行',
-					isChecked: false
-				},
-				{
-					name: '中国银行',
-					isChecked: false
-				},
-				{
-					name: '中国银行',
-					isChecked: false
-				},
-				{
-					name: '中国银行',
-					isChecked: false
-				},
-				{
-					name: '中国银行',
-					isChecked: false
-				},
-				
-				{
-					name: '中国银行',
-					isChecked: false
-				},
+				}
 			],
 			popupAccountType: false,
+			searchValue: '',
 			slotsAccountType: [{
 				flex: 1,
 				values: ['个人账户', '法人账户'],
 				className: 'slotsAccountType',
 				textAlign: 'center'
 			}],
-			popupSelectBank: true,
-			popupAccountBank: false,
-			slotsAccountBank: [{
-				flex: 1,
-				values: ['中国银行', '中国农业银行', '中国工商银行', '中国建设银行'],
-				className: 'slotsBankType',
-				textAlign: 'center'
-			}],
+			popupSelectBank: false,
 			// 控制上传附件
 			attachmentInfo: '',
-			showCityPopup: false,
+			showSelectCityPopup: false,
 			slotsCity: [{
 				flex: 1,
 				values: [],
@@ -1587,34 +1551,51 @@ var app = new Vue({
 	},
 	methods: {
 		init: function() {
-			this.caclImgHeight();
+			this.caclScrollHeight();
+			this.initCity();
+		},
+		initCity: function() {
 			var city = this.city;
 			var arr0 = [];
 			var arr2 = [];
-			// var slotsCity = this.slotsCity;
-			for (var i = 0; i < city.length; i++) {
+			var len1 = city.length;
+			for (var i = 0; i < len1; i++) {
 				arr0.push(city[i].name);
 			}
-			console.log()
 			this.slotsCity[0].values = arr0;
+
 			var city2 = city[0].children;
-			for (var i = 0; i < city2.length; i++) {
+			var len2 = city[0].children.length;
+			for (var i = 0; i < len2; i++) {
 				arr2.push(city2[i].name);
 			}
 			this.slotsCity[2].values = arr2;
 		},
+		// 计算滚动的高度
+		caclScrollHeight: function() {
+			var serchPopupDOM = this.$refs.serchPopup.$el;
+			var scrollDOM = this.$refs.scrollDOM;
+			this.$nextTick(function() {
+				scrollDOM.style.height = (serchPopupDOM.offsetHeight - 85) + 'px';
+			});
+		},
+		// 是否有小程序 确认事件
 		btnOk: function() {
 			this.showHaveMiniApp = !this.showHaveMiniApp;
 		},
+		// 是否有小程序 取消事件
 		btnCancel: function() {
 			this.showHaveMiniApp = !this.showHaveMiniApp;
 		},
+		// 显示选择上传照片信息
 		showSelecte: function() {
 			this.showImgInfo = !this.showImgInfo;
 		},
+		// 上传照片信息取消事件
 		selectCancel: function() {
 			this.showImgInfo = !this.showImgInfo;
 		},
+		// 上传照片信息确认事件
 		selectOK: function() {
 			var _this = this;
 			console.log(_this.checkBoxData)
@@ -1640,22 +1621,13 @@ var app = new Vue({
 				}
 			})
 		},
-		caclImgHeight: function() {
-			var ratio = 1.77;
-		},
-		// 改变城市时触发
-		cityOnValuesChange: function(picker,value) {
-			console.log(value);
-			var a = value[0];
-			var city = this.city;
-			var arr = [];
-		},
+
 		// 账户类型 取消事件
-		accountTypeCancel: function () {
+		accountTypeCancel: function() {
 			this.popupAccountType = !this.popupAccountType;
 		},
 		// 账户类型 确认事件
-		accountTypeOK: function () {
+		accountTypeOK: function() {
 			this.accountType = this.TS;
 			this.popupAccountType = !this.popupAccountType;
 		},
@@ -1668,23 +1640,59 @@ var app = new Vue({
 			this.TS = value[0];
 		},
 		// 银行选择 取消事件
-		accountBankCancel: function () {
-			this.popupAccountBank = !this.popupAccountBank;
+		selectBankCancel: function() {
+			this.popupSelectBank = !this.popupSelectBank;
 		},
 		// 银行选择 确定事件
-		accountBankOK: function () {
+		selectBankOK: function() {
 			this.accountBank = this.TS;
-			this.popupAccountBank = !this.popupAccountBank;
+			this.popupSelectBank = !this.popupSelectBank;
 		},
 		// 银行选择 popup 弹出事件
 		showaAcountBankPopup: function() {
-			this.popupAccountBank = !this.popupAccountBank;
+			this.popupSelectBank = !this.popupSelectBank;
 		},
 		// 银行选择 popup 选择事件
 		accountBankOnValuesChange: function(picker, value) {
 			this.TS = value[0];
 		},
-
+		// 选择银行时触发
+		changeBankRadio: function(index) {
+			this.bankNameList.map((v, i) => {
+				if (i == index) {
+					v.isChecked = true;
+				} else {
+					v.isChecked = false;
+				}
+			});
+			this.TS = this.bankNameList[index].name;
+		},
+		//显示选择城市popup
+		showSelectCity: function() {
+			this.showSelectCityPopup = !this.showSelectCityPopup;
+		},
+		// 选择城市 取消事件
+		selectCityCancel: function() {
+			this.showSelectCityPopup = !this.showSelectCityPopup;
+		},
+		// 选择城市 确定事件
+		selectCityOK: function() {
+			this.accountBankCity = this.TS;
+			this.showSelectCityPopup = !this.showSelectCityPopup;
+		},
+		// 改变城市时触发
+		cityOnValuesChange: function(picker, values) {
+			var province = picker.getValues()[0];
+			var city = picker.getValues()[1];
+			var cityArr = [];
+			var index = this.slotsCity[0].values.indexOf(province);
+			var len = this.city[index].children.length;
+			for (var i = 0; i < len; i++) {
+				cityArr.push(this.city[index].children[i].name);
+			}
+			picker.setSlotValues(1, cityArr);
+			this.TS = province + city;
+		},
 	},
 	components: {
 		// draggable
