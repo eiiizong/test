@@ -724,6 +724,7 @@ i.icon-down.no {
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 1002;
 }
 
 .sd-popup .popup-mask {
@@ -1130,34 +1131,57 @@ i.icon-down.no {
 .add-clerk h3 {
 	margin: 0;
 	font-size: 0.9375em;
-	/*15px*/
 	font-weight: bold;
 	color: #282828;
 	line-height: 1;
 	margin-top: 0.3125em;
 }
 
-.add-clerk .hint.add-method {
+.add-clerk .add-method-hint {
 	margin-top: 0.5em;
 	margin-bottom: 2.41667em;
 	text-align: left;
+	color: #989898;
+	font-size: 12px;
 }
 
 .add-clerk .QR-box {
 	width: 100%;
 	margin-top: 0.375em;
 	padding: 0 1.375em 0 0.5em;
+	position: relative;
 }
 
-.add-clerk .QR-box img {
+.add-clerk .QR-box .QR-bg {
+	width: 100%;
+	position: relative;
+	z-index: 1001;
+}
+
+.add-clerk .QR-box .QR-bg img {
+	width: 100%;
+}
+
+.add-clerk .QR-box .QR {
+	width: 100%;
+	position: absolute;
+	z-index: 1000;
+	top: 37px;
+	left: 94px;
+	width: 162px;
+	height: 162px;
+	overflow: hidden;
+}
+
+.add-clerk .QR-box .QR img {
 	width: 100%;
 }
 
 .add-clerk .hint {
 	font-size: 0.6875em;
-	/*11*/
 	text-align: center;
 	margin-top: 2.454545em;
+	color: #989898;
 }
 
 .sd-cc {
@@ -3011,6 +3035,7 @@ i.icon-plus-sign35 {
 .account-type-popup {
 	width: 100%;
 }
+
 .select-like-popup .mint-popup,
 .food-type-popup .mint-popup,
 .select-img-type .mint-popup,
@@ -3256,14 +3281,6 @@ i.icon-link-black {
 	font-weight: 500;
 }
 
-.card-img-info .sd-link-cell-h70 .left .content>label>img {
-	width: 60px;
-	height: 60px;
-}
-
-.card-img-info .sd-link-cell-h70 .left .content {
-	padding-top: 5px;
-}
 
 .card-img-info .sd-link-cell-h70 .content .hint-info,
 .other-file .sd-link-cell-h70 .content .hint-info {
@@ -3619,16 +3636,25 @@ i.icon-download {
 	line-height: 70px;
 }
 
-.sd-table-num .left a {
-	font-size: 14px;
+.sd-table-num .left .editor-btn {
 	color: #439aff;
-	line-height: 70px;
-	display: inline-block;
 }
 
 .sd-table-num .right {
 	position: relative;
 	margin-top: 7px;
+}
+
+.sd-table-num .editor-status {
+	margin: 0;
+	padding-right: 31px;
+}
+
+.sd-table-num .editor-status span {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 70px;
+	color: #232323;
 }
 
 .sd-table-num .right .mask {

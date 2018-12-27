@@ -67,7 +67,7 @@
 									<span class="title">价格</span>
 									<mt-field type="number" v-model="item.price" placeholder="输入价格"></mt-field>
 								</span>
-								<i class="size-delete" @click="deleteSize(index)"></i>
+								<i class="size-delete" @click="showDeleteSizePopup(index)"></i>
 							</div>
 						</div>
 						<div class="cell add-size" @click="addSize">
@@ -77,11 +77,7 @@
 						</div>
 					</div>
 				</transition>
-
-
-
-
-
+				
 				<!-- 偏好 -->
 				<div class="cell space-top" @click="showSelectLikePopup">
 					<div class="cell-warpper">
@@ -145,7 +141,7 @@
 					<button type="button" class="btn">确认添加</button>
 				</div>
 			</div>
-			
+
 			<div class="food-type-popup">
 				<mt-popup v-model="foodTypePopup" position="bottom">
 					<div class="tool-bar clearfix">
@@ -159,7 +155,7 @@
 					<mt-picker :slots="slotsFoodType" @change="foodTypeOnValuesChange"></mt-picker>
 				</mt-popup>
 			</div>
-			
+
 			<div class="select-like-popup">
 				<mt-popup v-model="selectLikePopup" position="bottom">
 					<div class="tool-bar clearfix">
@@ -174,15 +170,28 @@
 						<div class="sd-checkbox-group">
 							<label v-for="(item, index) in likes" :key="index" class="clearfix">
 								<span class="left">{{item.name}}</span>
-								<input type="checkbox" :value="item.value" :checked="item.checked" @change="changeCheckBox(index)"/>
+								<input type="checkbox" :value="item.value" :checked="item.checked" @change="changeCheckBox(index)" />
 								<div class="point right"></div>
 							</label>
 						</div>
 					</div>
-					
 				</mt-popup>
 			</div>
-			
+
+			<!-- 是否添加店员弹窗 -->
+			<div class="sd-popup" v-show="deleteSizePopup">
+				<div class="add-clerk-popup popup">
+					<div class="content">
+						<h3>是否删除该规格</h3>
+					</div>
+					<div class="btn clearfix">
+						<button type="button" class="btn btn-cancel left" @click="deleteSizeCancel">否</button>
+						<button type="button" class="btn btn-ok left" @click="deleteSizeOK">是</button>
+					</div>
+				</div>
+				<div class="popup-mask"></div>
+			</div>
+
 		</div>
 		<script src="static/js/vue.min.js"></script>
 		<script src="static/js/mint-ui.js"></script>

@@ -18,15 +18,15 @@
 	</head>
 	<body>
 		<div id="app" v-cloak>
-			<div class="editor-QR">
+			<div class="editor-QR" v-show="!isShowAddQR">
 				<div class="sd-hint-info">
 					<p class="before">可自行修改餐桌编号</p>
 				</div>
-				<div class="table-num-list">
-					<div class="sd-table-num clearfix">
+				<div class="table-num-list" v-if="tables">
+					<div class="sd-table-num clearfix" v-for="(item, index) in tables" :key="index">
 						<div class="left">
-							<span>4号桌</span>
-							<a href="#">[修改]</a>
+							<span>{{item.name}}</span>
+							<span class="editor-btn" @click="showEditorSeatNamePopup(index)">[修改]</span>
 						</div>
 						<div class="right">
 							<img src="static/img/table-QR.jpg" alt="">
@@ -34,45 +34,12 @@
 								<a href="see-QR.html">查看</a>
 							</div>
 						</div>
-					</div>
-					<div class="sd-table-num clearfix">
-						<div class="left">
-							<span>3号桌</span>
-							<a href="#">[修改]</a>
-						</div>
-						<div class="right">
-							<img src="static/img/table-QR.jpg" alt="">
-							<div class="mask">
-								<a href="see-QR.html">查看</a>
-							</div>
-						</div>
-					</div>
-					<div class="sd-table-num clearfix">
-						<div class="left">
-							<span>2号桌</span>
-							<a href="#">[修改]</a>
-						</div>
-						<div class="right">
-							<img src="static/img/table-QR.jpg" alt="">
-							<div class="mask">
-								<a href="see-QR.html">查看</a>
-							</div>
-						</div>
-					</div>
-					<div class="sd-table-num clearfix">
-						<div class="left">
-							<span>1号桌</span>
-							<a href="#">[修改]</a>
-						</div>
-						<div class="right">
-							<img src="static/img/table-QR.jpg" alt="">
-							<div class="mask">
-								<a href="see-QR.html">查看</a>
-							</div>
+						<div class="right editor-status">
+							<span>{{item.status}}</span>
 						</div>
 					</div>
 				</div>
-				<div class="add-table-QR">
+				<div class="add-table-QR" @click="addQR">
 					<div class="cc">
 						<i class="icon"></i><span>新增二维码</span>
 					</div>
@@ -82,10 +49,38 @@
 					<button type="button" class="btn">保存修改</button>
 				</div>
 			</div>
+			<!-- 修改餐桌编号弹窗 -->
+			<div class="sd-popup" v-show="editorSeatNamePopup">
+				<div class="add-QR-popup popup">
+					<div class="content">
+						<h3>请修改餐桌编号</h3>
+						<div class="input-warrper">
+							<div class="input-box">
+								<input type="text" v-model="newSeatName" placeholder="请输入修改后的名称" ref="inputDOM">
+							</div>
+						</div>
+					</div>
+					<div class="btn clearfix">
+						<button type="button" class="btn btn-cancel left" @click="editorSeatNameCancel">取消</button>
+						<button type="button" class="btn btn-ok left" @click="editorSeatNameOK">确认</button>
+					</div>
+				</div>
+				<div class="popup-mask"></div>
+			</div>
+			<!-- 输入桌数 -->
+			<div class="input-table-num" v-show="isShowAddQR">
+				<div class="input-box">
+					<p>请输入桌数</p>
+					<input type="number" placeholder="请输入桌数" v-model="addNum">
+				</div>
+				<div class="sd-btn-box">
+					<button class="btn" @click="createQR">生成二维码</button>
+				</div>
+			</div>
 		</div>
 		<script src="static/js/vue.min.js"></script>
 		<script src="static/js/mint-ui.js"></script>
 
-		<script src="static/js/add-clerk.js"></script>
+		<script src="static/js/editor-QR.js"></script>
 	</body>
 </html>

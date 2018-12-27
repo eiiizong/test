@@ -9,21 +9,26 @@
 		<meta name="author" content="" />
 		<title>添加店员</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
-		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
 	</head>
 	<body>
 		<div id="app" v-cloak>
 			<div class="add-clerk">
-				<h3>请扫描下方的二维码进行添加</h3>
-				<p class="hint add-method">添加方法：未添加的店员使用微信扫一扫进行扫码</p>
+				<h3 @click="showAddClerkPopup">请扫描下方的二维码进行添加</h3>
+				<p class="add-method-hint">添加方法：未添加的店员使用微信扫一扫进行扫码</p>
 				<div class="QR-box">
-					<img src="static/img/add-food-img.jpg">
+					<div class="QR-bg">
+						<img src="static/img/add-clerk-bg.png">
+					</div>
+					<div class="QR" ref="QR">
+						<img src="static/img/QR@2x.png" alt="">
+					</div>
 				</div>
 				<p class="hint">*二维码定时更新，请勿截屏，以免影响正常使用</p>
 
-				<div class="sd-popup" v-show="showPopup">
+				<!-- 是否添加店员弹窗 -->
+				<div class="sd-popup" v-show="isAddClerkPopup">
 					<div class="add-clerk-popup popup">
 						<div class="content">
 							<h3>是否将‘南希’添加为店员？</h3>
@@ -44,9 +49,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
-
+		<script src="static/js/vue.min.js"></script>
 		<script src="static/js/add-clerk.js"></script>
 	</body>
 </html>

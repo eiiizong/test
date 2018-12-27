@@ -12,6 +12,7 @@ var app = new Vue({
 			foodType: '', //菜品分类
 			sizePrices: [],
 			TS: '',
+			clickFalse: false,
 			// 选择分类
 			foodTypePopup: false,
 			slotsFoodType: [{
@@ -49,6 +50,8 @@ var app = new Vue({
 				}
 			],
 			selectedLike: [],
+			deleteSizePopup: false,
+			index: 0
 		}
 	},
 	mounted: function() {
@@ -71,11 +74,6 @@ var app = new Vue({
 				id: order
 			};
 			arr.push(item);
-			this.$forceUpdate();
-		},
-		// 删除规格
-		deleteSize: function(index) {
-			this.sizePrices.splice(index, 1);
 			this.$forceUpdate();
 		},
 		// 显示分类
@@ -122,6 +120,21 @@ var app = new Vue({
 					data[index].checked = !data[index].checked;
 				}
 			});
+		},
+		// 显示 删除规格弹窗
+		showDeleteSizePopup: function(index) {
+			this.index = index;
+			this.deleteSizePopup = !this.deleteSizePopup;
+		},
+		// 取消删除规格
+		deleteSizeCancel: function() {
+			this.deleteSizePopup = !this.deleteSizePopup;
+		},
+		// 确认删除规格
+		deleteSizeOK: function() {
+			this.sizePrices.splice(this.index, 1);
+			this.$forceUpdate();
+			this.deleteSizePopup = !this.deleteSizePopup;
 		}
 
 	},
