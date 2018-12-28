@@ -54,6 +54,14 @@ var app = new Vue({
 				{
 					name: '工商银行',
 					isChecked: false
+				},
+				{
+					name: '商业银行',
+					isChecked: false
+				},
+				{
+					name: '招商银行',
+					isChecked: false
 				}
 			],
 			popupAccountType: false,
@@ -1574,6 +1582,7 @@ var app = new Vue({
 		// 计算滚动的高度
 		caclScrollHeight: function() {
 			var serchPopupDOM = this.$refs.serchPopup.$el;
+			console.log(serchPopupDOM);
 			var scrollDOM = this.$refs.scrollDOM;
 			this.$nextTick(function() {
 				scrollDOM.style.height = (serchPopupDOM.offsetHeight - 85) + 'px';
@@ -1651,6 +1660,7 @@ var app = new Vue({
 		// 银行选择 popup 弹出事件
 		showaAcountBankPopup: function() {
 			this.popupSelectBank = !this.popupSelectBank;
+			this.caclScrollHeight();
 		},
 		// 银行选择 popup 选择事件
 		accountBankOnValuesChange: function(picker, value) {

@@ -3676,9 +3676,14 @@ i.icon-download {
 	text-align: center;
 }
 
-.sd-table-num .right img {
+.sd-table-num .right .img-box {
 	width: 56px;
 	height: 56px;
+	background-color: #eee;
+}
+
+.sd-table-num .right .img-box img {
+	width: 100%;
 }
 
 .editor-QR .add-table-QR {

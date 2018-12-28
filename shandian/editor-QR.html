@@ -29,7 +29,9 @@
 							<span class="editor-btn" @click="showEditorSeatNamePopup(index)">[修改]</span>
 						</div>
 						<div class="right">
-							<img src="static/img/table-QR.jpg" alt="">
+							<div class="img-box">
+								<img :src="item.QRImgUrl" alt="" v-if="!!item.QRImgUrl">
+							</div>
 							<div class="mask">
 								<a href="see-QR.html">查看</a>
 							</div>
@@ -71,10 +73,11 @@
 			<div class="input-table-num" v-show="isShowAddQR">
 				<div class="input-box">
 					<p>请输入桌数</p>
-					<input type="number" placeholder="请输入桌数" v-model="addNum">
+					<input type="number" placeholder="请输入增加的桌数" v-model="addNum">
 				</div>
 				<div class="sd-btn-box">
-					<button class="btn" @click="createQR">生成二维码</button>
+					<button class="btn" @click="createQR" v-show="!!addNum">生成二维码</button>
+					<button class="btn" @click="cancelCreateQR" v-show="!addNum">返回</button>
 				</div>
 			</div>
 		</div>

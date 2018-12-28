@@ -5,7 +5,8 @@ var app = new Vue({
 			isAddClerkPopup: true,
 			tables: [{
 					name: '1号桌',
-					status: '修改中···'
+					status: '修改中···',
+					QRImgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4'
 				},
 				{
 					name: '2号桌',
@@ -23,7 +24,7 @@ var app = new Vue({
 			editorSeatNamePopup: false,
 			index: 0,
 			newSeatName: '',
-			isShowAddQR: true,
+			isShowAddQR: false,
 			addNum: ''
 		}
 	},
@@ -31,7 +32,9 @@ var app = new Vue({
 		this.init();
 	},
 	methods: {
-		init: function() {},
+		init: function() {
+			this.initIsShowAddQR();
+		},
 		// 确定修改坐位号
 		editorSeatNameOK: function() {
 			this.tables[this.index].name = this.newSeatName;
@@ -42,6 +45,12 @@ var app = new Vue({
 		editorSeatNameCancel: function() {
 			this.editorSeatNamePopup = !this.editorSeatNamePopup;
 		},
+		// 初始化时是否显示弹窗
+		initIsShowAddQR: function() {
+			if (this.tables.length === 0) {
+				this.isShowAddQR = true;
+			}
+		},
 		// 显示修改坐位号弹窗
 		showEditorSeatNamePopup: function(index) {
 			this.index = index;
@@ -50,7 +59,23 @@ var app = new Vue({
 		addQR: function() {
 			this.isShowAddQR = !this.isShowAddQR;
 		},
+		createItem: function() {
+			var obj = {};
+			obj.name = this.tables.length + 1 + '桌号';
+			obj.status = '';
+			this.tables.push(obj);
+			this.$forceUpdate();
+		},
 		createQR: function() {
+			var num = parseInt(this.addNum);
+			if (!!num) {
+				for (var i = 0; i < num; i++) {
+					this.createItem();
+				}
+			}
+			this.isShowAddQR = !this.isShowAddQR;
+		},
+		cancelCreateQR: function() {
 			this.isShowAddQR = !this.isShowAddQR;
 		}
 	},
