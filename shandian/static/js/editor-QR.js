@@ -5,8 +5,7 @@ var app = new Vue({
 			isAddClerkPopup: true,
 			tables: [{
 					name: '1号桌',
-					status: '修改中···',
-					QRImgUrl: 'https://avatars1.githubusercontent.com/u/30979753?s=400&u=1de5d828ea2597ca7618410665fcf23580c8f892&v=4'
+					status: '修改中···'
 				},
 				{
 					name: '2号桌',

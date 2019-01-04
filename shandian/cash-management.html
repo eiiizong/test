@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
-	<title>提现管理</title>
-	<link rel="shortcut icon" href="static/img/favicon.ico">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>提现管理</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="static/css/mint-ui.css">
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
-	<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
-
-	<link rel="stylesheet" type="text/css" href="static/css/index.css" />
-
-
-</head>
-
-<body>
-	<div id="app" v-cloak>
-		<div class="cash-management">
-			<a href="bank-card-management.html" class="first-of-type">
-				<div class="sd-link-cell clearfix">
-					<div class="left">
-						<span>银行卡管理</span>
-					</div>
-					<i class="icon icon-link right"></i>
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<div class="toolbar goback">
+				<div>
+					<i class="icon icon-goback"></i>
 				</div>
-			</a>
-			<a href="withdrawal-record.html" class="">
-				<div class="sd-link-cell clearfix">
-					<div class="left">
-						<span>提现记录</span>
+				<p class="title">提现管理</p>
+			</div>
+			<div class="cash-management">
+				<a href="bank-card-management.html" class="first-of-type">
+					<div class="sd-link-cell clearfix">
+						<div class="left">
+							<span>银行卡管理</span>
+						</div>
+						<i class="icon icon-link right"></i>
 					</div>
-					<i class="icon icon-link right"></i>
-				</div>
-			</a>
+				</a>
+				<a href="withdrawal-record.html" class="">
+					<div class="sd-link-cell clearfix">
+						<div class="left">
+							<span>提现记录</span>
+						</div>
+						<i class="icon icon-link right"></i>
+					</div>
+				</a>
+			</div>
 		</div>
-	</div>
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-	<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
-	<script src="static/js/cash-management.js"></script>
-</body>
+		<script src="static/js/vue.min.js"></script>
+		<script src="static/js/mint-ui.js"></script>
+		<script src="static/js/cash-management.js"></script>
+	</body>
 
 </html>

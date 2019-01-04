@@ -18,14 +18,24 @@
 	</head>
 	<body>
 		<div id="app" v-cloak>
+			<div class="toolbar goback">
+				<div>
+					<i class="icon icon-goback"></i>
+				</div>
+				<p class="title">查看二维码</p>
+			</div>
 			<div class="see-QR">
 				<div class="img-box">
-					<img src="static/img/table-QR-bg.png" alt="" ref="bgImg">
-					<p class="num" ref="numDOM">01</p>
+					<img src="static/img/table-QR-bg.jpg" alt="" ref="bgImg">
+					<!-- user-defined -->
+					<p class="num fas" ref="numDOM">020</p>
 					<div class="QR" ref="QRbox">
 						<div><img src="static/img/QR@2x.png"></div>
 					</div>
 				</div>
+				<!-- <div class="created-img">
+					<img src="static/img/table-QR-bg.jpg">
+				</div> -->
 				<div class="btn-box">
 					<!-- <button type="button" class="btn download">
 						<i class="icon icon-download"></i>

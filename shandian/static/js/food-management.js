@@ -173,21 +173,19 @@ var app = new Vue({
 				}
 				caclHeight();
 				var menuWarrper = _this.$refs.menuWarrper;
-				menuWarrper.addEventListener('scroll', function() {
-					var scrollTop = menuWarrper.scrollTop;
-					if (scrollTop > 0) {
-						_this.$refs.banner.style.display = 'none';
-						_this.$refs.btn.style.display = 'none';
-						caclHeight();
-					} else {
-						_this.$refs.banner.style.display = 'block';
-						_this.$refs.btn.style.display = 'block';
-						caclHeight();
-					}
-				});
-
+// 				menuWarrper.addEventListener('scroll', function() {
+// 					var scrollTop = menuWarrper.scrollTop;
+// 					if (scrollTop > 10) {
+// 						_this.$refs.banner.style.display = 'none';
+// 						_this.$refs.btn.style.display = 'none';
+// 						caclHeight();
+// 					} else {
+// 						_this.$refs.banner.style.display = 'block';
+// 						_this.$refs.btn.style.display = 'block';
+// 						caclHeight();
+// 					}
+// 				});
 			};
-
 		},
 		// 帮助创建分类
 		ok: function() {

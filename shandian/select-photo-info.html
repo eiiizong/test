@@ -15,6 +15,12 @@
 	</head>
 	<body>
 		<div id="app" v-cloak>
+			<div class="toolbar goback">
+				<div>
+					<i class="icon icon-goback"></i>
+				</div>
+				<p class="title">选择照片信息</p>
+			</div>
 			<div class="select-photo-info">
 				<div class="sd-radio-group">
 					<label v-for="(item, index) in checkBoxData" :key="index" class="clearfix">
@@ -28,7 +34,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+		<script src="static/js/vue.min.js"></script>
 		<script src="static/js/select-photo-info.js"></script>
 	</body>
 </html>

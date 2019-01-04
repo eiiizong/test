@@ -10,13 +10,19 @@
 		<title>验证手机号码</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 
-		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+		<link rel="stylesheet" href="static/css/mint-ui.css">
 
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
 	</head>
 	<body>
 		<div id="app" v-cloak>
+			<div class="toolbar goback">
+				<div>
+					<i class="icon icon-goback"></i>
+				</div>
+				<p class="title">验证手机号码</p>
+			</div>
 			<!-- 店铺基本信息 -->
 			<div class="verify-tel">
 				<p>绑定银行卡需要短信确认，验证码已发送至手机：177****8316，请按操作提示。</p>
@@ -36,8 +42,8 @@
 				</div>
 			</div>
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		<script src="static/js/vue.min.js"></script>
+		<script src="static/js/mint-ui.js"></script>
 		<script src="static/js/verify-tel.js"></script>
 	</body>
 </html>

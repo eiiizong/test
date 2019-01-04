@@ -9,15 +9,18 @@
 		<meta name="author" content="" />
 		<title>小程序名称</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
-
-		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
-
+		<link rel="stylesheet" href="static/css/mint-ui.css">
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
-
 
 	</head>
 	<body>
 		<div id="app" v-cloak>
+			<div class="toolbar goback">
+				<div>
+					<i class="icon icon-goback"></i>
+				</div>
+				<p class="title">小程序名称</p>
+			</div>
 			<div class="app-name">
 				<div class="sd-input-box">
 					<mt-field type="text" v-model="name" ref="input" placeholder="请输入您的小程序名称"></mt-field>
@@ -31,8 +34,8 @@
 				</div>
 			</div>
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		<script src="static/js/vue.min.js"></script>
+		<script src="static/js/mint-ui.js"></script>
 		<script src="static/js/app-name.js"></script>
 	</body>
 </html>

@@ -10,14 +10,20 @@
 		<title>小程序申请流程</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 
-		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+		<link rel="stylesheet" href="static/css/mint-ui.css">
 
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
 
 	</head>
 	<body>
-		<div id="app" v-cloak>
+		<div id="app" v-cloak class="no-padding">
+			<!-- <div class="toolbar goback">
+				<div>
+					<i class="icon icon-goback"></i>
+				</div>
+				<p class="title">小程序申请流程</p>
+			</div> -->
 			<div class="app-apply-step">
 				<div class="sd-img-text">
 					<h2>第一步</h2>
@@ -49,11 +55,10 @@
 					<p>显示成功注册小程序账号，用刚刚填写的邮箱和密码登录，进入小程序后台，完成企业认证，即可进行小程序版本开发，<span>针对有支付类型的小程序还需要进行微信支付认证</span></p>
 					<img src="static/img/apply-step-01.png" alt="">
 				</div>
-				
 			</div>
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		<script src="static/js/vue.min.js"></script>
+		<script src="static/js/mint-ui.js"></script>
 		<script src="static/js/add-cooker.js"></script>
 	</body>
 </html>

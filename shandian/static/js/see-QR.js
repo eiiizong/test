@@ -17,13 +17,18 @@ var app = new Vue({
 			var func = function(newW, numDOM, QR) {
 				var x = newW / 375;
 				var numTop = 120 * x;
-				var numLeft = 90 * x;
-				var numFS = 54 * x;
+				var numLeft = 70 * x;
+				var numFS;
+				console.log(numDOM.className)
+				if (numDOM.className === 'num') {
+					numFS = 54 * x;
+				} else {
+					numFS = 30 * x;
+				}
 				numDOM.style.top = numTop + 'px';
 				numDOM.style.fontSize = numFS + 'px';
 				numDOM.style.left = numLeft + 'px';
-
-				var qrBottom = 40 * x;
+				var qrBottom = 40 * x + 20;
 				var qrLeft = 60 * x;
 				var qrW = 108 * x;
 				var qrH = 108 * x;
@@ -37,7 +42,7 @@ var app = new Vue({
 				var imgW = _this.$refs.bgImg.offsetWidth;
 				var qrBox = _this.$refs.QRbox;
 				var numDOM = _this.$refs.numDOM;
-				console.log(numDOM);
+				console.log(numDOM.className);
 				var screenWidth = window.screen.width;
 				func(imgW, numDOM, qrBox);
 			}

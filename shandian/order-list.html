@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
-	<title>订单列表</title>
-	<link rel="shortcut icon" href="static/img/favicon.ico">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>订单列表</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
 
-	<link rel="stylesheet" href="static/css/mint-ui.css">
+		<link rel="stylesheet" href="static/css/mint-ui.css">
 
-	<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
+	</head>
 
-</head>
+	<body>
+		<div id="app" v-cloak>
+			<div class="toolbar goback">
+				<div>
+					<i class="icon icon-goback"></i>
+				</div>
+				<p class="title">订单列表</p>
+			</div>
+			<div class="order-list">
 
-<body>
-	<div id="app" v-cloak>
-		<div class="order-list">
-
-			<div class="order-list-warpper" v-if="orderList">
-				<div class="sd-order-card" v-for="(item,index) in orderList" :key="index">
-					<div class="take-food-num clearfix">
-						<span class="left">取餐号：{{item.takeFoodNumber}}</span>
-						<i class="icon icon-replace-order right" v-if="item.isReplaceOrder"></i>
-					</div>
-					<div class="seat-num">
-						<span>座位号：{{item.seatNum}}</span>
-					</div>
-					<div class="food-detail clearfix" v-for="(foodItem, foodIndex) in item.foods" :key="foodIndex">
-						<span class="left">{{foodItem.name}}</span>
-						<div class="right clearfix">
-							<span class="size">{{foodItem.size}}</span>
-							<span class="num">×{{foodItem.num}}</span>
-							<span class="price">¥{{foodItem.allPrice}}</span>
+				<div class="order-list-warpper" v-if="orderList">
+					<div class="sd-order-card" v-for="(item,index) in orderList" :key="index">
+						<div class="take-food-num clearfix">
+							<span class="left">取餐号：{{item.takeFoodNumber}}</span>
+							<i class="icon icon-replace-order right" v-if="item.isReplaceOrder"></i>
 						</div>
-					</div>
-					<div class="more" v-if="item.more">···</div>
-					<div class="total clearfix">
-						<span class="left">总计</span>
-						<div class="right clearfix">
-							<span class="num">{{item.totalNum}}</span>
-							<span class="price">¥{{item.payMoney}}</span>
+						<div class="seat-num">
+							<span>座位号：{{item.seatNum}}</span>
 						</div>
-					</div>
+						<div class="food-detail clearfix" v-for="(foodItem, foodIndex) in item.foods" :key="foodIndex">
+							<span class="left">{{foodItem.name}}</span>
+							<div class="right clearfix">
+								<span class="size">{{foodItem.size}}</span>
+								<span class="num">×{{foodItem.num}}</span>
+								<span class="price">¥{{foodItem.allPrice}}</span>
+							</div>
+						</div>
+						<div class="more" v-if="item.more">···</div>
+						<div class="total clearfix">
+							<span class="left">总计</span>
+							<div class="right clearfix">
+								<span class="num">{{item.totalNum}}</span>
+								<span class="price">¥{{item.payMoney}}</span>
+							</div>
+						</div>
 
-					<div class="ordered-time">
-						<span>下单时间：{{item.orderTime}}</span>
-					</div>
-					<div class="sd-btn-box-inline">
-						<a class="btn" href="order-detail.html">查看详情</a>
+						<div class="ordered-time">
+							<span>下单时间：{{item.orderTime}}</span>
+						</div>
+						<div class="sd-btn-box-inline">
+							<a class="btn" href="order-detail.html">查看详情</a>
+						</div>
 					</div>
 				</div>
 			</div>
+
 		</div>
+		<script src="static/js/vue.min.js"></script>
+		<script src="static/js/mint-ui.js"></script>
 
-	</div>
-	<script src="static/js/vue.min.js"></script>
-	<script src="static/js/mint-ui.js"></script>
-
-	<script src="static/js/order-list.js"></script>
-</body>
+		<script src="static/js/order-list.js"></script>
+	</body>
 
 </html>

@@ -21,6 +21,12 @@
 	</head>
 	<body>
 		<div id="app" v-cloak>
+			<div class="toolbar goback">
+				<div>
+					<i class="icon icon-goback"></i>
+				</div>
+				<p class="title">设置营业时间</p>
+			</div>
 			<!-- 店铺基本信息 -->
 			<div class="set-work-time">
 				<div class="sd-work-time-cell clearfix" v-for="(item, index) in workTimes" :key="index">

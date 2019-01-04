@@ -144,6 +144,11 @@ var app = new Vue({
 				]
 			};
 			mychart.setOption(options);
+			mychart.on('click', function(param) {
+				console.log(param);
+				var url = param.data.url;
+				// window.location.href = url;
+			});
 		},
 		// 计算总价
 		getTotalMoney() {
@@ -158,7 +163,7 @@ var app = new Vue({
 			var month = now.getMonth() + 1;
 			this.years = years;
 			this.month = month;
-			this.choiceDate = years + '月' + month + '日';
+			this.choiceDate = years + '年' + month + '月';
 			this.calcDays(years, month);
 		},
 		openPicker() {

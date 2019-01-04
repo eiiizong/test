@@ -10,12 +10,18 @@
 		<title>商铺信息管理</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 		<!-- Bootstrap -->
-		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+		<link rel="stylesheet" href="static/css/mint-ui.css">
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
 
 	</head>
 	<body>
 		<div id="app" v-cloak>
+			<div class="toolbar goback">
+				<div>
+					<i class="icon icon-goback"></i>
+				</div>
+				<p class="title">商铺信息管理</p>
+			</div>
 			<div class="change-store-info">
 
 				<div class="store-head-portrait">
@@ -68,8 +74,8 @@
 				</div>
 			</mt-popup>
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		<script src="static/js/vue.min.js"></script>
+		<script src="static/js/mint-ui.js"></script>
 		<script src="static/js/store-info-change.js"></script>
 	</body>
 </html>

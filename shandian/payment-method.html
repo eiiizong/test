@@ -18,6 +18,12 @@
 	</head>
 	<body>
 		<div id="app" v-cloak>
+			<div class="toolbar goback">
+				<div>
+					<i class="icon icon-goback"></i>
+				</div>
+				<p class="title">店铺类型选择</p>
+			</div>
 			<div class="payment-method">
 				<a href="my-app-mall.html" class="first-of-type">
 					<div class="sd-link-cell clearfix">
@@ -33,7 +39,7 @@
 							<span>
 								平台管理
 							</span>
-							<i class="icon icon-help"  @click.prevent="gotopage"></i>
+							<i class="icon icon-help" @click.prevent="gotopage"></i>
 						</div>
 						<i class="icon icon-link right"></i>
 					</div>

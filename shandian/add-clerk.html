@@ -10,10 +10,15 @@
 		<title>添加店员</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
-
 	</head>
 	<body>
 		<div id="app" v-cloak>
+			<div class="toolbar goback">
+				<div>
+					<i class="icon icon-goback"></i>
+				</div>
+				<p class="title">添加店员</p>
+			</div>
 			<div class="add-clerk">
 				<h3 @click="showAddClerkPopup">请扫描下方的二维码进行添加</h3>
 				<p class="add-method-hint">添加方法：未添加的店员使用微信扫一扫进行扫码</p>

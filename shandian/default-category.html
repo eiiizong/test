@@ -9,20 +9,24 @@
 		<meta name="author" content="" />
 		<title>默认分类</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
-
 		<link rel="stylesheet" href="static/css/mint-ui.css">
-
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
-
 
 	</head>
 	<body>
 		<div id="app" v-cloak>
+			<div class="toolbar goback">
+				<div>
+					<i class="icon icon-goback"></i>
+				</div>
+				<p class="title">默认分类</p>
+			</div>
+
 			<div class="default-category">
 				<div class="sd-hint-info">
 					<p>请选择您的店铺类型</p>
 				</div>
-				
+
 				<div class="cell-group">
 					<a href="#" v-for="(item, index) in list" :key="index">
 						<div class="sd-link-cell clearfix">
@@ -33,8 +37,8 @@
 						</div>
 					</a>
 				</div>
-				
-				
+
+
 			</div>
 		</div>
 		<script src="static/js/vue.min.js"></script>

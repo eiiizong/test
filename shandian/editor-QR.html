@@ -9,15 +9,19 @@
 		<meta name="author" content="" />
 		<title>编辑二维码</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
-
 		<link rel="stylesheet" href="static/css/mint-ui.css">
-
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
-
 
 	</head>
 	<body>
 		<div id="app" v-cloak>
+			<div class="toolbar goback">
+				<div>
+					<i class="icon icon-goback"></i>
+				</div>
+				<p class="title">编辑二维码</p>
+			</div>
+
 			<div class="editor-QR" v-show="!isShowAddQR">
 				<div class="sd-hint-info">
 					<p class="before">可自行修改餐桌编号</p>
@@ -30,10 +34,10 @@
 						</div>
 						<div class="right">
 							<div class="img-box">
-								<img :src="item.QRImgUrl" alt="" v-if="!!item.QRImgUrl">
+								<img src="static/img/table-QR.jpg" alt="">
 							</div>
-							<div class="mask">
-								<a href="see-QR.html">查看</a>
+							<div class="mask" :class="!!item.status?'':'created'">
+								<a href="see-QR.html" v-if="!item.status">查看</a>
 							</div>
 						</div>
 						<div class="right editor-status">
@@ -45,10 +49,6 @@
 					<div class="cc">
 						<i class="icon"></i><span>新增二维码</span>
 					</div>
-				</div>
-				<p class="sd-hint">*修改名称后，保存修改才可查看新的桌贴哦</p>
-				<div class="sd-btn-box">
-					<button type="button" class="btn">保存修改</button>
 				</div>
 			</div>
 			<!-- 修改餐桌编号弹窗 -->

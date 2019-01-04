@@ -353,8 +353,11 @@ p {
 #app {
 	width: 100%;
 	height: 100%;
+	padding-top: 44px;
 }
-
+#app.no-padding {
+	padding-top: 0;
+}
 /****************清除浮动 END****************************/
 
 
@@ -924,7 +927,7 @@ i.icon-down.no {
 
 /****************************** 添加菜品 ****************/
 .add-food {
-	padding-top: 0.625em;
+	/* padding-top: 0.625em; */
 	font-weight: 500;
 }
 
@@ -1125,7 +1128,6 @@ i.icon-down.no {
 	min-height: 100%;
 	background-color: #fff;
 	padding: 0 0.875em;
-	padding-top: 0.625em;
 }
 
 .add-clerk h3 {
@@ -1134,7 +1136,7 @@ i.icon-down.no {
 	font-weight: bold;
 	color: #282828;
 	line-height: 1;
-	margin-top: 0.3125em;
+	padding-top: 0.3125em;
 }
 
 .add-clerk .add-method-hint {
@@ -2366,7 +2368,7 @@ i.icon-add-bankcard {
 	width: 100%;
 	height: 100%;
 	padding-bottom: 50px;
-	padding-top: 44px;
+	/* padding-top: 44px; */
 }
 
 .sale-total .top {
@@ -3087,7 +3089,7 @@ i.icon-plus-sign35 {
 
 /***************************** 选择照片信息 12.11改***********************/
 .select-photo-info {
-	padding-top: 10px;
+	/* padding-top: 10px; */
 }
 
 .sd-radio-group {
@@ -3333,28 +3335,6 @@ i.icon-link-black {
 	display: block;
 }
 
-/*
-.other-file>ul>li.add-img-btn label div{
-	width: 100%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	-webkit-transform: translate(-50%,-50%);
-	text-align: center;
-	
-}
-.other-file>ul>li.add-img-btn label div i{
-	width: 24px;
-	height: 24px;
-	border: ;
-}
-.other-file>ul>li.add-img-btn label div p {
-	width: 100%;
-	font-size: 14px;
-	line-height: 1;
-	padding-top: 5px;
-} */
 .sd-link-cell-h70 .right {
 	float: right;
 	margin-top: 27px;
@@ -3382,7 +3362,7 @@ i.icon-link {
 .payment-method .first-of-type {
 	margin-top: 0;
 }
-
+/* 顶部导航 */
 .toolbar {
 	background-color: #afd4ff;
 	height: 44px;
@@ -3407,7 +3387,42 @@ i.icon-link {
 	height: 15px;
 	background-image: url(../img/icon/tel@2x.png);
 }
-
+.toolbar.goback {
+	width: 100%;
+	font-weight: bold;
+	color: #fff;
+	height: 44px;
+	background-color: #439aff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+.toolbar.goback > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px;
+	height: 44px;
+	z-index: 100;
+}
+.toolbar.goback > div i {
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/svg/goback.svg);
+	margin-top: 4px;
+}
+.toolbar.goback > p.title {
+	width: 100%;
+	position: relative;
+	text-align: center;
+	font-size: 16px;
+	top: 0;
+	left: 0;
+	height: 44px;
+	line-height: 44px;
+	z-index: 99;
+}
 /* 12.12 查看二维码 */
 .see-QR {
 	width: 100%;
@@ -3420,6 +3435,8 @@ i.icon-link {
 .see-QR .img-box {
 	padding: 0;
 	position: relative;
+	padding-bottom: 20px;
+	background-color: #fff;
 }
 
 .see-QR .img-box img {
@@ -3430,15 +3447,26 @@ i.icon-link {
 .see-QR .img-box .num {
 	position: absolute;
 	top: 120px;
-	left: 90px;
+	left: 70px;
 	font-size: 54px;
 	line-height: 1;
 	font-weight: bold;
 }
+.see-QR .img-box .num.user-defined {
+	font-size: 30px;
+}
 
+.see-QR .img-box .num:after {
+	content: '号桌';
+	font-size: 22px;
+	padding-left: 5px;
+}
+.see-QR .img-box .num.user-defined:after {
+	content: '';
+}
 .see-QR .img-box .QR {
 	position: absolute;
-	bottom: 40px;
+	bottom: 60px;
 	left: 60px;
 	width: 108px;
 	height: 108px;
@@ -3455,10 +3483,16 @@ i.icon-link {
 .see-QR .img-box .QR img {
 	width: 100%;
 }
-
+.see-QR .created-img {
+	display: block;
+	width: 100%;
+}
+.see-QR .created-img img {
+	display: block;
+	width: 100%;
+}
 .see-QR p.sd-hint {
 	text-align: center;
-	padding-top: 20px;
 }
 
 .see-QR .btn-box {
@@ -3663,7 +3697,12 @@ i.icon-download {
 	position: absolute;
 	top: 0;
 	right: 0;
-	background-color: rgba(42, 42, 42, .2);
+	opacity: 0.8;
+	background-color: #2a2a2a;
+}
+
+.sd-table-num .right .mask.created {
+	background-color: #0076ff;
 }
 
 .sd-table-num .right .mask a {
@@ -3686,7 +3725,15 @@ i.icon-download {
 	width: 100%;
 }
 
+.editor-QR .table-num-list {
+	padding-bottom: 72px;
+}
+
 .editor-QR .add-table-QR {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
 	height: 72px;
 	border-top: 1px solid #eaeaea;
 	border-bottom: 1px solid #eaeaea;
@@ -3762,7 +3809,7 @@ i.icon-download {
 .store-daily-management {
 	width: 100%;
 	min-height: 100%;
-	padding-top: 44px;
+	/* padding-top: 44px; */
 	padding-bottom: 50px;
 }
 
@@ -3994,7 +4041,7 @@ i.icon-download {
 .mall {
 	width: 100%;
 	min-height: 100%;
-	padding-top: 44px;
+	/* padding-top: 44px; */
 }
 
 
