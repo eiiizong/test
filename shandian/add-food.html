@@ -26,8 +26,10 @@
 					<div class="cell-warpper">
 						<span class="text-left">
 							<span class="title">分类</span>
-							<span class="title-hint" v-if="foodType===''">选择分类</span>
-							<span class="orange" v-else="">{{foodType}}</span>
+							<span class="title-hint orange" v-if="selectedFoodTypes.length==0">选择分类</span>
+							<div v-else>
+								<span class="orange" v-if="index<4" v-for="(item, index) in selectedFoodTypes" :key="index">{{item}}</span>
+							</div>
 						</span>
 						<i class="icon-is-link-big"></i>
 					</div>
@@ -49,41 +51,46 @@
 					</div>
 				</div>
 				<!-- 价格 -->
-				<transition name="fade">
-					<div class="cell price" v-show="!isAddStandard">
-						<div class="cell-warpper">
-							<span class="text-left">
-								<span class="title">价格</span>
-								<mt-field type="text" v-model="price" placeholder="输入价格"></mt-field>
-							</span>
-						</div>
+				<div class="cell price" v-show="!isAddStandard">
+					<div class="cell-warpper">
+						<span class="text-left">
+							<span class="title">价格</span>
+							<mt-field type="text" v-model="price" placeholder="输入价格"></mt-field>
+						</span>
 					</div>
-				</transition>
+				</div>
 				<!-- 规格 价格 -->
 
-				<transition name="fade">
-					<div class="size-price" v-show="isAddStandard">
-						<div class="cell" v-for="(item, index) in sizePrices" :key="index">
-							<div class="cell-warpper">
-								<span class="text-left">
-									<span class="title">规格</span>
-									<mt-field type="text" v-model="item.size" placeholder="例:大\/中\/小"></mt-field>
-								</span>
-								<span class="text-left">
-									<span class="title">价格</span>
-									<mt-field type="number" v-model="item.price" placeholder="输入价格"></mt-field>
-								</span>
-								<i class="size-delete" @click="showDeleteSizePopup(index)"></i>
-							</div>
-						</div>
-						<div class="cell add-size" @click="addSize">
-							<div class="cell-warpper">
-								<p>添加规格</p>
-							</div>
+
+				<div class="size-price" v-show="isAddStandard">
+					<div class="cell" v-for="(item, index) in sizePrices" :key="index">
+						<div class="cell-warpper">
+							<span class="text-left">
+								<span class="title">规格</span>
+								<mt-field type="text" v-model="item.size" placeholder="例:大\/中\/小"></mt-field>
+							</span>
+							<span class="text-left">
+								<span class="title">价格</span>
+								<mt-field type="number" v-model="item.price" placeholder="输入价格"></mt-field>
+							</span>
+							<i class="size-delete" @click="showDeleteSizePopup(index)"></i>
 						</div>
 					</div>
-				</transition>
-				
+					<div class="cell">
+						<div class="cell-warpper" @click="isShowSelectDefaultSizePopup">
+							<span class="text-left">
+								<span class="title">选择默认规格</span>
+							</span>
+							<i class="icon-is-link-big"></i>
+						</div>
+					</div>
+					<div class="cell add-size">
+						<div class="cell-warpper" @click="addSize">
+							<p>添加规格</p>
+						</div>
+					</div>
+				</div>
+
 				<!-- 偏好 -->
 				<div class="cell space-top" @click="showSelectLikePopup">
 					<div class="cell-warpper">
@@ -148,6 +155,7 @@
 				</div>
 			</div>
 
+			<!-- 菜品分类弹窗 -->
 			<div class="food-type-popup">
 				<mt-popup v-model="foodTypePopup" position="bottom">
 					<div class="tool-bar clearfix">
@@ -158,7 +166,14 @@
 							<button class="btn" @click="foodTypeOK">确定</button>
 						</div>
 					</div>
-					<mt-picker :slots="slotsFoodType" @change="foodTypeOnValuesChange"></mt-picker>
+
+					<div class="sd-checkbox-group" ref="foodTypePopupScorllWarpper">
+						<label v-for="(item, index) in foodTypes" :key="index" class="clearfix">
+							<span class="left">{{item.name}}</span>
+							<input type="checkbox" :value="item.value" :checked="item.checked" @change="changeFoodTypeCheckBox(index)" />
+							<div class="point right"></div>
+						</label>
+					</div>
 				</mt-popup>
 			</div>
 
@@ -172,14 +187,12 @@
 							<button class="btn" @click="selectLikeOK">确定</button>
 						</div>
 					</div>
-					<div class="preference">
-						<div class="sd-checkbox-group">
-							<label v-for="(item, index) in likes" :key="index" class="clearfix">
-								<span class="left">{{item.name}}</span>
-								<input type="checkbox" :value="item.value" :checked="item.checked" @change="changeCheckBox(index)" />
-								<div class="point right"></div>
-							</label>
-						</div>
+					<div class="sd-checkbox-group">
+						<label v-for="(item, index) in likes" :key="index" class="clearfix">
+							<span class="left">{{item.name}}</span>
+							<input type="checkbox" :value="item.value" :checked="item.checked" @change="changeCheckBox(index)" />
+							<div class="point right"></div>
+						</label>
 					</div>
 				</mt-popup>
 			</div>
@@ -198,6 +211,47 @@
 				<div class="popup-mask"></div>
 			</div>
 
+			<!-- 添加默认规格 -->
+			<div class="select-default-size-popup">
+				<mt-popup v-model="selectDefaultSizePopup" position="right">
+					<div class="toolbar goback">
+						<div @click="isShowSelectDefaultSizePopup">
+							<i class="icon icon-goback"></i>
+						</div>
+						<p class="title">选择默认规格</p>
+					</div>
+					<div class="default-size">
+						<div class="sd-hint-info">
+							<p>请先选择您的店铺类型</p>
+						</div>
+
+						<div class="cell-group">
+							<div v-for="(item, index) in defaultSizes" :key="index">
+								<div class="sd-link-cell clearfix" @click="storeType(index)">
+									<div class="left">
+										<span>{{item.name}}</span>
+									</div>
+									<i class="icon icon-link-black right"></i>
+								</div>
+								<div class="sd-select-size" v-if="item.selected">
+									<div class="clearfix">
+										<div class="left" v-for="(sizeItem, sizeIndex) in item.children" :key="sizeIndex">
+											<label>
+												<input type="checkbox" :checked="sizeItem.checked" @change="sizeChange(sizeIndex)" />
+												<span>{{sizeItem.sizeName}}</span>
+											</label>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sd-btn-box">
+							<button class="btn" @click="checkedSizeOK">确认</button>
+						</div>
+					</div>
+				</mt-popup>
+			</div>
 		</div>
 		<script src="static/js/vue.min.js"></script>
 		<script src="static/js/mint-ui.js"></script>

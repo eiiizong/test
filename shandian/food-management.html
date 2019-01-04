@@ -51,9 +51,9 @@
 							</ul>
 						</div>
 						<div class="food-detail">
-							<div class="btn-putaway" ref="putawayBtn">
+							<!-- <div class="btn-putaway" ref="putawayBtn">
 								<button @click="allPutaway" class="btn">全部上架</button>
-							</div>
+							</div> -->
 							<div ref="foods" class="foods-box">
 								<ul>
 									<li v-for="(item, index) in foods" :key="index">
@@ -61,25 +61,11 @@
 										<div class="food-detail">
 											<div class="food-name">{{item.name}}</div>
 											<div class="food-desc">{{item.description}}</div>
-											<div class="food-handle clearfix">
-												<div class="checkbox-group left">
-													<label class="clearfix">
-														<span class="left">推荐</span>
-														<input type="checkbox" v-model="item.isRecommend" :checked="item.isRecommend" />
-														<div class="sd-point left"></div>
-													</label>
-												</div>
-												<div class="checkbox-group right">
-													<label class="clearfix">
-														<span class="left">上架</span>
-														<input type="checkbox" v-model="item.isPutAway" :checked="item.isPutAway" />
-														<div class="sd-point left"></div>
-													</label>
-												</div>
-											</div>
 											<div class="food-price clearfix">
 												<span class="left">24</span>
-												<div class="right">编辑</div>
+												<div class="right">
+													<i class="icon icon-editor"></i>
+												</div>
 											</div>
 										</div>
 									</li>

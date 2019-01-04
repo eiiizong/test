@@ -155,37 +155,21 @@ var app = new Vue({
 		},
 		height: function() {
 			var _this = this;
-			window.onload = function() {
-				var caclHeight = function() {
-					var bannerDOM = _this.$refs.banner,
-						btnDOM = _this.$refs.btn,
-						foodDOM = _this.$refs.food,
-						putawayBtnDOM = _this.$refs.putawayBtn,
-						foodsDOM = _this.$refs.foods,
-						windowHeight = document.body.clientHeight,
-						btnHeight = btnDOM.offsetHeight,
-						bannerHeight = bannerDOM.offsetHeight,
-						putawayBtnHeight = putawayBtnDOM.offsetHeight,
-						foodHeight = windowHeight - 94 - bannerHeight - btnHeight,
-						foodsHeight = foodHeight - putawayBtnHeight;
-					foodDOM.style.height = foodHeight + 'px';
-					foodsDOM.style.height = foodsHeight + 'px';
-				}
-				caclHeight();
-				var menuWarrper = _this.$refs.menuWarrper;
-// 				menuWarrper.addEventListener('scroll', function() {
-// 					var scrollTop = menuWarrper.scrollTop;
-// 					if (scrollTop > 10) {
-// 						_this.$refs.banner.style.display = 'none';
-// 						_this.$refs.btn.style.display = 'none';
-// 						caclHeight();
-// 					} else {
-// 						_this.$refs.banner.style.display = 'block';
-// 						_this.$refs.btn.style.display = 'block';
-// 						caclHeight();
-// 					}
-// 				});
-			};
+			var caclHeight = function() {
+				var bannerDOM = _this.$refs.banner,
+					btnDOM = _this.$refs.btn,
+					foodDOM = _this.$refs.food,
+					foodsDOM = _this.$refs.foods,
+					windowHeight = document.body.clientHeight,
+					btnHeight = btnDOM.offsetHeight,
+					bannerHeight = bannerDOM.offsetHeight,
+					foodHeight = windowHeight - 94 - bannerHeight - btnHeight;
+					
+				foodDOM.style.height = foodHeight + 'px';
+				foodsDOM.style.height = foodHeight + 'px';
+			}
+			caclHeight();
+			window.onload = caclHeight;
 		},
 		// 帮助创建分类
 		ok: function() {

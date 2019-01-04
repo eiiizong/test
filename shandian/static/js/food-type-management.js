@@ -61,7 +61,7 @@ var app = new Vue({
 			var arr = this.myArray[i + 1];
 			this.myArray[i + 1] = this.myArray[i];
 			this.myArray[i] = arr;
-
+			this.$forceUpdate();
 		},
 		// 添加分类
 		addFood: function() {
