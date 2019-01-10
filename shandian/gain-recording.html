@@ -22,16 +22,15 @@
 				<p class="title">收益记录</p>
 			</div>
 			<div class="gain-recording">
-
 				<div class="choice-deta clearfix">
 					<div class="left">
 						<span>{{deta}}</span>
-						<span>本月收入¥ {{totalSale}}</span>
+						<span>本日收入¥ {{totalSale}}</span>
 					</div>
 					<i class="icon icon-gain-deta right" @click="openPicker"></i>
 				</div>
 
-				<div class="record-list">
+				<div class="record-list" v-if="orderList.length==0">
 					<div class="sd-gain-card" v-for="(item, index) in orderList" :key="index">
 						<div class="user-header">
 							<img :src="item.imgUrl">
@@ -64,11 +63,15 @@
 						</div>
 					</div>
 				</div>
+
+			</div>
+			<div class="no-recoding" v-if="orderList.length!==0">
+				<span>暂无记录</span>
 			</div>
 
 			<div>
 				<mt-datetime-picker ref="picker" type="date" v-model="pickerValue" year-format="{value} 年" month-format="{value} 月"
-				 @confirm="handleConfirm" @cancel="cancal">
+				@confirm="handleConfirm" @cancel="cancal">
 				</mt-datetime-picker>
 			</div>
 		</div>

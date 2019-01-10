@@ -54,7 +54,7 @@
 				<div class="cell price" v-show="!isAddStandard">
 					<div class="cell-warpper">
 						<span class="text-left">
-							<span class="title">价格</span>
+							<span class="title">价格(元)</span>
 							<mt-field type="text" v-model="price" placeholder="输入价格"></mt-field>
 						</span>
 					</div>
@@ -70,7 +70,7 @@
 								<mt-field type="text" v-model="item.size" placeholder="例:大\/中\/小"></mt-field>
 							</span>
 							<span class="text-left">
-								<span class="title">价格</span>
+								<span class="title">价格(元)</span>
 								<mt-field type="number" v-model="item.price" placeholder="输入价格"></mt-field>
 							</span>
 							<i class="size-delete" @click="showDeleteSizePopup(index)"></i>
@@ -135,6 +135,7 @@
 						<label for="foodImg">
 							<img src="static/img/add-food-img.jpg">
 							<input type="file" id="foodImg">
+							<p class="hint">*点击图片更换照片</p>
 						</label>
 					</div>
 				</div>

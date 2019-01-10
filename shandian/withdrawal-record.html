@@ -33,7 +33,7 @@
 					<i class="icon icon-gain-deta right" @click="openPicker"></i>
 				</div>
 
-				<div class="record-list">
+				<div class="record-list" v-if="withdrawalList.length!==0">
 					<div class="sd-gain-card" v-for="(item, index) in withdrawalList" :key="index">
 						<div class="user-header">
 							<img :src="item.imgUrl">
@@ -62,6 +62,9 @@
 					</div>
 				</div>
 
+			</div>
+			<div class="no-recoding" v-if="withdrawalList.length===0">
+				<span>暂无记录</span>
 			</div>
 			<div>
 				<mt-datetime-picker ref="picker" type="date" v-model="pickerValue" year-format="{value} 年" month-format="{value} 月"

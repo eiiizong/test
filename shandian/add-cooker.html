@@ -21,12 +21,23 @@
 				</div>
 				<p class="title">添加厨师</p>
 			</div>
-			
+
 			<div class="add-cooker">
 				<div class="sd-input-group">
-					<p class="hint-input-box">请输入账号和密码</p>
+					<div class="store-upload-logo">
+						<label for="uploadLogo">
+							<div>
+								<img src="static/img/store-sign-logo.png" alt="" class="logo">
+							</div>
+							<input type="file" id="uploadLogo">
+						</label>
+						<p class="hint">点击上传厨师头像</p>
+					</div>
+					<!-- <p class="hint-input-box">请输入账号和密码</p> -->
+
 					<div class="input-box">
-						<mt-field label="账号" placeholder="请输入账号" v-model="accountNumber" type="text"></mt-field>
+						<mt-field label="昵称" placeholder="请输入昵称" v-model="accountNumber" type="text"></mt-field>
+						<mt-field label="电话" placeholder="请输入电话" v-model="accountNumber" type="text"></mt-field>
 						<mt-field label="密码" placeholder="请输入密码" v-model="password" type="password"></mt-field>
 					</div>
 				</div>

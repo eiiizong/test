@@ -28,17 +28,30 @@
 				</div>
 
 				<div class="cell-group">
-					<div v-for="(item, index) in list" :key="index">
-						<div class="sd-link-cell clearfix">
+					<div v-for="(item, index) in defaultSizes" :key="index">
+						<div class="sd-link-cell clearfix" @click.stop="choiceMainType(index)">
 							<div class="left">
-								<span>{{item}}</span>
+								<span>{{item.name}}</span>
 							</div>
 							<i class="icon icon-link-black right"></i>
+						</div>
+						<div class="sd-select-size" v-if="item.selected">
+							<div class="clearfix">
+								<div class="left" v-for="(sizeItem, sizeIndex) in item.children" :key="sizeIndex">
+									<label>
+										<input type="checkbox" :checked="sizeItem.checked" @change.stop="sizeChange(sizeIndex)" />
+										<span>{{sizeItem.sizeName}}</span>
+									</label>
+								</div>
+						
+							</div>
 						</div>
 					</div>
 				</div>
 				
-				
+				<div class="sd-btn-box">
+					<button type="button" class="btn" @click="save">保存</button>
+				</div>
 			</div>
 		</div>
 		<script src="static/js/vue.min.js"></script>

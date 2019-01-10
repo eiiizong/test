@@ -10,9 +10,7 @@
 		<meta name="author" content="" />
 		<title>菜品分类管理</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
-
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
-
 	</head>
 
 	<body>
@@ -55,7 +53,7 @@
 								<button @click="allPutaway" class="btn">全部上架</button>
 							</div> -->
 							<div ref="foods" class="foods-box">
-								<ul>
+								<ul v-if="foods">
 									<li v-for="(item, index) in foods" :key="index">
 										<img :src="item.imgUrl">
 										<div class="food-detail">
@@ -70,6 +68,10 @@
 										</div>
 									</li>
 								</ul>
+								<!-- 暂无商品 -->
+								<div class="no-foods" v-else>
+									<span>暂无商品</span>
+								</div>
 								<div class="add-food-btn">
 									<a href="add-food.html" class="btn">添加菜品</a>
 								</div>
