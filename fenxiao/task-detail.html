@@ -24,7 +24,7 @@
 					<p>3.容这是任务内容这是任务内容这是任务内容</p>
 					<div class="img-warpper clearfix">
 						<div class="left">
-							<img src="img/detail-01.jpg" alt="">
+							<img src="img/detail-01.jpg" alt="" id="img">
 						</div>
 						<div class="left">
 							<img src="img/detail-02.jpg" alt="">
@@ -43,7 +43,7 @@
 						<button type="button" class="btn">
 							<i class="icon icon-copy"></i><span>复制分享语</span>
 						</button>
-						<button type="button" class="btn">
+						<button type="button" class="btn" onclick="saveImg('img')">
 							<i class="icon icon-save"></i><span>保存图片</span>
 						</button>
 					</div>
@@ -61,5 +61,6 @@
 				</div>
 			</div>
 		</div>
+		<script src="js/saveImg.js"></script>
 	</body>
 </html>
