@@ -133,10 +133,12 @@
 							<span class="title">图片</span>
 						</span>
 						<label for="foodImg">
-							<img src="static/img/add-food-img.jpg">
-							<input type="file" id="foodImg">
-							<p class="hint">*点击图片更换照片</p>
+							<img src="static/img/add-food-img.jpg" id="uploadImg">
+							<input type="file" id="foodImg" onchange="changepic(this)" accept="image/jpg,image/jpeg,image/png,image/PNG">
+							
 						</label>
+						<p class="hint">*点击图片更换照片</p>
+						
 					</div>
 				</div>
 

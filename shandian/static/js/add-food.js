@@ -1,3 +1,21 @@
+
+
+function changepic(source) {
+	console.log(source);
+	var file = source.files[0];
+	if (window.FileReader) {
+		var fr = new FileReader();
+		console.log(fr);
+		var imgDOM = document.getElementById('uploadImg');
+		
+		fr.onloadend = function(e) {
+			console.log(e);
+			imgDOM.src = e.target.result;
+		};
+		fr.readAsDataURL(file);
+	}
+	
+}
 var app = new Vue({
 	el: '#app',
 	data: function() {

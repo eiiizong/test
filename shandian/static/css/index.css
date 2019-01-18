@@ -1138,8 +1138,10 @@ i.icon-down.no {
 	-webkit-box-pack: start;
 	-ms-flex-pack: start;
 	justify-content: flex-start;
-	min-height: 8.75em;
+	min-height: 150px;
 	position: relative;
+	align-items: flex-start;
+	padding-top: 10px;
 }
 
 .add-food .cell-warpper.img .text-left {
@@ -1152,15 +1154,26 @@ i.icon-down.no {
 }
 
 .add-food .cell-warpper.img label {
-	width: 7.1875em;
-	/* height: 150px; */
+	width: 115px;
+	height: 115px;
+	overflow: hidden;
+	position: relative;
+	border-radius: 5px;
 }
 
 .add-food .cell-warpper.img label img {
 	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
 }
 
-.add-food .cell-warpper.img label .hint {
+.add-food .cell-warpper.img .hint {
+	position: absolute;
+	bottom: 0;
+	left: 40px;
 	font-size: 12px;
 	line-height: 1;
 	padding: 5px 0;
@@ -3678,13 +3691,7 @@ i.icon-download {
 }
 
 /* 创建我的小程序 */
-.create-app {
-	width: 100%;
-	height: 100%;
-	background-color: #fff;
-	position: relative;
-	padding-top: 44px;
-}
+
 
 .top-nav {
 	position: fixed;
@@ -3733,8 +3740,20 @@ i.icon-download {
 	opacity: 1;
 }
 
-.create-app .content .img-box {
-	padding-top: 125px;
+.create-app {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	position: relative;
+}
+
+.create-app .content {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-top: -40px;
 }
 
 .create-app .content .img-box img {
@@ -4601,7 +4620,12 @@ i.icon-see-password {
 	height: 100%;
 	background: url(../img/wait-review-bg.png) no-repeat top left;
 	background-size: cover;
-	padding-top: 14px;
+	position: relative;
+}
+
+.wait-review.error {
+
+	background-image: url(../img/wait-error-bg@2x.jpg);
 }
 
 .wait-review>div {
@@ -4609,35 +4633,23 @@ i.icon-see-password {
 	text-align: center;
 }
 
-.wait-review .nav a {
-	font-size: 0;
-	display: block;
-}
-
-.wait-review .nav span {
-	display: inline-block;
-	font-size: 17px;
-	font-weight: bold;
-	color: #fff;
-	line-height: 1;
-}
-
-i.icon-change {
-	width: 12px;
-	height: 10px;
-	background-image: url(../img/icon/change@2x.png);
-	margin: 3px 0 0 4px;
-}
-
 .wait-review .img-box {
-	padding-top: 60px;
-	margin-bottom: 150px;
+	height: 50%;
+	position: relative;
 }
 
 .wait-review .img-box img {
 	display: block;
-	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	width: 140px;
+	margin-top: -20px;
+}
+
+.wait-review .text {
+	padding-top: 20px;
 }
 
 .wait-review .text h3 {
@@ -4645,6 +4657,7 @@ i.icon-change {
 	color: #000;
 	font-weight: 500;
 	line-height: 1;
+	padding-bottom: 5px;
 }
 
 .wait-review .text p {
@@ -4652,8 +4665,19 @@ i.icon-change {
 	font-size: 14px;
 	font-weight: 500;
 	color: #959595;
-	line-height: 18px;
+	line-height: 22px;
 	padding-top: 5px;
+}
+
+.wait-review.error .text p {
+	color: #000;
+	padding: 0;
+}
+
+.wait-review .sd-btn-box {
+	position: absolute;
+	left: 0;
+	bottom: 0;
 }
 
 /* 小程序名称 */
@@ -5015,4 +5039,18 @@ i.icon-change {
 	font-weight: 500;
 	color: #787878;
 	line-height: 1;
+}
+
+/* 打印 */
+.print {
+	background-color: #f4f4f4;
+}
+
+.print .img-box {
+	padding: 10px 0;
+}
+
+.print .img-box img {
+	display: block;
+	width: 100%;
 }

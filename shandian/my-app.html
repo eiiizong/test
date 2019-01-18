@@ -28,8 +28,8 @@
 						</li>
 					</ul>
 				</div>
-
-				<div class="create-app" v-if="haveApp">
+				<!-- 未创建小程序 -->
+				<div class="create-app" v-if="status===0">
 					<div class="content">
 						<div class="img-box">
 							<img src="static/img/no-app.jpg" alt="">
@@ -43,8 +43,8 @@
 					</div>
 				</div>
 
-				<!-- 平台管理 -->
-				<div class="platform-management" v-else>
+				<!-- 平台管理 小程序已经创建成功-->
+				<div class="platform-management" v-if="status===3">
 					<!-- 提现管理 -->
 					<div class="sd-cash-management">
 						<div class="sd-title-cell clearfix">
@@ -118,6 +118,34 @@
 
 					<div class="sd-btn-box">
 						<a href="#" class="btn">发布</a>
+					</div>
+				</div>
+
+				<!-- 小程序等待审核 -->
+				<div class="wait-review" v-if="status===1">
+					<div class="img-box">
+						<img src="static/img/icon/reviewing@2x.png">
+					</div>
+					<div class="text">
+						<h3>提交成功，请等待管理员审核！</h3>
+						<p>（预计1-3个工作日审核完毕,审核结果将发到您的注册手机上）</p>
+					</div>
+				</div>
+
+				<!-- 小程序审核失败 -->
+				<div class="wait-review error" v-if="status===2">
+					<div class="img-box">
+						<img src="static/img/icon/wait-error@2x.png">
+					</div>
+					<div class="text">
+						<h3>您提交的资料审核失败，原因如下：</h3>
+						<div class="cause">
+							<p>1.未上传店铺照片</p>
+							<p>2.未添加银行卡照片</p>
+						</div>
+					</div>
+					<div class="sd-btn-box">
+						<button class="btn">重新编辑</button>
 					</div>
 				</div>
 			</div>
