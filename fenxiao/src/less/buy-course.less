@@ -1,0 +1,141 @@
+/* buy-course.less 课程购买页面 */
+@import 'variable.less';
+
+// 左右间距
+@bc-page-padding-LR: 60/75rem;
+// 上下间距
+@bc-page-padding-TB: 40/75rem;
+
+// 卡片背景颜色
+@bc-card-bgc: #fff;
+
+// 卡片圆角大小
+@bc-card-border-radius: 20/75rem;
+
+// 各卡片之间间距
+@bc-card-item-space: 40/75rem;
+
+
+// 卡片内 上下间距
+@bc-card-space-TB: 34/75rem;
+
+// 卡片内 左右间距
+@bc-card-space-LR: 28/75rem;
+
+// 购买按钮宽度
+@buy-btn-width: 140/75rem;
+// 购买按钮高度
+@buy-btn-height: 54/75rem;
+
+// 购买按字体和边框颜色
+@buy-btn-color: #f0f;
+
+// 学员一级背景色
+@level-one-bgc: #ff3253;
+// 学员二级背景色
+@level-two-bgc: #efbb00;
+// 学员三级背景色
+@level-three-bgc: #356aff;
+
+.buy-course {
+	.card-list {
+		width: 100%;
+		padding: @bc-page-padding-TB @bc-page-padding-LR;
+		.item {
+			width: 100%;
+			background-color: @bc-card-bgc;
+			border-radius: @bc-card-border-radius;
+			overflow: hidden;
+			padding: @bc-card-space-TB @bc-card-space-LR;
+			position: relative;
+			margin-bottom: @bc-card-item-space;
+			box-shadow: 0px 0px 5px 0px rgba(182, 182, 182, 0.4);
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			.title {
+				font-size: 16px;
+				font-weight: bold;
+				color: #000;
+				line-height: 1;
+				.level {
+					font-size: 11px;
+					font-weight: 500;
+					color: #fefefe;
+					line-height: 1;
+					text-align: center;
+					border-radius: 2px;
+					margin-left: 4px;
+					padding: 2px 5px;
+					vertical-align: top;
+					&.one {
+						background-color: @level-one-bgc;
+					}
+					&.two {
+						background-color: @level-two-bgc;
+					}
+					&.three {
+						background-color: @level-three-bgc;
+					}
+				}
+			}
+			.content {
+				width: 100%;
+				font-size: 13px;
+				color: #888;
+				line-height: 17px;
+				margin: @12px 0 @16px;
+				padding-right: @230px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+			}
+			.price {
+				position: relative;
+				.left {
+					span {
+						line-height: 1;
+						font-size: 22px;
+						font-weight: bold;
+						color: #f00;
+						display: block;
+						&:before {
+							display: inline-block;
+							content: '¥';
+							font-size: 18px;
+							line-height: 1;
+							margin-right: 2px;
+						}
+					}
+				}
+				.right {
+					.link {
+						display: block;
+						line-height: 1;
+						font-size: 13px;
+						color: #888;
+						position: absolute;
+						bottom: 0;
+						right: 0;
+					}
+				}
+			}
+			.btn-buy {
+				position: absolute;
+				top: @bc-card-space-TB;
+				right: @bc-card-space-LR;
+				.btn {
+					width: @buy-btn-width;
+					line-height: @buy-btn-height;
+					height: @buy-btn-height;
+					background-color: transparent;
+					color: @buy-btn-color;
+					border: 1px solid @buy-btn-color;
+					border-radius: 50px;
+				}
+			}
+		}
+	}
+}

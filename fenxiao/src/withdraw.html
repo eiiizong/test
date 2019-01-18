@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>提现</title>
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="./css/index.css" />
+		<script src="./js/flexible.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div class="withdraw">
+
+				<div class="cell-wrapper">
+
+					<div class="item clearfix">
+						<label class="left" for="to">提现到</label>
+						<div class="right">
+							<select name="" id="to" class="select">
+								<option value="0">银行卡</option>
+								<option value="1">支付宝</option>
+								<option value="2">微信</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="item clearfix">
+						<label for="num" class="left">提现金额</label>
+						<div class="right">
+							<input type="number" placeholder="请输入提现金额" id="num">
+						</div>
+					</div>
+
+					<div class="item clearfix">
+						<label for="code" class="left">短信验证码</label>
+						<div class="right code">
+							<input type="text" placeholder="请输入验证码" id="code">
+							<button class="btn" type="button">获取</button>
+						</div>
+					</div>
+					<div class="item clearfix">
+						<div class="left">持卡人姓名</div>
+						<div class="right orange">
+							邓超
+						</div>
+					</div>
+					<div class="item clearfix">
+						<div class="left">银行名称</div>
+						<div class="right">
+							<select name="" id="" class="select">
+								<option value="0">中国银行</option>
+								<option value="1">农业银行</option>
+							</select>
+						</div>
+					</div>
+					<div class="item clearfix">
+						<label for="cardId" class="left">银行卡卡号</label>
+						<div class="right">
+							<input type="number" placeholder="请输入银行卡卡号" id="cardId">
+						</div>
+					</div>
+				</div>
+				<div class="hint">
+					<h3>温馨提示：</h3>
+					<p>1.请仔细核对银行卡信息，由银行卡信息错误导致的到账延迟与资产损失，由用户个人承担。</p>
+					<p>2.提现5%的手续费。</p>
+				</div>
+				<div class="btn-box">
+					<button class="btn" type="button">确认提现</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

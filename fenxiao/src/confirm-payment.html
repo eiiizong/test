@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>确认支付</title>
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="./css/index.css" />
+		<script src="./js/flexible.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div class="confirm-payment">
+				<div class="top">
+					<span>需支付</span>
+					<div class="price">
+						<span>598.00</span>
+					</div>
+					<span>客户充值高级VIP订单</span>
+				</div>
+				<div class="pay-away">
+					<h3>支付方式</h3>
+					<ul>
+						<li>
+							<label class="title clearfix">
+								<div class="left">
+									<i class="icon icon-alipay-01"></i>
+									<span>支付宝支付</span>
+								</div>
+								<div class="right">
+									<input type="radio" name="paymentAway">
+									<i class="icon icon-ckeckbox-01"></i>
+								</div>
+							</label>
+
+							<div class="content">
+								<label class="clearfix">
+									<div class="left">
+										<i class="icon icon-alipay-02"></i><span>支付宝(渠道01)(<b>拥挤</b>)</span>
+									</div>
+									<div class="right">
+										<input type="radio" name="alipay">
+										<span class="icon-radio"></span>
+									</div>
+								</label>
+								<label class="clearfix">
+									<div class="left">
+										<i class="icon icon-alipay-02"></i><span>支付宝(渠道02)</span>
+									</div>
+									<div class="right">
+										<input type="radio" name="alipay">
+										<span class="icon-radio"></span>
+									</div>
+								</label>
+							</div>
+						</li>
+						<li>
+							<label class="title clearfix">
+								<div class="left">
+									<i class="icon icon-wechat-pay-01"></i>
+									<span>微信支付(手续费1元)</span>
+								</div>
+								<div class="right">
+									<input type="radio" name="paymentAway">
+									<i class="icon icon-ckeckbox-01"></i>
+								</div>
+							</label>
+						</li>
+						<li>
+							<label class="title clearfix">
+								<div class="left">
+									<i class="icon icon-cash"></i>
+									<span>可用佣金支付(余额：¥19.00)</span>
+								</div>
+								<div class="right">
+									<input type="radio" name="paymentAway">
+									<i class="icon icon-ckeckbox-01"></i>
+								</div>
+							</label>
+						</li>
+					</ul>
+				</div>
+				<div class="btn-box">
+					<button class="btn" type="button" onclick="window.location.href='./confirm-payment-QR.html';">确认支付</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

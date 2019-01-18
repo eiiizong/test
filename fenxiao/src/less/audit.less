@@ -1,0 +1,79 @@
+/*! audit.less 提交审核页面 */
+@import 'variable.less';
+
+.audit {
+	padding-bottom: @bootom-distance;
+	.info {
+		padding: 0 @padding-LR;
+		h3 {
+			font-size: 16px;
+			line-height: 1;
+			color: #010101;
+			padding: @22px 0 @30px;
+		}
+		div,
+		p {
+			font-size: 15px;
+			line-height: 1;
+			color: #010101;
+		}
+		p {
+			padding: @26px 0 @34px;
+		}
+		ul {
+			padding-bottom: @36px;
+			li {
+				width: @175px;
+				height: @165px;
+				padding-right: @10px;
+				overflow: hidden;
+				border-radius: @10px;
+				margin-bottom: @10px;
+				&:last-of-type,
+				&:nth-of-type(n + 4) {
+					width: @165px;
+					padding-right: 0;
+				}
+				img {
+					width: 100%;
+				}
+				label {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+	}
+	.rules {
+		padding: 0 @padding-LR;
+		h3,
+		h4 {
+			font-size: 16px;
+			color: #010101;
+			line-height: 1;
+			padding-top: @40px;
+			padding-bottom: @10px;
+		}
+		h4 {
+			font-size: 15px;
+		}
+		p {
+			font-size: 14px;
+			line-height: 18px;
+			color: #696969;
+		}
+		.img-box {
+			img {
+				width: @165px;
+				margin-bottom: @14px;
+			}
+			span {
+				display: inline-block;
+				font-size: 13px;
+				line-height: 1;
+				color: #696969;
+				vertical-align: top;
+			}
+		}
+	}
+}

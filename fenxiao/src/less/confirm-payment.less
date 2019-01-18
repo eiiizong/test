@@ -1,0 +1,172 @@
+/*! confirm-payment.less 确认支付*/
+@import 'variable.less';
+@cp-step1-top-height: 300/75rem;
+
+.confirm-payment {
+	background-color: @white-bgc;
+	padding-bottom: @bootom-distance;
+	.top {
+		height: @cp-step1-top-height;
+		text-align: center;
+		padding-top: @64px;
+		> span {
+			display: block;
+			font-size: 11px;
+			color: #888;
+			line-height: 1;
+		}
+		.price {
+			padding: @30px 0 @28px;
+			span {
+				font-size: 34px;
+				line-height: 1;
+				color: #f00;
+				display: inline-block;
+				&:before {
+					display: inline-block;
+					content: '¥';
+					font-size: 24px;
+					line-height: 1;
+				}
+			}
+		}
+	}
+	.pay-away {
+		h3 {
+			line-height: 1;
+			font-size: 15px;
+			padding-left: @padding-LR;
+			padding-bottom: @32px;
+		}
+		ul {
+			padding-left: @88px;
+			li {
+				position: relative;
+				padding-left: @12px;
+				&:last-of-type {
+					.title {
+						border-bottom: 1px solid @borde-top-color;
+						.left {
+							span {
+								line-height: @116px;
+							}
+						}
+					}
+				}
+				.title {
+					border-top: 1px solid @borde-top-color;
+					height: @120px;
+					display: block;
+					width: 100%;
+					padding-right: @36px;
+					.left {
+						font-size: 0;
+						.icon {
+							width: @40px;
+							height: @32px;
+							position: absolute;
+							top: @44px;
+							left: -@48px;
+						}
+						.icon-alipay-01 {
+							.image('icon-alipay-01');
+						}
+						.icon-wechat-pay-01 {
+							height: @40px;
+							.image('icon-wechat-pay-01');
+							top: @40px;
+						}
+						.icon-cash {
+							height: @40px;
+							.image('icon-cash');
+							top: @40px;
+						}
+						span {
+							display: inline-block;
+							font-size: 15px;
+							line-height: @118px;
+						}
+					}
+					.right {
+						.icon-ckeckbox-01 {
+							width: @40px;
+							height: @40px;
+							.image-svg('no-checked');
+							margin-top: @40px;
+						}
+						input {
+							&:checked ~ .icon-ckeckbox-01 {
+								.image-svg('checked');
+							}
+						}
+					}
+				}
+				.content {
+					.clearfix {
+						display: block;
+						width: 100%;
+						padding-right: @36px;
+						height: @90px;
+						border-top: 1px solid @borde-top-color;
+						padding-left: @12px;
+					}
+					.left {
+						font-size: 0;
+						.icon-alipay-02 {
+							width: @28px;
+							height: @28px;
+							.image('icon-alipay-02');
+							margin-top: @30px;
+						}
+						span {
+							display: inline-block;
+							font-size: 14px;
+							padding-left: 5px;
+							line-height: @88px;
+							b {
+								font-weight: inherit;
+								color: #f00;
+							}
+						}
+					}
+					.right {
+						span {
+							display: block;
+							width: @40px;
+							height: @40px;
+							border: 1px solid @borde-color;
+							border-radius: 50%;
+							transition: all 0.3s;
+							position: relative;
+							margin-top: @24px;
+							&:after {
+								width: @24px;
+								height: @24px;
+								display: block;
+								content: '';
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								border-radius: 50%;
+								margin: -@12px 0 0 -@12px;
+								background-color: @borde-color-active;
+								transform: scale(0);
+								transition: all 0.3s;
+								opacity: 0;
+							}
+						}
+						input {
+							&:checked ~ span {
+								border-color: @borde-color-active;
+								&:after {
+									transform: scale(1);
+									opacity: 1;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

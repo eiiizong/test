@@ -4,4 +4,4 @@
 
 [闪点](http://eiiizong.top/test/shandian/index.html)
 
-[分销](http://eiiizong.top/test/fenxiao/index.html)
+[分销](http://eiiizong.top/test/fenxiao/dist/index.html)

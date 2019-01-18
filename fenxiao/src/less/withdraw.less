@@ -1,0 +1,79 @@
+/*! withdraw.less 提现页面 */
+@import 'variable.less';
+
+// 左右间距
+@cell-padding-LR: 35/75rem;
+// 卡片背景颜色
+@cell-bgc: #fff;
+// 卡片高度
+@cell-height: 88/75rem;
+// 各卡片之间间距
+@cell-item-space: 20/75rem;
+
+.withdraw {
+	background-color: #f4f4f4;
+	padding-bottom: @bootom-distance;
+	.cell-wrapper {
+		width: 100%;
+		padding-top: @cell-item-space;
+		.item {
+			min-height: @cell-height;
+			background-color: @cell-bgc;
+			font-size: 15px;
+			line-height: @cell-height;
+			padding: 0 @cell-padding-LR;
+			margin-bottom: @cell-item-space;
+			position: relative;
+			.right {
+				input {
+					width: @400px;
+					display: inline-block;
+					text-align: right;
+					font-size: 15px;
+				}
+				.btn {
+					font-style: 15px;
+					display: inline-block;
+					width: auto;
+					background-color: transparent;
+					color: #356aff;
+					height: @88px;
+					line-height: @88px;
+					padding-left: @12px;
+					position: absolute;
+					top: 0;
+					right: @cell-padding-LR;
+					&:before {
+						position: absolute;
+						display: inline-block;
+						content: '';
+						height: 13px;
+						width: 1px;
+						background-color: #b6b6b6;
+						top: 50%;
+						left: 0;
+						transform: translateY(-50%);
+					}
+				}
+				&.code {
+					input {
+						padding-right: @80px;
+					}
+				}
+			}
+		}
+	}
+	.hint {
+		width: 100%;
+		padding: 0 @cell-padding-LR;
+		h3,
+		p {
+			font-size: 15px;
+			line-height: 19px;
+			color: #000;
+		}
+		p {
+			text-indent: 2em;
+		}
+	}
+}

@@ -1,0 +1,110 @@
+/*! sign-in.less */
+@import 'variable.less';
+
+.sign-in {
+	background: url(../img/sign-bg.jpg) no-repeat top left;
+	background-size: cover;
+	padding: @100px @50px;
+	color: #000;
+	h2 {
+		font-size: 22px;
+		line-height: 1;
+		color: #fff;
+		padding: 0 @16px @58px;
+	}
+	label {
+		position: absolute;
+		bottom: @28px;
+		left: @50px;
+		font-size: 0;
+	}
+	input {
+		font-size: 16px;
+		border-bottom: 1px solid #c7c7c7;
+		line-height: @60px;
+		padding: @20px 0;
+		padding-left: @16px;
+		&.password {
+			padding-right: @70px;
+		}
+	}
+
+	.input-wrapper {
+		padding: @20px 0;
+		background-color: #fff;
+		border-radius: @20px;
+		.input-box {
+			padding: 0 @58px 0 @106px;
+			position: relative;
+			.btn {
+				position: absolute;
+				bottom: 0;
+				right: @58px;
+				width: @200px;
+				height: @64px;
+				border: solid 1px #356aff;
+				font-size: 14px;
+				line-height: @60px;
+				background-color: transparent;
+				color: #356aff;
+				border-radius: 50px;
+			}
+			.input {
+				&.code {
+					padding-right: @210px;
+				}
+			}
+		}
+		.icon-phone {
+			width: @40px;
+			height: @54px;
+			.image('phone');
+		}
+		.icon-code {
+			width: @40px;
+			height: @40px;
+			.image('code');
+		}
+		.icon-password {
+			width: @40px;
+			height: @48px;
+			.image('password');
+		}
+		.icon-invitation-code {
+			width: @40px;
+			height: @40px;
+			.image('invitation-code');
+		}
+		.btn-box {
+			position: relative;
+			padding: @58px @40px 0;
+			.btn {
+				border-radius: 50px;
+				font-size: 18px;
+			}
+		}
+		.go-to-login {
+			padding-right: @40px;
+			text-align: right;
+			a {
+				display: inline-block;
+				font-size: 14px;
+				color: #356aff;
+				line-height: @48px;
+				padding-top: @12px;
+			}
+		}
+		.icon-see-password {
+			width: 19px;
+			height: 13px;
+			position: absolute;
+			.image('see-password');
+			top: 50%;
+			right: @78px;
+			transform: translateY(-50%);
+			&.active {
+				.image('see-password-active');
+			}
+		}
+	}
+}
