@@ -15,25 +15,30 @@
 	<body>
 		<div id="app">
 			<div class="withdraw">
+
 				<div class="cell-wrapper">
+
 					<div class="item clearfix">
-						<div class="left">提现到</div>
+						<label class="left" for="to">提现到</label>
 						<div class="right">
-							<select name="" id="" class="select">
+							<select name="" id="to" class="select">
 								<option value="0">银行卡</option>
 								<option value="1">支付宝</option>
+								<option value="2">微信</option>
 							</select>
 						</div>
 					</div>
+
 					<div class="item clearfix">
 						<label for="num" class="left">提现金额</label>
 						<div class="right">
 							<input type="number" placeholder="请输入提现金额" id="num">
 						</div>
 					</div>
+
 					<div class="item clearfix">
 						<label for="code" class="left">短信验证码</label>
-						<div class="right">
+						<div class="right code">
 							<input type="text" placeholder="请输入验证码" id="code">
 							<button class="btn" type="button">获取</button>
 						</div>
