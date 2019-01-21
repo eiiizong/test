@@ -25,10 +25,17 @@
 				font-size: 16px;
 				color: #000;
 			}
+			p {
+				font-size: 16px;
+			}
 		</style>
 	</head>
 	<body>
 		<div id="app">
+			<h3>
+				<p>屏幕宽：<span id="w"></span>px</p>
+				<p>屏幕高：<span id="h"></span>px</p>
+			</h3>
 			<ul>
 				<li>
 					<a href="buy-course.html">课程购买</a>
@@ -65,5 +72,19 @@
 				</li>
 			</ul>
 		</div>
+		<script type="text/javascript">
+			window.onload = function () {
+				var resize = function () {
+					var w = document.body.clientWidth;
+					var h = document.body.clientHeight;
+					var wDOM = document.getElementById('w');
+					var hDOM = document.getElementById('h');
+					wDOM.innerHTML = w;
+					hDOM.innerHTML = h;
+				}
+				resize();
+				window.onresize = resize;
+			};
+		</script>
 	</body>
 </html>
