@@ -1,0 +1,51 @@
+/*! sign-in.less 注册页面*/
+@import 'variable.less';
+@icon-width: 40/75rem;
+.sign-ok {
+	background: url(../img/sign-bg.jpg) no-repeat top left;
+	background-size: cover;
+	color: #356aff;
+	padding: 0 @50px;
+	width: 100%;
+	.box {
+		width: @650px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background-color: #fff;
+		border-radius: @20px;
+		transform: translate(-50%, -50%);
+		padding-top: @84px;
+		padding-bottom: @34px;
+		text-align: center;
+		margin-top: -@200px;
+		.icon-sign-ok {
+			width: @100px;
+			height: @100px;
+			.image('sign-ok');
+			margin: 0 auto;
+		}
+		h3 {
+			padding-top: @26px;
+			line-height: 1;
+			font-size: @34px;
+		}
+		.btn-box {
+			width: 100%;
+			position: relative;
+			padding: @90px 0 0 0;
+			.btn {
+				width: 50%;
+				height: @50px;
+				line-height: @50px;
+				background-color: transparent;
+				color: #356aff;
+				font-size: @28px;
+				border-radius: 0;
+				&:first-child {
+					border-right: 1px solid #ececec;
+				}
+			}
+		}
+	}
+}
