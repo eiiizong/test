@@ -16,9 +16,10 @@
 		border-radius: @20px;
 		transform: translate(-50%, -50%);
 		padding-top: @84px;
-		padding-bottom: @34px;
 		text-align: center;
-		margin-top: -@200px;
+		@media screen and (min-height: 420px) {
+			margin-top: -100px;
+		}
 		.icon-sign-ok {
 			width: @100px;
 			height: @100px;
@@ -33,18 +34,16 @@
 		.btn-box {
 			width: 100%;
 			position: relative;
-			padding: @90px 0 0 0;
+			margin-top: @56px;
+			padding: @34px;
+			border-top: 1px solid  #ececec;
 			.btn {
-				width: 50%;
 				height: @50px;
 				line-height: @50px;
 				background-color: transparent;
 				color: #356aff;
 				font-size: @28px;
 				border-radius: 0;
-				&:first-child {
-					border-right: 1px solid #ececec;
-				}
 			}
 		}
 	}
