@@ -2,34 +2,33 @@
 @import 'variable.less';
 
 // 左右间距
-@bc-page-padding-LR: 60/75rem;
+@bc-page-padding-LR: @60px;
 // 上下间距
-@bc-page-padding-TB: 40/75rem;
+@bc-page-padding-TB: @40px;
 
 // 卡片背景颜色
 @bc-card-bgc: #fff;
 
 // 卡片圆角大小
-@bc-card-border-radius: 20/75rem;
+@bc-card-border-radius: @20px;
 
 // 各卡片之间间距
-@bc-card-item-space: 40/75rem;
-
+@bc-card-item-space: @40px;
 
 // 卡片内 上下间距
-@bc-card-space-TB: 34/75rem;
+@bc-card-space-TB: @34px;
 
 // 卡片内 左右间距
-@bc-card-space-LR: 28/75rem;
+@bc-card-space-LR: @28px;
 
 // 购买按钮宽度
-@buy-btn-width: 70px;
+@buy-btn-width: @140px;
 // 购买按钮高度
-@buy-btn-height: 27px;
-@buy-btn-line-height: 25px;
+@buy-btn-height: @54px;
+@buy-btn-line-height: @50px;
 
 // 购买按字体和边框颜色
-@buy-btn-color: #f0f;
+@buy-btn-color: #356aff;
 
 // 学员一级背景色
 @level-one-bgc: #ff3253;
@@ -55,19 +54,19 @@
 				margin-bottom: 0;
 			}
 			.title {
-				font-size: 16px;
+				font-size: @32px;
 				font-weight: bold;
 				color: #000;
 				line-height: 1;
 				.level {
-					font-size: 11px;
+					font-size: @22px;
 					font-weight: 500;
 					color: #fefefe;
 					line-height: 1;
 					text-align: center;
-					border-radius: 2px;
+					border-radius: @4px;
 					margin-left: 4px;
-					padding: 2px 5px;
+					padding: @4px @10px;
 					vertical-align: top;
 					&.one {
 						background-color: @level-one-bgc;
@@ -82,9 +81,9 @@
 			}
 			.content {
 				width: 100%;
-				font-size: 13px;
+				font-size: @26px;
 				color: #888;
-				line-height: 17px;
+				line-height: @34px;
 				margin: @12px 0 @16px;
 				padding-right: @230px;
 				overflow: hidden;
@@ -98,14 +97,14 @@
 				.left {
 					span {
 						line-height: 1;
-						font-size: 22px;
+						font-size: @44px;
 						font-weight: bold;
 						color: #f00;
 						display: block;
 						&:before {
 							display: inline-block;
 							content: '¥';
-							font-size: 18px;
+							font-size: @36px;
 							line-height: 1;
 							margin-right: 2px;
 						}
@@ -115,7 +114,7 @@
 					.link {
 						display: block;
 						line-height: 1;
-						font-size: 13px;
+						font-size: @26px;
 						color: #888;
 						position: absolute;
 						bottom: 0;
@@ -134,7 +133,7 @@
 					background-color: transparent;
 					color: @buy-btn-color;
 					border: 1px solid @buy-btn-color;
-					border-radius: 50px;
+					border-radius: 100px;
 				}
 			}
 		}
