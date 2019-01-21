@@ -1,5 +1,6 @@
 /*! input.less */
 @placeholderColor: #b6b6b6;
+@placeholder-fs: @28px;
 @inputColor: #000;
 
 input[type=checkbox],
@@ -11,18 +12,22 @@ input[type=file] {
 /* 设置 placeholder 字体颜色*/
 input::-webkit-input-placeholder {
 	color: @placeholderColor;
+	font-size: @placeholder-fs;
 }
 
 input:-moz-placeholder {
 	color: @placeholderColor;
+	font-size: @placeholder-fs;
 }
 
 input::-moz-placeholder {
 	color: @placeholderColor;
+	font-size: @placeholder-fs;
 }
 
 input:-ms-input-placeholder {
 	color: @placeholderColor;
+	font-size: @placeholder-fs;
 }
 input {
 	color: @inputColor;
