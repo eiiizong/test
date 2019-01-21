@@ -3,39 +3,48 @@
 
 .audit {
 	padding-bottom: @bootom-distance;
+	color: #010101;
 	.info {
-		padding: 0 @padding-LR;
-		h3 {
-			font-size: 16px;
-			line-height: 1;
-			color: #010101;
-			padding: @22px 0 @30px;
-		}
+		h3,
 		div,
 		p {
-			font-size: 15px;
+			font-size: 16px;
 			line-height: 1;
-			color: #010101;
+			padding-left: @padding-LR;
+			padding-right: @padding-LR;
+			padding-top: @22px;
+		}
+		div {
+			font-size: 15px;
+			padding-top: @28px;
 		}
 		p {
-			padding: @26px 0 @34px;
+			font-size: 15px;
+			padding-top: @26px;
+			padding-bottom: @30px;
 		}
 		ul {
-			padding-bottom: @36px;
+			width: 100%;
+			padding: 0 @25px;
+			padding-bottom: @40px;
 			li {
-				width: @175px;
-				height: @165px;
-				padding-right: @10px;
-				overflow: hidden;
-				border-radius: @10px;
-				margin-bottom: @10px;
-				&:last-of-type,
-				&:nth-of-type(n + 4) {
-					width: @165px;
-					padding-right: 0;
+				width: 25%;
+				padding: @5px;
+				.img-box {
+					width: 100%;
+					height: 100%;
+					overflow: hidden;
+					border-radius: @10px;
+					font-size: 0;
+					position: relative;
+					padding: 0;
 				}
 				img {
+					position: absolute;
 					width: 100%;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
 				}
 				label {
 					display: block;

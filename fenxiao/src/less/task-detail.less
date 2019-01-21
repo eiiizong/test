@@ -22,21 +22,24 @@
 			padding-bottom: @4px;
 		}
 		.img-warpper {
-			padding-top: @26px;
+			padding-top: @25px;
 			.left {
-				width: @175px;
-				height: @165px;
-				padding-right: @10px;
-				margin-bottom: @10px;
-				overflow: hidden;
-				border-radius: @10px;
-				&:nth-of-type(n + 4) {
-					width: @165px;
-					padding-right: 0;
+				width: 25%;
+				padding: @5px;
+				.img-box {
+					width: 100%;
+					height: 100%;
+					padding: 0;
+					overflow: hidden;
+					border-radius: @10px;
+					position: relative;
 				}
 				img {
+					position: absolute;
 					width: 100%;
-					height: auto;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
 				}
 			}
 		}
@@ -49,6 +52,7 @@
 				float: left;
 				color: #356aff;
 				background-color: transparent;
+				font-size: 14px;
 				height: 14px;
 				line-height: 1;
 				.icon {
