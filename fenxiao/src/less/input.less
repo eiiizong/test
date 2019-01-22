@@ -1,4 +1,5 @@
 /*! input.less */
+@import 'variable.less';
 @placeholderColor: #b6b6b6;
 @placeholder-fs: @28px;
 @inputColor: #000;
@@ -10,31 +11,15 @@ input[type=file] {
 }
 
 /* 设置 placeholder 字体颜色*/
-input::-webkit-input-placeholder {
-	color: @placeholderColor;
-	font-size: @placeholder-fs;
-}
+	
 
-input:-moz-placeholder {
-	color: @placeholderColor;
-	font-size: @placeholder-fs;
-}
-
-input::-moz-placeholder {
-	color: @placeholderColor;
-	font-size: @placeholder-fs;
-}
-
-input:-ms-input-placeholder {
-	color: @placeholderColor;
-	font-size: @placeholder-fs;
-}
 input {
 	color: @inputColor;
 	border: 0;
 	outline: 0;
 	display: inline-block;
 	width: 100%;
+	.placeholder (@placeholderColor, @placeholder-fs);
 }
 input[type=number] {
 	-moz-appearance: textfield;

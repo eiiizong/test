@@ -12,12 +12,16 @@ select,
 	color: #efbb00;
 	line-height: @88px;
 	background-color: transparent;
-	padding-left: @300px;
+	padding-left: @200px;
+	direction: rtl;
 	/*很关键：将默认的select选择框样式清除*/
 	appearance: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	&::-ms-expand {
 		display: none;
+	}
+	option {
+		direction: rtl;
 	}
 }

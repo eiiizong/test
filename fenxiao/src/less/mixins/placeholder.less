@@ -1,0 +1,21 @@
+.placeholder (@placeholderColor, @placeholder-fs) {
+	&::-webkit-input-placeholder {
+		color: @placeholderColor;
+		font-size: @placeholder-fs;
+	}
+	
+	&:-moz-placeholder {
+		color: @placeholderColor;
+		font-size: @placeholder-fs;
+	}
+	
+	&::-moz-placeholder {
+		color: @placeholderColor;
+		font-size: @placeholder-fs;
+	}
+	
+	&:-ms-input-placeholder {
+		color: @placeholderColor;
+		font-size: @placeholder-fs;
+	}
+}
