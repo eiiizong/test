@@ -844,6 +844,7 @@ input::-webkit-inner-spin-button {
 /*! confirm-payment-QR.less 确认支付*/
 .confirm-payment-QR {
   background-color: #365aff;
+  padding-bottom: 3.84rem;
 }
 .confirm-payment-QR .QR-wrapper {
   display: block;
@@ -922,12 +923,13 @@ input::-webkit-inner-spin-button {
 }
 .confirm-payment-QR .bottom {
   font-size: 0.34666667rem;
-  position: relative;
+  position: absolute;
   left: 0;
+  bottom: 0;
   width: 100%;
   text-align: center;
   color: #fff;
-  padding-top: 2.56rem;
+  padding-top: 2.53333333rem;
   padding-bottom: 0.48rem;
 }
 .confirm-payment-QR .bottom p {
