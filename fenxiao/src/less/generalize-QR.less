@@ -8,10 +8,14 @@
 		position: absolute;
 		top: @524px;
 		left: 0;
-		img {
+		#code {
 			width: @326px;
-			height: auto;
+			max-height: @326px;
 			margin: 0 auto;
+			overflow: hidden;
+			canvas {
+				display: block;
+			}
 		}
 	}
 
@@ -38,7 +42,7 @@
 				line-height: @50px;
 				background-color: #ffe1d9;
 				border-radius: @6px;
-				font-size: 14px;
+				font-size: @28px;
 				margin-right: @30px;
 				&:last-of-type {
 					margin-right: 0;
@@ -51,14 +55,14 @@
 			.btn {
 				height: @100px;
 				line-height: @100px;
-				color: #000;
+				color: #fff;
 				font-weight: bold;
-				background-color: #fff;
+				background-color: #f15447;
 				border-radius: @10px;
 				.icon-create-text {
 					width: @24px;
 					height: @30px;
-					.image('icon-create-text');
+					.image('icon-create-text-white');
 					margin: @35px @10px 0 0;
 				}
 			}
