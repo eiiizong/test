@@ -1,12 +1,14 @@
+// 背景图
+
 @img-base-url: '../img/icon/';
 @img-svg-base-url: '../img/svg/';
-.image(@name) {
+.image(@name) when (isstring(@name)) {
 	background-image: url('@{img-base-url}@{name}.png');
 	@media (-webkit-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
 		background-image: url('@{img-base-url}@{name}@2x.png');
 	}
 }
-.image-svg (@name) {
+.image-svg (@name)when (isstring(@name)) {
 	background-image: url('@{img-svg-base-url}@{name}.svg');
 }
 // 使用方式

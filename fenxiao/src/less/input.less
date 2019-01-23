@@ -1,8 +1,4 @@
 /*! input.less */
-@import 'variable.less';
-@placeholderColor: #b6b6b6;
-@placeholder-fs: @28px;
-@inputColor: #000;
 
 input[type=checkbox],
 input[type=radio],
@@ -12,14 +8,13 @@ input[type=file] {
 
 /* 设置 placeholder 字体颜色*/
 	
-
 input {
-	color: @inputColor;
+	color: @input-color;
 	border: 0;
 	outline: 0;
 	display: inline-block;
 	width: 100%;
-	.placeholder (@placeholderColor, @placeholder-fs);
+	.placeholder (@placeholder-color, @placeholder-font-size);
 }
 input[type=number] {
 	-moz-appearance: textfield;

@@ -1,6 +1,7 @@
-// variable.less
-// 自定义变量
 
+// 自定义变量 引入一些函数
+
+@import './mixins/px-to-rem.less';
 @import './mixins/border.less';
 @import './mixins/clearfix.less';
 @import './mixins/image.less';
@@ -8,93 +9,10 @@
 @import './mixins/user-select-none.less';
 @import './mixins/placeholder.less';
 
-
 @body-bgc: #fcfcfc;
 @a-color: #fff;
 @white-bgc: #fff;
-
-@4px: 4/75rem;
-@5px: 5/75rem;
-@6px: 6/75rem;
-@8px: 8/75rem;
-@10px: 10/75rem;
-@12px: 12/75rem;
-@14px: 14/75rem;
-@16px: 16/75rem;
-@18px: 18/75rem;
-@20px: 20/75rem;
-@22px: 22/75rem;
-@24px: 24/75rem;
-@25px: 25/75rem;
-@26px: 26/75rem;
-@28px: 28/75rem;
-@30px: 30/75rem;
-@32px: 32/75rem;
-@34px: 34/75rem;
-@35px: 35/75rem;
-@36px: 36/75rem;
-@40px: 40/75rem;
-@44px: 44/75rem;
-@48px: 48/75rem;
-@54px: 54/75rem;
-@32px: 32/75rem;
-@34px: 34/75rem;
-@35px: 35/75rem;
-@36px: 36/75rem;
-@38px: 38/75rem;
-@40px: 40/75rem;
-@46px: 46/75rem;
-@48px: 48/75rem;
-@50px: 50/75rem;
-@54px: 54/75rem;
-@56px: 56/75rem;
-@58px: 58/75rem;
-@54px: 54/75rem;
-@60px: 60/75rem;
-@64px: 64/75rem;
-@68px: 68/75rem;
-@70px: 70/75rem;
-@72px: 72/75rem;
-@74px: 74/75rem;
-@78px: 78/75rem;
-@80px: 80/75rem;
-@84px: 84/75rem;
-@88px: 88/75rem;
-@90px: 90/75rem;
-@100px: 100/75rem;
-@106px: 106/75rem;
-@108px: 108/75rem;
-@114px: 114/75rem;
-@116px: 116/75rem;
-@118px: 118/75rem;
-@120px: 120/75rem;
-@128px: 128/75rem;
-@140px: 140/75rem;
-@148px: 148/75rem;
-@160px: 160/75rem;
-@165px: 165/75rem;
-@175px: 175/75rem;
-@180px: 180/75rem;
-@182px: 182/75rem;
-@190px: 190/75rem;
-@192px: 192/75rem;
-@206px: 206/75rem;
-@200px: 200/75rem;
-@210px: 210/75rem;
-@220px: 220/75rem;
-@250px: 250/75rem;
-@230px: 230/75rem;
-@288px: 288/75rem;
-@300px: 300/75rem;
-@326px: 326/75rem;
-@400px: 400/75rem;
-@524px: 524/75rem;
-@500px: 500/75rem;
-@800px: 800/75rem;
-@650px: 650/75rem;
-@752px: 752/75rem;
-@951px: 951/75rem;
-
+@h20-bgc: #f0f0f0;
 @btn-bgc: #356aff;
 @btn-color: #fff;
 @btn-height: @88px;
@@ -108,10 +26,15 @@
 @bootom-w100-distance: @120px;
 
 // padding-TB
-@padding-TB: 10/75rem;
+@padding-TB: @10px;
 // 
-@padding-LR: 30/75rem;
+@padding-LR: @30px;
 
 @borde-top-color: #f4f4f4;
 @borde-color: #a7a7a7;
 @borde-color-active: #356aff;
+
+// input
+@placeholder-color: #b6b6b6;
+@placeholder-font-size: @28px;
+@input-color: #000;
