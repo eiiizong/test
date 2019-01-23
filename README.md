@@ -1,4 +1,4 @@
-###  exhibition 为展会静态页面
+## 该仓库为测试页面在真机上运行的效果
 
 [展会](http://eiiizong.top/test/exhibition/index.html)
 
