@@ -1,16 +1,27 @@
-var path = require('path');
+const path = require('path');
+
 const gulp = require('gulp');
-var less = require('gulp-less');
-var sourcemaps = require('gulp-sourcemaps');
+
+const less = require('gulp-less');
+
+const sourcemaps = require('gulp-sourcemaps');
 // var cleanCSS = require('gulp-clean-css');
 
-var postcss = require('gulp-postcss');
-var cssnano = require('cssnano');
-var autoprefixer = require('autoprefixer');
-var del = require('del');
-var gulpSequence = require('gulp-sequence');
-var connect = require('gulp-connect');
-var rename = require('gulp-rename');
+const postcss = require('gulp-postcss');
+
+const cssnano = require('cssnano');
+
+const autoprefixer = require('autoprefixer');
+
+const del = require('del');
+
+const gulpSequence = require('gulp-sequence');
+
+const connect = require('gulp-connect');
+
+const rename = require('gulp-rename');
+
+const gulpAutoprefixer = require('gulp-autoprefixer');
 
 // 编译 less 为 css
 gulp.task('less', function() {

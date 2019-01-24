@@ -20,13 +20,13 @@
 		font-size: 0;
 	}
 	input {
-		font-size: @32px;
+		display: block;
+		font-size: 16px;
 		border-bottom: @2px solid #c7c7c7;
 		line-height: @60px;
 		padding: @20px 0;
 		height: @102px;
 		padding-left: @16px;
-		border-radius: 0;
 		&.password {
 			padding-right: @70px;
 		}
@@ -53,11 +53,8 @@
 				border-radius: 100px;
 			}
 			.input {
-				font-size: 0;
+				&.img,
 				&.code {
-					padding-right: @220px;
-				}
-				&.img {
 					padding-right: @220px;
 				}
 				img {
@@ -67,6 +64,7 @@
 					width: @200px;
 					height: @80px;
 					transform: translateY(-50%);
+					-webkit-transform: translateY(-50%);
 				}
 			}
 		}
@@ -101,10 +99,6 @@
 			.btn {
 				border-radius: 100px;
 				font-size: @36px;
-				&[disabled] {
-					color: #666;
-					border-color: #666;
-				}
 			}
 			
 		}
