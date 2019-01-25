@@ -38,6 +38,14 @@
 					left: 50%;
 					transform: translate(-50%, -50%);
 				}
+				.icon-delete {
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: @32px;
+					height: @32px;
+					.image-svg('delete');
+				}
 				label {
 					display: block;
 					width: 100%;
@@ -60,6 +68,9 @@
 	}
 	.rules {
 		padding: 0 @padding-LR;
+		font-size: 14px;
+		line-height: 18px;
+		color: #696969;
 		h3,
 		h4 {
 			font-size: 16px;
@@ -70,11 +81,6 @@
 		}
 		h4 {
 			font-size: 15px;
-		}
-		p {
-			font-size: 14px;
-			line-height: 18px;
-			color: #696969;
 		}
 		.img-box {
 			img {

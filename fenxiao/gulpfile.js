@@ -5,8 +5,6 @@ const gulp = require('gulp');
 const less = require('gulp-less');
 
 const sourcemaps = require('gulp-sourcemaps');
-// var cleanCSS = require('gulp-clean-css');
-
 const postcss = require('gulp-postcss');
 
 const cssnano = require('cssnano');
@@ -26,65 +24,85 @@ const gulpAutoprefixer = require('gulp-autoprefixer');
 let resolvePath = function(url) {
 	return path.resolve(path.join(__dirname, url));
 };
+const targetDir = resolvePath('dist');
+
+const srcAllHtml = resolvePath('src/*.html');
+const distAllHtml = resolvePath('dist/*.html');
+
+const destAllHtmlDir = resolvePath('dist');
+
+const srcAllCss = resolvePath('src/css/*.css');
+const destAllCssDir = resolvePath('dist/css');
+
+const srcAllImg = resolvePath('src/img/*.*');
+const destAllImgDir = resolvePath('dist/img');
+
+const srcAllIcon = resolvePath('src/img/icon/*.png');
+const destAllIconDir = resolvePath('dist/img/icon');
+
+const srcAllSvg = resolvePath('src/img/svg/*.svg');
+const destAllSvgDir = resolvePath('dist/img/svg');
+
+const srcAllJs = resolvePath('src/js/*.js');
+const destAllJsDir = resolvePath('dist/js');
+
+const distAllCss = resolvePath('src/css/*.less');
+const indexLess = resolvePath('src/less/index.less');
+const indexCss = resolvePath('dist/css/index.css');
+const srcAllLess = resolvePath('src/less/*.less');
+const srcAllLessMixins = resolvePath('src/less/mixins/*.less');
+const srcAllLessComponent = resolvePath('src/less/component/*.less');
 
 // 复制文件
 gulp.task('copyhtml', function() {
-	return gulp.src(resolvePath('src/*.html'))
-		.pipe(gulp.dest(resolvePath('dist')));
+	return gulp.src(srcAllHtml)
+		.pipe(gulp.dest(destAllHtmlDir));
 });
 gulp.task('copycss', function() {
-	return gulp.src(resolvePath('src/css/*.css'))
-		.pipe(gulp.dest(resolvePath('dist/css')));
+	return gulp.src(srcAllCss)
+		.pipe(gulp.dest(destAllCssDir));
 });
 gulp.task('copyimg', function() {
-	return gulp.src(resolvePath('src/img/*.*'))
-		.pipe(gulp.dest(resolvePath('dist/img')));
+	return gulp.src(srcAllImg)
+		.pipe(gulp.dest(destAllImgDir));
 });
-
 gulp.task('copyimgIcon', function() {
-	return gulp.src(resolvePath('src/img/icon/*.*'))
-		.pipe(gulp.dest(resolvePath('dist/img/icon')));
+	return gulp.src(srcAllIcon)
+		.pipe(gulp.dest(destAllIconDir));
 });
 gulp.task('copyimgSvg', function() {
-	return gulp.src(resolvePath('src/img/svg/*.svg'))
-		.pipe(gulp.dest(resolvePath('dist/img/svg')));
+	return gulp.src(srcAllSvg)
+		.pipe(gulp.dest(destAllSvgDir));
 });
 gulp.task('copyjs', function() {
-	return gulp.src(resolvePath('src/js/*.js'))
-		.pipe(gulp.dest(resolvePath('dist/js/')));
+	return gulp.src(srcAllJs)
+		.pipe(gulp.dest(destAllJsDir));
 });
+
 // 删除文件夹
 gulp.task('clean', function(cb) {
 	del([
-		resolvePath('dist'),
+		targetDir,
 	], cb);
 });
+
 // 启动服务器
 gulp.task('serve', function() {
 	connect.server({
-		root: resolvePath('dist'),
+		root: targetDir,
 		livereload: true,
 		port: 8002
 	});
 });
 // 重新加载
 gulp.task('reload', function() {
-	gulp.src(resolvePath('./dist/*.html'))
+	gulp.src(distAllHtml)
 		.pipe(connect.reload());
 });
 
 
 // 编译 less 为 css
-gulp.task('less', function() {
-	return gulp.src('./src/less/index.less')
-		.pipe(sourcemaps.init())
-		.pipe(less({
-			paths: [path.join(__dirname, 'less', 'includes')]
-		}))
-		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('./dist/css/'));
-});
-gulp.task('autocss', function() {
+gulp.task('less', () => {
 	var plugins = [
 		autoprefixer({
 			browsers: [
@@ -98,10 +116,12 @@ gulp.task('autocss', function() {
 		}),
 		cssnano()
 	];
-	return gulp.src('./dist/css/index.css')
+	return gulp.src(indexLess)
+		.pipe(sourcemaps.init())
+		.pipe(less())
 		.pipe(postcss(plugins))
-		.pipe(rename('index.min.css'))
-		.pipe(gulp.dest('./dist/css/'));
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest(destAllCssDir));
 });
 
 
@@ -109,23 +129,20 @@ gulp.task('autocss', function() {
 gulp.task('copy', gulpSequence('copyhtml', 'copycss', 'copyimg', 'copyimgIcon', 'copyimgSvg', 'copyjs'));
 
 // 全部编译
-gulp.task('build', gulpSequence('copy', 'css', 'serve', 'watch'));
-gulp.task('css', gulpSequence('less', 'autocss'));
+gulp.task('build', gulpSequence('copy', 'less', 'serve', 'watch'));
+gulp.task('dev', gulpSequence('copy', 'less', 'serve', 'watch'));
 
-
-
-gulp.task('default', () => {
-	console.log(path);
-	var url = resolvePath('./src/less/index.less');
-	console.log(url);
-});
+gulp.task('img', gulpSequence('copyimg', 'copyimgIcon', 'copyimgSvg'));
+gulp.task('js', gulpSequence('copyjs'));
 
 // 监视文件自动编译
 gulp.task('watch', function() {
-	gulp.watch('src/less/*.less', ['less', 'reload']);
-	gulp.watch('src/*.html', ['copyhtml', 'reload']);
-	gulp.watch('src/img/*.*', ['copyimg', 'reload']);
-	gulp.watch('src/img/icon/*.*', ['copyimgIcon', 'reload']);
-	gulp.watch('src/img/svg/*.svg', ['copyimgSvg', 'reload']);
-	gulp.watch('src/js/*.js', ['copyjs', 'reload']);
+	gulp.watch(srcAllLess, ['less', 'reload']);
+	gulp.watch(srcAllLessMixins, ['less', 'reload']);
+	gulp.watch(srcAllLessComponent, ['less', 'reload']);
+	gulp.watch(srcAllHtml, ['copyhtml', 'reload']);
+	gulp.watch(srcAllImg, ['copyimg', 'reload']);
+	gulp.watch(srcAllIcon, ['copyimgIcon', 'reload']);
+	gulp.watch(srcAllSvg, ['copyimgSvg', 'reload']);
+	gulp.watch(srcAllJs, ['copyjs', 'reload']);
 });

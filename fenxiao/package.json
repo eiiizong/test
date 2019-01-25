@@ -1,13 +1,28 @@
 {
-  "name": "gulp-demo",
+  "name": "fenxiao",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "kbf fenxiao",
+  "main": "gulpfile.js",
+	"homepage": "https://github.com/eiiizong/test/tree/gh-pages#readme",
+	"keywords": [
+	  "fenxiao",
+	  "gulp",
+	  "kbf"
+	],
+	"repository": {
+	  "type": "git",
+	  "url": "https://github.com/eiiizong/test.git"
+	},
   "scripts": {
-    "start": "gulp build --color",
+    "dev": "gulp dev --color",
+    "build": "gulp build --color",
     "clean": "gulp clean",
     "html": "gulp copyhtml",
-    "css": "gulp css",
+    "img": "gulp img",
+    "js": "gulp js",
+    "copy": "gulp copy",
+    "css": "gulp less",
+    "less": "gulp less",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -18,7 +33,6 @@
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "^4.0.0",
     "gulp-connect": "^5.7.0",
     "gulp-less": "^4.0.1",
     "gulp-postcss": "^8.0.0",
