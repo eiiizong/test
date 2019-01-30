@@ -11,6 +11,28 @@
 .withdraw {
 	background-color: #f4f4f4;
 	padding-bottom: @bootom-distance;
+	.cash-num {
+		background-color: #356aff;
+		color: #fff;
+		text-align: center;
+		padding: @40px 0;
+		div {
+			font-size: @30px;
+			line-height: 1;
+			padding-bottom: @40px;
+		}
+		p {
+			font-size: @50px;
+			line-height: 1;
+			font-weight: bold;
+			&::before {
+				content: '¥';
+				font-size: @40px;
+				margin-right: 2px;
+				line-height: 1;
+			}
+		}
+	}
 	.cell-wrapper {
 		width: 100%;
 		padding-top: @cell-item-space;
