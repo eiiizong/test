@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,shrink-to-fit=no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<title>打印申请</title>
+		<link rel="shortcut icon" href="static/img/favicon.ico">
+		<link rel="stylesheet" href="static/css/mint-ui.css">
+		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<div class="toolbar goback">
+				<div>
+					<i class="icon icon-goback"></i>
+				</div>
+				<p class="title">打印申请</p>
+			</div>
+
+			<div class="apply-print">
+				<p class="e-hint before"><span>选择类型</span></p>
+				<div class="e-radio-group">
+					<label class="radio-box clearfix">
+						<div class="left">
+							<span>桌贴(10.5x14.8) cm</span>
+						</div>
+						<div class="right">
+							<input type="radio" name="choiceZT" :checked="!QT" @change="changeRadio">
+							<span></span>
+						</div>
+					</label>
+					<label class="radio-box clearfix">
+						<div class="left">
+							<span>墙贴(14.8x21.0) cm</span>
+						</div>
+						<div class="right">
+							<input type="radio" name="choiceZT" :checked="QT" @change="changeRadio">
+							<span></span>
+						</div>
+					</label>
+				</div>
+				<p class="e-hint before"><span>样式</span></p>
+				<div class="example-img">
+					<div class="img-box">
+						<img src="static/img/QR-example.jpg" alt="" v-show="!QT">
+						<img src="static/img/qt-QR.jpg" alt="" class="qt" v-show="QT">
+					</div>
+				</div>
+
+				<p class="e-hint before"><span>填写以下需求</span></p>
+				<div class="e-wrapper">
+					<div class="e-input-group">
+						<div class="select" @click="triggerPopup">
+							<div class="left">
+								<span>打印桌号</span>
+							</div>
+							<div class="center">
+								<span v-for="(item,index) in seatNumListChecked" :key="index">{{item}}</span>
+								<!-- <p class="hint">*已选择10个</p> -->
+							</div>
+							<div class="right">
+								<i class="icon"></i>
+							</div>
+						</div>
+						<div class="input-box">
+							<div class="left">
+								<span>打印份数</span>
+							</div>
+							<div class="right">
+								<input type="number" placeholder="例：1份" />
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="e-cell clearfix">
+					<div class="left">
+						<span>当前状态</span>
+					</div>
+					<div class="left">
+						<span class="printing status">打印中</span>
+					</div>
+				</div>
+				<div class="e-text-hint">
+					*说明：
+					<p>1.这是说明文字这是说明文字这是说明文字这是说明文字这是说明文字这是说明文字</p>
+					<p>2.这是说明文字这是说明文字这是说明文字这是说明文字这是说明文字这是说明文字</p>
+					<p>3.这是说明文字这是说明文字.</p>
+				</div>
+			</div>
+
+			<div class="sd-btn-box">
+				<button type="button" class="btn">提交</button>
+			</div>
+
+			<!-- 选择 -->
+			<div class="select-bank">
+				<mt-popup v-model="popupSelectSeatNum" position="bottom" ref="popup">
+					<div class="content">
+						<div class="tool-bar clearfix">
+							<div class="left">
+								<button class="btn" @click="triggerPopup">取消</button>
+							</div>
+							<div class="left">
+								<button class="btn" @click="selectSeatNumOK">确定</button>
+							</div>
+						</div>
+
+						<div class="sd-radio-group" ref="scrollDOM">
+							<label v-for="(item, index) in seatNumList" :key="index" class="clearfix">
+								<div class="left onlyone">
+									<span>{{item.name}}</span>
+								</div>
+
+								<input type="checkbox" :checked="item.isChecked" @change="changeSeatNum(index)" />
+								<div class="circle right"><i class="icon icon-radio"></i></div>
+							</label>
+						</div>
+					</div>
+				</mt-popup>
+			</div>
+		</div>
+
+		<script src="static/js/vue.min.js"></script>
+		<script src="static/js/mint-ui.js"></script>
+		<script src="static/js/apply-print.js"></script>
+	</body>
+</html>

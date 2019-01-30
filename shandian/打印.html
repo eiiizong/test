@@ -10,55 +10,121 @@
 		<title>打印</title>
 		<link rel="shortcut icon" href="static/img/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+        <style>
+            body{
+                background-color: #fff; 
+            }
+            /*1786 3572*/
+            .print {
+                width: 1792px;
+            }
+            .print .img-box {
+                
+            }
+        </style>
+		<style media="print" type="text/css">
+			.noprint {
+				display: none;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="app" v-cloak class="no-padding">
-			<div class="print">
+            <div class="print">
 				<div class="img-box">
-					<img src="static/img/table-QR.jpg" alt="">
+					<img src="static/img/table-QR-bg@2x.png">
+					<!-- 用户自定义 号桌添加  user-defined 类名-->
+					<p class="user-defined">空白符科</p>
+					<div class="QR">
+						<div><img src="static/img/QR@2x1.png"></div>
+					</div>
+				</div>
+                <div class="img-box">
+					<img src="static/img/table-QR-bg@3x.png">
+					<!-- 用户自定义 号桌添加  user-defined 类名-->
+					<p class="">C1</p>
+					<div class="QR">
+						<div><img src="static/img/QR@2x1.png"></div>
+					</div>
 				</div>
 				<div class="img-box">
-					<img src="static/img/table-QR.jpg" alt="">
+					<img src="static/img/table-QR-bg@3x.png">
+					<!-- 用户自定义 号桌添加  user-defined 类名-->
+					<p class="user-defined">空白符科</p>
+					<div class="QR">
+						<div><img src="static/img/QR@2x1.png"></div>
+					</div>
 				</div>
 				<div class="img-box">
-					<img src="static/img/table-QR.jpg" alt="">
+					<img src="static/img/table-QR-bg@3x.png">
+					<!-- 用户自定义 号桌添加  user-defined 类名-->
+					<p class="">C2</p>
+					<div class="QR">
+						<div><img src="static/img/QR@2x1.png"></div>
+					</div>
 				</div>
 				<div class="img-box">
-					<img src="static/img/table-QR.jpg" alt="">
+					<img src="static/img/table-QR-bg@3x.png">
+					<!-- 用户自定义 号桌添加  user-defined 类名-->
+					<p class="user-defined">空白符科</p>
+					<div class="QR">
+						<div><img src="static/img/QR@2x1.png"></div>
+					</div>
 				</div>
 				<div class="img-box">
-					<img src="static/img/table-QR.jpg" alt="">
+					<img src="static/img/table-QR-bg@3x.png">
+					<!-- 用户自定义 号桌添加  user-defined 类名-->
+					<p class="">C3</p>
+					<div class="QR">
+						<div><img src="static/img/QR@2x1.png"></div>
+					</div>
 				</div>
 				<div class="img-box">
-					<img src="static/img/table-QR.jpg" alt="">
+					<img src="static/img/table-QR-bg@3x.png">
+					<!-- 用户自定义 号桌添加  user-defined 类名-->
+					<p class="">C1</p>
+					<div class="QR">
+						<div><img src="static/img/QR@2x1.png"></div>
+					</div>
 				</div>
 				<div class="img-box">
-					<img src="static/img/table-QR.jpg" alt="">
+					<img src="static/img/table-QR-bg@3x.png">
+					<!-- 用户自定义 号桌添加  user-defined 类名-->
+					<p class="user-defined">空白符科</p>
+					<div class="QR">
+						<div><img src="static/img/QR@2x1.png"></div>
+					</div>
 				</div>
 				<div class="img-box">
-					<img src="static/img/table-QR.jpg" alt="">
+					<img src="static/img/table-QR-bg@3x.png">
+					<!-- 用户自定义 号桌添加  user-defined 类名-->
+					<p class="">C2</p>
+					<div class="QR">
+						<div><img src="static/img/QR@2x1.png"></div>
+					</div>
 				</div>
 				<div class="img-box">
-					<img src="static/img/table-QR.jpg" alt="">
+					<img src="static/img/table-QR-bg@3x.png">
+					<!-- 用户自定义 号桌添加  user-defined 类名-->
+					<p class="user-defined">空白符科</p>
+					<div class="QR">
+						<div><img src="static/img/QR@2x1.png"></div>
+					</div>
 				</div>
 				<div class="img-box">
-					<img src="static/img/table-QR.jpg" alt="">
+					<img src="static/img/table-QR-bg@3x.png">
+					<!-- 用户自定义 号桌添加  user-defined 类名-->
+					<p class="">C3</p>
+					<div class="QR">
+						<div><img src="static/img/QR@2x1.png"></div>
+					</div>
 				</div>
-				<div class="img-box">
-					<img src="static/img/table-QR.jpg" alt="">
-				</div>
-				<div class="img-box">
-					<img src="static/img/table-QR.jpg" alt="">
-				</div>
-				<div class="img-box">
-					<img src="static/img/table-QR.jpg" alt="">
-				</div>
-				<div class="sd-btn-box">
-					<button type="button" class="btn">打印</button>
+				<div class="sd-btn-box noprint">
+					<button type="button" class="btn" @click="print">打印</button>
 				</div>
 			</div>
 		</div>
 		<script src="static/js/vue.min.js"></script>
-		<script src="static/js/add-clerk.js"></script>
+		<script src="static/js/print-page.js"></script>
 	</body>
 </html>

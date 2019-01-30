@@ -1709,26 +1709,60 @@ i.icon-recommend {
 	background-color: #efeff4;
 }
 
-.gain-recording .choice-deta {
-	height: 45px;
-	padding: 0 14px;
-}
+.gain-recording .choice-deta {}
 
-.gain-recording .choice-deta .left span {
+.gain-recording .choice-deta .top {
+	width: 100%;
 	display: block;
-	font-size: 11px;
-	font-weight: 500;
-	color: #9a9a9a;
-	line-height: 1;
-	padding-top: 6px;
+	background-color: #0076ff;
+	color: #fff;
+	text-align: center;
+	padding: 30px 0;
 }
 
-.gain-recording .choice-deta .left span:first-child {
-	font-size: 13px;
-	font-weight: bold;
-	color: #222;
+.gain-recording .choice-deta .top span {
+	display: block;
+	font-size: 16px;
+	font-weight: 500;
 	line-height: 1;
-	padding-top: 10px;
+}
+
+.gain-recording .choice-deta .top p {
+	display: block;
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 1;
+	padding-top: 20px;
+}
+
+.gain-recording .choice-deta .top p:before {
+	content: '¥';
+	font-size: 22px;
+	line-height: 1;
+	padding-right: 4px;
+	font-weight: bold;
+
+}
+
+.gain-recording .choice-deta .bottom {
+	display: block;
+	width: 100%;
+	height: 50px;
+	padding: 10px 14px;
+}
+
+.gain-recording .choice-deta .bottom .left span {
+	display: block;
+	font-size: 16px;
+	line-height: 1;
+	font-weight: bold;
+}
+
+.gain-recording .choice-deta .bottom .left p {
+	font-size: 10px;
+	font-weight: 500;
+	color: #c7c7cd;
+	padding-top: 4px;
 }
 
 .gain-recording .record-list {
@@ -1858,7 +1892,7 @@ i.icon-gain-deta {
 	width: 18px;
 	height: 16px;
 	background-image: url(../img/icon/gain-deta.png);
-	margin-top: 15px;
+	margin-top: 6px;
 }
 
 i.icon-replace-order {
@@ -5043,14 +5077,295 @@ i.icon-see-password {
 
 /* 打印 */
 .print {
-	background-color: #f4f4f4;
+	background-color: #fff;
+	min-height: 100%;
+	height: auto;
 }
 
 .print .img-box {
-	padding: 10px 0;
+	width: 892px;
+	display: inline-block;
+	page-break-after: always;
+	padding-bottom: 0px;
+	background-color: #fff;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 5px;
 }
 
-.print .img-box img {
+.print .img-box>img {
+	width: 100%;
+}
+
+.print .img-box>p {
+	position: absolute;
+	top: 410px;
+	left: 140px;
+	font-size: 152px;
+	line-height: 1;
+	color: #000;
+	font-weight: bold;
+}
+
+.print .img-box>p:after {
+	content: '号桌';
+	font-size: 65px;
+	margin-left: 20px;
+	line-height: 1;
+}
+
+.print .img-box .user-defined {
+	font-size: 100px;
+}
+
+.print .img-box .user-defined:after {
+	content: '';
+}
+
+.print .img-box .QR {
+	position: absolute;
+	left: 54px;
+	bottom: 161px;
+}
+
+.print .img-box .QR div {
+	width: 360px;
+	height: 355px;
+	overflow: hidden;
+}
+
+.print .img-box .QR div img {
+	width: 100%;
+}
+
+.print .sd-btn-box {
+	width: 1080px;
+	margin: 0 auto;
+}
+
+.print .sd-btn-box .btn {
+	height: 60px;
+	line-height: 60px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* 打印申请 */
+.apply-print {
+	font-weight: 500;
+}
+
+.e-hint {
+	width: 100%;
+	background-color: transparent;
+	font-size: 14px;
+	color: #7b7b7b;
+	font-weight: 500;
+	line-height: 1;
+	padding: 8px 14px;
+	height: 30px;
+	vertical-align: top;
+}
+
+.e-hint span {
+	display: block;
+}
+
+.e-hint.before span {
+	position: relative;
+	padding-left: 5px;
+}
+
+.e-hint.before span:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 14px;
+	background-color: #439aff;
+	border-radius: 2px;
+}
+
+.e-radio-group {
+	border-top: 1px solid #eaeaee;
+	border-bottom: 1px solid #eaeaee;
+	background-color: #fff;
+	padding-left: 14px;
+}
+
+.e-radio-group .radio-box {
+	width: 100%;
+	display: block;
+	border-bottom: 1px solid #eaeaee;
+}
+
+.e-radio-group .radio-box:last-of-type {
+	border-bottom: 0;
+}
+
+.e-radio-group .radio-box .left span {
+	font-size: 15px;
+	display: block;
+	line-height: 40px;
+}
+
+.e-radio-group .radio-box .right {
+	margin-top: 10px;
+	padding-right: 14px;
+}
+
+.e-radio-group .radio-box .right span {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: #f00;
+	background: url(../img/svg/radio-full.svg) no-repeat;
+	background-size: 100% 100%;
+}
+
+.e-radio-group .radio-box .right input:checked~span {
+	background-image: url(../img/svg/radio-full-checked.svg);
+}
+
+.example-img {
+	width: 100%;
+	background-color: #fff;
+	padding: 11px 0 11px 37px;
+}
+
+.example-img img {
+	width: 80px;
+}
+
+.example-img img.qt {
+	width: 100px;
+}
+
+.e-wrapper {
+	background-color: #ff0;
+}
+
+.e-input-group {
+	padding-left: 14px;
+	background-color: #fff;
+	border-top: 1px solid #eaeaee;
+	border-bottom: 1px solid #eaeaee;
+}
+
+.e-input-group .input-box {
 	display: block;
 	width: 100%;
+	position: relative;
+}
+
+.e-input-group .input-box .left {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.e-input-group .input-box .left span {
+	font-size: 15px;
+	line-height: 40px;
+}
+
+.e-input-group .input-box .right {
+	width: 100%;
+	height: 40px;
+}
+
+.e-input-group .input-box .right input {
+	padding: 10px 0 10px 74px;
+	display: block;
+	width: 100%;
+	line-height: 20px;
+	font-size: 15px;
+}
+
+.select {
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #eaeaee;
+	position: relative;
+	min-height: 41px;
+}
+
+.select .left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 15px;
+	line-height: 40px;
+}
+
+.select .center {
+	width: 100%;
+	line-height: 40px;
+	font-size: 0;
+	color: #e8b400;
+	padding: 0 74px;
+	overflow: hidden;
+}
+
+.select .center span {
+	width: 25%;
+	display: inline-block;
+	font-size: 14px;
+	float: left;
+}
+
+.select .center .hint {
+	position: absolute;
+	bottom: 4px;
+	left: 50%;
+	font-size: 11px;
+	line-height: 1;
+	transform: translateX(-50%);
+	color: #f00;
+}
+
+.select .right {
+	position: absolute;
+	top: 0;
+	right: 14px;
+}
+
+.select .right .icon {
+	width: 18px;
+	height: 10px;
+	background-image: url(../img/icon/arrows-bottom@2x.png);
+	margin-top: 15px;
+}
+
+.e-text-hint {
+	font-size: 12px;
+	color: #888;
+	line-height: 1.4;
+	padding: 8px 14px;
+}
+
+.e-text-hint p {
+	text-indent: 2em;
+}
+
+.e-cell {
+	background-color: #fff;
+	padding-left: 14px;
+	margin-top: 10px;
+}
+
+.e-cell .left span {
+	display: block;
+	font-size: 15px;
+	line-height: 40px;
+}
+
+.e-cell .left span.status {
+	padding-left: 16px;
+}
+
+.e-cell .left span.printing {
+	padding-left: 16px;
+	color: #439aff;
 }
