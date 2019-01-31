@@ -14,8 +14,6 @@
 	function setRemUnit() {
 		var rem = docEl.clientWidth / 10
 		docEl.style.fontSize = rem + 'px';
-		
-		alert('rem: ' + rem + '，' + docEl.clientWidth);
 	}
 	setRemUnit();
 	// reset rem unit on page resize

@@ -43,13 +43,11 @@
 				var initWidth = 163;
 				var w = document.body.clientWidth;
 				initWidth = 163 * w / 375;
+				$('#QR').css('paddingTop', (w / 375 * 204) + 'px');
 				$('#code').html('');
 				$('#code').qrcode({width: initWidth,height: initWidth,text: "123"});
 			};
-			var html = $('html').css('fontSize');
-			var w = $(window).width();
-			var qr = $('#QR').css('paddingTop');
-			alert(w + ' , ' + html + ', ' + qr);
+			
 			createCode();
 			window.onresize = createCode;
 		</script>
