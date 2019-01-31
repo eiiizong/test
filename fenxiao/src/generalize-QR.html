@@ -21,7 +21,7 @@
 					<div id="code"></div>
 				</div>
 				<div class="bottom">
-					<div class="img-box invite">
+					<div class="img-box invite" id="QR">
 						<img src="img/icon/invite@2x.png">
 					</div>
 					<div class="code">
@@ -39,17 +39,20 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-			$(function() {
-				var createCode = function () {
-					var initWidth = 163;
-					var w = document.body.clientWidth;
-					initWidth = 163 * w / 375;
-					$('#code').html('');
-					 $('#code').qrcode({width: initWidth,height: initWidth,text: "123"});
-				};
-				createCode();
-				window.onresize = createCode;
-			});
+			var createCode = function () {
+				var initWidth = 163;
+				var w = document.body.clientWidth;
+				initWidth = 163 * w / 375;
+				$('#code').html('');
+				$('#code').qrcode({width: initWidth,height: initWidth,text: "123"});
+			};
+			var html = $('html').css('fontSize');
+			alert(html);
+			var qr = $('#QR').css('paddingTop');
+			console.log(html);
+			console.log(qr);
+			createCode();
+			window.onresize = createCode;
 		</script>
 	</body>
 </html>
