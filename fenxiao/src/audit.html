@@ -18,7 +18,7 @@
 				<div class="info">
 					<div class="detail">
 						<h3>完善审核资料</h3>
-						提交的任务：发朋友圈得佣金
+						提交的任务：发朋友圈得佣金test
 						<div>提交的任务：发朋友圈得佣金</div>
 						<p>上传朋友圈截图：</p>
 					</div>
@@ -51,6 +51,21 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			window.onload = function () {
+				var cacl = function () {
+					var ul = document.getElementById('img_warpper');
+					var lis = ul.getElementsByClassName('left');
+					var w = lis[0].offsetWidth;
+					alert(w);
+					console.log(w);
+					for(let i = 0; i<lis.length; i++) {
+						lis[i].style.height = w + 'px';
+					}
+				};
+				cacl();
+			};
+		</script>
 		<script src="js/cacl.js"></script>
 	</body>
 </html>
