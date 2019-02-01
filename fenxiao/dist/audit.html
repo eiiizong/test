@@ -18,7 +18,7 @@
 			<div class="audit">
 				<div class="info">
 					<div class="detail">
-						<h3>完善审核资料</h3>
+						<h3 id="test">完善审核资料</h3>
 						提交的任务：发朋友圈得佣金test1
 						<div>提交的任务：发朋友圈得佣金</div>
 						<p>上传朋友圈截图：</p>
@@ -56,6 +56,9 @@
 		<script type="text/javascript">
 			$(function() {
 				alert('js 开始执行');
+				setTimeout(function() {
+					$('#test').html('testtesttesttest');
+				}, 1000);
 				var lis = $('#img_warpper .left');
 				var w = lis.innerWidth();
 				console.log(w);
