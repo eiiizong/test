@@ -50,7 +50,7 @@
 				$('#QR').css('paddingTop', (w / 375 * 204) + 'px');
 				$('#code').html('');
 				$('#code').qrcode({width: initWidth,height: initWidth,text: "123"});
-				alert('获取到的字体大小为：' + $('html')[0].style.fontSize);
+				// alert('获取到的字体大小为：' + $('html')[0].style.fontSize);
 			};
 			createCode();
 			window.onresize = createCode;
