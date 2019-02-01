@@ -4,8 +4,8 @@ var cacl = function () {
 	var lis = ul.getElementsByClassName('left');
 	var w = lis[0].offsetWidth;
 	console.log(w);
-	for(let i = 0; i<lis.length; i++) {
+	for(var i = 0; i<lis.length; i++) {
 		lis[i].style.height = w + 'px';
 	}
 };
-cacl()
+cacl();
