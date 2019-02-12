@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>输入车牌号</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<!-- <script type="text/javascript" src="js/common.js"></script> -->
+		<style>
+			* {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            margin: 0 auto;
+            padding: 0 auto;
+            height: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        div#single-keyboard-box, div#mixed-keyboard-box {
+            height: 40%;
+        }
+
+    </style>
+	</head>
+
+	<body>
+		<div class="wapper input-car-id">
+			<div class="topbar">
+				<div class="topleft"><a href="#"><i class="icon iconfont icon-back"></i></a></div>
+				<h1>输入车牌号</h1>
+			</div>
+			<div class="main">
+				<div class="reg_box">
+					<h3><img src="images/input-car-id@2x.png" /></h3>
+					<div id="mixed-keyboard-box">
+						<div class="input-bg">
+							<mixed-keyboard :args="args" :callbacks="callbacks" />
+						</div>
+					</div>
+					<div id="hint">
+						*新能源汽车请点击第一个图标进行切换,若不能切换请清空车牌号后再进行切换。
+					</div>
+				</div>
+				<div class="bxx">
+					<ul class="clearfix" id="car_box">
+						<li>
+							<input type="text" placeholder="川A 11111" class="cy_text2" readonly>
+						</li>
+						<li>
+							<input type="text" placeholder="川A 22222" class="cy_text2" readonly>
+						</li>
+
+						<li>
+							<input type="text" placeholder="川A 33333" class="cy_text2" readonly>
+						</li>
+						<li>
+							<input type="text" placeholder="川A 44444" class="cy_text2" readonly>
+						</li>
+						<li>
+							<input type="text" placeholder="川A 55555" class="cy_text2" readonly>
+						</li>
+						<li>
+							<input type="text" placeholder="川A 66666" class="cy_text2" readonly>
+						</li>
+						<li>
+							<input type="text" placeholder="川A 77777" class="cy_text2" readonly>
+						</li>
+						<li>
+							<input type="text" placeholder="川A 8888888" class="cy_text2" readonly>
+						</li>
+						<li>
+							<input type="text" placeholder="川A D99999" class="cy_text2" readonly>
+						</li>
+					</ul>
+				</div>
+				<div class="btn-box">
+					<button type="button" class="btn">确定</button>
+				</div>
+			</div>
+			<div class="loading">
+				<div class="loadEffect">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		<script src="js/MixedKeyboard.js"></script>
+		<!-- <script src="js/keyboard-engine.js"></script> -->
+		<script>
+			var number = "";
+			var numberType = '';
+
+			var inputWidget = document.getElementById('input-widget');
+
+			// 显示键盘
+			var show = function() {
+				$('#inputrow li').last().removeClass('last');
+				$('#keyboard-pad').show();
+			}
+			// 隐藏键盘
+			var hide = function() {
+				$('#inputrow li').last().addClass('last');
+				$('#keyboard-pad').hide();
+			}
+
+			$('#inputrow').on('click', function() {
+				show();
+			});
+
+			function native_callback_ontextkey(text) {
+				number += text;
+				console.log("当前车牌[KEY]：" + number);
+				_updateKeyboard();
+			}
+
+			function native_callback_ondelkey() {
+				console.log("当前车牌[DEL]：" + number);
+				_updateKeyboard();
+			}
+
+			function native_callback_onokkey() {
+				console.log("当前车牌[OK]");
+			}
+
+			function native_callback_completed(number, isAutoCompleted) {
+				console.log("当前车牌[完成]：" + number + ", 自动完成:" + isAutoCompleted);
+				if (isAutoCompleted) {
+					hide();
+				}
+			}
+
+			function native_callback_changed(number, isCompleted) {
+				console.log("当前车牌[变更]：" + number + ", 已完成:" + isCompleted);
+			}
+
+			function native_callback_show_message(message) {
+				console.log(message);
+			}
+
+			function _updateKeyboard() {
+				// native_update_keyboard(presetNumber, keyboardType, provinceName, numberType, inputIndex)
+				native_update_keyboard(number, 0, "四川省", 8);
+			}
+
+			_updateKeyboard();
+			$(function() {
+
+				var cars = $('#car_box li');
+				var len = cars.length;
+
+				for (var i = 0; i < len; i++) {
+					$(cars[i]).on('click', function() {
+						for (var j = 0; j < len; j++) {
+							cars[j].children[0].className = 'cy_text2';
+						}
+						$(this).children().addClass('on');
+						number = $(this).children().attr('placeholder').replace(/\s*/g, "");
+						$('#inputrow li').last().addClass('last');
+						var numberLength = number.length;
+						if (7 === numberLength) {
+							// 普通民用汽车
+							hide();
+							_updateKeyboard();
+						} else if (8 === numberLength) {
+							// 新能源汽车
+							numberType = 5;
+							hide();
+							_updateKeyboard();
+						} else {
+							throw new Error('请输入正确的车牌号');
+						}
+
+
+					});
+				}
+
+			});
+		</script>
+	</body>
+</html>

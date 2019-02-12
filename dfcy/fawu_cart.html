@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>购物车</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet"  type="text/css" href="font/iconfont.css"  >
+<link rel="stylesheet"  type="text/css" href="css/swiper.min.css">
+<link rel="stylesheet"  type="text/css" href="css/style.css" >
+<script type="text/javascript"  src="js/jquery-2.1.4.js" ></script>
+<script type="text/javascript"  src="js/swiper.min.js"></script>
+<script type="text/javascript"  src="js/jQuery.autoIMG.js"></script>
+<script type="text/javascript"  src="js/num-alignment.js"></script>
+<script type="text/javascript"  src="js/common.js"></script>
+
+</head>
+
+<body>
+<div class="wapper">
+<div class="topbar">
+ <div class="topleft"><a href="#"><i class="icon iconfont icon-back"></i></a></div>
+ <h1>购物车</h1>
+<div class="topright">
+ </div>
+</div>
+<div class="main">
+<div class="shopping_list">
+<ul>
+	<li class="border-bottom">
+	  <label for="1" class="radiobox">
+    <span class="radio-bg"></span>
+    <input type="checkbox" name="1" id="1" value="" />
+    <span class="radio-on"></span>
+</label>
+	<div class="shopping_pic"><img src="images/01.jpg"/></div>
+	<div class="shopping_info">
+		<p>标题标题标题标题标题标题</p>	
+<div class="prices_num"><strong>￥188.00</strong></div>
+		<div class="prices_num"><span><a href="#"><i class="icon iconfont icon-bin"></i></a></span><div class="num_box"><input id="num1" data-step="1" data-min="0" data-max="50" data-digit="0" value="0" /></div></div>
+		<div class="prices_total">小计：300.00元</div>
+	</div>
+	<div class="clear"></div>
+	</li>
+<li class="border-bottom">
+	  <label for="2" class="radiobox">
+    <span class="radio-bg"></span>
+    <input type="checkbox" name="2" id="2" value="" />
+    <span class="radio-on"></span>
+</label>
+	<div class="shopping_pic"><img src="images/01.jpg"/></div>
+	<div class="shopping_info">
+		<p>标题标题标题标题标题标题</p>	
+<div class="prices_num"><strong>￥188.00</strong></div>
+		<div class="prices_num"><span><a href="#"><i class="icon iconfont icon-bin"></i></a></span><div class="num_box"><input id="num2" data-step="1" data-min="0" data-max="50" data-digit="0" value="0" /></div></div>
+		<div class="prices_total">小计：300.00元</div>
+	</div>
+	<div class="clear"></div>
+	</li>
+</ul>
+</div>
+<div class="chanyi_bar">
+<div class="choose_all">
+   <label for="all" class="radiobox">
+    <span class="radio-bg"></span>
+    <input type="checkbox" name="all" id="all" value="" />
+    <span class="radio-on"></span>
+</label>
+全选  合计：<b>500.00元</b></div>
+<a href="fawu_order.html" class="buy_btn">结算</a>	
+</div>
+</div>
+</div>
+<script>
+// 加减初始化
+alignmentFns.initialize();
+// 图片等比缩放
+window.onresize = function(){
+autoimg();
+$('.shopping_pic').autoIMG();	
+}
+$(document).ready(function(){
+autoimg();
+$('.shopping_pic').autoIMG();	
+});
+	
+function autoimg(){
+var imgheight=$(".shopping_pic").width();
+$(".shopping_pic").css('height',imgheight);
+$(".shopping_pic").css('line-height',imgheight+'px');
+}
+// 
+$("#all").click(function(){
+if(this.checked) {
+               $(".shopping_list .radiobox").find("input").prop("checked",true);
+            }else {
+               $(".shopping_list .radiobox").find("input").prop("checked",false);
+            }
+
+//$(".shopping_list .radiobox").find("input").prop("checked",true);
+
+});
+	
+</script>
+</body>
+</html>

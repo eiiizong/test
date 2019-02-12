@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>我要成为信众</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet"  type="text/css" href="font/iconfont.css"  >
+<link rel="stylesheet"  type="text/css" href="css/swiper.min.css">
+<link rel="stylesheet"  type="text/css" href="css/style.css" >
+<script type="text/javascript"  src="js/jquery-2.1.4.js" ></script>
+<script type="text/javascript"  src="js/common.js"></script>
+</head>
+<body class="chanyi_body" style="overflow: hidden">
+<div class="wapper">
+  <div class="topbar">
+    <div class="topleft"><a href="#"><i class="icon iconfont icon-back"></i></a></div>
+    <h1>我要成为信众</h1>
+    <div class="topright"> </div>
+  </div>
+  <div class="main">
+    <div class="reg_box">
+      <ul>
+        <li>
+          <input type="text" placeholder="姓名" class="cy_text">
+        </li>
+        <li>
+          <select class="select_text">
+            <option value="" selected="true" disabled="true">性别</option>
+            <option value="cat-1">男</option>
+            <option value="cat-2">女</option>
+          </select>
+        </li>
+        <li>
+          <input type="date"  id="birthday"   placeholder="出生年月" class="cy_text" />
+        </li>
+        <li>
+          <input type="text" placeholder="联系地址" class="cy_text">
+        </li>
+        <li>
+          <input type="number" placeholder="联系电话" class="cy_text">
+        </li>
+        <li>
+          <input type="email" placeholder="联系邮箱" class="cy_text">
+        </li>
+        <li>
+          <input type="number" placeholder="身份证号" class="cy_text">
+        </li>
+        		<li class="upload_photo">
+               <div class="photo-box">生活照片<img src="images/photoimg.png"/>
+                <input type="file" accept="image/*"  class="upload_file1" name="img1" id="img1"/>
+                <div id="preview"></div>
+            </div></li>
+            <script type="text/javascript">
+	  function preview1(file) {
+
+        var img = new Image(), url = img.src = URL.createObjectURL(file)
+        var $img = $(img)
+        img.onload = function() {
+            URL.revokeObjectURL(url)
+            $('#preview').empty().append($img)
+        }
+    }
+    function preview2(file) {
+        var reader = new FileReader()
+        reader.onload = function(e) {
+            var $img = $('<img>').attr("src", e.target.result)
+            $('#preview').empty().append($img)
+        }
+        reader.readAsDataURL(file)
+    }
+
+    $(function() {
+        $('.upload_file1').change(function(e) {
+            var file = e.target.files[0]
+            preview1(file);
+            //$('.upload_file1').hide();
+        })
+
+    })
+	  </script>
+        <li>
+          <input type="text" placeholder="工作单位" class="cy_text">
+        </li>
+        <li>
+          <input type="number" placeholder="工作职位" class="cy_text">
+        </li>
+        <li>
+          <select class="select_text">
+            <option value="" selected="true" disabled="true">收入范围</option>
+            <option value="cat-1">3000以下</option>
+            <option value="cat-2">3001~5000</option>
+            <option value="cat-2">5000~8000</option>
+            <option value="cat-2">8000~15000</option>
+            <option value="cat-2">15000以上</option>
+          </select>
+        </li>
+        <li>
+          <textarea class="text_area" placeholder="兴趣爱好" rows="4"></textarea>
+        </li>
+        <li>
+          <textarea class="text_area" placeholder="技能特长" rows="4"></textarea>
+        </li>
+      
+      </ul>
+    </div>
+  </div>
+  <div class="pop_bg_body">
+	
+</div>
+ <div class="pop_box">
+<h3>信众申请须知</h3>
+<div class="pop_body">
+<div class="pop_content">
+<div class="pop_content_text">
+<p>大佛禅院法物流通是信众，游人恭请佛菩萨像及法物之处，亦是大众表达宗教感情之所，由寺院开设，管理。大佛禅院法物流通是信众，游人恭请佛菩萨像及法物之处，亦是大众表达宗教感情之所，由寺院开设，管理。大佛禅院法物流通是信众，游人恭请佛菩萨像及法物之处，亦是大众表达宗教感情之所，由寺院开设，管理。大佛禅院法物流通是信众，游人恭请佛菩萨像及法物之处，亦是大众表达宗教感情之所，由寺院开设，管理。大佛禅院法物流通是信众，游人恭请佛菩萨像及法物之处，亦是大众表达宗教感情之所，由寺院开设，管理。</p>
+<p>所有佛像、法物皆由法师们开光、加持，恭请佛菩萨像及法物回家供养或佩戴，均是种善因、造福田之举，给自己及家人带来幸福、吉祥。信众请佛像、法物之善款，均由寺院用于佛像及法物制作、寺院建筑的修缮维护及慈善康养事业等。</p>
+	</div>
+<div class="pop_bottom">
+<a href="#" class="pop_btn pop_no_btn">不同意</a>
+<a href="#" class="pop_btn">同意</a>
+</div>
+</div>	
+</div>
+</div>
+  </div>
+
+
+<script>
+$("#birthday").on("input",function(){
+   if($(this).val().length>0){
+   $(this).addClass("full");
+}
+else{
+  $(this).removeClass("full");
+  }
+});
+</script>
+</body>
+</html>

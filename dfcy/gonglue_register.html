@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>预约讲解员信息填写</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet"  type="text/css" href="font/iconfont.css"  >
+<link rel="stylesheet"  type="text/css" href="css/swiper.min.css">
+<link rel="stylesheet"  type="text/css" href="css/style.css" >
+<script type="text/javascript"  src="js/jquery-2.1.4.js" ></script>
+
+<script type="text/javascript"  src="js/common.js"></script>
+
+</head>
+
+<body class="chanyi_body">
+<div class="wapper">
+<div class="topbar">
+ <div class="topleft"><a href="#"><i class="icon iconfont icon-back"></i></a></div>
+ <h1>预约讲解员信息填写</h1>
+<div class="topright">
+ </div>
+</div>
+<div class="main">
+<div class="reg_box">
+<h3><img src="images/gonglue_title.png"/></h3>
+<ul>
+	<li><input type="text" placeholder="真实姓名" class="cy_text"></li>
+	<li><input type="number" placeholder="手机号码" class="cy_text"></li>
+	<li><input type="number" placeholder="游览人数" class="cy_text"></li>
+	<li><input type="text"  id="regdate" onfocus="(this.type='date')"  placeholder="预定时间" class="cy_text" /></li>
+	<li><input type="text" placeholder="车牌号码" class="cy_text"></li>
+	<li><input type="button" class="ok_btn" value="下一步"></li>
+</ul>	
+</div>
+</div>
+</div>
+<script>
+$('#regdate').focus(function(){
+    var obj = $(this);
+    obj.prop('type','date');
+    setTimeout(function(){obj.trigger('click');},10);
+});	
+$('#regdate').blur(function(){
+    var obj = $(this);
+    if(!obj.val()){
+        obj.prop('type','text');
+    }
+});	
+</script>
+</body>
+</html>
