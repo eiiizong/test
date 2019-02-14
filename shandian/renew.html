@@ -24,18 +24,17 @@
 			</div>
 			<div class="renew">
 				<div class="renew-detail">
-
-					<div class="time-remaining">当前剩余授权时间：
-						<span>03天</span>
-					</div>
-					<div class="authorization-period">授权期限为：2018年2月16日—2018年11月16日</div>
+					<div class="current-status">当前版本为：初级版</div>
+					<div class="authorization-period">可使用二维码：5个</div>
+					<div class="authorization-period">授权期限为：2018年2月16日—2018年11月16日，<span class="time-remaining">剩余03天</span></div>
 					<div class="buy clearfix">
 						<div class="sd-renew-card left" v-for="(item, index) in buyDetails" :key="index" :class="item.isRecommend? 'recommand': ''">
-							<div class="warpper" ref="buyBox">
+							<div class="warpper" ref="buyBox" @click="resolvePopup(index)" :class="item.isRecommend?'active': ''">
 								<div class="content">
-									<p class="renew-time">续费{{item.time}}</p>
+									<p class="renew-title">{{item.name}}</p>
+									<p class="QR-number">{{item.QRnumber}}</p>
 									<p class="now-price">{{item.nowPrice}}</p>
-									<p class="old-price">¥{{item.oldPrice}}</p>
+									<p class="old-price" :class="index==0?'free':''">¥{{item.oldPrice}}</p>
 								</div>
 								<i v-if="item.isRecommend"></i>
 							</div>
@@ -55,6 +54,53 @@
 					<p>2.2财新对会员开通本服务不收取任何费用，但财新有权根据业务需要或市场变化等原因决定是否对本服务本身进行收费或调整自动续费周期及费用，并在相关页面向会员进行公示。</p>
 					<p>2.3 本服务由会员自主选择是否取消，若会员选择不取消，则视为会员同意财新按照一定规则进行扣款尝试，一旦扣款成功，财新将为会员开通下一个计费周期的会员服务。</p>
 					<p>2.4若在自动续费时/之前，服务价格发生调整，应以现时有效的价格为准。</p>
+				</div>
+
+				<div class="select-img-type buy-detail">
+					<mt-popup v-model="goodsDetail" position="bottom">
+						<div class="content">
+							<div class="pay">
+								<div class="pay-num">支付金额：<span>100.00</span></div>
+								<div class="status-info">已选：中级套餐（10个二维码）</div>
+							</div>
+							<div class="time">
+								<p>续费年限（可不选）</p>
+								<div class="clearfix">
+									<label class="left">
+										<input type="radio" name="time" placeholder="1年">
+										<span>1年</span>
+									</label>
+									<label class="left">
+										<input type="radio" name="time" placeholder="2年"><span>2年</span>
+									</label>
+									<label class="left">
+										<input type="radio" name="time" placeholder="3年"><span>3年</span>
+									</label>
+								</div>
+							</div>
+							<div class="detail">
+								<div class="clearfix upgrade-to">
+									<div class="left">升级到中级版</div>
+									<div class="right">{{currentDetail.nowPrice}}</div>
+								</div>
+								<div class="clearfix upgrade-current">
+									<div class="left">当前初级版</div>
+									<div class="right">199</div>
+								</div>
+								<div class="clearfix upgrade-time">
+									<div class="left">授权期限</div>
+									<div class="right">2018.9.12~2019.9.12</div>
+								</div>
+								<div class="clearfix upgrade-money">
+									<div class="left">需补费用</div>
+									<div class="right">100</div>
+								</div>
+							</div>
+							<div class="sd-btn-box">
+								<button type="button" class="btn">确定升级</button>
+							</div>
+						</div>
+					</mt-popup>
 				</div>
 			</div>
 		</div>

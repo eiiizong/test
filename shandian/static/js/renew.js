@@ -3,37 +3,37 @@ var app = new Vue({
 	data: function() {
 		return {
 			buyDetails: [{
-					time: '一年',
-					nowPrice: '0723.00',
-					oldPrice: '1115.00',
+					name: '免费版',
+					nowPrice: '0.00',
+					QRnumber: '1个二维码',
+					oldPrice: '',
+					isRecommend: false
+				},
+				{
+					name: '初级版',
+					QRnumber: '5个二维码',
+					nowPrice: '199.00',
+					oldPrice: '400.00',
+					isRecommend: false
+				},
+				{
+					name: '中级版',
+					QRnumber: '10个二维码',
+					nowPrice: '299.00',
+					oldPrice: '6000.00',
+					isRecommend: false
+				},
+				{
+					name: '高级版',
+					QRnumber: '20个二维码',
+					nowPrice: '599.00',
+					oldPrice: '1200.00',
 					isRecommend: true
-				},
-				{
-					time: '两年',
-					nowPrice: '723.00',
-					oldPrice: '1115.00',
-					isRecommend: false
-				},
-				{
-					time: '三年',
-					nowPrice: '723.00',
-					oldPrice: '1115.00',
-					isRecommend: false
-				},
-				{
-					time: '四年',
-					nowPrice: '723.00',
-					oldPrice: '1115.00',
-					isRecommend: false
-				},
-				{
-					time: '五年',
-					nowPrice: '723.00',
-					oldPrice: '1115.00',
-					isRecommend: false
-				},
+				}
 			],
-			height: ''
+			height: '',
+			goodsDetail: false,
+			currentDetail: {}
 		}
 	},
 	mounted() {
@@ -53,9 +53,13 @@ var app = new Vue({
 		},
 		resize() {
 			var _this = this;
-			window.onresize = function () {
+			window.onresize = function() {
 				_this.setHeight();
 			};
+		},
+		resolvePopup: function(index) {
+			this.currentDetail = this.buyDetails[index];
+			this.goodsDetail = !this.goodsDetail;
 		}
 	}
 });

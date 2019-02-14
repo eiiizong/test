@@ -822,7 +822,7 @@ i.icon-down.no {
 
 .change-info {
 	width: 100%;
-	padding-top: 0.625em;
+	/* padding-top: 0.625em; */
 }
 
 .sd-input-box {
@@ -830,13 +830,35 @@ i.icon-down.no {
 	border-bottom: 1px solid #eaeaea;
 }
 
+.sd-input-box.change {
+	padding: 8px 14px;
+	background-color: #F5F5F5;
+}
+
 .sd-input-box .mint-cell {
 	min-height: 40px;
+}
+
+.sd-input-box.change .mint-cell {
+	min-height: 50px;
 }
 
 .sd-input-box .mint-cell-wrapper {
 	width: 100%;
 	padding: 0 0.875em;
+}
+
+.sd-input-box.change .mint-cell {
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.sd-input-box.change .mint-cell-wrapper {
+	padding: 0 10px;
+}
+
+.sd-input-box.change .mint-cell-wrapper input {
+	font-size: 16px;
 }
 
 .sd-input-box .mint-cell-value {
@@ -2379,7 +2401,7 @@ i.icon-add-bankcard {
 	background-color: #fff;
 }
 
-.renew .time-remaining {
+.renew .current-status {
 	padding-top: 15px;
 	font-size: 15px;
 	font-weight: bold;
@@ -2388,21 +2410,142 @@ i.icon-add-bankcard {
 	padding: 15px 14px 0;
 }
 
-.renew .time-remaining span {
-	color: #e00000;
-}
 
 .renew .authorization-period {
 	font-size: 11px;
 	color: #989898;
-	padding-top: 7px;
+	padding-top: 5px;
 	line-height: 1;
-	padding: 7px 14px 0;
+	padding: 5px 14px 0;
+	line-height: 15px;
+}
+
+.renew .authorization-period span.time-remaining {
+	color: #e00000;
 }
 
 .renew .buy {
-	padding: 15px 10px 0;
+	padding: 13px 10px 0;
 }
+
+.renew .buy-detail .content {
+	padding: 10px 15px;
+	font-weight: 500;
+}
+
+.renew .buy-detail .content .pay {
+	border-bottom: 1px solid #f4f4f4;
+}
+
+.renew .buy-detail .content .pay-num {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1;
+	color: #000;
+}
+
+.renew .buy-detail .content .pay-num span {
+	display: inline-block;
+	font-size: 20px;
+	line-height: 1;
+	color: #ff383d;
+}
+
+.renew .buy-detail .content .pay-num span:before {
+	display: inline-block;
+	content: '¥';
+	font-size: 14px;
+	margin-right: 5px;
+}
+
+.renew .buy-detail .content .status-info {
+	font-size: 14px;
+	line-height: 1;
+	color: #010101;
+	padding-top: 6px;
+	padding-bottom: 14px;
+}
+
+.renew .buy-detail .content .time {
+	border-bottom: 1px solid #f4f4f4;
+	padding: 14px 0 20px;
+}
+
+.renew .buy-detail .content .time p {
+	font-size: 12px;
+	color: #010101;
+	line-height: 1;
+}
+
+.renew .buy-detail .content .time div {
+	padding-top: 13px;
+}
+
+.renew .buy-detail .content .time .left {
+	margin-right: 5px;
+	text-align: center;
+}
+
+.renew .buy-detail .content .time .left span {
+	display: block;
+	font-size: 12px;
+	width: 78px;
+	height: 30px;
+	line-height: 28px;
+	border-radius: 5px;
+	border: solid 1px #bdbdbd;
+	color: #888;
+	cursor: pointer;
+}
+
+.renew .buy-detail .content .time .left input:checked~span {
+	border-color: #439aff;
+	color: #439aff;
+}
+
+.renew .buy-detail .content .detail {
+	line-height: 28px;
+	padding: 11px 0 40px;
+}
+
+.renew .buy-detail .content .detail .left {
+	font-size: 14px;
+	color: #7c7c7c;
+}
+
+.renew .buy-detail .content .detail .right {
+	font-size: 14px;
+	color: #7c7c7c;
+}
+
+.renew .buy-detail .content .detail .upgrade-money .right:before,
+.renew .buy-detail .content .detail .upgrade-current .right:before,
+.renew .buy-detail .content .detail .upgrade-to .right:before {
+	content: '¥';
+	font-size: 12px;
+	line-height: 1;
+	margin-right: 1px;
+}
+
+.renew .buy-detail .content .detail .upgrade-current .right:after,
+.renew .buy-detail .content .detail .upgrade-to .right:after {
+	content: '/年';
+	margin-left: 1px;
+}
+
+.renew .buy-detail .content .sd-btn-box {
+	padding: 0;
+}
+
+.renew .buy-detail .content .sd-btn-box .btn {
+	border-radius: 5px;
+	font-size: 15px;
+	font-weight: 700;
+	color: #fff;
+	height: 40px;
+	line-height: 40px;
+}
+
 
 .sd-renew-card {
 	width: 33.3333%;
@@ -2413,9 +2556,13 @@ i.icon-add-bankcard {
 
 .sd-renew-card .warpper {
 	position: relative;
-	background-color: #fffaf2;
+	background-color: #fff;
 	border-radius: 5px;
 	border: solid 1px #eac389;
+}
+
+.sd-renew-card .warpper.active {
+	background-color: #fffaf2;
 }
 
 .sd-renew-card .warpper .content {
@@ -2431,22 +2578,42 @@ i.icon-add-bankcard {
 	color: #5d5d5e;
 }
 
-.sd-renew-card .warpper .content .renew-time {
+.sd-renew-card .warpper .content .renew-title {
 	font-size: 14px;
 	line-height: 1;
+	font-weight: bold;
+	color: #000;
+	white-space: nowrap;
+}
+
+.sd-renew-card .warpper .content .QR-number {
+	font-size: 11px;
+	line-height: 1;
+	color: #5d5d5e;
+	white-space: nowrap;
+	margin-top: 3px;
+	font-weight: normal;
 }
 
 .sd-renew-card .warpper .content .now-price {
-	font-size: 24px;
+	font-size: 22px;
 	color: #a57458;
 	line-height: 1;
-	margin-top: 20px;
+	margin-top: 10px;
+	white-space: nowrap;
 }
 
 .sd-renew-card .warpper .content .now-price:before {
 	content: '¥';
-	font-size: 15px;
-	margin-right: 4px;
+	font-size: 14px;
+	position: relative;
+	bottom: 1px;
+	margin-right: 1px;
+}
+
+.sd-renew-card .warpper .content .now-price:after {
+	content: '/年';
+	font-size: 14px;
 }
 
 .sd-renew-card .warpper .content .old-price {
@@ -2458,6 +2625,10 @@ i.icon-add-bankcard {
 	color: #989898;
 	padding: 0 2px;
 	position: relative;
+}
+
+.sd-renew-card .warpper .content .old-price.free {
+	visibility: hidden;
 }
 
 .sd-renew-card .warpper .content .old-price:after {
@@ -2472,6 +2643,7 @@ i.icon-add-bankcard {
 	background-color: #989898;
 }
 
+
 .sd-renew-card .warpper i {
 	width: 33px;
 	height: 33px;
@@ -2483,8 +2655,9 @@ i.icon-add-bankcard {
 }
 
 @media screen and (max-width:374px) {
-	.sd-renew-card .warpper .content .renew-time {
-		font-size: 12px;
+
+	.sd-renew-card .warpper .content .QR-number {
+		font-size: 10px;
 	}
 
 	.sd-renew-card .warpper .content .now-price {
@@ -4227,6 +4400,8 @@ i.icon-download {
 	margin-top: 9px;
 	margin-bottom: 6px;
 	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 /*********** 特约商户 *******************/
@@ -5065,14 +5240,17 @@ i.icon-see-password {
 	margin-right: 6px;
 }
 
-.official-accounts .apply-step ul li .right p {
+.official-accounts .apply-step ul li p {
 	position: absolute;
 	top: 18px;
-	left: 36px;
+	left: 28px;
 	font-size: 12px;
 	font-weight: 500;
 	color: #787878;
 	line-height: 1;
+}
+.official-accounts .apply-step ul li .left p {
+	left: -28px;
 }
 
 /* 打印 */

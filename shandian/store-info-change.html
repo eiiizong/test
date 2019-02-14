@@ -64,13 +64,27 @@
 			<!-- 修改信息 -->
 			<mt-popup v-model="popupVisible" position="top" class="changeInfoPopup">
 				<div class="change-info">
-					<div class="sd-input-box">
+					<div class="sd-input-box change">
 						<mt-field type="text" v-model="text" placeholder="请输入您想要修改的店名"></mt-field>
 					</div>
 					<p class="sd-hint">*提交后将由管理平台审批,通过后自动更新(审批将于24小时内进行)。</p>
+					
+					<div class="sd-get-code">
+						<div>
+							<mt-field type="text" v-model="code" placeholder="请输入验证码"></mt-field>
+							<div class="btn-box">
+								<button type="primary" @click="" class="btn">
+									<span v-if="canClick">获取验证码</span>
+									<span v-else>重新获取({{number}}s)</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					
 					<div class="sd-btn-box">
 						<button type="button" class="btn" @click="saveInfo">提交</button>
 					</div>
+					
 				</div>
 			</mt-popup>
 		</div>
