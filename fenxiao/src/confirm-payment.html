@@ -25,56 +25,27 @@
 				<div class="pay-away">
 					<h3>支付方式</h3>
 					<ul>
-						<li>
+						<li class="alipay">
 							<label class="title clearfix">
 								<div class="left">
 									<i class="icon icon-alipay-01"></i>
-									<span>支付宝支付</span>
+									<span>支付宝支付(<span class="recommend">推荐</span>)</span>
 								</div>
 								<div class="right">
 									<input type="radio" name="paymentAway">
 									<i class="icon icon-ckeckbox-01"></i>
 								</div>
 							</label>
-
-							<div class="content">
-								<label class="clearfix">
-									<div class="left">
-										<i class="icon icon-alipay-02"></i><span>支付宝(渠道01)(<b>拥挤</b>)</span>
-									</div>
-									<div class="right">
-										<input type="radio" name="alipay">
-										<span class="icon-radio"></span>
-									</div>
-								</label>
-								<label class="clearfix">
-									<div class="left">
-										<i class="icon icon-alipay-02"></i><span>支付宝(渠道02)</span>
-									</div>
-									<div class="right">
-										<input type="radio" name="alipay">
-										<span class="icon-radio"></span>
-									</div>
-								</label>
-							</div>
 						</li>
-						<li>
+						<li class="see-more-pay" id="btn_see_more">
+							<span>选择其他支付方式</span>
+							<i class="icon icon-link"></i>
+						</li>
+						<li class="wechat-pay">
 							<label class="title clearfix">
 								<div class="left">
 									<i class="icon icon-wechat-pay-01"></i>
 									<span>微信支付(手续费1元)</span>
-								</div>
-								<div class="right">
-									<input type="radio" name="paymentAway">
-									<i class="icon icon-ckeckbox-01"></i>
-								</div>
-							</label>
-						</li>
-						<li>
-							<label class="title clearfix">
-								<div class="left">
-									<i class="icon icon-cash"></i>
-									<span>可用佣金支付(余额：¥19.00)</span>
 								</div>
 								<div class="right">
 									<input type="radio" name="paymentAway">
@@ -89,5 +60,14 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				var $seeMore = $('#btn_see_more');
+				$seeMore.on('click', function () {
+					$(this).parent().toggleClass("clicked");
+				});
+			});
+		</script>
 	</body>
 </html>
