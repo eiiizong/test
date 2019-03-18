@@ -4,7 +4,7 @@
 
 [闪点](http://eiiizong.top/test/shandian/index.html)
 
-[分销](http://eiiizong.top/test/audio-test/index.html)
+[分销](http://eiiizong.top/test/fenxiao/dist/index.html)
 
 [大佛禅院](http://eiiizong.top/test/dfcy/index.html)
 
