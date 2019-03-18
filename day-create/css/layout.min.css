@@ -92,6 +92,7 @@ body {
 	position: relative;
 	padding-bottom: 60px;
 	overflow-x: hidden;
+	background-color: #fafafa;
 }
 
 body,
@@ -1167,7 +1168,7 @@ fieldset[disabled] .btn-theme {
 }
 
 .bg-color-sky-light {
-	background: #fafafa
+	background-color: #eee
 }
 
 .row-space-1 {
