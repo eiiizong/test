@@ -92,7 +92,7 @@ body {
 	position: relative;
 	padding-bottom: 60px;
 	overflow-x: hidden;
-	background-color: #fafafa;
+	background-color: #b5bcbd;
 }
 
 body,
@@ -104,8 +104,8 @@ html a {
 p {
 	font-size: 15px;
 	font-weight: 400;
-	color: #a6a7aa;
-	margin-bottom: 15px
+	color: #515769;
+	margin-bottom: 15px;
 }
 
 em,
@@ -228,7 +228,7 @@ h4 {
 	position: relative;
 	font-size: 17px;
 	font-weight: 400;
-	color: #a6a7aa;
+	color: #515769;
 	border-left: none;
 	margin-left: 20px
 }
@@ -617,8 +617,8 @@ fieldset[disabled] .btn-theme {
 }
 
 .header .logo {
-	width: 100px;
-	height: 100px;
+	/* width: 100px;
+	height: 100px; */
 	float: left;
 	max-height: 95px;
 	line-height: 65px
@@ -629,13 +629,18 @@ fieldset[disabled] .btn-theme {
 }
 
 .header .logo-img {
-	width: 85px;
+	width: 250px;
 	height: auto;
 	max-width: 100%;
 	max-height: 100%;
 	vertical-align: middle
 }
-
+	
+@media screen and (max-width: 768px) {
+	.header .logo-img {
+		width: 200px;
+	}
+}
 .header .logo-img-active {
 	display: none
 }
@@ -1168,7 +1173,7 @@ fieldset[disabled] .btn-theme {
 }
 
 .bg-color-sky-light {
-	background-color: #eee
+	background-color: #d2dae2;
 }
 
 .row-space-1 {
@@ -1199,6 +1204,12 @@ fieldset[disabled] .btn-theme {
 .content-lg {
 	padding-top: 100px;
 	padding-bottom: 100px
+}
+@media screen and (max-width: 768px) {
+	.content-lg {
+		padding-top: 40px;
+		padding-bottom: 20px
+	}
 }
 
 .parallax-content {
@@ -1555,9 +1566,23 @@ input::-webkit-inner-spin-button {
 	float: left;
 	margin-left: 10px;
 	line-height: 36px;
-
 }
-
+	
+.paging .pagination>li>a,
+.paging .pagination>li>span {
+	border: 0;
+	border-right: 1px solid #ddd;
+	margin: 0;
+}
+.paging .pagination>li:last-child>a,
+.paging .pagination>li:last-child>span {
+	border: 0;
+}
+.paging .pagination>li.active>a,
+.paging .pagination>li.active>span {
+	border-color: #337ab7;
+	margin-left: -1px;
+}
 .page-tabs ul {
 	border: 0;
 }
@@ -1652,4 +1677,23 @@ input::-webkit-inner-spin-button {
 		right: 20px;
 		line-height: 34px;
 	}
+}
+/* 新闻 */
+h3.news-title {
+	margin-bottom: 5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.release-time {
+	font-size: 16px;
+	line-height: 1;
+	margin-bottom: 20px;
+	color: #000;
+}
+
+h2.news-detail-title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
