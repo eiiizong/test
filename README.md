@@ -10,4 +10,4 @@
 
 [正天创意](http://eiiizong.top/test/day-create/index.html)
 
-[vue-test](http://eiiizong.top/test/vue/index.html)
+[vue 项目测试](http://eiiizong.top/test/vue/)
