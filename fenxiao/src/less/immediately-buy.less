@@ -1,0 +1,57 @@
+/* team-number.less ta的组员 */
+@cell-height: @88px;
+.immediately-buy {
+	background-color: #f4f4f4;
+	padding-top: @20px;
+	padding-bottom: @128px;
+	.cell-warrper {
+		padding: 0 @30px;
+		position: relative;
+		background-color: #fff;
+		height: @cell-height;
+		line-height: @cell-height;
+		font-size: 15px;
+		color: #000;
+		margin-bottom: @20px;
+		.left {
+			position: absolute;
+			top: 0;
+			left: 0;
+			span {
+				padding-left: @36px;
+			}
+		}
+		.right {
+			padding-left: @200px;
+			text-align: right;
+			span {
+				display: block;
+				&::before {
+					content: '¥';
+					font-size: 12px;
+				}
+				&.can-buy-num {
+					&::before {
+						content: '';
+					}
+				}
+				&.total {
+					color: #f00;
+				}
+			}
+			.input {
+				text-align: right;
+				line-height: @40px;
+				padding: @24px 0;
+				font-size: 15px;
+			}
+		}
+	}
+	.btn-warrper {
+		width: 100%;
+		padding: 0 @36px;
+		position: fixed;
+		left: 0;
+		bottom: @20px;
+	}
+}
