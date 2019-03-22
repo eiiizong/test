@@ -4,6 +4,7 @@
 	min-height: 0;
 	height: 100%;
 	.top {
+		width: 100%;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -15,7 +16,7 @@
 		text-align: center;
 		background-color: #fcfcfc;
 		.left {
-			width: 33.3%;
+			width: 25%;
 			a {
 				display: block;
 				width: 100%;
@@ -51,6 +52,15 @@
 	.bottom {
 		width: 100%;
 		padding-top: @470px;
+		&.no-records {
+			p {
+				padding-top: @300px;
+				font-size: @40px;
+				text-align: center;
+				line-height: 1.2;
+				color: #666;
+			}
+		}
 	}
 	.content {
 		width: 100%;
