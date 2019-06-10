@@ -11,3 +11,4 @@ Homestead.yaml
 /config/fields.php
 /composer.lock
 /storage/*
+/yfge
