@@ -15,7 +15,6 @@
   // alert('js设置字体大小之前的html字体大小：' + document.getElementsByTagName('html')[0].style.fontSize);
   function setRemUnit () {
     var rem = docEl.clientWidth / 10
-    console.log(docEl)
     // alert('手机屏幕宽度：' + rem*10 + 'px');
     docEl.style.fontSize = rem + 'px'
   }
