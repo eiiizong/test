@@ -1,4 +1,4 @@
-## 该仓库为测试页面在真机上运行的效果
+## => 测试页面在真机上运行的效果
 
 [展会](http://eiiizong.top/test/exhibition/index.html)
 
@@ -10,4 +10,6 @@
 
 [正天创意](http://eiiizong.top/test/day-create/index.html)
 
-[vue 项目测试](http://eiiizong.top/test/vue/)
+[城市机会 => vue](http://eiiizong.top/test/city-opportunity-vue/)
+
+[vue 项目 dist 测试](http://eiiizong.top/test/vue/)
