@@ -1,5 +1,6 @@
 /node_modules
 /fenxiao/node_modules
+/city-opportunity-vue/node_modules
 /public/storage
 /storage/*.key
 /vendor

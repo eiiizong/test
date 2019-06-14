@@ -10,6 +10,6 @@
 
 [正天创意](http://eiiizong.top/test/day-create/index.html)
 
-[城市机会 => vue](http://eiiizong.top/test/city-opportunity-vue/)
+[城市机会 => vue](http://eiiizong.top/test/city-opportunity-vue/dist/)
 
 [vue 项目 dist 测试](http://eiiizong.top/test/vue/)
