@@ -12,4 +12,6 @@
 
 [城市机会 => vue](http://eiiizong.top/test/city-opportunity-vue/dist/)
 
+[城市机会 => react](http://eiiizong.top/test/city-opportunity-react/)
+
 [vue 项目 dist 测试](http://eiiizong.top/test/vue/)
