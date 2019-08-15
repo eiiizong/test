@@ -14,4 +14,6 @@
 
 [城市机会 => react](http://eiiizong.top/test/city-opportunity-react/)
 
+[商城弹框测试](http://eiiizong.top/test/ozshop/cart.html)
+
 [vue 项目 dist 测试](http://eiiizong.top/test/vue/)
