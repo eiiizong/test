@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>kbfec电子商务平台</title>
+    <link type="image/x-icon" href="/favicon.ico" rel="icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon-precomposed" href="views/mobile/skin/default/image/logo.gif">
+    <script type="text/javascript" charset="UTF-8" src="runtime/_systemjs/jquery/jquery-1.12.4.min.js"></script> <script type="text/javascript" charset="UTF-8" src="runtime/_systemjs/form/form.js"></script> <script type="text/javascript" charset="UTF-8" src="runtime/_systemjs/autovalidate/validate.js"></script><link rel="stylesheet" type="text/css" href="runtime/_systemjs/autovalidate/style.css" /> <script type="text/javascript" charset="UTF-8" src="runtime/_systemjs/artdialog/artDialog.js"></script><script type="text/javascript" charset="UTF-8" src="runtime/_systemjs/artdialog/plugins/iframeTools.js"></script><link rel="stylesheet" type="text/css" href="runtime/_systemjs/artdialog/skins/aero.css" /> <script type="text/javascript" charset="UTF-8" src="runtime/_systemjs/artTemplate/artTemplate.js"></script><script type="text/javascript" charset="UTF-8" src="runtime/_systemjs/artTemplate/artTemplate-plugin.js"></script>
+    <script src="views/mobile/javascript/common.js"></script>
+    <script src='views/mobile/javascript/site.js'></script>
+    <script src='views/mobile/javascript/mobile.js'></script>
+    <link rel="stylesheet" href="views/mobile/skin/default/style/style.css">
+    <link rel="stylesheet" href="views/mobile/skin/default/style/style_index.css">
+    <link rel="stylesheet" href="views/mobile/skin/default/style/new_style.css">
+    <link rel="stylesheet" href="views/mobile/skin/default/font/iconfont.css">
+    <link rel="stylesheet" href="views/mobile/skin/default/style/swiper.css">
+    <link rel="stylesheet" href="views/mobile/skin/default/style/swiper.min.css">
+    <script src='views/mobile/javascript/jquery.js'></script>
+    <script src='views/mobile/javascript/swiper.min.js'></script>
+    <script src='views/mobile/javascript/swiper.animate.min.js'></script>
+</head>
+
+<body>
+<!-- 顶部通栏 -->
+<header class="header_box">
+    <div class="header">
+        <div class="header_back" onclick="window.history.back();"><i class="icon-chevron-left"></i></div>
+        <h1 id="page_title" class="page_title">kbfec电子商务平台</h1>
+        <div class="header_so_btn" onclick="window.location.href='/'"><i class="icon-home"></i></div>
+    </div>
+</header>
+
+<!-- 顶部搜索 -->
+<!-- <section class="header_search">
+    <form method='get' action="/index.php">
+        <input type='hidden' name='controller' value='site'>
+        <input type='hidden' name='action' value='search_list'>
+        <input class="keywords" type="text" name='word' autocomplete="off" placeholder="请输入关键词...">
+        <input class="submit" type="submit" value="搜索">
+    </form>
+</section> -->
+<!-- 引入内页 -->
+<style type="text/css">
+    .free_color{
+        color: #ff5000;
+    }
+</style>
+
+<div id="pageInfo" data-title="购物车"></div>
+<!-- 优惠信息 -->
+<section class="cart_prompt" style="display:none" id="cart_prompt">
+    <h4>恭喜，您的订单已经满足了以下优惠活动！</h4>
+    <ol></ol>
+</section>
+
+<!--促销模板-->
+<script type="text/html" id="promotionTemplate">
+    <li><%=item['plan']%>，<%=item['info']%></li>
+</script>
+
+<!-- 邮费标准 -->
+<section class="fuel-standard">
+	<div class="container">
+		<div class="left">
+			<i class="icon icon-kg"></i>
+			<div class="detail">
+				<p>当前重量：<span>2kg</span></p>
+				<p>所需邮费：<span>¥20</span></p>
+			</div>
+		</div>
+		<div class="right" id="fule_popup_handle_btn">
+			<i class="icon icon-detail"></i>
+			<span>邮费标准</span>
+		</div>
+	</div>
+</section>
+
+<!-- 商品列表 -->
+<section class="cart_list">
+    <ul>
+        <li>
+            <div class="cart_list_goods">
+                <div class="cart_list_photo" onclick="gourl('/site/products/id/4')">
+                    <img src="/pic/thumb/img/176f2b4114946093e2MDAwMDA0Nzc2MTAxNjplNmoyZGQ0MjIwZGZnYDMwMjF1d2xrYmAoMjg0OS82MS85OC0yMzk5MzczOTEyMTM2OTcwOSlrc2cvdyg@@_@@OS9oLzgw" alt="花王LiesePrettia泡沫染发剂黑色.jpg">
+                </div>
+                <div class="cart_list_info">
+                    <h3 class="cart_list_info_title">花王LiesePrettia泡沫染发剂黑色.jpg</h3>
+                    <p class="cart_list_info_info">
+                        祝您购物愉快!
+                    </p>
+                    <em class="cart_list_info_price">单价：￥50.00</em>
+                </div>
+            </div>
+            <del class="del" onclick='javascript:removeCartByJSON({"name":"花王LiesePrettia泡沫染发剂黑色.jpg","cost_price":"0.00","goods_id":"4","img":"upload\/2019\/07\/10\/20190710121359109.jpg","sell_price":"50.00","point":"0","weight":"0.00","store_nums":"99","exp":"0","goods_no":"SD156273171768","product_id":"0","seller_id":"0","reduce":0,"count":1,"sum":50});'>删除</del>
+            <div class="goods_num_adjust">
+                <span onclick='cart_reduce({"name":"花王LiesePrettia泡沫染发剂黑色.jpg","cost_price":"0.00","goods_id":"4","img":"upload\/2019\/07\/10\/20190710121359109.jpg","sell_price":"50.00","point":"0","weight":"0.00","store_nums":"99","exp":"0","goods_no":"SD156273171768","product_id":"0","seller_id":"0","reduce":0,"count":1,"sum":50});'>-</span>
+                <input type='text' onchange='cartCount({"name":"花王LiesePrettia泡沫染发剂黑色.jpg","cost_price":"0.00","goods_id":"4","img":"upload\/2019\/07\/10\/20190710121359109.jpg","sell_price":"50.00","point":"0","weight":"0.00","store_nums":"99","exp":"0","goods_no":"SD156273171768","product_id":"0","seller_id":"0","reduce":0,"count":1,"sum":50});' id="count_4_0" value="1">
+                <span onclick='cart_increase({"name":"花王LiesePrettia泡沫染发剂黑色.jpg","cost_price":"0.00","goods_id":"4","img":"upload\/2019\/07\/10\/20190710121359109.jpg","sell_price":"50.00","point":"0","weight":"0.00","store_nums":"99","exp":"0","goods_no":"SD156273171768","product_id":"0","seller_id":"0","reduce":0,"count":1,"sum":50});'>+</span>
+            </div>
+            <div class="count">小结：￥<span id="sum_4_0">50</span></div>
+        </li>
+        <li>
+            <div class="cart_list_goods">
+                <div class="cart_list_photo" onclick="gourl('/site/products/id/5')">
+                    <img src="/pic/thumb/img/b14df62eac1de7fe08MDE1MDEwNTAxMDcyNDMyYjRlMGU@_@MDAwPGEwNGRiZjV1cG1qYWEvMjAzOScwNy8xNS87MDM6MDYxMDcyMzA2OjMyMC5rcGcvdyYwMC9oKz4x" alt="高级稻米硅田七人参果冻装 糖尿病患者福音 13g*60包(1个月用量)">
+                </div>
+                <div class="cart_list_info">
+                    <h3 class="cart_list_info_title">高级稻米硅田七人参果冻装 糖尿病患者福音 13g*60包(1个月用量)</h3>
+                    <p class="cart_list_info_info">
+                        祝您购物愉快!
+                    </p>
+                    <em class="cart_list_info_price">单价：￥1100.00</em>
+                </div>
+            </div>
+            <del class="del" onclick='javascript:removeCartByJSON({"name":"高级稻米硅田七人参果冻装 糖尿病患者福音 13g*60包(1个月用量)","cost_price":"0.00","goods_id":"5","img":"upload\/2019\/07\/10\/20190710123359361.jpg","sell_price":"1100.00","point":"0","weight":"0.00","store_nums":"100","exp":"0","goods_no":"SD156273288648","product_id":"0","seller_id":"0","reduce":0,"count":1,"sum":1100});'>删除</del>
+            <div class="goods_num_adjust">
+                <span onclick='cart_reduce({"name":"高级稻米硅田七人参果冻装 糖尿病患者福音 13g*60包(1个月用量)","cost_price":"0.00","goods_id":"5","img":"upload\/2019\/07\/10\/20190710123359361.jpg","sell_price":"1100.00","point":"0","weight":"0.00","store_nums":"100","exp":"0","goods_no":"SD156273288648","product_id":"0","seller_id":"0","reduce":0,"count":1,"sum":1100});'>-</span>
+                <input type='text' onchange='cartCount({"name":"高级稻米硅田七人参果冻装 糖尿病患者福音 13g*60包(1个月用量)","cost_price":"0.00","goods_id":"5","img":"upload\/2019\/07\/10\/20190710123359361.jpg","sell_price":"1100.00","point":"0","weight":"0.00","store_nums":"100","exp":"0","goods_no":"SD156273288648","product_id":"0","seller_id":"0","reduce":0,"count":1,"sum":1100});' id="count_5_0" value="1">
+                <span onclick='cart_increase({"name":"高级稻米硅田七人参果冻装 糖尿病患者福音 13g*60包(1个月用量)","cost_price":"0.00","goods_id":"5","img":"upload\/2019\/07\/10\/20190710123359361.jpg","sell_price":"1100.00","point":"0","weight":"0.00","store_nums":"100","exp":"0","goods_no":"SD156273288648","product_id":"0","seller_id":"0","reduce":0,"count":1,"sum":1100});'>+</span>
+            </div>
+            <div class="count">小结：￥<span id="sum_5_0">1100</span></div>
+        </li>
+    </ul>
+</section>
+<footer class="cart_footer">
+    <div class="cart_footer_fixed">
+        <div class="buy btn_pay" id="btn_pay" onclick="gourl('/simple/cart2')">
+            去结算
+        </div>
+        <div class="count" style="width:30%;">
+            <span>合计:</span>
+            <em>￥<i id='sum_price'>1150</i></em>
+            <u>不含运费</u>
+        </div>
+        <div class="count" style="float:left;text-align:left;padding-left:15px;width:30%;">
+            <span id="free_fee"  >满50免邮费</span>
+        </div>
+    </div>
+</footer>
+
+<!-- 邮费标准弹窗 -->
+<section class="fuel-standard-popup" id="fule_popup">
+	<div class="popu-content">
+		<div class="top">
+			<i class="icon icon-popup-bg"></i>
+		</div>
+		<div class="container">
+			
+			<div class="hint">
+				<p>这里是提示</p>
+				<div class="line"></div>
+			</div>
+			<div class="content">
+				<p>1.1公斤重量邮费为¥20</p>
+				<p>1.10公斤重量邮费为¥200</p>
+				<p>1.1公斤重量邮费为¥</p>
+				<p>1.1公斤重量邮费为¥20</p>
+				<p>1.1公斤重量邮费为¥20</p>
+				<p>1.1公斤重量邮费为¥20</p>
+				<p>1.1公斤重量邮费为¥20</p>
+				<p>1.1公斤重量邮费为¥20</p>
+				<p>1.1公斤重量邮费为¥20</p>
+			</div>
+		</div>
+		<i class="icon icon-close" id="fule_popup_close_btn"></i>
+	</div>
+	
+</section>
+
+<script>
+    $(function(){
+        // 隐藏底部导航
+        hideNav();
+
+
+    })
+    //购物车数量改动计算
+    function cartCount(obj)
+    {
+        var countInput = $('#count_'+obj.goods_id+'_'+obj.product_id);
+        var countInputVal = parseInt(countInput.val());
+        var oldNum = countInput.data('oldNum') ? countInput.data('oldNum') : obj.count;
+
+        //商品数量大于1件
+        if(isNaN(countInputVal) || (countInputVal <= 0))
+        {
+            tips('购买的数量必须大于1件');
+            countInput.val(1);
+            countInput.change();
+        }
+        //商品数量小于库存量
+        else if(countInputVal > parseInt(obj.store_nums))
+        {
+            tips('购买的数量不能大于此商品的库存量');
+            countInput.val(parseInt(obj.store_nums));
+            countInput.change();
+        }
+        else
+        {
+            var diff = parseInt(countInputVal) - parseInt(oldNum);
+            if(diff == 0)
+            {
+                return;
+            }
+
+            var goods_id   = obj.product_id > 0 ? obj.product_id : obj.goods_id;
+            var goods_type = obj.product_id > 0 ? "product"      : "goods";
+
+            //更新购物车中此商品的数量
+            $.getJSON("/simple/joinCart",{"goods_id":goods_id,"type":goods_type,"goods_num":diff,"random":Math.random()},function(content){
+                if(content.isError == true)
+                {
+                    tips(content.message);
+                    countInput.val(1);
+                    countInput.change();
+                }
+                else
+                {
+                    var goodsId   = [];
+                    var productId = [];
+                    var num       = [];
+                    $('[id^="count_"]').each(function(i)
+                    {
+                        var idValue = $(this).attr('id');
+                        var dataArray = idValue.split("_");
+
+                        goodsId.push(dataArray[1]);
+                        productId.push(dataArray[2]);
+                        num.push(this.value);
+                    });
+                    countInput.data('oldNum',countInputVal);
+                    $.getJSON("/simple/promotionRuleAjax",{"goodsId":goodsId,"productId":productId,"num":num,"random":Math.random()},function(content){
+                        if(content.promotion.length > 0)
+                        {
+                            $('#cart_prompt li').remove();
+
+                            for(var i = 0;i < content.promotion.length; i++)
+                            {
+                                $('#cart_prompt ol').append( template.render('promotionTemplate',{"item":content.promotion[i]}) );
+                            }
+                            $('#cart_prompt').show();
+                        }
+                        else
+                        {
+                            $('#cart_prompt li').remove();
+                            $('#cart_prompt').hide();
+                        }
+
+                        /*开始更新数据*/
+                        $('#weight').html(content.weight);
+                        $('#origin_price').html(content.sum);
+                        $('#discount_price').html(content.reduce);
+                        $('#promotion_price').html(content.proReduce);
+                        $('#sum_price').html(content.final_sum);
+                        if(content.final_sum>=199)
+                        {
+                            $("#free_fee").removeClass("free_color");
+                        } else {
+                            $("#free_fee").addClass("free_color");
+                        }
+                        $('#sum_'+obj.goods_id+'_'+obj.product_id).html((obj.sell_price * countInputVal).toFixed(2));
+                    });
+                }
+            });
+        }
+    }
+
+    //增加商品数量
+    function cart_increase(obj){
+        //库存超量检查
+        var countInput = $('#count_'+obj.goods_id+'_'+obj.product_id);
+        if(parseInt(countInput.val()) + 1 > parseInt(obj.store_nums))
+        {
+            tips('购买的数量大于此商品的库存量');
+        }
+        else
+        {
+            countInput.val(parseInt(countInput.val()) + 1);
+            countInput.change();
+        }
+    }
+
+    //减少商品数量
+    function cart_reduce(obj){
+        //库存超量检查
+        var countInput = $('#count_'+obj.goods_id+'_'+obj.product_id);
+        if(parseInt(countInput.val()) - 1 <= 0)
+        {
+            tips('购买的数量必须大于1件');
+        }
+        else
+        {
+            countInput.val(parseInt(countInput.val()) - 1);
+            countInput.change();
+        }
+    }
+
+    //移除购物车
+    function removeCartByJSON(obj)
+    {
+        var goods_id   = obj.product_id > 0 ? obj.product_id : obj.goods_id;
+        var goods_type = obj.product_id > 0 ? "product"      : "goods";
+        $.getJSON("/simple/removeCart",{"goods_id":goods_id,"type":goods_type,"random":Math.random()},function()
+        {
+            window.location.reload();
+        });
+    }
+</script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        autoplay : 5000,
+    });
+	
+	// 控制邮费标准弹窗
+	$(function() {
+		var fule_popup_handle_btn = $('#fule_popup_handle_btn'),
+			fule_popup_close_btn = $('#fule_popup_close_btn'),
+			fule_popup = $('#fule_popup');
+		fule_popup_handle_btn.on('click', function() {
+			fule_popup.css('display', 'block')
+		})
+		fule_popup_close_btn.on('click', function() {
+			fule_popup.css('display', 'none')
+		})
+	})
+</script>
+</body>
+</html>
+<script type="text/javascript">
+    _webUrl = "/_controller_/_action_/_paramKey_/_paramVal_";_themePath = "views/mobile/";_skinPath = "views/mobile/skin/default/";
+    //创建URL地址
+    function creatUrl(param)
+    {
+        var urlArray   = [];
+        var _tempArray = param.split("/");
+        for(var index in _tempArray)
+        {
+            if(_tempArray[index])
+            {
+                urlArray.push(_tempArray[index]);
+            }
+        }
+
+        if(urlArray.length >= 2)
+        {
+            var braveECUrl = _webUrl.replace("_controller_",urlArray[0]).replace("_action_",urlArray[1]);
+
+            //存在URL参数情况
+            if(urlArray.length >= 4)
+            {
+                braveECUrl = braveECUrl.replace("_paramKey_",urlArray[2]);
+
+                //卸载原数组中已经拼接的数据
+                urlArray.splice(0,3);
+
+                if(braveECUrl.indexOf("?") == -1)
+                {
+                    braveECUrl = braveECUrl.replace("_paramVal_",urlArray.join("/"));
+                }
+                else
+                {
+                    var _paramVal_ = "";
+                    for(var i in urlArray)
+                    {
+                        if(i == 0)
+                        {
+                            _paramVal_ += urlArray[i];
+                        }
+                        else if(i%2 == 0)
+                        {
+                            _paramVal_ += "="+urlArray[i];
+                        }
+                        else
+                        {
+                            _paramVal_ += "&"+urlArray[i];
+                        }
+                    }
+                    braveECUrl = braveECUrl.replace("_paramVal_",_paramVal_);
+                }
+            }
+            return braveECUrl;
+        }
+        return '';
+    }
+
+    //切换验证码
+    function changeCaptcha()
+    {
+        $('#captchaImg').prop('src',creatUrl("site/getCaptcha/random/"+Math.random()));
+    }
+</script>
