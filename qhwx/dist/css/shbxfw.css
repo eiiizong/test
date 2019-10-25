@@ -1,0 +1,90 @@
+.shbxfw {
+  padding: 0.3rem;
+}
+.service-items {
+  width: 100%;
+  background: url(../images/bg_shbxfw.png) no-repeat top left;
+  background-size: 100%;
+  border-radius: 0.1rem;
+  padding: 0.3rem;
+  min-height: 4.36rem;
+}
+h2 {
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  padding-bottom: 0.2rem;
+}
+.item {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  line-height: 0.36rem;
+}
+.item .title {
+  width: 1.44rem;
+}
+.btn-box {
+  padding: 0.4rem 0 0.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-box .btn {
+  width: 2.2rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  background-color: #f3f4f9;
+  border-radius: 0.1rem;
+  color: #999;
+}
+.btn-box .btn.active {
+  background-color: #007cf7;
+  color: #fff;
+  box-shadow: #007cf7;
+  box-shadow: 0px 0.1rem 0.1rem #cfe6fd;
+}
+h3.title {
+  padding: 0.3rem 0 0.2rem;
+}
+h3.title span {
+  display: block;
+  line-height: 1;
+  position: relative;
+  padding-left: 0.14rem;
+}
+h3.title span::before {
+  content: "";
+  width: 0.04rem;
+  height: 0.3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to top,
+    rgb(0, 124, 247),
+    rgb(123, 188, 252)
+  );
+}
+table {
+  width: 100%;
+}
+table tr {
+  text-align: center;
+  border: 1px solid #e5ecf9;
+}
+table tr:nth-of-type(2n-1) {
+  background-color: #e5ecf9;
+}
+table th {
+  color: #333;
+  line-height: 0.5rem;
+  /* border-right: 1px solid #e5ecf9; */
+}
+table td {
+  color: #777;
+  padding: 0.22rem;
+  /* border-right: 1px solid #e5ecf9; */
+}
+table tr:first-of-type th {
+  min-width: 1.4rem;
+}

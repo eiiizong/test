@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/qh-style.css" />
+  <link rel="stylesheet" href="./css/swiper.min.css" />
+  <link rel="stylesheet" href="./css/my.css" />
+  <script src="./js/header.js"></script>
+  <title>我的</title>
+</head>
+
+<body>
+  <div class="app my">
+    <!-- 已登陆登陆 -->
+    <div class="basic-info">
+      <!-- 登陆状态 -->
+      <div class="login-status">
+        <div class="info">
+          <div class="left">
+            <div class="img-box">
+              <img class="avatar" src="./images/my/avatar.png" alt="">
+            </div>
+            <div>
+              <p class="fs-30">
+                <span>姓名：</span><span>王晓溪</span>
+              </p>
+              <p class="fs-26">
+                <span>身份证号：</span><span>46489487878781234</span>
+              </p>
+            </div>
+          </div>
+          <div class="right">
+            <div class="fs-24">
+              <span>点我</span>
+              <i class="icon icon-arrow-right-transpant"></i>
+            </div>
+            <p class="fs-20">领取电子卡</p>
+          </div>
+        </div>
+        <div class="bx-status">
+          <div>
+            <p>养老账户金额</p>
+            <span class="num">187.6</span>
+          </div>
+          <div>
+            <p>参保状态</p>
+            <span>已参保</span>
+          </div>
+          <div>
+            <p>参保状态</p>
+            <span>正常缴费</span>
+          </div>
+        </div>
+        <div class="type">
+          <div class="fs-26 left">参保险种:</div>
+          <div class="right">
+            <span>养老保险</span>
+            <span>失业保险</span>
+            <span>工伤保险</span>
+            <span>养老保险</span>
+            <span>养老保险</span>
+            <span>养老保险</span>
+          </div>
+        </div>
+
+      </div>
+      <!-- 未登陆 -->
+      <div class="no-login">
+        <div class="img-box">
+          <img class="avatar" src="./images/my/avatar.png" alt="">
+        </div>
+        <p class="hint fs-30">Hi，您还没有登录！</p>
+        <div class="btn-box">
+          <button class="btn login-btn fs-30">立即登陆</button>
+        </div>
+      </div>
+    </div>
+    <!-- 我的业务 -->
+    <section class="my-work">
+      <h3 class="title">
+        <span class="fs-32">办理材料</span>
+      </h3>
+      <div class="content">
+        <ul>
+          <li>
+            <i class="icon icon-my-banjian"></i>
+            <p class="fs-28">我的办件</p>
+            <!-- 此圆点登陆之后才存在 -->
+            <span class="point">1</span>
+          </li>
+          <li>
+            <i class="icon icon-my-reserve"></i>
+            <p class="fs-28">我的预约</p>
+            <!-- 此圆点登陆之后才存在 -->
+            <span class="point">1</span>
+          </li>
+          <li>
+            <i class="icon icon-my-rz"></i>
+            <p class="fs-28">我的认证</p>
+            <!-- 此圆点登陆之后才存在 -->
+            <span class="point">1</span>
+          </li>
+          <li>
+            <i class="icon icon-my-xy"></i>
+            <p class="fs-28">我的协议</p>
+            <!-- 此圆点登陆之后才存在 -->
+            <span class="point">1</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- 我的电子证照 -->
+    <section class="my-card">
+      <h3 class="title">
+        <span class="fs-32">我的电子证照</span>
+      </h3>
+      <div class="content swiper-container">
+        <ul class="swiper-wrapper">
+          <!-- 登陆之后显示的状态 -->
+          <li class="swiper-slide">
+            <div class="fs-36">
+              <div class="left">
+                <i class="icon icon-my-info"></i>
+                <span>身份证</span>
+              </div>
+              <div class="right fs-34">
+                46489487878781234
+              </div>
+            </div>
+            <div class="fs-24">
+              <div class="left">青海省西宁市城东分局</div>
+              <div class="right">1985.2.12 - 2045.3.16</div>
+            </div>
+          </li>
+          <!-- 未登陆显示的状态 -->
+          <li class="swiper-slide no-login">
+            <div class="fs-36">
+              <div class="left">
+                <i class="icon icon-my-info"></i>
+                <span>身份证</span>
+              </div>
+              <div class="right fs-34"></div>
+            </div>
+            <div class="fs-24">
+              <div class="left">确认身份信息 保障信息安全</div>
+              <div class="right">
+                <button class="btn">请登录</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- 我的相关 -->
+    <section class="my-xg">
+      <h3 class="title">
+        <span class="fs-32">我的相关</span>
+      </h3>
+      <div class="content">
+        <ul class="fs-28">
+          <li class="">
+            <div class="left">
+              <i class="icon icon-my-info"></i>
+              <span class="">我的个人信息</span>
+            </div>
+            <div class="right">
+              <span></span>
+              <i class="icon icon-arrow-right"></i>
+            </div>
+          </li>
+          <li class="">
+            <div class="left">
+              <i class="icon icon-my-zhaq"></i>
+              <span class="">我的账号安全</span>
+            </div>
+            <div class="right">
+              <span>3个未设置</span>
+              <i class="icon icon-arrow-right"></i>
+            </div>
+          </li>
+          <li class="">
+            <div class="left">
+              <i class="icon icon-my-glzh"></i>
+              <span class="">我的关联账号</span>
+            </div>
+            <div class="right">
+              <span>2个</span>
+              <i class="icon icon-arrow-right"></i>
+            </div>
+          </li>
+          <li class="">
+            <div class="left">
+              <i class="icon icon-my-sbxq"></i>
+              <span class="">我的社保详情</span>
+            </div>
+            <div class="right">
+              <span>正常缴费</span>
+              <i class="icon icon-arrow-right"></i>
+            </div>
+          </li>
+          <li class="">
+            <div class="left">
+              <i class="icon icon-my-xxjl"></i>
+              <span class="">我的消息记录</span>
+            </div>
+            <div class="right">
+              <span class="point">20</span>
+              <i class="icon icon-arrow-right"></i>
+            </div>
+          </li>
+          <li class="">
+            <div class="left">
+              <i class="icon icon-my-fwpj"></i>
+              <span class="">我的服务评价</span>
+            </div>
+            <div class="right">
+              <span></span>
+              <i class="icon icon-arrow-right"></i>
+            </div>
+          </li>
+          <li class="">
+            <div class="left">
+              <i class="icon icon-my-wlgl"></i>
+              <span class="">我的物流管理</span>
+            </div>
+            <div class="right">
+              <span></span>
+              <i class="icon icon-arrow-right"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div class="btn-box loginout">
+      <button class="btn fs-34">切换亲情账号</button>
+      <button class="btn fs-34">退出登陆</button>
+    </div>
+  </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+  var mySwiper = new Swiper('.swiper-container', {
+    direction: 'horizontal', // 垂直切换选项
+  });     
+</script>
+
+</html>

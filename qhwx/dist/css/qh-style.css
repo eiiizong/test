@@ -1,0 +1,301 @@
+.app {
+  padding: 0.3rem;
+  min-height: 100%;
+}
+
+.img-box {
+  padding-bottom: 0.3rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: top;
+}
+
+.btn {
+  width: 100%;
+  background-color: #007cf7;
+  border-radius: 5px;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  color: #fff;
+  outline: 0;
+  border: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.login {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 0.1rem;
+  height: 2rem;
+  padding: 0.4rem 0.3rem;
+  background: url(../images/login-bg.png) no-repeat right bottom #fff;
+  background-size: 100%;
+  margin-bottom: 0.3rem;
+}
+
+.tourist-box {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 0.1rem;
+}
+
+.tourist {
+  display: flex;
+  align-items: center;
+  height: 1.9rem;
+  padding: 0.4rem 0.3rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.avatar {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.content h3 {
+  width: 100%;
+  font-size: 0.48rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.content .hint {
+  width: 100%;
+  line-height: 1;
+  color: #ccc;
+}
+
+.input-container {
+  padding: 0 0.3rem;
+}
+
+.input-box {
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+  position: relative;
+}
+
+select,
+input {
+  flex: 1;
+  height: 0.84rem;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  line-height: 0.84px;
+}
+
+.verification-code {
+  width: 1.1rem;
+  border-left: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0.5rem;
+}
+
+.btn-box {
+  padding: 0.3rem;
+}
+
+/*
+随时验
+*/
+.test-anytime .input-container {
+  border: 1px solid #ccc;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.3rem 0.4rem;
+}
+
+.test-anytime .btn-box {
+  padding: 0.3rem 0;
+}
+select {
+  background-color: transparent;
+}
+
+i.icon {
+  display: inline-block;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  vertical-align: top;
+}
+
+i.icon-select-down {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: inline-block;
+  width: 0.22rem;
+  height: 0.11rem;
+  background-image: url(../images/icon-arrow-down.png);
+  transform: translateY(-50%);
+}
+
+select::focus ~ .icon {
+  background-image: url(../images/icon-arrow-up.png);
+}
+
+/*
+在线缴
+*/
+
+.pay-online {
+  padding: 0.3rem 0;
+}
+
+.pay-online .img-box {
+  padding: 0 0.3rem;
+}
+
+.pay-online .hint {
+  border-bottom: 1px solid #ccc;
+  line-height: 0.86rem;
+  padding: 0 0.3rem 0.1rem;
+  color: #999;
+}
+.pay-online li {
+  display: flex;
+  height: 1.92rem;
+  border-bottom: 1px solid #ccc;
+  justify-content: space-between;
+  padding: 0 0.3rem;
+}
+.pay-online li:last-of-type {
+  border-bottom: 0;
+}
+.pay-online li .right {
+  text-align: right;
+}
+.pay-online li .title {
+  line-height: 1;
+  color: #000;
+  padding: 0.26rem 0;
+}
+.pay-online li .time {
+  display: inline-block;
+  color: #ff8451;
+  border: 1px solid #ff8451;
+  padding: 0.04rem 0.1rem;
+  line-height: 1;
+  border-radius: 2px;
+  margin-bottom: 0.22rem;
+}
+.pay-online li .code {
+  line-height: 1;
+}
+.pay-online li .pay-num {
+  line-height: 1;
+  margin: 0.3rem 0 0.26rem;
+}
+.pay-online li .pay-num .money {
+  color: #ff1f3d;
+}
+.pay-btn .btn {
+  background-color: #fef2d6;
+  width: 1.4rem;
+  height: 0.8rem;
+  border-radius: 0;
+  line-height: 0.8rem;
+  color: #daab51;
+}
+
+/*
+掌上约
+*/
+.reserve {
+  padding: 0;
+}
+.reserve .search {
+  background-color: #ededed;
+  padding: 0.16rem;
+  display: flex;
+}
+.reserve .search .input-box {
+  flex: 1;
+  background-color: #fff;
+  height: 0.56rem;
+  line-height: 0.56px;
+  border-radius: 0.1rem;
+  position: relative;
+}
+.reserve .search .icon {
+  width: 0.25rem;
+  height: 0.25rem;
+  background-image: url(../images/icon-search.png);
+  position: absolute;
+  top: 0.16rem;
+  left: 0.17rem;
+}
+.reserve .search input {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  height: 0.56rem;
+  line-height: 0.56rem;
+  border-radius: 0.1rem;
+  padding-left: 0.54rem;
+}
+.reserve .search .btn {
+  width: auto;
+  height: auto;
+  line-height: 1;
+  background-color: transparent;
+  color: #007cf7;
+  padding-left: 0.2rem;
+}
+.reserve .img-box {
+  padding: 0 0.3rem;
+  padding-top: 0.3rem;
+}
+.reserve ul {
+  padding: 0 0.3rem;
+}
+.reserve li {
+  height: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #ddd;
+}
+.reserve li .icon {
+  width: 0.88rem;
+  height: 0.88rem;
+  background-image: url(../images/icon-item.png);
+  margin-right: 0.3rem;
+}
+.reserve li .inner {
+  flex: 1;
+  line-height: 1;
+}
+.reserve li .name {
+  color: #000;
+}
+.reserve li .section {
+  color: #a9a9a9;
+  line-height: 1;
+  padding-top: 0.3rem;
+}
+.reserve li .btn {
+  width: 1.2rem;
+  height: 0.6rem;
+  color: #fff;
+  line-height: 0.6rem;
+  background-image: linear-gradient(to left, #76caf6, #2290ff);
+}

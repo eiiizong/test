@@ -1,0 +1,417 @@
+h3.title {
+  padding: 0.3rem 0 0.2rem;
+}
+h3.title span {
+  display: block;
+  line-height: 1;
+  position: relative;
+  padding-left: 0.14rem;
+}
+h3.title span::before {
+  content: "";
+  width: 0.04rem;
+  height: 0.3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to top,
+    rgb(0, 124, 247),
+    rgb(123, 188, 252)
+  );
+}
+.my {
+  padding: 0;
+}
+.my .basic-info {
+  /* height: 4.06rem; */
+}
+.my .basic-info .login-status {
+  width: 100%;
+  height: 4.06rem;
+  background: url(../images/my/bg-header.png) no-repeat top left;
+  background-size: 100% 100%;
+  padding: 0.6rem 0 0 0.4rem;
+}
+.my .login-status > div {
+  display: flex;
+  justify-content: space-between;
+}
+.my .login-status .info {
+  height: 0.8rem;
+}
+.my .login-status .info .left {
+  display: flex;
+}
+.my .login-status .info .left p {
+  color: #fff;
+  line-height: 1;
+  padding-top: 0.1rem;
+}
+.my .login-status .info .left p:last-of-type {
+  padding-top: 0.12rem;
+}
+.my .login-status .avatar {
+  margin: 0;
+  margin-right: 0.2rem;
+}
+.my .login-status .info .right {
+  width: 1.86rem;
+  height: 0.76rem;
+  background-color: #5aa3f0;
+  border-top-left-radius: 20rem;
+  border-bottom-left-radius: 20rem;
+  padding: 0.12rem 0 0 0.2rem;
+}
+.my .login-status .info .right span {
+  display: inline-block;
+  color: #fff;
+  line-height: 1;
+}
+.my .login-status .info .right .icon-arrow-right-transpant {
+  width: 0.07rem;
+  height: 0.12rem;
+  background: url(../images/my/icon-arrow-right-transpant.png) no-repeat top
+    left;
+  background-size: 100% 100%;
+  margin-top: 0.1rem;
+}
+
+.my .login-status .info .right p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1;
+  padding-top: 0.06rem;
+}
+.my .login-status .bx-status {
+  padding-top: 0.4rem;
+  padding-right: 0.4rem;
+  text-align: center;
+}
+.my .login-status .bx-status div {
+  font-size: 0;
+}
+.my .login-status .bx-status p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1;
+  font-size: 0.26rem;
+}
+.my .login-status .bx-status span {
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 0.28rem;
+  color: #fff;
+  padding-top: 0.16rem;
+}
+.my .login-status .bx-status .num::after {
+  content: "元";
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.24rem;
+  padding-left: 0.02rem;
+}
+.my .login-status .type {
+  align-items: flex-start;
+  margin-top: 0.2rem;
+}
+.my .login-status .type .left {
+  margin-top: 0.1rem;
+  margin-right: 0.1rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+.my .login-status .type .right {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.my .login-status .type span {
+  margin-right: 0.2rem;
+  font-size: 0.24rem;
+  background-color: #fff;
+  line-height: 1;
+  color: #4b83eb;
+  padding: 0.08rem 0.12rem;
+  border-radius: 0.04rem;
+  margin-top: 0.1rem;
+}
+
+.my .basic-info .no-login {
+  width: 100%;
+  height: 4.06rem;
+  background: url(../images/my/bg-header-no-login.png) no-repeat bottom left
+    #469ef7;
+  background-size: 100% 2.44rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+.my .no-login .img-box {
+  padding-bottom: 0.15rem;
+}
+.my .avatar {
+  margin: auto;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.my .no-login .hint {
+  color: #fff;
+  line-height: 1;
+}
+.my .no-login .btn-box {
+  padding: 0;
+  padding-top: 0.88rem;
+}
+.my .no-login .btn-box .login-btn {
+  width: 1.9rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  border-radius: 50rem;
+  background-color: rgb(110, 179, 249);
+}
+.my section {
+  padding: 0 0.3rem;
+}
+.my .my-work ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.my .my-work li {
+  width: 1.65rem;
+  height: 1.85rem;
+  background: url(../images/my/bg-my-banjian.png) no-repeat top left;
+  background-size: 100%;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.my .my-work li .icon {
+  width: 0.44rem;
+  height: 0.5rem;
+  background: url(../images/my/icon-my-banjian.png) no-repeat top left;
+  background-size: 100%;
+  margin: 0.48rem auto 0.2rem;
+}
+.my .my-work ul li:nth-of-type(2) {
+  background-image: url(../images/my/bg-my-reserve.png);
+}
+.my .my-work li .icon-my-reserve {
+  background-image: url(../images/my/icon-my-reserve.png);
+}
+.my .my-work ul li:nth-of-type(3) {
+  background-image: url(../images/my/bg-my-rz.png);
+}
+.my .my-work li .icon-my-rz {
+  background-image: url(../images/my/icon-my-rz.png);
+}
+.my .my-work ul li:nth-of-type(4) {
+  background-image: url(../images/my/bg-my-xy.png);
+}
+.my .my-work li .icon-my-xy {
+  background-image: url(../images/my/icon-my-xy.png);
+}
+
+.my .my-work li p {
+  line-height: 1;
+}
+.my .my-work .point {
+  width: 0.26rem;
+  height: 0.26rem;
+  border: 0.04rem solid #fff;
+  position: absolute;
+  top: -0.1rem;
+  right: -0.08rem;
+  font-size: 0.18rem;
+  line-height: 0.22rem;
+}
+
+.my .my-card li {
+  width: 6.7rem;
+  height: 2rem;
+  background: url(../images/my/bg-id-card.png) no-repeat top left;
+  background-size: 100%;
+  margin-right: 0.2rem;
+  padding: 0.6rem 0.3rem 0 0.36rem;
+}
+.my .my-card li.no-login {
+  background-image: url(../images/my/bg-id-card-no-login.png);
+}
+.my .my-card li > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.my .my-card li > div .left {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  color: #48a1ff;
+}
+.my .my-card li.no-login > div .left {
+  color: #fff;
+}
+
+.my .my-card li > div .left .icon {
+  margin-right: 0.15rem;
+}
+.my .my-card li > div .right {
+  line-height: 1;
+  color: #48a1ff;
+}
+.my .my-card li > div:nth-of-type(2) {
+  margin-top: 0.3rem;
+}
+.my .my-card li > div:nth-of-type(2) .left {
+  color: #5c88b4;
+}
+.my .my-card li.no-login > div:nth-of-type(2) .left {
+  color: #fff;
+}
+.my .my-card li > div:nth-of-type(2) .right {
+  color: #5c88b4;
+}
+.my .my-card li.no-login > div .left .icon {
+  width: .44rem;
+  height: .34rem;
+  background-image: url(../images/my/icon-id-card-white.png);
+}
+.my .my-card li > div .right .btn {
+  color: #fff;
+  width: 1.12rem;
+  height: 0.42rem;
+  line-height: 0.42rem;
+  border-radius: 40rem;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+
+.my .my-card {
+  padding: 0;
+}
+.my .my-card .title {
+  padding-left: 0.3rem;
+}
+.my .my-card .swiper-container {
+  padding-right: 0.5rem;
+  padding-left: 0.3rem;
+  width: 100%;
+}
+.my .my-card .swiper-wrapper {
+  width: 6.7rem;
+  height: 2rem;
+}
+.my .my-xg ul {
+  width: 100%;
+}
+.my .my-xg li {
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.my .my-xg li .right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #999;
+}
+.my .my-xg li .left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #333;
+  font-weight: 500;
+}
+.my .my-xg li .icon-arrow-right {
+  display: block;
+  width: 0.14rem;
+  height: 0.24rem;
+  background: url(../images/my/icon-arrow-right.png) no-repeat top left;
+  background-size: 100%;
+  margin-left: 0.14rem;
+}
+.my .my-xg .icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top left;
+}
+.my .icon-my-info {
+  width: 0.46rem;
+  height: 0.32rem;
+  background-image: url(../images/my/icon-my-info.png);
+  margin-right: 0.16rem;
+}
+.my .icon-my-zhaq {
+  width: 0.42rem;
+  height: 0.34rem;
+  background-image: url(../images/my/icon-my-zhaq.png);
+  margin-right: 0.18rem;
+}
+.my .icon-my-glzh {
+  width: 0.4rem;
+  height: 0.34rem;
+  background-image: url(../images/my/icon-my-glzh.png);
+  margin-right: 0.2rem;
+}
+.my .icon-my-sbxq {
+  width: 0.38rem;
+  height: 0.37rem;
+  background-image: url(../images/my/icon-my-sbxq.png);
+  margin-right: 0.2rem;
+}
+.my .icon-my-xxjl {
+  width: 0.35rem;
+  height: 0.42rem;
+  background-image: url(../images/my/icon-my-xxjl.png);
+  margin-right: 0.22rem;
+}
+.my .icon-my-fwpj {
+  width: 0.41rem;
+  height: 0.32rem;
+  background-image: url(../images/my/icon-my-fwpj.png);
+  margin-right: 0.2rem;
+}
+.my .icon-my-wlgl {
+  width: 0.41rem;
+  height: 0.32rem;
+  background-image: url(../images/my/icon-my-wlgl.png);
+  margin-right: 0.2rem;
+}
+.my .point {
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: #ff4d6e;
+  font-size: 0.2rem;
+  line-height: 0.3rem;
+  text-align: center;
+  color: #fff;
+}
+.my .point {
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: #ff4d6e;
+  font-size: 0.2rem;
+  line-height: 0.3rem;
+  text-align: center;
+  color: #fff;
+}
+.my .btn-box.loginout {
+  padding: 0.4rem 0.6rem 1.17rem;
+}
+.my .btn-box.loginout .btn {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  border-radius: 50rem;
+}
+.my .btn-box.loginout .btn:first-of-type {
+  background-color: transparent;
+  color: #999;
+  border: 1px solid #ddd;
+  margin-bottom: 0.2rem;
+}

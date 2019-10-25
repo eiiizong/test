@@ -17,3 +17,6 @@
 [商城弹框测试](http://eiiizong.top/test/ozshop/cart.html)
 
 [vue 项目 dist 测试](http://eiiizong.top/test/vue/)
+
+[青海微信](http://eiiizong.top/test/qhwx/dist/index.html)
+

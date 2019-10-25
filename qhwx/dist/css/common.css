@@ -1,0 +1,524 @@
+@charset "utf-8";
+
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+code,
+em,
+img,
+q,
+small,
+strong,
+dd,
+dl,
+dt,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+table,
+tbody,
+tr,
+th,
+td,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  height: 100%;
+  color: #333;
+  background: #fff;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html * {
+  outline: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Microsoft YaHei';
+  font-size: .32rem;
+  min-height: 100%;
+}
+
+@font-face {
+  font-family: myFont;
+  src: url('../fonts/HelveticaNeue.ttf'),
+    url('../fonts/STHeiti-Light.ttc');
+}
+
+/* div, span, a, b, em, i, input, h1, h2, h3, h4, h5, h6 { font-family: myFont; } */
+a,
+a:active,
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none
+}
+
+a,
+img {
+  -webkit-touch-callout: none
+}
+
+fieldset,
+img {
+  border: 0
+}
+
+ol,
+ul,
+li {
+  list-style: none
+}
+
+textarea,
+input[type="password"],
+input[type="text"] {
+  resize: none;
+  outline: 0;
+  -webkit-appearance: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: #fff
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+
+/*透明式状态栏开启*/
+html.ios>body .header {
+  padding-top: 20px;
+}
+
+html.android>body .header {
+  padding-top: 25px;
+}
+
+/*定义字体*/
+
+/** 定义 10px ~ 40px */
+.fs-10 {
+  font-size: .1rem;
+}
+
+.fs-12 {
+  font-size: .12rem;
+}
+
+.fs-14 {
+  font-size: .14rem;
+}
+
+.fs-16 {
+  font-size: .16rem;
+}
+
+.fs-18 {
+  font-size: .16rem;
+}
+
+.fs-20 {
+  font-size: .2rem;
+}
+
+.fs-22 {
+  font-size: .22rem;
+}
+
+.fs-23 {
+  font-size: .23rem;
+}
+
+.fs-24 {
+  font-size: .24rem;
+}
+
+.fs-26 {
+  font-size: .26rem;
+}
+
+.fs-28 {
+  font-size: .28rem;
+}
+
+.fs-30 {
+  font-size: .3rem;
+}
+
+.fs-32 {
+  font-size: .32rem;
+}
+
+.fs-34 {
+  font-size: .34rem;
+}
+
+.fs-36 {
+  font-size: .36rem;
+}
+
+.fs-38 {
+  font-size: .38rem;
+}
+
+.fs-40 {
+  font-size: .40rem;
+}
+
+div {
+  outline: 0 !important;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  position: relative;
+  color: #666666;
+}
+
+.md-box {
+  display: box;
+  display: -webkit-box;
+}
+
+.md-flex {
+  display: flex;
+  display: -webkit-flex;
+}
+
+.md-ac {
+  box-align: center;
+  -webkit-box-align: center;
+}
+
+.md-as {
+  box-align: stretch;
+  -webkit-box-align: stretch;
+}
+
+.md-ae {
+  -webkit-box-align: end;
+  box-align: end;
+}
+
+.md-pc {
+  box-pack: center;
+  -webkit-box-pack: center;
+}
+
+.md-pe {
+  box-pack: end;
+  -webkit-box-pack: end;
+}
+
+.md-pj {
+  -webkit-box-pack: justify;
+  box-pack: justify;
+}
+
+.md-ver {
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+}
+
+.md-f1 {
+  box-flex: 1;
+  -webkit-box-flex: 1;
+}
+
+.md-f2 {
+  box-flex: 2;
+  -webkit-box-flex: 2;
+}
+
+.md-sa {
+  justify-content: space-around;
+}
+
+/*提示信息*/
+.md-msgtip {
+  position: fixed;
+  z-index: 999999;
+  top: 3rem;
+  padding: 0.2rem 0.4rem;
+  max-width: 6rem;
+  border-radius: 0.1rem;
+  background-color: rgba(29, 29, 29, 0.6);
+  opacity: 0;
+}
+
+.md-msgtip-img {
+  float: left;
+  background-image: url(../img/msgTip.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 0.32rem;
+  height: 0.32rem;
+  margin-top: 0.07rem;
+}
+
+.md-msgtip-text {
+  float: left;
+  margin-left: 0.2rem;
+  font-size: 0.32rem;
+  color: #fff;
+  max-width: 4.68rem;
+}
+
+
+/** 定义 10px ~ 40px */
+.marl-10 {
+  margin-left: .1rem;
+}
+
+.marl-12 {
+  margin-left: .12rem;
+}
+
+.marl-14 {
+  margin-left: .14rem;
+}
+
+.marl-16 {
+  margin-left: .16rem;
+}
+
+.marl-18 {
+  margin-left: .16rem;
+}
+
+.marl-20 {
+  margin-left: .2rem;
+}
+
+.marl-22 {
+  margin-left: .22rem;
+}
+
+.marl-24 {
+  margin-left: .24rem;
+}
+
+.marl-26 {
+  margin-left: .26rem;
+}
+
+.marl-28 {
+  margin-left: .28rem;
+}
+
+.marl-30 {
+  margin-left: .3rem;
+}
+
+.marl-32 {
+  margin-left: .32rem;
+}
+
+.marl-34 {
+  margin-left: .34rem;
+}
+
+.marl-36 {
+  margin-left: .36rem;
+}
+
+.marl-38 {
+  margin-left: .38rem;
+}
+
+.marl-40 {
+  margin-left: .40rem;
+}
+
+.marr-10 {
+  margin-right: .1rem;
+}
+
+.marr-12 {
+  margin-right: .12rem;
+}
+
+.marr-14 {
+  margin-right: .14rem;
+}
+
+.marr-16 {
+  margin-right: .16rem;
+}
+
+.marr-18 {
+  margin-right: .16rem;
+}
+
+.marr-20 {
+  margin-right: .2rem;
+}
+
+.marr-22 {
+  margin-right: .22rem;
+}
+
+.marr-24 {
+  margin-right: .24rem;
+}
+
+.marr-26 {
+  margin-right: .26rem;
+}
+
+.marr-28 {
+  margin-right: .28rem;
+}
+
+.marr-30 {
+  margin-right: .3rem;
+}
+
+.marr-32 {
+  margin-right: .32rem;
+}
+
+.marr-34 {
+  margin-right: .34rem;
+}
+
+.marr-36 {
+  margin-right: .36rem;
+}
+
+.marr-38 {
+  margin-right: .38rem;
+}
+
+.marr-40 {
+  margin-right: .40rem;
+}
+
+.marlr-20 {
+  margin: 0rem 0.2rem;
+}
+
+.martb-20 {
+  margin: 0.2rem 0rem;
+}
+
+.marlr-40 {
+  margin: 0rem 0.40rem;
+}
+
+.marlr-42 {
+  margin: 0rem 0.42rem;
+}
+
+.icon-search {
+  float: right;
+  background: url(../../rst/index/resource/img/searchPic.png) no-repeat 50% 50%;
+  background-size: 75% 75%;
+}
+
+.display_none {
+  display: none;
+}
+
+
+
+/*暂无数据的css*/
+.no-page-content {
+  /*background-color: #f0f0f0;*/
+}
+
+.no-page-img {
+  width: 6rem;
+  height: 5rem;
+  background-image: url(../img/icon_nomessage.png);
+  margin-bottom: 0.6rem;
+  margin-top: 2rem;
+}
+
+.md-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.no-text1 {
+  color: #999;
+  font-size: 0.5rem;
+}
+
+/*没有滚动条*/
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+/*背景*/
+.bg-fit {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/*在返回键那里*/
+.mf65 {
+  margin-left: 0.30rem;
+}
+
+.mf31 {
+  margin-left: 0.26rem;
+}
+
+.backPicOut {
+  height: 0.7rem;
+  width: 0.7rem;
+}
+
+.paddingright {
+  margin-right: 1rem;
+}
+
+.iconSelect {
+  background-image: url(../img/xia1.png);
+  background-size: 0.32rem 0.32rem;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.iconSelect1 {
+  background-image: url(../img/shang1.png);
+  background-size: 0.32rem 0.32rem;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.shadow {
+  box-shadow: 0.02rem 0.03rem 0.43rem 0.03rem rgba(114, 106, 106, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
