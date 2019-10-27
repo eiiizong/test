@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- 关闭将数字字符串识别为电话号码 -->
+  <meta name="format-detection" content="telephone=no" />
+  <!-- 关闭识别邮箱 -->
+  <meta name="format-detection" content="email=no" />
+  <!-- 删除默认的苹果工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/qh-style.css" />
+  <link rel="stylesheet" href="./css/index.min.css" />
+  <script src="./js/header.js"></script>
+  <title>添加亲情账号</title>
+</head>
+
+<body>
+  <div class="app add-family-account">
+    <div class="input-box">
+      <label for="" class="label">对方账号</label>
+      <input type="text" placeholder="请输入对方账号、身份证号或手机号" />
+    </div>
+    <div class="input-box">
+      <label for="" class="label">对方姓名</label>
+      <input type="text" placeholder="请输入对方姓名" />
+    </div>
+    <div class="input-box">
+      <div class="label">选择亲情关系</div>
+      <div class="radio-box df ai-c jc-sb">
+        <label for="fw">
+          <input type="radio" id="fm" class="input-radio" name="relation" checked />
+          <span>父母</span>
+        </label>
+        <label for="">
+          <input type="radio" class="input-radio" name="relation" />
+          <span>子女</span>
+        </label>
+        <label for="">
+          <input type="radio" class="input-radio" name="relation" />
+          <span>伴侣</span>
+        </label>
+        <label for="">
+          <input type="radio" class="input-radio" name="relation" />
+          <span>朋友</span>
+        </label>
+      </div>
+    </div>
+    <div class="input-box">
+      <label for="" class="label">图形验证码</label>
+      <input type="text" placeholder="请输入右侧图形验证码" />
+    </div>
+    <div class="btn-box">
+      <button class="btn radius box-shadow">下一步</button>
+    </div>
+  </div>
+</body>
+
+</html>
