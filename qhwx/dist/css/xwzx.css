@@ -1,0 +1,83 @@
+/*服务列表tab*/
+.itemTab{
+	background-color: #ffffff;
+	margin-bottom: .2rem;
+	margin:.1rem .3rem 0;
+	border-top: 1px solid #dddddd;
+}
+.itemTab-Inner{
+	width: 100%;
+	padding:.2rem .5rem .35rem;
+	overflow-x: hidden;
+}
+.itemTab span{
+	display: block;
+	color: rgb(51,51,51);
+	margin-right: .3rem;
+	position: relative;
+	text-align: center;
+}
+.itemTab span i{
+	position: absolute;
+	display: block;
+	width: .16rem;
+	height: .16rem;
+	border-radius: .08rem;
+	background-color:rgb(255,49,73);
+	top:.02rem;
+	right: -.1rem;
+}
+.itemTab span.current::after{
+	position: absolute;
+	display: block;
+	content: "";
+	width: .52rem;
+	height: .06rem;
+	border-radius: .03rem;
+	bottom: -.1rem;
+	left:0;
+	right: 0;
+	margin: 0 auto;
+	background-color: rgb(51,51,51);
+}
+
+/**/
+.p-title{
+	padding: .15rem 0;
+}
+.p-title i{
+	width: .05rem;
+	height: .3rem;
+	background-image: linear-gradient(rgb(123,188,252), rgb(0,124,247));
+}
+.p-title em{
+	font-style: normal;
+	color:rgb(51,51,51);
+}
+.news-title{
+	padding: .15rem .3rem;
+}
+
+/*新闻列表*/
+.picNews-list{
+
+}
+.picNews-list > div{
+	border-top:1px dashed #dddddd;
+	padding-top: .2rem;
+	padding-bottom: .15rem;
+}
+.s-img{
+	/*height: 1.55rem;*/
+}
+.s-img img{
+	width: 100%;
+}
+.news-name{
+	line-height: 0.6rem;
+	color: rgb(51,51,51);
+}
+.news-desc{
+	color: rgb(153,153,153);
+	line-height: 0.4rem;
+}

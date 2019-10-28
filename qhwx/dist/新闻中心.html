@@ -2,26 +2,138 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <!-- 关闭将数字字符串识别为电话号码 -->
-  <meta name="format-detection" content="telephone=no" />
-  <!-- 关闭识别邮箱 -->
-  <meta name="format-detection" content="email=no" />
-  <!-- 删除默认的苹果工具栏和菜单栏 -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <link rel="stylesheet" href="./css/common.css" />
-  <link rel="stylesheet" href="./css/qh-style.css" />
-  <link rel="stylesheet" href="./css/index.min.css" />
-  <script src="./js/header.js"></script>
-  <title>新闻中心</title>
+	<meta charset="UTF-8">
+	<title>个人中心</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/xwzx.css">
+	<script type="text/javascript" src="js/header.js"></script>
+	<style>
+		.bx-wrapper {
+			margin-bottom: 0;
+		}
+
+		.bx-wrapper .bx-viewport {
+			-moz-box-shadow: 0 0 0px #ccc;
+			-webkit-box-shadow: 0 0 0px #ccc;
+			box-shadow: 0 0 0px #ccc;
+			border: 0px solid #fff;
+			left: 0px;
+			background: transparent;
+		}
+
+		.bx-wrapper .bx-pager,
+		.bx-wrapper .bx-controls-auto {
+			position: absolute;
+			bottom: 0px;
+			right: 0;
+			/*width: 100%;*/
+			text-align: right;
+			margin: 0 .3rem;
+		}
+
+		.bx-wrapper .bx-pager.bx-default-pager a {
+			width: 5px;
+			height: 5px;
+			color: transparent;
+			margin: 0 3px;
+			background: url(images/news/circle-g.png) no-repeat;
+			background-size: contain;
+		}
+
+		.bx-wrapper .bx-pager.bx-default-pager a:hover,
+		.bx-wrapper .bx-pager.bx-default-pager a.active {
+			background: url(images/news/circle-w.png) no-repeat;
+			background-size: contain;
+		}
+
+		.picNews img {
+			width: 100%;
+		}
+	</style>
 </head>
 
-<body>
-  <div class="app news-center">
-    
-  </div>
+<body class="md-box md-ver">
+	<div class="md-box p-title md-ac marl-30 marr-30">
+		<i class="md-box"></i>
+		<em class="md-box marl-10 fs-32">热点政策解读</em>
+	</div>
+	<div class="md-box picNews">
+		<div class="pic-slider div-after">
+			<a href="" class="md-box md-ver">
+				<div class="marl-30 marr-30"><img src="images/news/tmp_news.png" alt=""></div>
+				<div class="md-box news-shadow"></div>
+				<div class="md-box fs-28 news-title">广东省社会保障局党委召开党委扩大会议</div>
+			</a>
+			<a href="" class="md-box md-ver">
+				<div class="marl-30 marr-30"><img src="images/news/tmp_news.png" alt=""></div>
+				<div class="md-box news-shadow"></div>
+				<div class="md-box fs-28 news-title">广东省社会保障局党委召开党委扩大会议</div>
+			</a>
+			<a href="" class="md-box md-ver">
+				<div class="marl-30 marr-30"><img src="images/news/tmp_news.png" alt=""></div>
+				<div class="md-box news-shadow"></div>
+				<div class="md-box fs-28 news-title">广东省社会保障局党委召开党委扩大会议</div>
+			</a>
+			<a href="" class="md-box md-ver">
+				<div class="marl-30 marr-30"><img src="images/news/tmp_news.png" alt=""></div>
+				<div class="md-box news-shadow"></div>
+				<div class="md-box fs-28 news-title">广东省社会保障局党委召开党委扩大会议</div>
+			</a>
+		</div>
+	</div>
+	<div class="itemTab">
+		<div class="itemTab-Inner">
+			<div class="md-box">
+				<span class="md-f1 fs-32 current">人社新闻 <i></i></span>
+				<span class="md-f1 fs-32">政策法规</span>
+				<span class="md-f1 fs-32">通知公告</span>
+			</div>
+		</div>
+	</div>
+	<div class="picNews-list">
+		<div class="md-box marl-30 marr-30" style="border-top:none;padding-top: 0;">
+			<div class="md-f1 s-img ">
+				<img src="images/news/tmp_pic1.png">
+			</div>
+			<div class="md-box md-f1 md-ver marl-20">
+				<div class="fs-32 news-name">张纪南赴陕西省调研人社...</div>
+				<p class="fs-26 news-desc">10月15日，人力资源社会保障部党组书记、部长张纪南带队赴陕西省...</p>
+			</div>
+		</div>
+		<div class="md-box marl-30 marr-30">
+			<div class="md-f1 s-img ">
+				<img src="images/news/tmp_pic1.png">
+			</div>
+			<div class="md-box md-f1 md-ver marl-20">
+				<div class="fs-32 news-name">张纪南赴陕西省调研人社...</div>
+				<p class="fs-26 news-desc">10月15日，人力资源社会保障部党组书记、部长张纪南带队赴陕西省...</p>
+			</div>
+		</div>
+		<div class="md-box marl-30 marr-30">
+			<div class="md-f1 s-img ">
+				<img src="images/news/tmp_pic1.png">
+			</div>
+			<div class="md-box md-f1 md-ver marl-20">
+				<div class="fs-32 news-name">张纪南赴陕西省调研人社...</div>
+				<p class="fs-26 news-desc">10月15日，人力资源社会保障部党组书记、部长张纪南带队赴陕西省...</p>
+			</div>
+		</div>
+	</div>
 </body>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.bxslider.js"></script>
+<script>
+	$(function () {
+		$('.pic-slider').bxSlider({
+			controls: false,
+			auto: true
+		});
+	})
+</script>
 
 </html>
