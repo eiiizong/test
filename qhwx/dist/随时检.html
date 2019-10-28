@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/qh-style.css" />
-    <script src="./js/header.js"></script>
-    <title>随时检</title>
-  </head>
 
-  <body>
-    <div class="app test-anytime">
-      <div class="img-box marb-30">
-        <img src="./images/test-anytime.png" alt="" />
+<head>
+  <<meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+  <!-- 关闭将数字字符串识别为电话号码 -->
+  <meta name="format-detection" content="telephone=no" />
+  <!-- 关闭识别邮箱 -->
+  <meta name="format-detection" content="email=no" />
+  <!-- 删除默认的苹果工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <!-- 控制状态栏显示样式 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <title>随时检</title>
+
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/qh-style.css" />
+  <script src="./js/header.js"></script>
+</head>
+
+<body>
+  <div class="app test-anytime">
+    <div class="img-box marb-30">
+      <img src="./images/test-anytime.png" alt="" />
+    </div>
+    <div class="input-container">
+      <div class="input-box">
+        <select>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="opel">Opel</option>
+          <option value="audi">Audi</option>
+        </select>
+        <i class="icon icon-select-down"></i>
       </div>
-      <div class="input-container">
-        <div class="input-box">
-          <select>
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
-          </select>
-          <i class="icon icon-select-down"></i>
-        </div>
-        <div class="input-box">
-          <input class="fs-28" type="text" placeholder="请输入办件编号" />
-        </div>
-        <div class="input-box">
-          <input class="fs-28" type="text" placeholder="请输入验证码" />
-          <div class="verification-code">
-            1234
-            <!-- <img src="" alt=""> -->
-          </div>
-        </div>
+      <div class="input-box">
+        <input class="fs-28" type="text" placeholder="请输入办件编号" />
       </div>
-      <div class="btn-box">
-        <button class="btn fs-34">查询</button>
+      <div class="input-box">
+        <input class="fs-28" type="text" placeholder="请输入验证码" />
+        <div class="verification-code">
+          1234
+          <!-- <img src="" alt=""> -->
+        </div>
       </div>
     </div>
-  </body>
+    <div class="btn-box">
+      <button class="btn fs-34">查询</button>
+    </div>
+  </div>
+</body>
+
 </html>
