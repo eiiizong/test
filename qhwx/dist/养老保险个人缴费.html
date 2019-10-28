@@ -184,7 +184,7 @@
       </ul>
     </div>
     <!-- 时间选择 -->
-    <div class="time-select" id="time_select">
+    <div class="time-select" id="time_select" style="display: block;">
       <div class="top df jc-sb">
         <div class="start-time">
           <p for="start_time">开始日期</p>
@@ -199,9 +199,13 @@
         </div>
       </div>
       <div class="center df ai-c jc-c">
-        <i class="icon icon-arrow-left" id="reduce_year_btn"></i>
+        <button class="btn left" id="reduce_year_btn">
+          <i class="icon icon-arrow-left"></i>
+        </button>
         <span id="year">2018</span>年
-        <i class="icon icon-arrow-right" id="add_year_btn"></i>
+        <button class="btn right" id="add_year_btn">
+          <i class="icon icon-arrow-right"></i>
+        </button>
       </div>
       <div class="bottom df" id="months">
         <div class="df jc-c ai-c">
@@ -250,132 +254,6 @@
 
 </body>
 <script src="./js/jquery.min.js"></script>
-<!-- <script src="./js/jquery.min.js"></script> -->
-<script>
-  $(function () {
-    var type = 1;
-    var time_select = $('#time_select');
-    var time_select_btn = $('#time_select_btn');
-    var ok_btn = $('#ok_btn');
-    var yearhtml = $('#year');
-    var month_btns = $('#months .btn');
-    var start_time_input = $('#start_time');
-    var end_time_input = $('#end_time');
-    var reduce_year_btn = $('#reduce_year_btn');
-    var add_year_btn = $('#add_year_btn');
-    var start_time = '';
-    var end_time = '';
-
-    var nowTime = new Date();
-    var year = nowTime.getFullYear();
-    var month = nowTime.getMonth() + 1;
-    var maxYear = year;
-    var minYear = 2000;
-
-    start_time_input.on('click', function () {
-      type = 1;
-      inputActive()
-    });
-    end_time_input.on('click', function () {
-      type = 2;
-      inputActive()
-    });
-    // input 输入框样式聚焦
-    function inputActive() {
-      if (type === 1) {
-        end_time_input.removeClass('active');
-        start_time_input.addClass('active')
-      } else {
-        start_time_input.removeClass('active');
-        end_time_input.addClass('active')
-      }
-    }
-    inputActive();
-    // 时间选择按钮
-    time_select_btn.on('click', function () {
-      time_select.show();
-    });
-    // 确定按钮
-    ok_btn.on('click', function () {
-      time_select.hide();
-      console.log('start_time:' + start_time);
-      console.log('end_time:' + end_time);
-    });
-    // 设置年份
-    function setYear(value) {
-      yearhtml.html(value);
-    }
-    // 年份点击加
-    function add() {
-      if (year < maxYear) {
-        year++;
-        setYear(year);
-        canClickYearBtn();
-        setInputValue(type, year, month);
-        console.log(year);
-      }
-    }
-    // 年份点击减
-    function reduce() {
-      if (year > minYear) {
-        year = year - 1;
-        setYear(year);
-        canClickYearBtn();
-        console.log(year);
-        setInputValue(type, year, month);
-      }
-    }
-    add_year_btn.on('click', add);
-    reduce_year_btn.on('click', reduce);
-    // 检测年份是加减按钮是否可用 同时设置样式
-    function canClickYearBtn() {
-      if (year >= maxYear) {
-        add_year_btn.addClass('disabled');
-      } else {
-        add_year_btn.removeClass('disabled');
-      }
-      if (year <= minYear) {
-        reduce_year_btn.addClass('disabled');
-      } else {
-        reduce_year_btn.removeClass('disabled');
-      }
-    }
-    canClickYearBtn();
-    $(month_btns[month - 1]).addClass('active');
-    setYear(year);
-    if (month < 10) {
-      month = '0' + month;
-    }
-    end_time = year + '.' + month;
-    start_time = year - 1 + '.' + month;
-    start_time_input.html(start_time);
-    end_time_input.html(end_time);
-    // console.log(month_bvartns);
-    function setInputValue(type, year, month) {
-      if (type === 1) {
-        start_time = year + '.' + month;
-        start_time_input.html(start_time);
-      } else {
-        end_time = year + '.' + month;
-        end_time_input.html(end_time);
-      }
-    }
-
-    // 月份点击事件注册
-    for (var i = 0; i < 12; i++) {
-      var item = month_btns[i];
-      item.onclick = function () {
-        for (var j = 0; j < 12; j++) {
-          $(month_btns[j]).removeClass('active');
-        }
-        $(this).addClass('active');
-        var value = $(this).html();
-        month = value;
-        setInputValue(type, year, month);
-        console.log(value);
-      }
-    }
-  });
-</script>
+<script src="./js/time-select.js"></script>
 
 </html>
