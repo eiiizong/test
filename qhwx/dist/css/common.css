@@ -273,7 +273,7 @@ div {
 
 .md-msgtip-img {
   float: left;
-  background-image: url(../img/msgTip.png);
+  /* background-image: url(../img/msgTip.png); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 0.32rem;
@@ -455,7 +455,7 @@ div {
 .no-page-img {
   width: 6rem;
   height: 5rem;
-  background-image: url(../img/icon_nomessage.png);
+  /* background-image: url(../img/icon_nomessage.png); */
   margin-bottom: 0.6rem;
   margin-top: 2rem;
 }
@@ -501,7 +501,7 @@ div {
   margin-right: 1rem;
 }
 
-.iconSelect {
+/* .iconSelect {
   background-image: url(../img/xia1.png);
   background-size: 0.32rem 0.32rem;
   background-repeat: no-repeat;
@@ -513,7 +513,7 @@ div {
   background-size: 0.32rem 0.32rem;
   background-repeat: no-repeat;
   background-position: center right;
-}
+} */
 
 .shadow {
   box-shadow: 0.02rem 0.03rem 0.43rem 0.03rem rgba(114, 106, 106, 0.1);
