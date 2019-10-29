@@ -25,21 +25,28 @@
 
 <body>
   <div class="app txspb-see">
-    <div class="title df ai-c jc-sb">
-      <div class="left">《退休审批表》（共<span>5</span>张）</div>
-      <div class="right">
-        <button class="btn radius">添加</button>
+    <div class="top-fixed">
+      <div class="title df ai-c jc-sb">
+        <!-- 首字母有 《 符号 添加类名 remove-space 否则删除 -->
+        <div class="left remove-space">《退休审批表》（共<span>5</span>张）</div>
+        <div class="right">
+          <button class="btn radius">添加</button>
+        </div>
       </div>
     </div>
+
     <ul>
       <li>
         <div class="name df ai-c jc-sb ai-c">
           <div class="left">退休审批表1</div>
           <div class="right df ai-c">
             <button class="btn radius df ai-c jc-c">
-              <i class="icon icon-reload"></i>
-              <input type="file">
-              <span>重新上传</span>
+              <!-- label 标签 for 属性的值要与input标签的id值一致 且不能与其他input标签的id值相同 -->
+              <label for="cl1" class="df">
+                <i class="icon icon-reload"></i>
+                <input type="file" id="cl1">
+                <span>重新上传</span>
+              </label>
             </button>
             <button class="btn radius df ai-c jc-c">
               <i class="icon icon-delete"></i>
@@ -54,9 +61,12 @@
           <div class="left">退休审批表2</div>
           <div class="right df ai-c">
             <button class="btn radius df ai-c jc-c">
-              <i class="icon icon-reload"></i>
-              <input type="file">
-              <span>重新上传</span>
+              <!-- label 标签 for 属性的值要与input标签的id值一致 且不能与其他input标签的id值相同 -->
+              <label for="cl2" class="df">
+                <i class="icon icon-reload"></i>
+                <input type="file" id="cl2">
+                <span>重新上传</span>
+              </label>
             </button>
             <button class="btn radius df ai-c jc-c">
               <i class="icon icon-delete"></i>
@@ -67,7 +77,7 @@
         <img src="./images/example/2.png" alt="">
       </li>
     </ul>
-    <div class="btn-box">
+    <div class="btn-box fixed-bottom">
       <button class="btn radius box-shadow">提交</button>
     </div>
   </div>
