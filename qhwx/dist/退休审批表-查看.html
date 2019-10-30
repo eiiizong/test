@@ -36,11 +36,11 @@
       </li>
       <li>
         <div class="name">退休审批表1</div>
-        <img src="./images/example/1.png" alt="">
+        <img src="./images/example/2.png" alt="">
       </li>
       <li>
         <div class="name">退休审批表2</div>
-        <img src="./images/example/2.png" alt="">
+        <img src="./images/example/3.png" alt="">
       </li>
     </ul>
     <div class="btn-box fixed-bottom">
@@ -54,24 +54,22 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="./images/example/3.png" alt="">
-          </div>
-          <div class="swiper-slide">
             <img src="./images/example/1.png" alt="">
           </div>
           <div class="swiper-slide">
             <img src="./images/example/2.png" alt="">
           </div>
+          <div class="swiper-slide">
+            <img src="./images/example/3.png" alt="">
+          </div>
         </div>
-        <!-- 如果需要分页器 -->
-        <!-- <div class="swiper-pagination"></div> -->
       </div>
     </div>
   </div>
   <script src="./js/jquery.min.js"></script>
   <script src="./js/swiper.min.js"></script>
   <script>
-
+    // 查看图片 左右滑动
     $(function () {
       var activeIndex = $('#activeIndex');
       var topNum = $('#topNum');
@@ -85,16 +83,24 @@
       console.log(items)
       var len = items.length;
       for (var i = 0; i < len; i++) {
-        var item = items[i];
-        item.onclick = function (e, i) {
-          zoom.show();
-          showSwiper(i + 1);
-        }
+        (function (i) {
+          var item = items[i];
+          item.onclick = function () {
+            console.log('click', i)
+            zoom.show();
+            showSwiper(i);
+          }
+        })(i);
       }
+      // 关闭弹窗查看图片
       activeIndex.on('click', function () {
         zoom.hide();
       });
-      var mySwiper;
+      zoom.on('click', function (e) {
+        e.stopPropagation();
+        zoom.hide();
+      });
+      var mySwiper = null;
       // 
       function showSwiper(i) {
         if (!mySwiper) {
@@ -102,33 +108,21 @@
             // 初始化索引
             initialSlide: i,
             direction: 'horizontal', // 垂直切换选项
-            loop: true, // 循环模式选项
+            loop: false, // 循环模式选项
             on: {
               slideChangeTransitionEnd: function () {
+                console.log('slideChangeTransitionEnd', this.activeIndex);
                 var index = this.activeIndex;
-                if (index > len) {
-                  index = index - len
-                }
-                if (index < 1) {
-                  index = len;
-                }
-                activeIndex.html(index);
-                console.log(this.activeIndex);//切换结束时，告诉我现在是第几个slide
+                activeIndex.html(index + 1);
               },
-              init: function () {
-                //Swiper初始化了
-                // activeIndex.html(this.activeIndex);
-                console.log('当前的slide序号是' + this.activeIndex);
-                this.emit('transitionEnd');//在初始化时触发一次transitionEnd事件，需要先设置transitionEnd
-              },
+
             },
           });
         } else {
           mySwiper.slideTo(i);
-          activeIndex.html(i);
+          activeIndex.html(i + 1);
         }
       }
-      // showSwiper(0);
     })
 
   </script>
