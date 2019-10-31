@@ -18,6 +18,7 @@
   <title>在线缴费</title>
 
   <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/font-awesome.min.css" />
   <link rel="stylesheet" href="./css/qh-style.css" />
   <link rel="stylesheet" href="./css/index.min.css" />
   <script src="./js/header.js"></script>
@@ -41,9 +42,41 @@
       </div>
     </div>
     <div class="btn-box">
-      <button class="btn box-shadow radius">确定支付</button>
+      <button class="btn box-shadow radius" id="btn_pay">确定支付</button>
+    </div>
+    <div class="popup pay" id="popup_pay">
+      <div class="content">
+        <div class="title df ai-c">
+          <i class="fa fa-times" aria-hidden="true" id="btn_close"></i>
+          <span class="flex-1">请输入支付密码</span>
+        </div>
+        <p>城乡居民养老保险缴费</p>
+        <p class="num">472.76</p>
+        <div class="type df ai-c jc-sb">
+          <span>支付方式</span>
+          <span class="rights">
+            <i class="fa fa-credit-card" aria-hidden="true"></i>
+            中国农业银行
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
+        </div>
+      </div>
     </div>
   </div>
+  <script src="./js/jquery.min.js"></script>
+  <script>
+    $(function () {
+      var popup = $('#popup_pay'),
+        btn = $('#btn_pay'),
+        close = $('#btn_close');
+      btn.on('click', function () {
+        popup.show();
+      });
+      close.on('click', function () {
+        popup.hide();
+      });
+    })
+  </script>
 </body>
 
 </html>
