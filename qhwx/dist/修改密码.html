@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+  <!-- 关闭将数字字符串识别为电话号码 -->
+  <meta name="format-detection" content="telephone=no" />
+  <!-- 关闭识别邮箱 -->
+  <meta name="format-detection" content="email=no" />
+  <!-- 删除默认的苹果工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <!-- 控制状态栏显示样式 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <title>修改密码</title>
+
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/qh-style.css" />
+  <link rel="stylesheet" href="./css/index.min.css" />
+  <script src="./js/header.js"></script>
+</head>
+
+<body>
+  <div class="app add-family-account">
+    <div class="before-line-box">
+      <div class="before-line">
+        <span class="fw-500 lh-100">请通过以下操作完成密码重置</span>
+      </div>
+    </div>
+    <div class="input-box">
+      <label for="" class="label border-top">旧登录密码</label>
+      <input type="password" placeholder="请输入旧登录密码" />
+    </div>
+    <div class="input-box">
+      <label for="" class="label">新登录密码</label>
+      <input type="password" placeholder="请输入新登录密码" />
+    </div>
+    <div class="input-box">
+      <label for="" class="label">确认新登录密码</label>
+      <input type="password" placeholder="请再次输入新登录密码" />
+    </div>
+    <div class="input-box code">
+      <label for="" class="label">图形验证码</label>
+      <input type="text" placeholder="请输入右侧图形验证码" />
+      <div class="verification-code">
+        <button class="btn">
+          <!-- <img src="" alt=""> -->
+        </button>
+      </div>
+    </div>
+    <div class="btn-box padding-40-60-60">
+      <button class="btn h80 radius box-shadow">下一步</button>
+    </div>
+    <div class="text-right">
+      <a href="#">忘记旧密码？</a>
+    </div>
+  </div>
+</body>
+
+</html>
