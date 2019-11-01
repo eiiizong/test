@@ -15,7 +15,7 @@
 
   <!-- 控制状态栏显示样式 -->
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <title>修改手机号</title>
+  <title>修改邮箱地址-仍使用-01</title>
 
   <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="./css/qh-style.css" />
@@ -24,27 +24,27 @@
 </head>
 
 <body>
-  <div class="app yz">
-    <div class="hint df ai-c">
-      <i class="icon icon-hint"></i>
-      <span>为确保是本人操作，请完成以下验证</span>
-    </div>
-    <div class="cell-wrapper">
-      <div class="cell df ai-c jc-sb">
-        <label for="name">姓名</label>
-        <input type="text" placeholder="请输入您的姓名">
-      </div>
-      <div class="cell df ai-c jc-sb">
-        <label for="name">身份证号码</label>
-        <input type="text" placeholder="请输入您的身份证号码">
-      </div>
-      <div class="cell df ai-c jc-sb">
-        <label for="name">新手机号码</label>
-        <input type="text" placeholder="请输入您的新手机号码">
+  <div class="app verification-email">
+    <div class="send-verification-code-tip-box">
+      <div>
+        <span>我们已经发送验证码到您的邮箱</span>
+        <p>2671*****@QQ.com</p>
       </div>
     </div>
-    <div class="btn-box padding-40-60">
-      <button class="btn h80 radius box-shadow">下一步</button>
+    <div class="input-wrapper">
+      <div class="input-box type-2 df ai-c jc-sb">
+        <input class="flex-1" type="text" placeholder="邮箱验证码">
+        <button class="btn">发送验证码</button>
+      </div>
+      <div class="input-box type-2 df ai-c jc-sb">
+        <input class="flex-1" type="text" placeholder="图形验证码">
+        <button class="btn">
+          <div class="code"></div>
+        </button>
+      </div>
+      <div class="btn-box">
+        <button class="btn h80 radius box-shadow">下一步</button>
+      </div>
     </div>
   </div>
 </body>

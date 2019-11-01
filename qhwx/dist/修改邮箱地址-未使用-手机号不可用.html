@@ -15,7 +15,7 @@
 
   <!-- 控制状态栏显示样式 -->
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <title>邮箱验证</title>
+  <title>修改邮箱地址-未使用-手机号不可用</title>
 
   <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="./css/qh-style.css" />
@@ -27,25 +27,38 @@
   <div class="app verification-email">
     <div class="send-verification-code-tip-box">
       <div>
-        <span>我们已经发送验证码到您的邮箱</span>
-        <p>2671*****@QQ.com</p>
+        <span>我们已经发送验证码到您的手机</span>
+        <p>184*****0080</p>
       </div>
     </div>
     <div class="input-wrapper">
       <div class="input-box type-2 df ai-c jc-sb">
-        <input class="flex-1" type="text" placeholder="邮箱验证码">
+        <input class="flex-1" type="text" placeholder="手机验证码">
         <button class="btn">发送验证码</button>
       </div>
-      <div class="input-box type-2 df ai-c jc-sb">
-        <input class="flex-1" type="text" placeholder="图形验证码">
-        <button class="btn">
-          <div class="code"></div>
-        </button>
-      </div>
-      <div class="btn-box">
+      <div class="btn-box pb-60">
         <button class="btn h80 radius box-shadow">下一步</button>
       </div>
+      <div class="text-right p-0-0">
+        <a href="#" class="link">手机号不可用？</a>
+      </div>
     </div>
+  </div>
+  <!-- 切换验证方式 switch-verification-method -->
+  <div class="popup s-v-m">
+    <div class="content-wrapper bottom">
+      <div class="content">
+        <div class="nav">
+          <h3>切换验证方式</h3>
+          <ul>
+            <li>通过亲情号验证</li>
+            <li>通过个人信息验证</li>
+          </ul>
+        </div>
+        <button class="btn">取消</button>
+      </div>
+    </div>
+    <div class="mask"></div>
   </div>
 </body>
 

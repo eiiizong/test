@@ -15,7 +15,7 @@
 
   <!-- 控制状态栏显示样式 -->
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <title>修改手机号</title>
+  <title>修改邮箱地址</title>
 
   <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="./css/qh-style.css" />
@@ -24,27 +24,24 @@
 </head>
 
 <body>
-  <div class="app yz">
-    <div class="hint df ai-c">
-      <i class="icon icon-hint"></i>
-      <span>为确保是本人操作，请完成以下验证</span>
+  <div class="app edit-phoneNumber">
+    <div class="img-box">
+      <img src="./images/icon/img-change-email.png" alt="">
     </div>
-    <div class="cell-wrapper">
-      <div class="cell df ai-c jc-sb">
-        <label for="name">姓名</label>
-        <input type="text" placeholder="请输入您的姓名">
-      </div>
-      <div class="cell df ai-c jc-sb">
-        <label for="name">身份证号码</label>
-        <input type="text" placeholder="请输入您的身份证号码">
-      </div>
-      <div class="cell df ai-c jc-sb">
-        <label for="name">新手机号码</label>
-        <input type="text" placeholder="请输入您的新手机号码">
-      </div>
-    </div>
-    <div class="btn-box padding-40-60">
-      <button class="btn h80 radius box-shadow">下一步</button>
+    <p class="ta-l pl-88">
+      <span class="c-333 pb-20">请确认以下绑定邮箱是否仍在使用？</span><br />
+      <span>26723******@qq.com</span>
+    </p>
+    <span class="ta-l d-b pl-88">如果邮箱还能使用，输入邮箱验证码即可快速完成验证</span>
+    <div class="btn-box">
+      <button class="btn radius df ai-c jc-c">
+        <i class="icon icon-hook"></i>
+        <span>是，邮箱还能正常使用</span>
+      </button>
+      <button class="btn radius df ai-c jc-c">
+        <i class="icon icon-cross"></i>
+        <span>否，我没在用该邮箱了</span>
+      </button>
     </div>
   </div>
 </body>

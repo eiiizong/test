@@ -15,7 +15,7 @@
 
   <!-- 控制状态栏显示样式 -->
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <title>修改手机号</title>
+  <title>修改邮箱地址-仍使用-02</title>
 
   <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="./css/qh-style.css" />
@@ -24,26 +24,24 @@
 </head>
 
 <body>
-  <div class="app yz">
-    <div class="hint df ai-c">
-      <i class="icon icon-hint"></i>
-      <span>为确保是本人操作，请完成以下验证</span>
-    </div>
-    <div class="cell-wrapper">
-      <div class="cell df ai-c jc-sb">
-        <label for="name">姓名</label>
-        <input type="text" placeholder="请输入您的姓名">
-      </div>
-      <div class="cell df ai-c jc-sb">
-        <label for="name">身份证号码</label>
-        <input type="text" placeholder="请输入您的身份证号码">
-      </div>
-      <div class="cell df ai-c jc-sb">
-        <label for="name">新手机号码</label>
-        <input type="text" placeholder="请输入您的新手机号码">
+  <div class="app no-change-phone-number">
+    <div class="before-line-box">
+      <div class="before-line">
+        <span class="lh-90">请输入您要设置的新邮箱</span>
       </div>
     </div>
-    <div class="btn-box padding-40-60">
+
+    <div class="input-wrapper">
+      <div class="input-box step2 border-top">
+        <label for="email">新邮箱地址</label>
+        <input class="flex-1" type="email" id="email" placeholder="请输入您的新邮箱地址">
+      </div>
+    </div>
+    <!--  滑动验证 -->
+    <div class="slide-yz-box">
+      <div>拖动左侧滑块完成信息验证</div>
+    </div>
+    <div class="btn-box">
       <button class="btn h80 radius box-shadow">下一步</button>
     </div>
   </div>
