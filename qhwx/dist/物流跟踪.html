@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+  <!-- 关闭将数字字符串识别为电话号码 -->
+  <meta name="format-detection" content="telephone=no" />
+  <!-- 关闭识别邮箱 -->
+  <meta name="format-detection" content="email=no" />
+  <!-- 删除默认的苹果工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <!-- 控制状态栏显示样式 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/qh-style.css" />
+  <script src="./js/header.js"></script>
+  <title>物流跟踪</title>
+</head>
+
+<body>
+  <div class="app">
+    <div class="img-box marb-30">
+      <img src="./images/wlgz.png" alt="" />
+    </div>
+    <div class="login">
+      <img class="avatar marr-30" src="./images/avatar.png" alt="" />
+      <div class="content">
+        <h3>我要登陆</h3>
+        <p class="hint fs-24">
+          一键查询所有办件
+        </p>
+      </div>
+    </div>
+    <div class="tourist-box">
+      <div class="tourist">
+        <img class="avatar marr-30" src="./images/avatar.png" alt="" />
+        <div class="content">
+          <h3>我是游客</h3>
+        </div>
+      </div>
+      <div class="input-container">
+        <div class="input-box">
+          <input class="fs-28" type="text" placeholder="请输入快递编号（自动识别）" />
+        </div>
+        <div class="input-box">
+          <input class="fs-28" type="text" placeholder="请输入验证码" />
+          <div class="verification-code">
+            1234
+            <!-- <img src="" alt=""> -->
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <button class="btn fs-34">查询</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

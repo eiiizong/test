@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+  <!-- 关闭将数字字符串识别为电话号码 -->
+  <meta name="format-detection" content="telephone=no" />
+  <!-- 关闭识别邮箱 -->
+  <meta name="format-detection" content="email=no" />
+  <!-- 删除默认的苹果工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <!-- 控制状态栏显示样式 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <title>新增物流地址</title>
+
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/qh-style.css" />
+  <link rel="stylesheet" href="./css/index.min.css" />
+  <script src="./js/header.js"></script>
+</head>
+
+<body>
+  <div class="app no-padding">
+    <div class="input-wrapper">
+      <div class="input-box df ai-c jc-sb">
+        <div class="left">
+          <label for="">收件地址</label>
+        </div>
+        <div class="right df ai-c">
+          <i class="icon icon-address"></i>
+          <span>点击选择</span>
+          <i class="icon icon-arrow-right-grey-1424"></i>
+        </div>
+      </div>
+      <div class="input-box df ai-c jc-sb">
+        <div class="left">
+          <label for="xxdz">详细地址</label>
+        </div>
+        <div class="right df ai-c flex-1">
+          <input class="input-text" id="xxdz" type="text" placeholder="详细地址，例：16号楼5层501室">
+        </div>
+      </div>
+      <div class="input-box df ai-c jc-sb">
+        <div class="left">
+          <label for="sjr">收件人</label>
+        </div>
+        <div class="right df ai-c flex-1">
+          <input class="input-text" id="sjr" type="text" placeholder="请填写收件人姓名">
+        </div>
+      </div>
+      <div class="input-box df ai-c jc-sb">
+        <div class="left">
+          <label for="sjhm">手机号码</label>
+        </div>
+        <div class="right df ai-c flex-1">
+          <input class="input-text" id="sjhm" type="number" placeholder="请填写收件人手机号码">
+        </div>
+      </div>
+      <div class="input-box df ai-c jc-sb">
+        <div class="left">
+          <label for="mrdz">设为默认地址</label>
+        </div>
+        <div class="right df ai-c">
+          <div class="checkbox-box df ai-c">
+            <label for="mrdz">
+              <input class="input-text" id="mrdz" type="checkbox">
+              <div class="icon-switch"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-box padding-40-60">
+      <button class="btn radius box-shadow h80">保存地址</button>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+  <!-- 关闭将数字字符串识别为电话号码 -->
+  <meta name="format-detection" content="telephone=no" />
+  <!-- 关闭识别邮箱 -->
+  <meta name="format-detection" content="email=no" />
+  <!-- 删除默认的苹果工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <!-- 控制状态栏显示样式 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <title>材料寄送</title>
+
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./css/qh-style.css" />
+  <link rel="stylesheet" href="./css/index.min.css" />
+  <script src="./js/header.js"></script>
+</head>
+
+<body>
+  <div class="app no-padding">
+    <div class="row-wrapper">
+      <div class="row df ai-c">
+        <div class="left df ai-c">
+          <div class="avatar">寄</div>
+        </div>
+        <div class="right df ai-c flw-w">
+          <div class="df ai-c line pb">
+            <p class="fw-500">王晓溪</p>
+            <span>136867561234</span>
+          </div>
+          <div class="line">
+            <p>青海省西宁市城北区宁张路42号</p>
+          </div>
+        </div>
+      </div>
+      <div class="row df ai-c bb-0">
+        <div class="left df ai-c">
+          <div class="avatar type-02">收</div>
+        </div>
+        <div class="right df ai-c flw-w">
+          <div class="df ai-c line pb">
+            <p class="fw-500">青海省社会保险事业管理局</p>
+            <span>61787532</span>
+          </div>
+          <div class="line">
+            <p>青海省西宁市城北区宁张路42号</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="h-20 bgc-f7f8f9"></div>
+    <div class="row-wrapper">
+      <div class="row h100 df ai-c jc-sb">
+        <div class="left df ai-c">
+          <div>寄件方式</div>
+        </div>
+        <div class="right df ai-c">
+          <!-- active 高亮 -->
+          <button class="btn active">上门取件</button>
+          <button class="btn">自送服务点</button>
+        </div>
+      </div>
+      <div class="row h100 df ai-c jc-sb">
+        <div class="left df ai-c">
+          <div>期望上门时间</div>
+        </div>
+        <div class="right df ai-c">
+          <div class="select-box">
+            <select name="" id="">
+              <option value="">一小时以内</option>
+              <option value="">二小时以内</option>
+              <option value="">三小时以内</option>
+            </select>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 同意协议 -->
+    <div class="agree-protocol">
+      <label for="checkbox" class="df ai-c jc-c">
+        <input type="checkbox" id="checkbox" />
+        <i class="fa fa-square-o  icon-checkbox" aria-hidden="true"></i>
+        <span>我已阅读并同意<a href="#">《快件服务协议》</a></span>
+      </label>
+    </div>
+    <div class="btn-box p-0-60">
+      <button class="btn h80 radius box-shadow">下单</button>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+  <!-- 关闭将数字字符串识别为电话号码 -->
+  <meta name="format-detection" content="telephone=no" />
+  <!-- 关闭识别邮箱 -->
+  <meta name="format-detection" content="email=no" />
+  <!-- 删除默认的苹果工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <!-- 控制状态栏显示样式 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <title>手机预约</title>
+
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/qh-style.css" />
+  <link rel="stylesheet" href="./css/index.min.css" />
+  <script src="./js/header.js"></script>
+</head>
+
+<body>
+  <div class="app sjyy">
+    <div class="before-line-box">
+      <div class="before-line">
+        <span class="fw-500 lh-100">单位基本信息变更</span>
+      </div>
+    </div>
+    <div class="btn-wrapper">
+      <div class="btn-box df jc-c ai-c">
+        <button class="btn df ai-c jc-c left active">
+          <i class="icon icon-unit"></i>
+          <span>单位</span>
+        </button>
+        <button class="btn df ai-c jc-c right">
+          <span>个人</span>
+          <i class="icon icon-person"></i>
+        </button>
+      </div>
+    </div>
+    <div class="input-wrapper">
+      <div class="input-box df ai-c jc-sb">
+        <div class="left">
+          <label for="name">预约人姓名：</label>
+        </div>
+        <div class="right">
+          <input class="" type="text" id="name" placeholder="请输入预约人姓名">
+        </div>
+      </div>
+      <div class="input-box df ai-c jc-sb">
+        <div class="left">
+          <label for="phoneNumber">预约人联系电话：</label>
+        </div>
+        <div class="right">
+          <input class="" type="number" id="phoneNumber" placeholder="请输入预约人联系电话">
+        </div>
+      </div>
+      <div class="input-box df ai-c jc-sb">
+        <div class="left">
+          <label for="date">预约日期：</label>
+        </div>
+        <div class="right">
+          <input class="" type="date" id="data" placeholder="请输入预约人姓名">
+        </div>
+      </div>
+      <div class="input-box df ai-c jc-sb">
+        <div class="left">
+          <label for="time">预约时间：</label>
+        </div>
+        <div class="right">
+          <input class="" type="time" id="time" placeholder="">
+        </div>
+      </div>
+      <div class="input-box df ai-c jc-sb">
+        <div class="left">
+          <label for="jg">预约办事机构：</label>
+        </div>
+        <div class="eight">
+          <select name="" id="">
+            <option value="">请选择预约机构</option>
+            <option value="">请选择预约机构</option>
+            <option value="">请选择预约机构</option>
+          </select>
+        </div>
+      </div>
+      <div class="input-box df jc-sb">
+        <div class="left">
+          <label for="">预约机构地址：</label>
+        </div>
+        <div class="right">
+          <span>成都市锦江区三色路</span>
+        </div>
+      </div>
+    </div>
+    <div class="btn-box padding-40-60">
+      <button class="btn radius h80 box-shadow">提交</button>
+    </div>
+  </div>
+</body>
+
+</html>
