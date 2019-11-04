@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+  <!-- 关闭将数字字符串识别为电话号码 -->
+  <meta name="format-detection" content="telephone=no" />
+  <!-- 关闭识别邮箱 -->
+  <meta name="format-detection" content="email=no" />
+  <!-- 删除默认的苹果工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <!-- 控制状态栏显示样式 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <title>领取社保卡</title>
+
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/qh-style.css" />
+  <link rel="stylesheet" href="./css/index.min.css" />
+  <script src="./js/header.js"></script>
+</head>
+
+<body>
+  <div class="app lqsbk">
+    <div class="password-wrapper">
+      <h3>身份验证</h3>
+      <p>请验证支付密码确认本人操作</p>
+      <input type="tel" class="input-tel" id="rel_input" />
+      <div class="password-box df ai-c -jc-c" id="password_box">
+        <input type="password" disabled />
+        <input type="password" disabled />
+        <input type="password" disabled />
+        <input type="password" disabled />
+        <input type="password" disabled />
+        <input type="password" disabled />
+      </div>
+    </div>
+  </div>
+  <script src="./js/jquery.min.js"></script>
+  <script>
+    $(function () {
+      var input = $('#rel_input');
+      var passwordBox = $('#password_box');
+      var passwords = $('#password_box input');
+      passwordBox.on('click', function () {
+        input.focus();
+      });
+      input.focus();
+      input.on('input', function (e) {
+        var value = $(this).val();
+        var arr = value.split('');
+        var len = arr.length;
+        if (len <= 6) {
+          for (var i = 0; i < 6; i++) {
+            $(passwords[i]).val(arr[i]);
+          }
+        }
+        if (len === 6) {
+          $(this).blur();
+          console.log('最终获取密码值：', value)
+        }
+      });
+    });
+    // 今天写完给他们
+  </script>
+</body>
+
+</html>
